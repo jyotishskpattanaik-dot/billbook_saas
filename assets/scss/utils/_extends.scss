@@ -1,0 +1,59 @@
+@use './mixins' as *;
+
+%include-bg{
+	@include background();
+}
+
+%ap-transition-color{
+	@include ap-transition(color);
+}
+
+%ap-transition-transform{
+	@include ap-transition(transform);
+}
+
+%ap-transition-border-color{
+	@include ap-transition(border-color);
+}
+
+%ap-transition-bg-color{
+	@include ap-transition(background-color);
+}
+
+%ap-transition-fz{
+	@include ap-transition(font-size);
+}
+
+// Transition 
+%ap-transition-3{
+	@include ap-transition();
+}
+
+%ap-transition-5{
+	@include ap-transition(opacity, 0.5s, ease-in-out, 0.2s);
+}
+
+// Font
+%ap-ff-fontawesome{
+	font-family: var(--font-icomoon);
+}
+
+// Transform
+%translateY1_2{
+	@include transform(translateY(-50%));
+}
+%translateX1_2{
+	@include transform(translateX(-50%));
+}
+%translate1_2{
+	@include transform(translate(-50%, -50%));
+}
+
+// Bg thumbnails
+%bg-thumb{
+	position: absolute;
+	top: 0;
+	inset-inline-start: 0;
+	width: 100%;
+	height: 100%;
+}

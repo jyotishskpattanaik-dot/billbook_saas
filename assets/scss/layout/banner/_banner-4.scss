@@ -1,0 +1,222 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.1.4 Banner Style 4 CSS Start
+/*----------------------------------------*/
+
+.ap-banner-four {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    z-index: 15;
+
+    &-title {
+        color: var(--color-theme-white);
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+
+    &-intro {
+        margin-bottom: 40px;
+        color: #B9B6BB;
+    }
+
+    &-cta {
+        &-form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+
+            @media #{$xs} {
+                flex-wrap: wrap;
+            }
+
+            input {
+                width: 380px;
+                border: 1px solid var(--color-theme-white);
+                background-color: var(--color-theme-white);
+
+                @media #{$sm,$xs} {
+                    width: 100%;
+                }
+            }
+        }
+
+        .ap-btn {
+            white-space: nowrap;
+        }
+
+        span {
+            color: #A99EB1;
+        }
+    }
+
+    &-shape-1 {
+        position: absolute;
+        z-index: 5;
+        inset-inline-start: 65px;
+        bottom: 30px;
+
+        @media #{$xl,$lg,$md,$sm,$xs} {
+            display: none;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            inset-inline-start: -50px;
+            inset-block-end: -80px;
+            width: 135.85px;
+            height: 146.17px;
+            background: #2C40C4;
+            filter: blur(100px);
+            z-index: -1;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 133.46px;
+            height: 143.79px;
+            inset-inline-start: 86px;
+            inset-block-start: -100px;
+            background: #8A27D1;
+            filter: blur(100px);
+            z-index: -1;
+        }
+
+        img {
+            animation: round-shape 8s linear infinite;
+        }
+    }
+
+    &-shape-2 {
+        position: absolute;
+        z-index: 5;
+        inset-inline-end: 140px;
+        inset-block-start: 170px;
+
+        @media #{$xl,$lg,$md,$sm,$xs} {
+            display: none;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 167px;
+            height: 179px;
+            inset-inline-end: -30px;
+            top: -30px;
+            background: rgba(120, 21, 190, 0.8);
+            filter: blur(100px);
+            z-index: -1;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 175px;
+            height: 186px;
+            inset-inline-end: 100px;
+            top: 100px;
+            background: rgba(45, 59, 157, 0.8);
+            filter: blur(100px);
+            z-index: -1;
+        }
+
+        img {
+            animation: round-shape 8s linear infinite;
+        }
+    }
+}
+
+
+.ap-banner-video {
+    position: relative;
+    z-index: 5;
+
+    &::before {
+        position: absolute;
+        content: "";
+        inset-block-start: 50%;
+        inset-inline-start: 0;
+        width: 184px;
+        height: 722px;
+        background: #8A27D1;
+        opacity: 0.5;
+        filter: blur(100px);
+        transform: translateY(-50%);
+        z-index: -1;
+
+        @media #{$md,$sm,$xs} {
+            display: none;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        inset-block-start: 50%;
+        inset-inline-end: 0;
+        width: 184px;
+        height: 722px;
+        background: #8A27D1;
+        opacity: 0.5;
+        filter: blur(100px);
+        transform: translateY(-50%);
+        z-index: -1;
+
+        @media #{$md,$sm,$xs} {
+            display: none;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+    }
+
+    &-wrapper {
+        width: calc(100% - 580px);
+        margin: 0 auto;
+        position: relative;
+        border-radius: 16px;
+
+        @media #{$x4l} {
+            width: calc(100% - 200px);
+        }
+
+        @media #{$x3l} {
+            width: calc(100% - 200px);
+        }
+
+        @media #{$xxl,$xl,$lg} {
+            width: calc(100% - 50px);
+        }
+
+        @media #{$md} {
+            width: calc(100% - 50px);
+        }
+
+        @media #{$sm,$xs} {
+            width: calc(100% - 15px);
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            inset-inline-start: 0;
+            inset-block-start: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            border-radius: 16px;
+            z-index: 6;
+        }
+    }
+}
+/*----------------------------------------*/
+/*  3.1.4 Banner Style 4 CSS End
+/*----------------------------------------*/

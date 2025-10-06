@@ -1,0 +1,92 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.8 Color CSS Start
+/*----------------------------------------*/
+
+.white-text {
+    color: var(--color-white);
+}
+
+.text-black {
+    color: var(--color-theme-black);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-secondary {
+    color: var(--color-secondary);
+}
+
+.body-text-2 {
+    color: var(--color-body-text-2);
+}
+
+/* background-color */
+.theme-bg {
+    background-color: var(--color-primary);
+}
+
+.primary-bg {
+    background-color: var(--color-bg-primary);
+}
+
+.theme-bg-3 {
+    background-color: var(--color-bg-3);
+}
+.theme-bg-4 {
+    background-color: var(--color-bg-4);
+}
+
+.theme-bg-5 {
+    background-color: var(--color-bg-5);
+}
+
+.theme-bg-6 {
+    background-color: var(--color-bg-6);
+}
+
+.theme-bg-7 {
+    background-color: var(--color-bg-7);
+}
+
+.theme-bg-8 {
+    background-color: var(--color-bg-8);
+}
+
+.theme-bg-9 {
+    background-color: var(--color-bg-9);
+}
+
+.dark-bg {
+    background-color: var(--color-dark-bg);
+}
+
+.theme-bg-secondary {
+    background-color: var(--color-bg-secondary);
+}
+
+.full-black-bg {
+    background-color: var(--color-theme-black);
+}
+
+.theme-black {
+    background-color: var(--color-theme-black);
+}
+
+.secondary-bg {
+    background-color: var(--color-secondary);
+}
+
+.white-bg {
+    background-color: var(--color-theme-white);
+}
+
+.gradient-bg {
+    background: linear-gradient(92.77deg, rgba(7, 161, 105, 0.15) 1.33%, rgba(251, 140, 0, 0.15) 129.72%) !important;
+}
+/*----------------------------------------*/
+/*  2.8 Color CSS End
+/*----------------------------------------*/

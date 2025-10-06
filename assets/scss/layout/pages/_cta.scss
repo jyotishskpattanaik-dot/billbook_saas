@@ -1,0 +1,185 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.4 cta css
+/*----------------------------------------*/
+
+.ap-cta {
+    &-thumb {
+        &-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        &-1 {
+            position: relative;
+            z-index: 2;
+
+            &::before {
+                position: absolute;
+                content: "";
+                inset-inline-start: 50%;
+                inset-block-start: 50%;
+                transform: translate(-50%, -50%);
+                width: 340px;
+                height: 340px;
+                border-radius: 100%;
+                background: rgba(175, 98, 231, 0.2);
+                z-index: -1;
+
+                @include rtl {
+                    inset-inline-start: auto;
+                    inset-inline-end: 50%;
+                }
+            }
+        }
+
+        &-2 {
+            position: relative;
+            z-index: 5;
+        }
+
+        &-3 {
+            margin-top: -290px;
+            margin-inline-start: -20px;
+            position: relative;
+            z-index: 5;
+        }
+    }
+
+    &-shape {
+        &-1 {
+            position: absolute;
+            inset-inline-start: 85px;
+            inset-inline-start: 90px;
+        }
+
+        &-2 {
+            position: absolute;
+            inset-block-end: 92px;
+            inset-inline-start: 540px;
+        }
+
+        &-3 {
+            position: absolute;
+            inset-block-end: 95px;
+            inset-inline-end: 90px;
+        }
+    }
+}
+
+/* CTA Style Two */
+.ap-cta-two-thumb-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 25px;
+    position: relative;
+    z-index: 5;
+
+    @media #{$lg,$md,$sm,$xs} {
+        justify-content: center;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 60px;
+        height: 60px;
+        background: rgba(138, 39, 209, 0.8);
+        filter: blur(75px);
+        z-index: -1;
+        inset-block-start: 50%;
+        inset-inline-start: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.ap-cta-two-shape {
+    position: absolute;
+    inset-block-end: 60px;
+    inset-inline-start: 600px;
+}
+
+/* CTA Style Two End */
+
+/* CTA Style Three */
+.ap-cta-space-bottom {
+    margin-bottom: -230px;
+}
+
+.ap-cta-three {
+    &-box {
+        background: linear-gradient(180deg, #FFFFFF -27.27%, #AF62E7 143.82%);
+        border-radius: 12px;
+        padding: 65px 30px 80px;
+        position: relative;
+    }
+
+    &-shape-1 {
+        position: absolute;
+        inset-inline-start: 78px;
+        inset-block-start: 97px;
+    }
+
+    &-shape-2 {
+        position: absolute;
+        inset-inline-end: 86px;
+        inset-block-end: 64px;
+    }
+}
+
+/* CTA Style Three End */
+
+/* CTA Style Three */
+.ap-cta-four-box {
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 5;
+}
+
+.ap-cta-four-shape {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    @include rtl {
+        inset-inline-start: auto;
+        inset-inline-end: 50%;
+    }
+    img {
+        animation: round-shape 8s linear infinite;
+    }
+}
+
+/* CTA Style Three End */
+.ap-newsletter-area {
+    background-color: var(--color-bg-primary);
+    border-bottom: 1px solid rgba($color: $white, $alpha: .10);
+    padding: 50px 0;
+}
+
+.ap-newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    input[type="email"] {
+        border-color: rgba($color: $white, $alpha: .30);
+        color: var(--color-white);
+
+        &::placeholder {
+            color: var(--color-body-text-2);
+        }
+
+        &:focus {
+            border-color: var(--color-white);
+        }
+    }
+}

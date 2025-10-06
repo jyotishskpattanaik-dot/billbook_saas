@@ -1,0 +1,53 @@
+@use '../utils' as *;
+
+/*----------------------------------------
+   2.13 Basic pagination CSS Start
+-----------------------------------------*/
+
+.basic {
+   &-pagination {
+      margin-top: 70px;
+
+      ul {
+         display: inline-flex;
+         gap: 15px;
+
+         li {
+            list-style: none;
+
+            a {
+               width: 48px;
+               height: 48px;
+               display: inline-flex;
+               align-items: center;
+               justify-content: center;
+               position: relative;
+               font-weight: 600;
+               font-size: 16px;
+               background-color: var(--color-bg-5);
+               @include border-radius(4px);
+
+               &:hover {
+                  background-color: var(--color-primary);
+                  color: var(--color-white);
+               }
+            }
+
+            .current {
+               background-color: var(--color-primary);
+               color: var(--color-white);
+            }
+
+            .prev,
+            .next {
+               background-color: var(--color-bg-5);
+               color: var(--color-primary);
+               font-size: 20px;
+            }
+         }
+      }
+   }
+}
+/*----------------------------------------
+   2.13 Basic pagination CSS End
+-----------------------------------------*/

@@ -1,0 +1,151 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.10 Fun Fact CSS Start
+/*----------------------------------------*/
+
+.ap-fun-fact {
+    &-wrapper {
+        background-color: var(--color-gray);
+        border-radius: 16px;
+        padding: 52px 0px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-between;
+
+        @media #{$md,$sm} {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 30px;
+        }
+    }
+
+    &-item {
+        text-align: center;
+
+        &.style-two {
+            .ap-fun-fact-title {
+                color: #B9B6BB;
+            }
+
+            .ap-fun-fact-number {
+                color: var(--color-white);
+            }
+        }
+    }
+
+    &-title {
+        color: rgba($color: $black-light, $alpha: .70);
+    }
+
+    &-number {
+        font-family: var(--font-title);
+        font-size: 52px;
+        font-weight: var(--fw-semibold);
+        margin-bottom: 20px;
+        line-height: 1;
+        color: var(--color-theme-black);
+    }
+
+    &-shape {
+        position: absolute;
+        inset-block-end: -13px;
+        inset-inline-start: 16px;
+
+        img {
+            animation: round-shape 50s linear infinite;
+        }
+    }
+}
+
+/* Fun Facts Item Two */
+
+.ap-fun-fact-item-two {
+    background-color: #F7F5FB;
+    border-radius: 12px;
+    padding: 27px 37px 31px;
+    position: relative;
+
+    &:hover {
+        &::before {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &::after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: calc(100% - 50px);
+        height: 100px;
+        inset-inline-start: 50%;
+        inset-block-end: -5px;
+        transform: translateX(-50%);
+        background-color: #EEEAF5;
+        z-index: -1;
+        border-radius: 12px;
+        transition: var(--transition);
+        opacity: 0;
+        visibility: hidden;
+
+        @include rtl {
+            inset-inline-start: auto;
+            inset-inline-end: 50%;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: calc(100% - 70px);
+        height: 100px;
+        inset-inline-start: 50%;
+        inset-block-end: -10px;
+        transform: translateX(-50%);
+        border: 1px solid #EEEEEE;
+        z-index: -1;
+        border-radius: 12px;
+        transition: 0.4s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+
+        @include rtl {
+            inset-inline-start: auto;
+            inset-inline-end: 50%;
+        }
+    }
+
+    .ap-fun-fact-number-two {
+        font-family: var(--font-title);
+        font-size: 48px;
+        font-weight: var(--fw-medium);
+        line-height: 1;
+        color: var(--color-theme-black);
+
+        @media #{$lg} {
+            font-size: 38px;
+        }
+    }
+
+    .ap-fun-fact-intro {
+        font-size: 16px;
+        color: var(--color-black-light);
+        margin-top: 53px;
+
+        @media #{$lg} {
+            margin-top: 30px;
+        }
+    }
+}
+/*----------------------------------------*/
+/*  2.10 Fun Fact CSS End
+/*----------------------------------------*/

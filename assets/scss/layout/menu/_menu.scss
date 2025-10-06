@@ -1,0 +1,401 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.6.1 Main menu css
+/*----------------------------------------*/
+
+.ap-main-menu {
+    >ul {
+        display: inline-flex;
+        gap: 0 48px;
+
+        @media #{$xxl,$xl} {
+            gap: 0 30px;
+        }
+
+        >li {
+            &:has(ul)>a {
+                &::after {
+                    content: "\e902";
+                    font-family: var(--font-icomoon);
+                    margin-inline-start: 5px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    display: inline-block;
+                    transition: all 0.3s 0s ease-out;
+
+                }
+
+                &:hover {
+                    &::after {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+
+
+            &:hover {
+                >a {
+                    color: var(--color-primary);
+                }
+
+                >ul {
+                    opacity: 1;
+                    pointer-events: all;
+                    transform: scaleY(1);
+
+                    &.submenu li {
+                        &:hover {
+                            >ul {
+                                opacity: 1;
+                                pointer-events: all;
+                                transform: scaleY(1);
+                            }
+                        }
+                    }
+                }
+
+                .mega-menu {
+                    transform: translateX(-50%) scale(1);
+                }
+            }
+
+            @media #{$lg,$md,$sm,$xs} {
+                &:hover>ul.last-children.submenu li:hover>ul {
+                    inset-inline-end: 100%;
+                    inset-inline-start: auto;
+                }
+            }
+        }
+    }
+
+    li {
+        position: relative;
+        list-style: none;
+
+        a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--color-theme-black);
+            padding: 28px 0px;
+            display: inline-block;
+            font-family: var(--font-body);
+            position: relative;
+            transition: all 0.3s linear;
+            text-transform: capitalize;
+
+            &.active {
+                color: var(--color-primary);
+            }
+        }
+
+        .has-submenu {
+            >a::before {
+                content: "\e902";
+                font-family: var(--font-icomoon);
+                font-weight: 400;
+                position: absolute;
+                inset-inline-end: 32px;
+                transition: all 0.3s ease-in-out;
+            }
+
+            &:hover a::before {
+                transform: rotate(-90deg);
+            }
+        }
+
+        &.has-mega-menu {
+            position: static;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+
+    .submenu {
+        background-color: var(--color-theme-white);
+        box-shadow: 0px 30px 70px 0px rgba(11, 6, 70, 0.08);
+        padding: 12px 0px;
+        width: 250px;
+        position: absolute;
+        inset-inline-start: 0;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 10;
+        transition: 0.5s;
+        border-radius: 0 0 4px 4px;
+        top: 100%;
+        transform: scaleY(0);
+        transform-origin: top center;
+
+        ul {
+            background-color: var(--color-theme-white);
+            width: 250px;
+            position: absolute;
+            inset-inline-start: 100%;
+            top: 0;
+            opacity: 0;
+            z-index: 10;
+            transition: 0.5s;
+            border-radius: 0 4px 4px 4px;
+        }
+
+        li {
+            position: relative;
+            padding: 0 12px;
+
+            &:has(ul) {
+                >a {
+                    &::after {
+                        content: "\e902";
+                        font-family: var(--font-icomoon);
+                        font-weight: 400;
+                        position: absolute;
+                        right: 10px;
+                        transition: 0.3s;
+                    }
+
+                }
+
+                &:hover a {
+                    &::after {
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+
+            &:hover {
+                >a {
+                    color: var(--color-primary);
+                    background-color: rgba($color: $primary, $alpha: .05);
+                }
+
+                >ul {
+                    opacity: 1;
+                    transform: none !important;
+                    pointer-events: all;
+                }
+            }
+
+            a {
+                font-size: 16px;
+                color: var(--color-theme-black);
+                padding: 8px 12px;
+                border-radius: 8px;
+                display: block;
+                transition: all 0.5s;
+                text-align: left;
+                cursor: pointer;
+
+                @include rtl {
+                    text-align: right;
+                }
+
+                &.active {
+                    color: var(--color-primary);
+                    background-color: rgba($color: $primary, $alpha: .05);
+                }
+            }
+        }
+    }
+
+    .mega-menu {
+        background-color: var(--color-theme-white);
+        box-shadow: 0px 20px 30px rgba(1, 15, 28, 0.1);
+        padding: 30px 30px;
+        position: absolute;
+        inset-inline-start: 50%;
+        transform: translateX(-50%) scale(1, 0);
+        transform-origin: 0 0;
+        width: 1320px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 50px;
+        justify-content: center;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 20;
+        transition: all 0.5s;
+        top: 100%;
+        text-align: start;
+        border-radius: 0 0 8px 8px;
+
+        @include rtl {
+            inset-inline-start: auto;
+            inset-inline-end: 50%;
+        }
+
+        @media #{$xl} {
+            width: 100%;
+            column-gap: 30px;
+        }
+        li:has(ul) {
+            >a {
+                &:after {
+                    content: "";
+                }
+            }
+        }
+
+        li {
+            a {
+                font-size: 16px;
+                font-weight: 500;
+                color: var(--color-theme-black);
+                padding: 5px;
+                display: inline-block;
+                align-items: center;
+                gap: 8px;
+                background: transparent;
+                border-radius: 8px;
+                transition: all 0.3s;
+
+                &:hover {
+                    color: var(--color-primary);
+                }
+
+                &.active {
+                    color: var(--color-primary);
+                }
+            }
+        }
+
+        .title {
+            font-weight: 500;
+            color: var(--color-theme-black);
+            border-bottom: 1px solid var(--color-border-primary);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            pointer-events: none;
+            border-radius: 0;
+            display: block;
+        }
+    }
+    .ap-home-menu-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 20px;
+        column-gap: 20px;
+        padding-bottom: 25px;
+    }
+}
+
+/* Responsive submenu right */
+.last-children {
+    @media #{$xl,$lg,$md,$sm,$xs} {
+        &.submenu {
+
+            ul {
+                inset-inline-start: auto;
+                inset-inline-end: 100%;
+                border-radius: 4px 0 4px 4px;
+
+            }
+
+            li:has(ul):hover a::after {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+
+/* Mega Menu Inner */
+.ap-home-menu {
+    &-item {
+        position: relative;
+        line-height: 1;
+        padding: 0 0;
+        text-align: center;
+
+        @media #{$lg,$md,$sm,$xs} {
+            margin-bottom: 30px;
+        }
+
+        &:hover {
+            .ap-home-menu-thumb {
+                &::before {
+                    opacity: 0.8;
+                }
+            }
+
+            .ap-home-menu-button-wrapper {
+                transform: scale(1, 1);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &-thumb {
+        position: relative;
+        border: 1px solid var(--color-border-primary);
+        border-radius: 6px;
+        margin-bottom: 15px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            background: var(--color-bg-7);
+            opacity: 0;
+            transition: all 0.3s linear;
+            inset-inline-start: 0;
+            bottom: 0;
+            border-radius: 6px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 6px;
+        }
+    }
+
+    &-title {
+        line-height: 1;
+        color: var(--color-theme-black);
+        font-size: 18px;
+        font-family: var(--font-body);
+        font-weight: var(--fw-medium);
+    }
+
+    &-button-wrapper {
+        position: absolute;
+        top: 0;
+        inset-inline-start: 0;
+        inset-inline-end: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transform: scale(1, 0);
+        opacity: 0;
+        visibility: hidden;
+        transform-origin: bottom center;
+        transition: 500ms ease;
+        gap: 10px;
+    }
+}
+.ap-main-menu ul li .ap-home-menu-grid .ap-home-menu-item .ap-home-menu-button-wrapper .ap-home-menu-btn,
+.ap-offcanvas-menu ul li .ap-home-menu-grid .ap-home-menu-item .ap-home-menu-button-wrapper .ap-home-menu-btn {
+    font-size: 18px;
+    font-weight: var(--fw-medium);
+    font-family: var(--font-body);
+    color: var(--color-theme-white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px 11px;
+    line-height: 1.5;
+    transition: all 0.3s linear;
+    @include border-radius(6px);
+    position: relative;
+    z-index: 2;
+    background-color: var(--color-primary);
+
+    &:hover {
+        color: var(--color-theme-white);
+        background-color: var(--color-secondary);
+    }
+}

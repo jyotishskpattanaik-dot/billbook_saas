@@ -1,0 +1,85 @@
+:root {
+
+  /**  @font family declaration */
+  --font-body: 'Roboto', sans-serif;
+  --font-title: 'Oswald', sans-serif;
+  --font-p: 'Roboto', sans-serif;
+  --font-icomoon: "icomoon";
+
+  /** @color declaration */
+  --color-white: #FFFFFF;
+  --color-theme-white: #F9F9F9;
+  --color-black: #000000;
+  --color-theme-black: #222222;
+  --color-black-light: #363636;
+  --color-placeholder: #5E5E5E;
+  --color-body: #FFFFFF;
+  --color-primary: #8A27D1;
+  --color-secondary: #AF62E7;
+  --color-danger: #dc3545;
+  --color-success: #22c55e;
+  --color-body-text: #5E5E5E;
+  --color-body-text-2: #B9B6BB;
+  --color-gray: #FAFAFA;
+  --color-label: #0A0A0A;
+  --color-rating: #FFC107;
+  --color-text-muted: #6c757d;
+  --color-bg-primary: #772EED;
+  --color-bg-secondary: #EDF3F5;
+  --color-dark-bg: #010101;
+  --color-bg-3: #DDCBFB;
+  --color-bg-4: #FBF3EC;
+  --color-bg-5: #F7F5FB;
+  --color-bg-6: #EEDDFA;
+  --color-bg-7: #141414;
+  --color-bg-8: #F1E4FB;
+  --color-bg-9: #0D0214;
+  --color-border-primary: #D9D9D9;
+  --color-border-secondary: #F1F1F1;
+
+  --color-gradient-1: linear-gradient(90deg, #F5F5F5 52.13%, rgba(245, 245, 245, 0.7) 100%);
+
+  /** @font weight declaration */
+  --fw-normal: normal;
+  --fw-thin: 100;
+  --fw-elight: 200;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-ebold: 800;
+  --fw-black: 900;
+
+  /** @font size declaration */
+  --fs-body: 18px;
+  --fs-p: 18px;
+  --fs-h1: 60px;
+  --fs-h2: 52px;
+  --fs-h3: 36px;
+  --fs-h4: 28px;
+  --fs-h5: 22px;
+  --fs-h6: 20px;
+  --fs-b1: 14px;
+  --fs-b2: 16px;
+  --fs-b3: 18px;
+  --fs-b4: 22px;
+
+  /** @transition value declaration */
+  --transition: all .3s ease-in-out;
+  --transition-5: all .5s ease-in-out;
+}
+
+$white: #FFFFFF;
+$black: #222222;
+$black-light: #363636;
+$placeholder: #5E5E5E;
+$primary: #8A27D1;
+$secondary: #AF62E7;
+$body-text: #5E5E5E;
+$label: #0A0A0A;
+$rating: #FEC300;
+$text-muted: #6c757d;
+$bg-primary: #F5F5F5;
+$bg-secondary: #EDF3F5;
+$border-primary: #D9D9D9;

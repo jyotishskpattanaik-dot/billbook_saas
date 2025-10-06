@@ -1,0 +1,44 @@
+
+
+=== MAIL 2025-10-06 14:52:29 ===
+To: bhumika@gmail.com
+Subject: Welcome to BillBook - Your Account is Ready!
+
+
+        <h2>Welcome to billbook.in, bhumika!</h2>
+        <p>Thank you for signing up. Your account has been created successfully.</p>
+        <div class='credentials-box'>
+            <h3>Your Login Credentials:</h3>
+            <p><strong>Email:</strong> bhumika@gmail.com</p>
+            <p><strong>Password:</strong> <code>f98873beecce2cae</code></p>
+            <p><strong>Order Number:</strong> ORD-68E3BB8CDE529</p>
+            <p><strong>Plan:</strong> Free_trial</p>
+        </div>
+        <p><strong>Note:</strong> Please change your password after first login.</p>
+        <p style='text-align: center; margin: 30px 0;'>
+            <a href='http://localhost/public/login.php' class='button'>Login to Your Account</a>
+        </p>
+        <p>If you have any questions, feel free to contact our support team.</p>
+    
+
+=== MAIL 2025-10-06 15:28:19 ===
+To: dollyrout@gmail.com
+Subject: Welcome to BillBook - Your Account is Ready!
+
+
+        <h2>Welcome to billbook.in, Dolly!</h2>
+        <p>Thank you for signing up. Your account has been created successfully.</p>
+        <div class='credentials-box'>
+            <h3>Your Login Credentials:</h3>
+            <p><strong>Email:</strong> dollyrout@gmail.com</p>
+            <p><strong>Password:</strong> <code>9ae88882a15061a7</code></p>
+            <p><strong>Order Number:</strong> ORD-68E3C3F2EA9CB</p>
+            <p><strong>Plan:</strong> Free_trial</p>
+        </div>
+        <p><strong>Note:</strong> Please change your password after first login.</p>
+        <p style='text-align: center; margin: 30px 0;'>
+            <a href='http://localhost/public/login.php' class='button'>Login to Your Account</a>
+        </p>
+        <p>If you have any questions, feel free to contact our support team.</p>
+    
+

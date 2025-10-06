@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /billbook.in/
+
+# Redirect to index.php if the URL doesn't match an actual file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]

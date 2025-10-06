@@ -1,0 +1,63 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  3.3.1 Cart css
+/*----------------------------------------*/
+
+.ap-cart {
+    &-content {
+        margin-inline-end: 30px;
+
+        @media #{$lg,$md,$sm,$xs} {
+            margin-inline-end: 0;
+        }
+    }
+
+    &-table {
+        margin-bottom: 15px;
+
+        thead {
+            tr {
+                th {
+                    font-family: var(--font-title);
+                    font-size: 18px;
+                    color: var(--color-theme-black);
+                }
+            }
+        }
+    }
+
+    &-thumb {
+        width: 105px;
+
+        img {
+            width: 75px;
+            height: 75px;
+            border-radius: 4px;
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    &-coupon-input {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        white-space: nowrap;
+
+        @media #{$xs} {
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+    }
+}
+
+.removeRow {
+    color: var(--color-danger);
+}

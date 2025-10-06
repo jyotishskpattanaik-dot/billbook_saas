@@ -1,0 +1,262 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.5 faq css
+/*----------------------------------------*/
+
+.ap-common {
+    &-faq {
+        .accordion-item {
+            margin-bottom: 25px;
+            background: #FFFFFF;
+            border-radius: 12px;
+            border: none;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .accordion-button {
+            font-size: 22px;
+            font-weight: var(--fw-medium);
+            font-family: var(--font-title);
+            text-transform: capitalize;
+            color: var(--color-theme-black);
+            background-color: transparent;
+            border-bottom: none;
+            box-shadow: none;
+            padding: 20px 70px 20px 25px;
+            margin-bottom: 0;
+            outline: none;
+            border: 1px solid rgba(217, 217, 217, 0.5);
+            border-radius: 12px !important;
+            transition: all 0.3s ease-in-out;
+
+            &:not(.collapsed) {
+                position: relative;
+                border-radius: 12px 12px 0 0 !important;
+                border: 1px solid rgba(138, 39, 209, 0.2);
+                border-bottom: none !important;
+                background: #F7F5FB;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    inset-inline-start: 50%;
+                    inset-block-end: 0;
+                    transform: translateX(-50%);
+                    width: calc(100% - 50px);
+                    height: 1px;
+                    background-color: #dedede;
+                    transition: all 0.3s ease-in-out;
+
+                    @include rtl {
+                        inset-inline-start: auto;
+                        inset-inline-end: 50%;
+                    }
+                }
+            }
+
+            &:focus {
+                z-index: 3;
+                outline: 0;
+                box-shadow: none;
+            }
+
+            &::after {
+                -webkit-flex-shrink: 0;
+                -ms-flex-negative: 0;
+                flex-shrink: 0;
+                width: auto;
+                height: auto;
+                border-radius: 50%;
+                margin-inline-start: auto;
+                content: "\e902";
+                font-family: var(--font-icomoon);
+                font-size: 22px;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                position: absolute;
+                inset-inline-end: 28px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-image: none;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 28px;
+                height: 28px;
+                background-color: transparent;
+                color: var(--color-theme-black);
+            }
+
+            &:not(.collapsed)::after {
+                transform: translateY(-50%) rotate(-180deg);
+                width: 28px;
+                height: 28px;
+                background-color: transparent;
+                color: var(--color-primary);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
+        .accordion-body {
+            padding: 30px 35px 30px 25px;
+            font-size: 16px;
+            color: rgba($color: $black-light, $alpha: .80);
+            background: #F7F5FB;
+            border: 1px solid rgba(138, 39, 209, 0.2);
+            border-top: none;
+            border-radius: 0 0 12px 12px;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &-faq-two {
+        .accordion-item {
+            border-radius: 0px;
+            color: var(--color-black);
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid var(--color-border-primary);
+            padding-inline-start: 20px;
+            padding-inline-end: 10px;
+            padding-top: 21px;
+            padding-bottom: 22px;
+        }
+
+        .accordion-button {
+            font-size: 20px;
+            font-weight: var(--fw-semibold);
+            font-weight: var(--fw-medium);
+            font-family: var(--font-body);
+            padding: 0 0;
+            padding-inline-end: 35px;
+            transition: all 0.3s ease-in-out;
+            background: transparent;
+            color: var(--color-theme-black);
+
+            &::after {
+                -webkit-flex-shrink: 0;
+                -ms-flex-negative: 0;
+                flex-shrink: 0;
+                width: auto;
+                height: auto;
+                border-radius: 50%;
+                margin-inline-start: auto;
+                content: "\e94f";
+                font-family: var(--font-icomoon);
+                font-size: 16px;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                position: absolute;
+                inset-inline-end: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-image: none;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 28px;
+                height: 28px;
+                background-color: transparent;
+                color: var(--color-black-light);
+                border: 1px solid var(--color-border-primary);
+            }
+
+            &:not(.collapsed)::after {
+                content: "\e94c";
+                font-family: var(--font-icomoon);
+                width: 28px;
+                height: 28px;
+                background-color: transparent;
+                color: var(--color-primary);
+                border: 1px solid var(--color-primary);
+                transition: all 0.3s ease-in-out;
+            }
+
+            &:not(.collapsed) {
+                background-color: transparent;
+                box-shadow: none;
+                border-radius: 6px 6px 0 0 !important;
+                margin-bottom: 25px;
+            }
+        }
+
+        .accordion-body {
+            color: #5A5471;
+            padding: 0 0;
+        }
+    }
+}
+
+.ap-faq {
+    &-content {
+        padding: 0 66px;
+
+        @media #{$xl,$lg,$md,$sm,$xs} {
+            padding: 0 0;
+        }
+    }
+
+    &-more {
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 60px;
+            font-size: 18px;
+            font-weight: var(--fw-semibold);
+            color: var(--color-theme-black);
+            gap: 10px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: var(--color-primary);
+            }
+        }
+    }
+
+    &-shape-1 {
+        position: absolute;
+        inset-inline-start: 117px;
+        inset-block-start: 486px;
+
+        @media #{$x4l,$x3l,$xxl} {
+            inset-inline-start: 50px;
+        }
+    }
+
+    &-shape-2 {
+        position: absolute;
+        inset-inline-end: 140px;
+        inset-block-start: 151px;
+
+        @media #{$x4l,$x3l,$xxl} {
+            inset-inline-end: 50px;
+        }
+    }
+
+    &-two {
+        margin-inline-end: 55px;
+
+        @media #{$lg,$md,$sm,$xs} {
+            margin-inline-end: 0px;
+        }
+    }
+
+    &-list-item {
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &-list-title {
+        margin-bottom: 15px;
+    }
+
+    &-list-desc {
+        color: rgba($color: $black-light, $alpha: .80);
+    }
+}

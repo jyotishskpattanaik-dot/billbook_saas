@@ -1,0 +1,8 @@
+#productDetails input.form-control {
+  font-size: 12px;
+  padding: 2px 4px;
+  height: auto;
+}
+#productDetails td {
+  vertical-align: middle;
+}

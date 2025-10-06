@@ -1,0 +1,298 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.11 testimonial css
+/*----------------------------------------*/
+
+.ap-testimonial {
+    &-item {
+        background-color: #F7F5FB;
+        border-radius: 8px;
+        padding: 35px 30px;
+
+        &.style-two {
+            background-color: var(--color-bg-7);
+
+            .ap-testimonial-desc {
+                color: var(--color-body-text-2);
+            }
+
+            .ap-testimonial-meta-content {
+                .name {
+                    color: var(--color-white);
+                }
+
+                .role {
+                    color: var(--color-body-text-2);
+                }
+            }
+        }
+    }
+
+    &-brand {
+        margin-bottom: 30px;
+    }
+
+    &-desc {
+        color: var(--color-black-light);
+        margin-bottom: 25px;
+    }
+
+    &-meta {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        &-thumb {
+            img {
+                width: 55px;
+                height: 55px;
+                border-radius: 100%;
+            }
+        }
+
+        &-content {
+            .role {
+                font-size: 14px;
+                color: var(--color-black-light);
+            }
+        }
+    }
+}
+
+/* testimonial style two */
+.ap-testimonial {
+    &-item-two {
+        background-color: var(--color-white);
+        padding: 60px 100px;
+        text-align: center;
+
+        @media #{$md} {
+            padding: 60px 60px;
+        }
+
+        @media #{$sm,$xs} {
+            padding: 30px 30px;
+        }
+    }
+
+    &-two-desc {
+        font-size: 22px;
+        font-weight: var(--fw-medium);
+        margin-bottom: 35px;
+    }
+
+    &-meta-two {
+        margin-bottom: 30px;
+    }
+
+    &-two-rating {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+
+        i {
+            color: var(--color-rating);
+            font-size: 20px;
+        }
+    }
+
+    &-slide-thumb {
+        width: 86px;
+        height: 86px;
+        border-radius: 100%;
+        padding: 8px;
+        border: 1px solid #fbf3ec;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        margin-bottom: 2px;
+        margin-top: 55px;
+
+        @media #{$sm,$xs} {
+            width: 60px;
+            height: 60px;
+            margin-top: 30px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+        }
+    }
+
+    &-shape {
+        position: absolute;
+        inset-block-start: 159px;
+        inset-inline-start: 111px;
+    }
+}
+
+.testimonialSlideActiveTwoThumbs {
+    .swiper-slide {
+        width: auto !important;
+
+        &.swiper-slide-thumb-active {
+            .ap-testimonial-slide-thumb {
+                border-color: rgba($color: $primary, $alpha: .50);
+            }
+        }
+    }
+}
+
+/* testimonial style two end */
+
+/* testimonial style three */
+.ap-testimonial-three {
+    &-thumb-wrapper {
+        -webkit-clip-path: polygon(45% 1.33975%, 46.5798% 0.60307%, 48.26352% 0.15192%, 50% 0%, 51.73648% 0.15192%, 53.4202% 0.60307%, 55% 1.33975%, 89.64102% 21.33975%, 91.06889% 22.33956%, 92.30146% 23.57212%, 93.30127% 25%, 94.03794% 26.5798%, 94.48909% 28.26352%, 94.64102% 30%, 94.64102% 70%, 94.48909% 71.73648%, 94.03794% 73.4202%, 93.30127% 75%, 92.30146% 76.42788%, 91.06889% 77.66044%, 89.64102% 78.66025%, 55% 98.66025%, 53.4202% 99.39693%, 51.73648% 99.84808%, 50% 100%, 48.26352% 99.84808%, 46.5798% 99.39693%, 45% 98.66025%, 10.35898% 78.66025%, 8.93111% 77.66044%, 7.69854% 76.42788%, 6.69873% 75%, 5.96206% 73.4202%, 5.51091% 71.73648%, 5.35898% 70%, 5.35898% 30%, 5.51091% 28.26352%, 5.96206% 26.5798%, 6.69873% 25%, 7.69854% 23.57212%, 8.93111% 22.33956%, 10.35898% 21.33975%);
+        clip-path: polygon(45% 1.33975%, 46.5798% 0.60307%, 48.26352% 0.15192%, 50% 0%, 51.73648% 0.15192%, 53.4202% 0.60307%, 55% 1.33975%, 89.64102% 21.33975%, 91.06889% 22.33956%, 92.30146% 23.57212%, 93.30127% 25%, 94.03794% 26.5798%, 94.48909% 28.26352%, 94.64102% 30%, 94.64102% 70%, 94.48909% 71.73648%, 94.03794% 73.4202%, 93.30127% 75%, 92.30146% 76.42788%, 91.06889% 77.66044%, 89.64102% 78.66025%, 55% 98.66025%, 53.4202% 99.39693%, 51.73648% 99.84808%, 50% 100%, 48.26352% 99.84808%, 46.5798% 99.39693%, 45% 98.66025%, 10.35898% 78.66025%, 8.93111% 77.66044%, 7.69854% 76.42788%, 6.69873% 75%, 5.96206% 73.4202%, 5.51091% 71.73648%, 5.35898% 70%, 5.35898% 30%, 5.51091% 28.26352%, 5.96206% 26.5798%, 6.69873% 25%, 7.69854% 23.57212%, 8.93111% 22.33956%, 10.35898% 21.33975%);
+        background-color: var(--color-bg-8);
+        display: block;
+        height: 600px;
+        width: 600px;
+        text-align: center;
+        flex: 0 0 auto;
+        -webkit-transition: all 0.6s ease-out 0s;
+        -moz-transition: all 0.6s ease-out 0s;
+        -ms-transition: all 0.6s ease-out 0s;
+        -o-transition: all 0.6s ease-out 0s;
+        transition: all 0.6s ease-out 0s;
+        position: relative;
+        overflow: hidden;
+
+        @media #{$xl} {
+            height: 500px;
+            width: 500px;
+        }
+
+        @media #{$lg} {
+            height: 450px;
+            width: 450px;
+        }
+
+        @media #{$sm} {
+            height: 450px;
+            width: 450px;
+            margin: 0 auto;
+        }
+
+        @media #{$xs} {
+            height: 360px;
+            width: 360px;
+            margin: 0 auto;
+        }
+    }
+
+    &-thumb {
+        position: absolute;
+        inset-block-start: 20px;
+        inset-inline-start: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+
+        @include rtl {
+            inset-inline-start: auto;
+            inset-inline-end: 50%;
+        }
+    }
+
+    &-thumb-shape {
+        position: absolute;
+        inset-block-start: 50px;
+        inset-inline-start: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+
+        @include rtl {
+            inset-inline-start: auto;
+            inset-inline-end: 50%;
+        }
+    }
+
+    &-video {
+        position: absolute;
+        inset-block-start: 160px;
+        inset-inline-end: 100px;
+
+        @media #{$xl,$lg,$sm} {
+            inset-block-start: 120px;
+            inset-inline-end: 50px;
+        }
+
+        @media #{$xs} {
+            inset-block-start: 100px;
+            inset-inline-end: 30px;
+        }
+    }
+
+    &-content {
+        position: relative;
+    }
+
+    &-rating {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 6px;
+        margin-bottom: 20px;
+
+        i {
+            color: var(--color-rating);
+            font-size: 20px;
+        }
+    }
+
+    &-desc {
+        font-family: var(--font-title);
+        font-weight: 400;
+        font-size: 24px;
+        color: var(--color-black-light);
+    }
+
+    &-meta {
+        .name {
+            margin-bottom: 8px;
+        }
+
+        .role {
+            color: rgba($color: $black-light, $alpha: .70);
+        }
+    }
+
+    &-quote {
+        position: absolute;
+        inset-block-end: -40px;
+        inset-inline-end: 0;
+    }
+}
+
+.ap-testimonial-navigation {
+    button {
+        width: 50px;
+        height: 50px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        background-color: transparent;
+        border: 1px solid var(--color-primary);
+        border-radius: 6px;
+        color: var(--color-primary);
+        transition: all 0.3s ease-in-out;
+
+        i {
+            @include rtl {
+                transform: rotate(-180deg);
+            }
+        }
+
+        &:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+    }
+}
+
+/* testimonial style three end */

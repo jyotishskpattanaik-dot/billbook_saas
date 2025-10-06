@@ -1,0 +1,13 @@
+<!-- Product Picker (no <form> tag) -->
+<div class="product-picker position-relative">
+  <input type="hidden" id="product_id">
+  <div class="input-group">
+    <input type="text" class="form-control" id="product_name" placeholder="Type product name…">
+    <div class="input-group-append">
+      <button type="button" class="btn btn-outline-secondary" id="btnAddProduct">➕</button>
+    </div>
+  </div>
+
+  <!-- live suggestions (for later JS use, if needed) -->
+  <div id="product_suggestions" class="list-group position-absolute w-100" style="z-index: 1051; display:none;"></div>
+</div>

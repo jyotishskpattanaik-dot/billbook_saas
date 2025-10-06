@@ -1,0 +1,297 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.16 Short codes CSS Start
+/*----------------------------------------*/
+
+.sidebar-sticky {
+    position: sticky;
+    top: 100px;
+}
+
+.pos-center {
+    position: absolute;
+    top: 50%;
+    inset-inline-start: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+/* Text Underline */
+.underline {
+    & a {
+        display: inline;
+        background-image: linear-gradient(var(--color-primary), var(--color-primary)), linear-gradient(var(--color-primary), var(--color-primary));
+        background-size: 0% 1px, 0 1px;
+        background-position: 100% 100%, 0 83%;
+        background-repeat: no-repeat;
+        transition: background-size 0.4s linear;
+        padding-bottom: 2px;
+
+        &:hover {
+            background-size: 0 1px, 100% 1px;
+        }
+    }
+
+    &-two {
+        & a {
+            background-image: linear-gradient(var(--color-secondary), var(--color-secondary)), linear-gradient(var(--color-secondary), var(--color-secondary));
+
+            &:hover {
+                color: var(--color-secondary) !important;
+            }
+        }
+    }
+
+    &-white {
+        & a {
+            background-image: linear-gradient(var(--color-theme-white), var(--color-theme-white)), linear-gradient(var(--color-theme-white), var(--color-theme-white));
+
+            &:hover {
+                color: var(--color-theme-white) !important;
+            }
+        }
+    }
+}
+
+/* display flex */
+.flex-wrap-small {
+    @media #{$sm,$xs} {
+        flex-wrap: wrap !important;
+    }
+}
+
+.d-flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.d-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-flex-start {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.d-flex-items {
+    display: flex;
+    align-items: center;
+}
+
+.d-flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.direction-column {
+    flex-direction: column;
+}
+
+/* justify-content */
+.justify-start {
+    justify-content: start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-between-center {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+/*  align-items */
+.align-start {
+    align-items: start;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: end;
+}
+
+/* gap */
+.gap-05 {
+    gap: 5px;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.gap-15 {
+    gap: 15px;
+}
+
+.gap-16 {
+    gap: 16px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.gap-25 {
+    gap: 25px;
+}
+
+.gap-30 {
+    gap: 30px;
+}
+
+.gap-35 {
+    gap: 35px;
+}
+
+/* Border Radius */
+.radius-0 {
+    border-radius: 0px;
+}
+
+.radius-4 {
+    border-radius: 4px;
+}
+
+.radius-5 {
+    border-radius: 5px;
+}
+
+.radius-6 {
+    border-radius: 6px;
+}
+
+.radius-8 {
+    border-radius: 8px;
+}
+
+.radius-10 {
+    border-radius: 10px;
+}
+
+.radius-12 {
+    border-radius: 12px;
+}
+
+.radius-16 {
+    border-radius: 16px;
+}
+
+.radius-24 {
+    border-radius: 16px;
+}
+
+.radius-50 {
+    border-radius: 50px;
+}
+
+/* width */
+.w-50p {
+    width: 50%;
+}
+
+.w-100p {
+    width: 100%;
+}
+
+/* line height */
+.lh-1 {
+    line-height: 1;
+}
+
+/* List Style None */
+.list-none {
+    list-style-type: none;
+}
+
+/* Font Family */
+.font-body {
+    font-family: var(--font-body);
+}
+
+.font-title {
+    font-family: var(--font-title)
+}
+
+/* Font Size */
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-15 {
+    font-size: 15px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-17 {
+    font-size: 17px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+/* Font Weight */
+.fw-1 {
+    font-weight: var(--fw-thin);
+}
+
+.fw-2 {
+    font-weight: var(--fw-elight);
+}
+
+.fw-3 {
+    font-weight: var(--fw-light);
+}
+
+.fw-4 {
+    font-weight: var(--fw-regular);
+}
+
+.fw-5 {
+    font-weight: var(--fw-medium);
+}
+
+.fw-6 {
+    font-weight: var(--fw-semibold);
+}
+
+.fw-7 {
+    font-weight: var(--fw-bold);
+}
+
+.fw-8 {
+    font-weight: var(--fw-ebold);
+}
+
+.fw-9 {
+    font-weight: var(--fw-black);
+}
+.accordion-button:focus {
+    box-shadow: none;
+}
+/*----------------------------------------*/
+/*  2.16 Short codes CSS End
+/*----------------------------------------*/

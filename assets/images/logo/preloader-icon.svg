@@ -1,0 +1,43 @@
+<svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 0.866025C21.9282 0.330127 23.0718 0.330127 24 0.866025L40.4856 10.384C41.4138 10.9199 41.9856 11.9103 41.9856 12.9821V32.018C41.9856 33.0897 41.4138 34.0801 40.4856 34.616L24 44.134C23.0718 44.6699 21.9282 44.6699 21 44.134L4.51443 34.616C3.58623 34.0801 3.01443 33.0897 3.01443 32.0179V12.982C3.01443 11.9103 3.58623 10.9199 4.51443 10.384L21 0.866025Z" fill="url(#paint0_radial_597_1003)"/>
+<mask id="mask0_597_1003" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="18" y="8" width="14" height="25">
+<path d="M25.3458 32.8259C42.0389 23.1968 20.627 14.6753 23.0642 8.18277C10.6215 13.5224 30.5876 26.0927 25.3458 32.8259Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_597_1003)">
+<mask id="mask1_597_1003" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="9" y="7" width="34" height="27">
+<path d="M42.6991 9.09881L10.8984 7.61523L9.75273 32.0984L41.5534 33.582L42.6991 9.09881Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_597_1003)">
+<rect width="31.9117" height="24.5866" transform="matrix(0.998914 0.0466017 -0.0467445 0.998907 11.7148 7.65319)" fill="url(#paint1_linear_597_1003)"/>
+<foreignObject x="-1.43359" y="-4.34681" width="57.0254" height="50.0468"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(6px);clip-path:url(#bgblur_0_597_1003_clip_path);height:100%;width:100%"></div></foreignObject><rect data-figma-bg-blur-radius="12" width="31.9117" height="24.5866" transform="matrix(0.998914 0.0466017 -0.0467445 0.998907 11.7148 7.65319)" fill="white" fill-opacity="0.03"/>
+</g>
+</g>
+<mask id="mask2_597_1003" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="14" y="17" width="10" height="20">
+<path d="M18.5681 36.0473C31.5469 29.2551 15.5523 22.1157 17.6063 17.261C7.98965 20.9281 22.7597 31.0973 18.5681 36.0473Z" fill="white"/>
+</mask>
+<g mask="url(#mask2_597_1003)">
+<mask id="mask3_597_1003" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6" y="16" width="27" height="22">
+<path d="M32.4894 18.5689L8.38477 16.4505L6.74876 35.0085L30.8534 37.127L32.4894 18.5689Z" fill="white"/>
+</mask>
+<g mask="url(#mask3_597_1003)">
+<rect width="32.3408" height="23.7533" transform="matrix(0.99616 0.0875487 -0.0878154 0.996137 7.33984 13.008)" fill="url(#paint2_linear_597_1003)"/>
+<foreignObject x="-6.74609" y="1.008" width="58.3027" height="50.4929"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(6px);clip-path:url(#bgblur_1_597_1003_clip_path);height:100%;width:100%"></div></foreignObject><rect data-figma-bg-blur-radius="12" width="32.3408" height="23.7533" transform="matrix(0.99616 0.0875487 -0.0878154 0.996137 7.33984 13.008)" fill="white" fill-opacity="0.03"/>
+</g>
+</g>
+<defs>
+<clipPath id="bgblur_0_597_1003_clip_path" transform="translate(1.43359 4.34681)"><rect width="31.9117" height="24.5866" transform="matrix(0.998914 0.0466017 -0.0467445 0.998907 11.7148 7.65319)"/>
+</clipPath><clipPath id="bgblur_1_597_1003_clip_path" transform="translate(6.74609 -1.008)"><rect width="32.3408" height="23.7533" transform="matrix(0.99616 0.0875487 -0.0878154 0.996137 7.33984 13.008)"/>
+</clipPath><radialGradient id="paint0_radial_597_1003" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(22.5 23.5) rotate(90) scale(52 52.0005)">
+<stop stop-color="#F0F0F0"/>
+<stop offset="1" stop-color="#C766FF"/>
+</radialGradient>
+<linearGradient id="paint1_linear_597_1003" x1="11.8764" y1="0.561986" x2="15.956" y2="24.5866" gradientUnits="userSpaceOnUse">
+<stop stop-color="#AF40FF"/>
+<stop offset="1" stop-color="#8500E6"/>
+</linearGradient>
+<linearGradient id="paint2_linear_597_1003" x1="11.1614" y1="2.8403" x2="14.2955" y2="21.5578" gradientUnits="userSpaceOnUse">
+<stop stop-color="#AF40FF"/>
+<stop offset="1" stop-color="#8500E4"/>
+</linearGradient>
+</defs>
+</svg>

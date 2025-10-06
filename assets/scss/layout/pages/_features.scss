@@ -1,0 +1,131 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.6 feature css
+/*----------------------------------------*/
+.ap-feature {
+    &-tab {
+        margin-bottom: 60px;
+
+        @media #{$lg,$md,$sm,$xs} {
+            margin-bottom: 40px;
+        }
+
+        .nav-pills {
+            justify-content: space-between;
+            position: relative;
+            padding: 0 19px;
+            z-index: 5;
+
+            @media #{$xl,$lg,$md,$sm,$xs} {
+                padding: 0 0;
+            }
+
+            @media #{$md,$sm,$xs} {
+                display: flex;
+                gap: 50px;
+                flex-wrap: nowrap;
+                overflow-y: hidden;
+                overflow-x: auto;
+                white-space: nowrap;
+                scrollbar-width: thin;
+                justify-content: start;
+                padding-bottom: 15px;
+            }
+        }
+
+        .nav-link {
+            display: block;
+            padding: 0 50px 10px;
+            font-size: 22px;
+            font-weight: var(--fw-medium);
+            text-decoration: none;
+            text-transform: capitalize;
+            border-radius: 0;
+            transition: all 0.3s ease-in-out;
+            color: var(--color-theme-black);
+            background-color: transparent;
+            border-bottom: 1px solid var(--color-theme-black);
+            position: relative;
+
+            @media #{$lg,$md,$sm,$xs} {
+                padding: 0 20px 10px;
+            }
+        }
+
+        .nav-pills .nav-link.active,
+        .nav-pills .show>.nav-link {
+            color: var(--color-primary);
+            border-color: var(--color-primary);
+            background-color: transparent;
+        }
+    }
+
+    &-tab-content {
+        & .tab-pane {
+            &.active {
+                & .row {
+                    animation: tab-bottom .4s linear;
+                }
+            }
+
+            & .row {
+                @at-root {
+                    @include keyframes(tab-bottom) {
+                        from {
+                            transform: translateY(30px);
+                        }
+
+                        to {
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-thumb {
+        margin-inline-start: 19px;
+        margin-inline-end: 19px;
+
+        @media #{$lg,$md,$sm,$xs} {
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        img {
+            border-radius: 12px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &-content {
+        margin-inline-start: 10px;
+
+        @media #{$lg,$md,$sm,$xs} {
+            margin-inline-start: 0px;
+        }
+    }
+
+    &-title {
+        font-size: 40px;
+        font-weight: var(--fw-medium);
+        margin-bottom: 20px;
+    }
+
+    &-desc {
+        margin-bottom: 30px;
+    }
+
+    &-shape {
+        position: absolute;
+        inset-block-end: 54px;
+        inset-inline-end: 305px;
+        @media #{$xl} {
+            inset-block-end: 0;
+            inset-inline-end: 0;
+        }
+    }
+}

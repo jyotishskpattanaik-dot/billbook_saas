@@ -1,0 +1,117 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.8 process css
+/*----------------------------------------*/
+
+.ap-process {
+    &-thumb {
+        margin-inline-end: 36px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+        }
+    }
+
+    &-item {
+        &-single {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            gap: 30px 39px;
+            border-bottom: 1px solid rgba(239, 239, 239, 0.15);
+            padding-bottom: 25px;
+            margin-bottom: 52px;
+
+            @media #{$sm,$xs} {
+                flex-wrap: wrap;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-icon {
+            width: 80px;
+            min-width: 80px;
+            height: 80px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(138, 39, 209, 0.3) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: var(--color-white);
+
+            svg,
+            img {
+                width: 36px;
+                height: 36px;
+            }
+        }
+
+        &-title {
+            color: var(--color-white);
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        &-desc {
+            font-size: 17px;
+            color: var(--color-body-text-2);
+        }
+
+        &-serial {
+            font-size: 130px;
+            font-weight: var(--fw-bold);
+            line-height: 1;
+            color: transparent;
+            white-space: nowrap;
+            -webkit-text-stroke: 2px var(--color-white);
+            opacity: .25;
+        }
+    }
+}
+
+.ap-process-shape {
+    position: absolute;
+    inset-block-end: 150px;
+    inset-inline-start: -50px;
+
+    @media #{$lg,$md,$sm,$xs} {
+        display: none;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        inset-inline-start: 15px;
+        inset-block-start: -40px;
+        width: 133.46px;
+        height: 143.79px;
+        background: #8A27D1;
+        border-radius: 100%;
+        filter: blur(100px);
+        z-index: -1;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        inset-inline-start: -20px;
+        inset-block-end: -50px;
+        width: 135.85px;
+        height: 146.17px;
+        background: #2C40C4;
+        border-radius: 100%;
+        filter: blur(100px);
+        z-index: -1;
+    }
+
+    img {
+        animation: round-shape 8s linear infinite;
+    }
+}

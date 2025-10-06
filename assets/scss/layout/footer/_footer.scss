@@ -1,0 +1,142 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.4.2 Footer Style
+/*----------------------------------------*/
+.ap-footer {
+    &-widget {
+        &-logo {
+            margin-bottom: 22px;
+
+            img {
+                max-width: 160px;
+            }
+        }
+
+        &-description {
+            font-size: 18px;
+            color: var(--color-white);
+            margin-bottom: 30px;
+        }
+
+        &-title {
+            color: var(--color-white);
+            font-size: 24px;
+            margin-bottom: 22px;
+        }
+
+        &-link {
+            ul {
+                li {
+                    list-style: none;
+
+                    &:not(:last-child) {
+                        margin-bottom: 8px;
+                    }
+
+                    & a {
+                        font-size: 16px;
+                        color: rgba($color: $white, $alpha: .75);
+                        font-weight: var(--fw-medium);
+                        position: relative;
+                        transition: 0.3s ease-in-out;
+
+                        &:hover {
+                            color: var(--color-white);
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-app-btn {
+            display: flex;
+            align-items: center;
+            gap: 10PX;
+        }
+    }
+
+    &-top-space {
+        padding-top: 330px;
+    }
+
+    &-dark {
+        .ap-footer-widget-description {
+            color: var(--color-body-text-2);
+        }
+
+        .ap-footer-widget-title {
+            color: rgba($color: $white, $alpha: .90);
+        }
+
+        .ap-footer-widget-link ul li a {
+            color: var(--color-body-text-2);
+
+            &:hover {
+                color: var(--color-primary);
+            }
+        }
+
+        .ap-app-btn {
+            background: transparent;
+            border: 1px solid var(--color-border-primary);
+        }
+
+        .ap-app-icon svg path {
+            fill: var(--color-body-text-2);
+        }
+
+        .ap-app-name {
+            color: var(--color-body-text-2);
+        }
+
+        .ap-app-slogan {
+            color: var(--color-body-text-2);
+        }
+    }
+
+    &-col-2 {
+        margin-inline-start: 70px;
+
+        @media #{$xl} {
+            margin-inline-start: 50px;
+        }
+
+        @media #{$lg,$md,$sm,$xs} {
+            margin-inline-start: 0;
+        }
+    }
+
+    &-col-4 {
+        margin-inline-start: -20px;
+
+        @media #{$lg,$md,$sm,$xs} {
+            margin-inline-start: 0;
+        }
+    }
+
+    &-2-col-2 {
+        margin-inline-start: 50px;
+
+        @media #{$md,$sm,$xs} {
+            margin-inline-start: 0;
+        }
+    }
+
+    &-2-col-3 {
+        margin-inline-start: 50px;
+
+        @media #{$md,$sm,$xs} {
+            margin-inline-start: 0;
+        }
+    }
+
+    &-2-col-4 {
+        margin-inline-start: 50px;
+
+        @media #{$lg,$md,$sm,$xs} {
+            margin-inline-start: 0;
+        }
+    }
+}

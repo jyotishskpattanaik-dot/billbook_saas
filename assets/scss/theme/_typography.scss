@@ -1,0 +1,305 @@
+@use '../utils' as *;
+
+/*---------------------------------
+	1.2 Typography SCSS
+---------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	color: var(--color-body-text);
+	font-family: var(--font-body);
+	font-size: var(--fs-body);
+	font-weight: normal;
+	line-height: 1.5;
+	background: var(--color-body);
+}
+
+.ap-dark-home {
+	background-color: var(--color-dark-bg);
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h5,
+h5,
+.h5,
+h6,
+.h6 {
+	color: var(--color-theme-black);
+	margin-top: 0px;
+	line-height: 1.3;
+	margin-bottom: 0;
+	font-weight: var(--fw-medium);
+	word-break: break-word;
+	font-family: var(--font-title);
+}
+
+h1,
+.h1 {
+	font-size: var(--fs-h1);
+
+	@media #{$xl,$lg} {
+		font-size: 50px;
+	}
+
+	@media #{$md,$sm,$xs} {
+		font-size: 42px;
+	}
+}
+
+h2,
+.h2 {
+	font-size: var(--fs-h2);
+
+	@media #{$lg,$md,$sm,$xs} {
+		font-size: 36px;
+	}
+}
+
+h3,
+.h3 {
+	font-size: var(--fs-h3);
+
+	@media #{$lg,$md,$sm,$xs} {
+		font-size: 32px;
+	}
+}
+
+h4,
+.h4 {
+	font-size: var(--fs-h4);
+}
+
+h5,
+.h5 {
+	font-size: var(--fs-h5);
+}
+
+h6,
+.h6 {
+	font-size: var(--fs-h6);
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+p {
+	font-size: var(--fs-p);
+	font-family: var(--font-p);
+	font-weight: var(--fw-normal);
+	color: var(--color-body-text);
+	margin-bottom: 25px;
+	line-height: 1.6;
+
+	&.b1 {
+		font-size: var(--fs-b1);
+		line-height: 1.714;
+	}
+
+	&.b2 {
+		font-size: var(--fs-b2);
+	}
+
+	&.b3 {
+		font-size: var(--fs-b3);
+	}
+
+	&.b4 {
+		font-size: var(--fs-b4);
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.b1 {
+	font-size: var(--fs-b1);
+}
+
+.b2 {
+	font-size: var(--fs-b2);
+}
+
+.b3 {
+	font-size: var(--fs-b3);
+}
+
+.b4 {
+	font-size: var(--fs-b4);
+}
+
+a {
+	text-decoration: none;
+}
+
+a,
+.btn,
+button,
+span,
+sub,
+sup,
+p,
+input,
+select,
+textarea,
+img,
+svg,
+.transition-3,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@extend %ap-transition-3;
+}
+
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+a:focus,
+a:hover {
+	// text-decoration: none;
+	// color: inherit;
+}
+
+a,
+button {
+	color: inherit;
+	outline: none;
+	border: none;
+	background: transparent;
+}
+
+img {
+	max-width: 100%;
+	object-fit: cover;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+button:focus {
+	outline: 0;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+hr:not([size]) {
+	margin: 0;
+	border-color: var(--color-border-primary);
+	opacity: 1;
+	border-width: 1px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+input[type="file"],
+input[type="url"],
+select,
+textarea {
+	outline: none;
+	background-color: transparent;
+	height: 50px;
+	width: 100%;
+	font-size: 16px;
+	@include border-radius(4px);
+	border: 1px solid var(--color-border-primary);
+	color: var(--color-theme-black);
+	padding-inline-start: 16px;
+	padding-inline-end: 16px;
+
+	&:focus {
+		border-color: var(--color-primary);
+	}
+}
+
+input[type="file"] {
+	&::file-selector-button {
+		font: var(--font-body);
+		-webkit-appearance: button;
+		margin-inline-start: -17px;
+		width: 115px;
+		height: 50px;
+		border: none;
+		border-radius: 6px 0 0 6px;
+		color: var(--color-theme-black);
+		cursor: pointer;
+		padding: 0 30px 0 25px;
+		font-size: 16px;
+		font-weight: var(--fw-medium);
+	}
+}
+
+textarea {
+	padding: 20px 25px;
+	min-height: 250px;
+	&:focus {
+		border-color: var(--color-primary);
+	}
+}
+
+*::-moz-selection {
+	background: var(--color-secondary);
+	color: var(--color-theme-white);
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: var(--color-primary);
+	color: var(--color-theme-white);
+	text-shadow: none;
+}
+
+::selection {
+	background: var(--color-primary);
+	color: var(--color-theme-white);
+	text-shadow: none;
+}
+
+*::-moz-placeholder {
+	opacity: 1;
+	font-size: 16px;
+	color: var(--color-placeholder);
+}
+
+*::placeholder {
+	opacity: 1;
+	font-size: 16px;
+	font-weight: 400;
+	font-family: var(--font-body);
+	color: var(--color-placeholder);
+}

@@ -1,0 +1,40 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.18 Video CSS Start
+/*----------------------------------------*/
+
+.ap-video {
+    &-thumb {
+        img {
+            border-radius: 24px;
+        }
+    }
+
+    &-area-shape-1 {
+        position: absolute;
+        inset-block-start: 97px;
+        inset-inline-start: 57px;
+
+        @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
+            display: none;
+        }
+    }
+
+    &-area-shape-2 {
+        position: absolute;
+        inset-block-start: -97px;
+        inset-inline-end: 0;
+        z-index: 9;
+
+        @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
+            display: none;
+        }
+        @include rtl {
+            transform: rotate(180deg);
+        }
+    }
+}
+/*----------------------------------------*/
+/*  2.18 Video CSS Start
+/*----------------------------------------*/

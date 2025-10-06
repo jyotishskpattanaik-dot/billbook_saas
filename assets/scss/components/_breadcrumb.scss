@@ -1,0 +1,129 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.5 Breadcrumb CSS Start
+/*----------------------------------------*/
+
+.ap-breadcrumb {
+    position: relative;
+    z-index: 2;
+    min-height: 350px;
+
+    &-area {
+        background-color: var(--color-bg-5);
+        position: relative;
+        overflow: hidden;
+    }
+
+    &-title {
+        color: var(--color-theme-white);
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    &-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+
+        span {
+            a {
+                font-size: 16px;
+                font-weight: var(--fw-medium);
+                color: var(--color-theme-white);
+            }
+        }
+
+        .current-item {
+            font-size: 16px;
+            font-weight: var(--fw-medium);
+            color: var(--color-theme-white);
+        }
+
+        .divider {
+            font-size: 16px;
+            font-weight: var(--fw-medium);
+            color: var(--color-theme-white);
+            margin-top: 5px;
+        }
+    }
+
+    &-bg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            opacity: 0.9;
+            background: rgba($color: $bg-primary, $alpha: .05);
+        }
+    }
+
+    &-glow-1 {
+        position: absolute;
+        content: "";
+        width: 50%;
+        height: 100px;
+        filter: blur(100px);
+        inset-inline-start: 0px;
+        inset-block-start: 50%;
+        transform: translateY(-50%);
+        background: #8A27D1;
+        z-index: -2;
+    }
+
+    &-glow-2 {
+        position: absolute;
+        content: "";
+        inset-inline-end: 0px;
+        inset-block-start: 50%;
+        transform: translateY(-50%);
+        width: 50%;
+        height: 100px;
+        filter: blur(100px);
+        background: #772EED;
+        z-index: -2;
+    }
+
+    &-glow-3 {
+        position: absolute;
+        content: "";
+        width: 50%;
+        height: 200px;
+        filter: blur(100px);
+        inset-inline-start: 50%;
+        inset-block-start: 50%;
+        transform: translate(-50%, -50%);
+        background: #772EED;
+        z-index: -1;
+    }
+
+    &-glow-4 {
+        position: absolute;
+        content: "";
+        inset-inline-end: 0px;
+        inset-block-start: 50%;
+        transform: translateY(-50%);
+        width: 200px;
+        height: 200px;
+        filter: blur(100px);
+        background: #8A27D1;
+        z-index: -1;
+        display: none;
+    }
+}
+/*----------------------------------------*/
+/*  2.5 Breadcrumb CSS End
+/*----------------------------------------*/

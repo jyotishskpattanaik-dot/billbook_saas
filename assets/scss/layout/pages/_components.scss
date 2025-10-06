@@ -1,0 +1,227 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.2 Components CSS
+/*----------------------------------------*/
+
+.ap-components-area {
+    &-line-shape {
+        position: absolute;
+        inset-inline-start: 260px;
+        inset-block-start: 295px;
+        z-index: -1;
+
+        @media #{$x4l} {
+            inset-inline-start: 150px;
+        }
+
+        @media #{$x3l} {
+            inset-inline-start: 115px;
+        }
+
+        @media #{$xxl} {
+            inset-inline-start: 30px;
+            width: 95%;
+        }
+
+        @media #{$xl} {
+            inset-inline-start: 30px;
+            width: 95%;
+        }
+
+        @media #{$lg,$md,$sm,$xs} {
+            display: none;
+        }
+
+        svg * {
+            path {
+                stroke-dasharray: 4;
+                stroke-dashoffset: 350;
+                -webkit-animation: pt-line-dash 30s linear forwards infinite;
+                animation: pt-line-dash 30s linear forwards infinite;
+            }
+        }
+    }
+
+    &-shape-1 {
+        position: absolute;
+        inset-inline-end: 0;
+        inset-block-start: 0;
+
+        @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
+            display: none;
+        }
+    }
+
+    &-shape-2 {
+        position: absolute;
+        inset-inline-start: -80px;
+        inset-block-start: 650px;
+
+        @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
+            display: none;
+        }
+    }
+
+    &-shape-3 {
+        position: absolute;
+        inset-inline-start: -100px;
+        inset-block-end: 500px;
+
+        @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
+            display: none;
+        }
+    }
+
+    &-shape-4 {
+        position: absolute;
+        inset-inline-end: -100px;
+        inset-block-end: 750px;
+
+        @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
+            display: none;
+        }
+    }
+}
+
+.ap-components-content {
+    margin-inline-start: 30px;
+
+    @media #{$md,$sm,$xs} {
+        margin-inline-start: 0;
+    }
+}
+
+/* Component Style-01 */
+.ap-design-components-section {
+    margin-bottom: 130px;
+
+    @media #{$lg} {
+        margin-bottom: 80px;
+    }
+
+    @media #{$md,$sm,$xs} {
+        margin-bottom: 60px;
+    }
+}
+
+.ap-components-thumb {
+    margin-inline-start: 26px;
+
+    &-shape-1 {
+        position: absolute;
+        inset-inline-start: 50%;
+        inset-block-start: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+
+        @include rtl {
+            inset-inline-start: auto;
+            inset-inline-end: 50%;
+        }
+    }
+
+    &-shape-2 {
+        position: absolute;
+        inset-block-start: 95px;
+        inset-inline-end: 26px;
+    }
+}
+
+/* Component Style-02 */
+.ap-ui-components-section {
+    padding-bottom: 130px;
+    padding-top: 130px;
+
+    @media #{$xl} {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    @media #{$lg} {
+        padding-bottom: 80px;
+        padding-top: 0;
+    }
+
+    @media #{$md,$sm,$xs} {
+        padding-bottom: 60px;
+        padding-top: 0;
+    }
+}
+
+.ap-components-two {
+    &-thumb {
+        text-align: center;
+
+        img {
+            border-radius: 12px;
+        }
+    }
+
+    &-thumb-shape-1 {
+        position: absolute;
+        inset-inline-start: 60px;
+        inset-block-start: 40px;
+        z-index: -1;
+    }
+
+    &-thumb-shape-2 {
+        position: absolute;
+        inset-inline-start: 45px;
+        inset-block-end: 50px;
+    }
+
+    &-thumb-shape-3 {
+        position: absolute;
+        inset-block-start: -150px;
+        inset-inline-start: 45px;
+
+        @media #{$xl} {
+            inset-block-start: -120px;
+        }
+    }
+
+    &-thumb-shape-4 {
+        position: absolute;
+        inset-block-start: -196px;
+        inset-inline-end: 30px;
+        z-index: -1;
+
+        @media #{$xl} {
+            inset-block-start: -140px;
+        }
+    }
+}
+
+/* Component Style-03 */
+.ap-dashboard-components-section {
+    padding-top: 100px;
+
+    @media #{$lg,$md,$sm,$xs} {
+        padding-top: 0;
+    }
+}
+
+.ap-components-three {
+    &-thumb-shape {
+        position: absolute;
+        inset-inline-start: 50%;
+        inset-block-start: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        z-index: -1;
+
+        @include rtl {
+            inset-inline-start: auto;
+            inset-inline-end: 50%;
+        }
+    }
+}
+
+/* pt-line-dash */
+@keyframes pt-line-dash {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}

@@ -1,0 +1,55 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.17 Social CSS Start
+/*----------------------------------------*/
+
+.ap-common-social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    a {
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #312529;
+        background-color: rgba($color: $secondary, $alpha: .20);
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: var(--color-white);
+            background-color: var(--color-secondary);
+        }
+    }
+
+    &.white {
+        a {
+            background-color: var(--color-white);
+
+            &:hover {
+                color: var(--color-primary);
+            }
+        }
+    }
+
+    &.dark {
+        a {
+            background-color: var(--color-bg-9);
+            border: 1px solid rgba($color: #B9B6BB, $alpha: .30);
+            color: var(--color-body-text-2);
+
+            &:hover {
+                color: var(--color-white);
+                background-color: var(--color-primary);
+                border-color: var(--color-primary);
+            }
+        }
+    }
+}
+/*----------------------------------------*/
+/*  2.17 Social CSS End
+/*----------------------------------------*/

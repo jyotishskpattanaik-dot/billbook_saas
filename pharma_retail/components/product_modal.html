@@ -1,0 +1,87 @@
+<!-- Add Product Modal (no nested form issues) -->
+<div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header py-2">
+        <h5 class="modal-title">➕ Add New Product</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body pt-2">
+        
+        <!-- ✅ Form starts here -->
+        <form id="addProductForm" action="javascript:void(0);">
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Product Name</label>
+              <input type="text" class="form-control" name="product_name" required>
+            </div>
+            <div class="form-group col-md-3">
+              <label>Company</label>
+              <input type="text" class="form-control" name="company" required>
+            </div>
+            <div class="form-group col-md-3">
+              <label>Category</label>
+              <input type="text" class="form-control" name="category" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Composition</label>
+              <input type="text" class="form-control" name="composition" required>
+            </div>
+            <div class="form-group col-md-3">
+              <label>Batch No</label>
+              <input type="text" class="form-control" name="batch_no" required>
+            </div>
+            <div class="form-group col-md-3">
+              <label>HSN Code</label>
+              <input type="text" class="form-control" name="hsn_code">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <label>Packing</label>
+              <input type="text" class="form-control" name="pack">
+            </div>
+            <div class="form-group col-md-3">
+              <label>MRP</label>
+              <input type="number" step="0.01" class="form-control" name="mrp">
+            </div>
+            <div class="form-group col-md-3">
+              <label>Rate</label>
+              <input type="number" step="0.01" class="form-control" name="rate">
+            </div>
+            <div class="form-group col-md-3">
+              <label>Expiry (YYYY-MM-DD)</label>
+              <input type="date" class="form-control" name="expiry_date">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label>SGST %</label>
+              <input type="number" step="0.01" class="form-control" name="sgst">
+            </div>
+            <div class="form-group col-md-4">
+              <label>CGST %</label>
+              <input type="number" step="0.01" class="form-control" name="cgst">
+            </div>
+            <div class="form-group col-md-4">
+              <label>IGST %</label>
+              <input type="number" step="0.01" class="form-control" name="igst">
+            </div>
+          </div>
+
+          <div class="text-right">
+            <button type="submit" class="btn btn-success">💾 Save Product</button>
+          </div>
+        </form>
+        <!-- ✅ Form ends here -->
+
+      </div>
+    </div>
+  </div>
+</div>

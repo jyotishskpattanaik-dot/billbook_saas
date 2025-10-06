@@ -1,0 +1,244 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  3.2.3 Postbox css
+/*----------------------------------------*/
+
+.ap-blog-details {
+    &-thumb {
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+        }
+    }
+
+    &-meta {
+        border-top: 1px solid var(--color-border-primary);
+        padding-top: 25px;
+        margin-bottom: 40px;
+    }
+
+    &-meta-item {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        .tagcloud a {
+            margin-top: 0;
+            margin-inline-end: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+
+        @media #{$sm,$xs} {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+.ap-postbox-single-title {
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+/* Post Author */
+.ap-blog-post-author {
+    &-box {
+        padding: 30px 30px;
+        border: 1px solid var(--color-border-primary);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        @media #{$sm,$xs} {
+            flex-wrap: wrap;
+        }
+    }
+
+    &-thumb {
+        width: 180px;
+        min-width: 180px;
+        height: 180px;
+        border-radius: 8px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+    }
+
+    &-name {
+        font-size: 26px;
+        margin-bottom: 7px;
+    }
+
+    &-role {
+        font-size: 16px;
+        color: var(--color-black);
+        margin-bottom: 10px;
+    }
+
+    &-bio {
+        color: #3D424F;
+    }
+}
+
+/* post comment */
+.ap-postbox-comment {
+    margin-bottom: 50px;
+
+    .children {
+        padding-inline-start: 70px;
+
+        @media #{$md,$sm} {
+            padding-inline-start: 30px;
+        }
+
+        @media #{$xs} {
+            padding-inline-start: 20px;
+        }
+    }
+
+    & li {
+        list-style: none;
+
+    }
+
+    &-box {
+        display: flex;
+        align-items: start;
+        gap: 30px;
+        border-bottom: 1px solid var(--color-border-primary);
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+
+        @media #{$xs} {
+            flex-wrap: wrap;
+        }
+    }
+
+    &-avatar {
+        flex: 0 0 auto;
+
+        img {
+            width: 110px;
+            height: 110px;
+            border-radius: 8px;
+        }
+    }
+
+    &-content {
+        width: 100%;
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    &-content-meta {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    &-author {
+        .title {
+            font-size: 26px;
+            line-height: 1;
+        }
+
+        .comment-date {
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--color-primary);
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+    }
+
+    &-reply {
+        a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            font-weight: var(--fw-medium);
+            line-height: 1;
+            color: var(--color-primary);
+            background: var(--color-bg-5);
+            border-radius: 4px;
+            width: 67px;
+            height: 28px;
+
+            &:hover {
+                color: var(--color-white);
+                background: var(--color-primary);
+            }
+        }
+    }
+}
+
+/* Comment Form */
+.ap-comment-form {
+    &-box {
+        padding: 40px 40px;
+        border: 1px solid var(--color-border-primary);
+        border-radius: 16px;
+
+        @media #{$sm,$xs} {
+            padding: 30px 30px;
+        }
+    }
+
+    &-input {
+        position: relative;
+
+        input {
+            padding-inline-start: 25px;
+            padding-inline-end: 60px;
+
+            &:focus {
+                &~ {
+                    .ap-comment-form-input-icon {
+                        color: var(--color-primary);
+                    }
+                }
+            }
+        }
+
+        textarea {
+            padding-inline-end: 60px;
+            resize: none;
+
+            &:focus {
+                &~ {
+                    .ap-comment-form-input-icon-textarea {
+                        color: var(--color-primary);
+                    }
+                }
+            }
+        }
+    }
+
+    &-input-icon {
+        position: absolute;
+        inset-inline-end: 25px;
+        inset-block-start: 50%;
+        transform: translateY(-50%);
+
+        &-textarea {
+            position: absolute;
+            inset-inline-end: 25px;
+            inset-block-start: 20px;
+        }
+    }
+}

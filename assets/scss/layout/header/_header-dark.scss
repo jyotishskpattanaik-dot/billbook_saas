@@ -1,0 +1,50 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.5.2 Header Dark Style
+/*----------------------------------------*/
+
+.ap-header-dark {
+	background: #0E0E0E;
+	border-bottom: 1px solid rgba(235, 235, 235, 0.1);
+
+	.ap-main-menu li a {
+		color: var(--color-theme-white);
+	}
+
+	.ap-header-btn .ap-header-link {
+		color: var(--color-theme-white);
+	}
+
+	.bar-icon span {
+		background: var(--color-theme-white);
+	}
+
+	&.ap-header-sticky {
+		background: var(--color-theme-black);
+	}
+
+	.ap-main-menu .mega-menu {
+		background-color: var(--color-theme-black);
+	}
+
+	.ap-home-menu-title {
+		color: var(--color-theme-white);
+	}
+
+	.ap-home-menu-thumb {
+		border-color: rgba(235, 235, 235, 0.1);
+	}
+
+	.ap-main-menu .submenu {
+		background-color: var(--color-theme-black);
+
+		li a {
+			color: var(--color-theme-white);
+		}
+	}
+
+	.ap-sidebar-toggle-icon span {
+		background: var(--color-theme-white);
+	}
+}

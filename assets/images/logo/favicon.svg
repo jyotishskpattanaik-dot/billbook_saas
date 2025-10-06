@@ -1,0 +1,41 @@
+<svg width="39" height="45" viewBox="0 0 39 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 0.866025C18.9282 0.330127 20.0718 0.330127 21 0.866025L37.4856 10.384C38.4138 10.9199 38.9855 11.9103 38.9855 12.9821V32.0179C38.9855 33.0897 38.4138 34.0801 37.4855 34.616L21 44.134C20.0718 44.6699 18.9282 44.6699 18 44.134L1.5144 34.616C0.5862 34.0801 0.0144043 33.0897 0.0144043 32.0179V12.982C0.0144043 11.9103 0.586201 10.9199 1.5144 10.384L18 0.866025Z" fill="url(#paint0_radial_2025_316)"/>
+<mask id="mask0_2025_316" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="15" y="8" width="14" height="25">
+<path d="M22.345 32.8259C39.0381 23.1968 17.6263 14.6753 20.0635 8.18277C7.62074 13.5224 27.5869 26.0927 22.345 32.8259Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_2025_316)">
+<mask id="mask1_2025_316" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6" y="7" width="34" height="27">
+<path d="M39.6979 9.09881L7.89722 7.61523L6.75151 32.0984L38.5522 33.582L39.6979 9.09881Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_2025_316)">
+<rect width="31.9117" height="24.5866" transform="matrix(0.998914 0.0466017 -0.0467445 0.998907 8.71289 7.65319)" fill="url(#paint1_linear_2025_316)"/>
+</g>
+</g>
+<mask id="mask2_2025_316" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="11" y="17" width="10" height="20">
+<path d="M15.5674 36.0473C28.5462 29.2551 12.5516 22.1157 14.6056 17.261C4.98891 20.9281 19.7589 31.0973 15.5674 36.0473Z" fill="white"/>
+</mask>
+<g mask="url(#mask2_2025_316)">
+<mask id="mask3_2025_316" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="3" y="16" width="27" height="22">
+<path d="M29.4882 18.5689L5.38354 16.4505L3.74754 35.0085L27.8522 37.127L29.4882 18.5689Z" fill="white"/>
+</mask>
+<g mask="url(#mask3_2025_316)">
+<rect width="32.3408" height="23.7533" transform="matrix(0.99616 0.0875487 -0.0878154 0.996137 4.3396 13.008)" fill="url(#paint2_linear_2025_316)"/>
+<foreignObject x="-9.74634" y="1.008" width="58.3025" height="50.4929"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(6px);clip-path:url(#bgblur_0_2025_316_clip_path);height:100%;width:100%"></div></foreignObject><rect data-figma-bg-blur-radius="12" width="32.3408" height="23.7533" transform="matrix(0.99616 0.0875487 -0.0878154 0.996137 4.3396 13.008)" fill="white" fill-opacity="0.03"/>
+</g>
+</g>
+<defs>
+<clipPath id="bgblur_0_2025_316_clip_path" transform="translate(9.74634 -1.008)"><rect width="32.3408" height="23.7533" transform="matrix(0.99616 0.0875487 -0.0878154 0.996137 4.3396 13.008)"/>
+</clipPath><radialGradient id="paint0_radial_2025_316" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(19.5 23.5) rotate(90) scale(52 52.0005)">
+<stop stop-color="#F0F0F0"/>
+<stop offset="1" stop-color="#C766FF"/>
+</radialGradient>
+<linearGradient id="paint1_linear_2025_316" x1="11.8764" y1="0.561986" x2="15.956" y2="24.5866" gradientUnits="userSpaceOnUse">
+<stop stop-color="#AF40FF"/>
+<stop offset="1" stop-color="#8500E6"/>
+</linearGradient>
+<linearGradient id="paint2_linear_2025_316" x1="11.1614" y1="2.8403" x2="14.2955" y2="21.5578" gradientUnits="userSpaceOnUse">
+<stop stop-color="#AF40FF"/>
+<stop offset="1" stop-color="#8500E4"/>
+</linearGradient>
+</defs>
+</svg>

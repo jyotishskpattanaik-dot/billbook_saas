@@ -1,0 +1,84 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  3.2.5 Sidebar css
+/*----------------------------------------*/
+.ap-blog-standard-wrapper {
+    margin-inline-end: -17px;
+
+    @media #{$lg,$md,$sm,$xs} {
+        margin-inline-end: 0;
+    }
+}
+
+.ap-blog-sidebar {
+    margin-inline-start: 47px;
+
+    @media #{$lg,$md,$sm,$xs} {
+        margin-inline-start: 0;
+    }
+}
+
+.ap-sidebar-search-form {
+    position: relative;
+
+    input {
+        width: 100%;
+        background-color: var(--color-white);
+        border-radius: 4px;
+        height: 50px;
+        padding-inline-start: 20px;
+        padding-inline-end: 55px;
+
+        &:focus {
+            border-color: var(--color-primary);
+        }
+    }
+
+    button {
+        font-size: 20px;
+        color: var(--color-theme-black);
+        position: absolute;
+        top: 50%;
+        inset-inline-end: 0;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+}
+
+.widget_categories {
+    ul {
+        li {
+            list-style: none;
+
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border: 1px solid var(--color-border-primary);
+                padding: 9px 18px 8px;
+                border-radius: 4px;
+                color: rgba($color: $black-light, $alpha: .60);
+                transition: all 0.3s ease-in-out;
+                font-size: 16px;
+                font-weight: var(--fw-medium);
+
+                &:hover {
+                    color: var(--color-primary);
+                }
+            }
+        }
+    }
+}

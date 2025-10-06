@@ -1,0 +1,322 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.1 About CSS
+/*----------------------------------------*/
+
+.ap-about {
+	&-thumb {
+		img {
+			border-radius: 16px;
+		}
+	}
+
+	&-thumb-shape {
+		position: absolute;
+		top: 16px;
+		inset-inline-end: 4px;
+	}
+
+	&-content {
+		margin-inline-start: 20px;
+
+		@media #{$xl,$lg,$md,$sm,$xs} {
+			margin-inline-start: 0;
+		}
+	}
+
+	&-list {
+		margin-bottom: 42px;
+	}
+
+	&-shape {
+		position: absolute;
+		inset-block-end: 0;
+		inset-inline-end: -160px;
+
+		img {
+			animation: round-shape 60s linear infinite;
+		}
+	}
+}
+
+/* about style two */
+.ap-about-two {
+	&-thumb {
+		img {
+			border-radius: 12px;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&-top-content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 30px;
+		margin-bottom: 30px;
+
+		@media #{$sm,$xs} {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	&-bottom-content {
+		background: linear-gradient(177.71deg, #FFFFFF -61.58%, #AF62E7 202.69%);
+		border-radius: 12px;
+		display: flex;
+		justify-content: space-between;
+		padding-top: 46px;
+		padding-inline-start: 35px;
+
+		@media #{$sm,$xs} {
+			flex-wrap: wrap;
+			gap: 30px;
+		}
+	}
+}
+
+.ap-about {
+	&-fun-fact {
+		&-box {
+			background: #FFFFFF;
+			box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.04);
+			border-radius: 12px;
+			padding: 55px 35px 60px 35px;
+
+			@media #{$sm,$xs} {
+				padding: 30px 30px 30px 30px;
+			}
+		}
+
+		&-number {
+			font-family: var(--font-body);
+			font-size: 56px;
+			font-weight: var(--fw-medium);
+			margin-bottom: 10px;
+			line-height: 1;
+			color: var(--color-theme-black);
+		}
+
+		&-title {
+			font-size: 22px;
+			color: #5A5471;
+		}
+	}
+
+	&-progress-box {
+		background: #FFFFFF;
+		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.04);
+		border-radius: 12px;
+		padding: 30px 30px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 30px;
+	}
+}
+
+.ap-radial {
+	&-progress {
+		position: relative;
+		display: inline-block;
+
+		&-single {
+			display: flex;
+			align-items: center;
+			gap: 50px;
+		}
+	}
+
+	&-icon {
+		position: absolute;
+		top: 43%;
+		width: 100%;
+		text-align: center;
+		transform: translateY(-50%);
+		color: var(--color-secondary);
+	}
+
+	&-content {
+		margin-top: -10px;
+	}
+
+	&-number {
+		font-size: 30px;
+		font-weight: var(--fw-semibold);
+		font-family: var(--font-title);
+		color: var(--color-theme-black);
+		margin-bottom: 2px;
+	}
+
+	&-title {
+		color: #5A5471;
+		font-size: 16px;
+	}
+}
+
+/* about style two end*/
+
+/* about style three */
+.ap-about-three-left {
+	&-content {
+		padding: 27px 31px 0;
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		border-radius: 12px;
+		background-color: var(--color-bg-7);
+	}
+
+	&-title {
+		font-size: 36px;
+		color: var(--color-white);
+		margin-bottom: 19px;
+	}
+
+	&-desc {
+		color: var(--color-body-text-2);
+		margin-bottom: 27px;
+	}
+
+	&-thumb {
+		img {
+			border-radius: 12px 12px 0 0;
+			width: 100%;
+		}
+	}
+}
+
+.ap-about-three-right {
+	&-top {
+		&-box {
+			padding: 20px 25px;
+			border: 1px solid rgba(255, 255, 255, 0.05);
+			border-radius: 12px;
+			background-color: var(--color-bg-7);
+			margin-bottom: 30px;
+		}
+
+		&-title {
+			font-size: 30px;
+			color: var(--color-white);
+			margin-bottom: 15px;
+		}
+
+		&-desc {
+			color: var(--color-body-text-2);
+			margin-bottom: 30px;
+		}
+
+		&-meta {
+			border-top: 1px solid rgba(239, 239, 239, 0.1);
+			padding-top: 35px;
+			display: flex;
+			align-items: center;
+			gap: 35px;
+
+			.meta-title {
+				font-size: 22px;
+				color: var(--color-white);
+			}
+		}
+	}
+
+	&-bottom {
+		&-box {
+			padding: 20px 25px 0;
+			border: 1px solid rgba(255, 255, 255, 0.05);
+			border-radius: 12px;
+			background-color: var(--color-bg-7);
+		}
+
+		&-title {
+			font-size: 30px;
+			color: var(--color-white);
+			margin-bottom: 30px;
+		}
+
+		&-thumb {
+			img {
+				border-radius: 12px 12px 0 0;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.ap-about-three-shape-1 {
+	position: absolute;
+	inset-block-end: -50px;
+	inset-inline-start: 90px;
+    @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
+        display: none;
+    }
+	&::after {
+		position: absolute;
+		content: "";
+		inset-inline-start: 15px;
+		inset-block-start: -40px;
+		width: 133.46px;
+		height: 143.79px;
+		background: #8A27D1;
+		border-radius: 100%;
+		filter: blur(100px);
+		z-index: -1;
+	}
+
+	&::before {
+		position: absolute;
+		content: "";
+		inset-inline-start: -20px;
+		inset-block-end: -50px;
+		width: 135.85px;
+		height: 146.17px;
+		background: #2C40C4;
+		border-radius: 100%;
+		filter: blur(100px);
+		z-index: -1;
+	}
+
+	img {
+		animation: round-shape 8s linear infinite;
+	}
+}
+
+.ap-about-three-shape-2 {
+	position: absolute;
+	inset-block-start: 130px;
+	inset-inline-end: 147px;
+    @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
+        display: none;
+    }
+	&::after {
+		position: absolute;
+		content: "";
+		inset-inline-start: 15px;
+		inset-block-start: -40px;
+		width: 133.46px;
+		height: 143.79px;
+		background: #8A27D1;
+		border-radius: 100%;
+		filter: blur(100px);
+		z-index: -1;
+	}
+
+	&::before {
+		position: absolute;
+		content: "";
+		inset-inline-start: -20px;
+		inset-block-end: -50px;
+		width: 135.85px;
+		height: 146.17px;
+		background: #2C40C4;
+		border-radius: 100%;
+		filter: blur(100px);
+		z-index: -1;
+	}
+
+	img {
+		animation: round-shape 8s linear infinite;
+	}
+}
+
+/* about style three end */

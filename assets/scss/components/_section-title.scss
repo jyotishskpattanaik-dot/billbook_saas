@@ -1,0 +1,154 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.15 Section Title CSS Start
+/*----------------------------------------*/
+
+.ap-section-icon {
+    margin-bottom: 11px;
+}
+
+.ap-section-subtitle {
+    color: var(--color-primary);
+    margin-bottom: 5px;
+    font-size: 16px;
+
+    &.line {
+        padding-inline-start: 30px;
+        position: relative;
+        display: inline-block;
+
+        &::before {
+            position: absolute;
+            content: "";
+            inset-inline-start: 0;
+            inset-block-start: 50%;
+            transform: translateY(-50%);
+            width: 25px;
+            height: 1px;
+            background-color: var(--color-primary);
+        }
+    }
+}
+
+.ap-section-title {
+    text-transform: capitalize;
+}
+
+.ap-section-title-small {
+    font-size: 18px;
+    color: rgba($color: $black-light, $alpha: .90);
+    font-weight: var(--fw-medium);
+    font-family: var(--font-body);
+}
+
+.ap-section-desc {
+    padding-top: 22px;
+}
+
+.ap-section-faq {
+    .accordion-item {
+        margin-bottom: 25px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
+        border-radius: 6px;
+    }
+
+    .accordion-button {
+        font-size: 18px;
+        font-weight: var(--fw-medium);
+        font-family: var(--font-title);
+        text-transform: capitalize;
+        border-radius: 6px !important;
+        color: var(--color-theme-black);
+        background-color: transparent;
+        border-bottom: none;
+        box-shadow: none;
+        padding: 20px 35px 20px 25px;
+        margin-bottom: 0;
+        outline: none;
+
+        &:not(.collapsed) {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                inset-inline-start: 50%;
+                inset-block-end: 0;
+                transform: translateX(-50%);
+                width: calc(100% - 50px);
+                height: 1px;
+                background-color: #dedede;
+
+                @include rtl {
+                    inset-inline-start: auto;
+                    inset-inline-end: 50%;
+                }
+            }
+        }
+
+        &:focus {
+            z-index: 3;
+            outline: 0;
+            box-shadow: none;
+        }
+
+        &::after {
+            -webkit-flex-shrink: 0;
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+            width: auto;
+            height: auto;
+            border-radius: 50%;
+            margin-inline-start: auto;
+            content: "\e902";
+            font-family: var(--font-icomoon);
+            font-size: 22px;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            position: absolute;
+            inset-inline-end: 28px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: none;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 28px;
+            height: 28px;
+            background-color: transparent;
+            color: var(--color-theme-black);
+        }
+
+        &:not(.collapsed)::after {
+            transform: translateY(-50%) rotate(-180deg);
+            width: 28px;
+            height: 28px;
+            background-color: transparent;
+            color: var(--color-primary);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .accordion-body {
+        padding: 30px 35px 30px 25px;
+        font-size: 16px;
+        color: rgba($color: $black-light, $alpha: .80);
+    }
+}
+
+.ap-section-box {
+    background: rgba($color: #FAF2FF, $alpha: .5);
+    border: 1px solid rgba(138, 39, 209, 0.3);
+    border-radius: 200px;
+    display: inline-block;
+    padding: 50px 130px;
+
+    @media #{$md,$sm,$xs} {
+        padding: 50px 50px;
+    }
+}
+/*----------------------------------------*/
+/*  2.15 Section Title CSS End
+/*----------------------------------------*/

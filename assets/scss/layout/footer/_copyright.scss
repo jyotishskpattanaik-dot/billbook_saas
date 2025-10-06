@@ -1,0 +1,39 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.4.1 Copyright Style
+/*----------------------------------------*/
+
+.ap-footer-copyright {
+    border-top: 1px solid rgba($color: $white, $alpha: .1);
+
+    &-text {
+        color: var(--color-white);
+        font-size: 16px;
+        a {
+            color: var(--color-white);
+            font-weight: var(--fw-medium);
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                opacity: .85;
+            }
+        }
+
+        &.color-2 {
+            color: var(--color-body-text-2);
+        }
+    }
+
+    &-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+        gap: 20px;
+
+        @media #{$sm,$xs} {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,237 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.9 Common CSS Start
+/*----------------------------------------*/
+
+section {
+    position: relative;
+    z-index: 5;
+}
+.ap-section-bg {
+    position: absolute;
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+    inset-block-start: 0;
+    width: 1720px;
+    height: 100%;
+    padding-inline-start: 100px;
+    padding-inline-end: 100px;
+    z-index: -1;
+
+    @include rtl {
+        inset-inline-start: auto;
+        inset-inline-end: 50%;
+    }
+
+    @media #{$x4l,$x3l,$xxl} {
+        padding-inline-start: 15px;
+        padding-inline-end: 15px;
+        width: 100%;
+    }
+
+    @media #{$xl,$lg,$md,$sm,$xs} {
+        padding-inline-start: 0px;
+        padding-inline-end: 0px;
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+.ap-list-item {
+    ul {
+        li {
+            list-style: none;
+            position: relative;
+            display: flex;
+            gap: 12px;
+            font-size: 18px;
+            font-weight: var(--fw-medium);
+            color: var(--color-black);
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            i {
+                color: var(--color-primary);
+                margin-top: 5px;
+            }
+
+            svg {
+                width: 18px;
+                height: 18px;
+                color: var(--color-primary);
+
+                path {
+                    fill: var(--color-primary);
+                }
+            }
+
+            img {
+                width: 18px;
+                height: 18px;
+                border-radius: 100%;
+            }
+        }
+    }
+}
+.ap-list-item-box {
+    ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        @media #{$lg,$sm,$xs} {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        li {
+            list-style: none;
+            position: relative;
+            display: flex;
+            gap: 12px;
+            font-size: 18px;
+            font-weight: var(--fw-medium);
+            color: var(--color-black);
+            padding: 12px 20px 11px;
+            background: #FEFEFE;
+            border: 1px solid #E0E0E0;
+            border-radius: 6px;
+
+            i {
+                color: var(--color-secondary);
+                margin-top: 5px;
+            }
+
+            svg {
+                width: 18px;
+                height: 18px;
+                color: var(--color-secondary);
+
+                path {
+                    fill: var(--color-secondary);
+                }
+            }
+
+            img {
+                width: 18px;
+                height: 18px;
+                border-radius: 100%;
+            }
+        }
+    }
+}
+.ap-common-thumb {
+    border-radius: 16px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+    }
+}
+.ap-text-link-primary {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--color-primary);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        color: var(--color-theme-black);
+    }
+
+    i {
+        @include rtl {
+            transform: rotate(-180deg);
+        }
+    }
+}
+.ap-text-link-secondary {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--color-secondary);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        color: var(--color-primary);
+    }
+
+    i {
+        @include rtl {
+            transform: rotate(-180deg);
+        }
+    }
+}
+.ap-text-link-white {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--color-white);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        color: var(--color-primary);
+    }
+
+    i {
+        @include rtl {
+            transform: rotate(-180deg);
+        }
+    }
+}
+.ap-text-link {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--color-theme-black);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        color: var(--color-primary);
+    }
+
+    i {
+        @include rtl {
+            transform: rotate(-180deg);
+        }
+    }
+}
+.ap-line-hover {
+    a {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 2px;
+            width: 100%;
+            height: 1px;
+            background: currentColor;
+            transform-origin: right top;
+            transform: scale(0, 1);
+            transition: transform 0.4s cubic-bezier(0.74, 0.72, 0.27, 0.24);
+        }
+
+        &:hover::before {
+            -webkit-transform-origin: left top;
+            -ms-transform-origin: left top;
+            transform-origin: left top;
+            -webkit-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            transform: scale(1, 1);
+        }
+    }
+}
+.font-title {
+    font-family: var(--font-title);
+}
+.font-body {
+    font-family: var(--font-body);
+}
+
+/*----------------------------------------*/
+/*  2.9 Common CSS End
+/*----------------------------------------*/

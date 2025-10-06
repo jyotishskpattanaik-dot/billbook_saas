@@ -1,0 +1,12 @@
+#product_suggestions {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+#product_suggestions .list-group-item {
+  cursor: pointer;
+}
+
+#product_suggestions .no-results {
+  cursor: default;
+}

@@ -1,0 +1,590 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.11 Integration CSS Start
+/*----------------------------------------*/
+
+.ap-integration {
+    &-brand-item {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        background-color: #FEFEFE;
+        filter: drop-shadow(0px 4px 20px rgba(138, 39, 209, 0.05));
+    }
+
+    &-item-1 {
+        position: absolute;
+        inset-block-start: 126px;
+        inset-inline-start: 184px;
+        z-index: 2;
+
+        @media #{$xxl} {
+            inset-inline-start: 74px;
+        }
+    }
+
+    &-item-2 {
+        position: absolute;
+        inset-block-start: 198px;
+        inset-inline-start: 443px;
+        z-index: 2;
+
+        @media #{$xxl} {
+            inset-inline-start: 195px;
+        }
+    }
+
+    &-item-3 {
+        position: absolute;
+        inset-inline-start: 295px;
+        inset-block-end: 297px;
+        z-index: 2;
+
+
+    }
+
+    &-item-4 {
+        position: absolute;
+        inset-inline-start: 459px;
+        inset-block-end: 164px;
+        z-index: 2;
+
+        @media #{$xxl} {
+            inset-inline-start: 210px;
+        }
+    }
+
+    &-item-5 {
+        position: absolute;
+        inset-block-start: 126px;
+        inset-inline-end: 323px;
+        z-index: 2;
+
+        @media #{$xxl} {
+            inset-inline-end: 70px;
+        }
+    }
+
+    &-item-6 {
+        position: absolute;
+        inset-block-start: 271px;
+        inset-inline-end: 154px;
+        z-index: 2;
+
+        @media #{$xxl} {
+            inset-inline-end: 175px;
+        }
+    }
+
+    &-item-7 {
+        position: absolute;
+        inset-inline-end: 436px;
+        inset-block-end: 237px;
+        z-index: 2;
+
+        @media #{$xxl} {
+            inset-inline-end: 315px;
+        }
+    }
+
+    &-item-8 {
+        position: absolute;
+        inset-block-end: 104px;
+        inset-inline-end: 191px;
+        z-index: 2;
+
+        @media #{$xxl} {
+            inset-inline-end: 80px;
+        }
+    }
+
+    &-circle-1 {
+        width: 1560px;
+        height: 1560px;
+        border: 2px dotted rgba($color: #D9D9D9, $alpha: .80);
+        border-radius: 100%;
+        position: absolute;
+        inset-block-start: 50%;
+        inset-inline-start: 50%;
+        transform: translate(-50%, -50%);
+
+        @include rtl {
+            inset-inline-start: auto;
+            inset-inline-end: 50%;
+        }
+    }
+
+    &-circle-2 {
+        width: 1280px;
+        height: 1280px;
+        border: 2px dotted rgba($color: #D9D9D9, $alpha: .80);
+        border-radius: 100%;
+        position: absolute;
+        inset-block-start: 50%;
+        inset-inline-start: 50%;
+        transform: translate(-50%, -50%);
+
+        @include rtl {
+            inset-inline-start: auto;
+            inset-inline-end: 50%;
+        }
+    }
+
+    &-circle-3 {
+        width: 1000px;
+        height: 1000px;
+        border: 2px dotted rgba($color: #D9D9D9, $alpha: .80);
+        border-radius: 100%;
+        position: absolute;
+        inset-block-start: 50%;
+        inset-inline-start: 50%;
+        transform: translate(-50%, -50%);
+
+        @include rtl {
+            inset-inline-start: auto;
+            inset-inline-end: 50%;
+        }
+    }
+
+    &-circle-4 {
+        width: 745px;
+        height: 745px;
+        border: 2px dotted rgba($color: #D9D9D9, $alpha: .80);
+        border-radius: 100%;
+        position: absolute;
+        inset-block-start: 50%;
+        inset-inline-start: 50%;
+        transform: translate(-50%, -50%);
+
+        @include rtl {
+            inset-inline-start: auto;
+            inset-inline-end: 50%;
+        }
+    }
+}
+
+/* integration style 02 */
+.ap-integration {
+    &-section-title-wrapper {
+        margin-inline-start: 43px;
+
+        @media #{$xl,$lg,$md,$sm,$xs} {
+            margin-inline-start: 0px;
+        }
+    }
+
+    &-thumb {
+        img {
+            border-radius: 12px;
+            width: 100%;
+            height: 100%;
+        }
+
+        &-shape {
+            position: absolute;
+            inset-block-start: 30px;
+            inset-inline-end: 30px;
+            box-shadow: 0px 12px 34px -10px rgba(58, 77, 233, 0.15);
+
+            @include rtl {
+                inset-inline-start: auto;
+                inset-inline-end: 30px;
+            }
+        }
+    }
+}
+
+/* integration style 02  end */
+
+.ap-integration-item {
+    background: var(--color-white);
+    border: 1px solid var(--color-white);
+    border-radius: 8px;
+    padding: 30px 30px 27px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    &:hover {
+        border-color: var(--color-primary);
+
+        .ap-text-icon-btn {
+            a {
+                color: var(--color-primary);
+            }
+
+            span {
+                opacity: 1;
+                visibility: visible;
+                margin-inline-start: 0;
+            }
+
+            i {
+                color: var(--color-primary);
+            }
+        }
+    }
+
+    .ap-text-icon-btn a span {
+        margin-inline-start: -65px;
+    }
+
+    &-top {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 30px;
+    }
+
+    &-content {
+        .subtitle {
+            font-size: 14px;
+        }
+    }
+
+    &-desc {
+        font-size: 16px;
+        color: rgba($color: #5A5471, $alpha: .80);
+        margin-bottom: 26px;
+    }
+}
+
+.ap-integration-shape-1 {
+    position: absolute;
+    inset-block-start: 212px;
+    inset-inline-start: 60px;
+
+    @media #{$x3l} {
+        inset-inline-start: 30px;
+    }
+
+    @media #{$xxl} {
+        inset-block-start: 100px;
+    }
+}
+
+.ap-integration-shape-2 {
+    position: absolute;
+    inset-block-end: 292px;
+    inset-inline-end: 60px;
+
+    @media #{$x3l} {
+        inset-inline-end: 30px;
+    }
+
+    @media #{$xxl} {
+        inset-block-end: 80px;
+    }
+}
+
+/* integration three*/
+.ap-integration-three {
+    &-wrapper {
+        &::before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 420px;
+            inset-block-start: 50%;
+            inset-inline-start: 0;
+            z-index: 2;
+            background: linear-gradient(270deg, #FFF 80%, rgba(0, 0, 0, 0) 100%);
+            transform: translateY(-50%) matrix(-1, 0, 0, 1, 0, 0);
+
+            @media #{$x4l} {
+                width: 270px;
+            }
+
+            @media #{$x3l} {
+                width: 220px;
+            }
+
+            @media #{$xxl,$xl,$lg} {
+                width: 100px;
+            }
+
+            @media #{$md,$sm,$xs} {
+                width: 30px;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 400px;
+            inset-block-start: 50%;
+            inset-inline-end: 0;
+            transform: translateY(-50%);
+            z-index: 1;
+            background: linear-gradient(270deg, #FFFFFF 80%, rgba(0, 0, 0, 0) 100%);
+
+            @media #{$x4l} {
+                width: 270px;
+            }
+
+            @media #{$x3l} {
+                width: 220px;
+            }
+
+            @media #{$xxl,$xl,$lg} {
+                width: 100px;
+            }
+
+            @media #{$md,$sm,$xs} {
+                width: 30px;
+            }
+        }
+    }
+
+    &-box {
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+        gap: 25px;
+        animation: marquee 20s linear 0s infinite normal;
+        animation-play-state: running;
+
+        @include rtl {
+            animation: marquee_rtl 20s linear 0s infinite normal;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        &.animation-revers {
+            animation: marquee_rev 20s linear 0s infinite normal;
+            animation-play-state: running;
+            animation-play-state: running;
+
+            @include rtl {
+                animation: marquee_rev_rtl 20s linear 0s infinite normal;
+            }
+        }
+    }
+
+    &-item {
+        width: 235px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        border-radius: 50px;
+        background-color: var(--color-bg-3);
+        font-size: 18px;
+        color: #222222;
+
+        &:nth-child(1) {
+            background-color: #CAFCE5;
+        }
+
+        &:nth-child(2) {
+            background-color: #FFDFF0;
+        }
+
+        &:nth-child(3) {
+            background-color: #FFF3DA;
+        }
+
+        &:nth-child(4) {
+            background-color: #C7EDFC;
+        }
+
+        &:nth-child(5) {
+            background-color: #F0DEFF;
+        }
+
+        &:nth-child(6) {
+            background-color: #FFF3DB;
+        }
+
+        &:nth-child(7) {
+            background-color: #EFDBFF;
+        }
+
+        &:nth-child(8) {
+            background-color: #C2FBE1;
+        }
+
+        &:nth-child(9) {
+            background-color: #C7DDFF;
+        }
+
+        &:nth-child(10) {
+            background-color: #FFE2F1;
+        }
+
+        &:nth-child(11) {
+            background-color: #FFE1F1;
+        }
+
+        &:nth-child(12) {
+            background-color: #C7DDFF;
+        }
+
+        &:nth-child(13) {
+            background-color: #C2FBE1;
+        }
+
+        &:nth-child(14) {
+            background-color: #EFDAFF;
+        }
+
+        &:nth-child(15) {
+            background-color: #FFF4DD;
+        }
+    }
+}
+
+/* integration three end */
+.ap-integration-four {
+    &-item-wrapper {
+        padding: 0 70px;
+        overflow: hidden;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 105%;
+            width: 120px;
+            inset-block-start: 50%;
+            inset-inline-start: 0;
+            z-index: 2;
+            background: linear-gradient(270deg, #EEDDFA 80%, rgba(0, 0, 0, 0) 100%);
+            transform: translateY(-50%) matrix(-1, 0, 0, 1, 0, 0);
+            @include rtl {
+                background: linear-gradient(-270deg, #EEDDFA 80%, rgba(0, 0, 0, 0) 100%);
+            }
+            @media #{$sm,$xs} {
+                width: 50px;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            height: 105%;
+            width: 120px;
+            inset-block-start: 50%;
+            inset-inline-end: 0;
+            transform: translateY(-50%);
+            z-index: 1;
+            background: linear-gradient(270deg, #EEDDFA 80%, rgba(0, 0, 0, 0) 100%);
+            @include rtl {
+                background: linear-gradient(-270deg, #EEDDFA 80%, rgba(0, 0, 0, 0) 100%);
+            }
+            @media #{$sm,$xs} {
+                width: 50px;
+            }
+        }
+    }
+
+    &-item-wrap {
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+        gap: 25px;
+        animation: marquee 20s linear 0s infinite normal;
+        animation-play-state: running;
+
+        @include rtl {
+            animation: marquee_rtl 20s linear 0s infinite normal;
+        }
+
+        &.style-two {
+            padding-top: 25px;
+            animation: marquee_rev 20s linear 0s infinite normal;
+            animation-play-state: running;
+
+            @include rtl {
+                animation: marquee_rev_rtl 20s linear 0s infinite normal;
+            }
+        }
+    }
+
+    &-item {
+        background: #FFFFFF;
+        border-radius: 12px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0 25px 0;
+        text-align: center;
+        width: 200px;
+    }
+
+    &-item-thumb {
+        margin-bottom: 15px;
+    }
+
+    &-item-title {
+        font-size: 16px;
+        font-weight: var(--fw-medium);
+        color: var(--color-black);
+        line-height: 1;
+    }
+}
+
+.ap-integration-four-shape-1 {
+    position: absolute;
+    inset-block-start: 187px;
+    inset-inline-start: 50px;
+
+    @media #{$xl,$lg,$md,$sm,$xs} {
+        display: none;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        inset-inline-start: 0;
+        inset-block-end: 0;
+        width: 69px;
+        height: 45px;
+        background: #D995C0;
+        border-radius: 100%;
+        filter: blur(30px);
+        z-index: -1;
+    }
+
+    img {
+        animation: round-shape 8s linear infinite;
+    }
+}
+
+.ap-integration-four-shape-2 {
+    position: absolute;
+    inset-block-start: 121px;
+    inset-inline-end: 67px;
+
+    @media #{$xl,$lg,$md,$sm,$xs} {
+        display: none;
+    }
+
+    img {
+        animation: round-shape 8s linear infinite;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        inset-inline-start: 0;
+        inset-block-end: 0;
+        width: 69px;
+        height: 45px;
+        background: #D995C0;
+        border-radius: 100%;
+        filter: blur(30px);
+        z-index: -1;
+    }
+}
+/*----------------------------------------*/
+/*  2.11 Integration CSS End
+/*----------------------------------------*/

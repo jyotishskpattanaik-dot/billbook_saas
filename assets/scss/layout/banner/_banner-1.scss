@@ -1,0 +1,392 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.1.1 Banner Style 1 CSS Start
+/*----------------------------------------*/
+
+.ap-banner-one {
+    position: relative;
+    z-index: 5;
+
+    .ap-banner-content {
+        padding-top: 250px;
+        padding-bottom: 195px;
+
+        @media #{$lg} {
+            padding-top: 200px;
+        }
+
+        @media #{$md,$sm} {
+            padding-top: 200px;
+            padding-bottom: 50px;
+        }
+
+        @media #{$xs} {
+            padding-top: 150px;
+            padding-bottom: 50px;
+        }
+    }
+
+    .ap-banner-title {
+        font-size: 60px;
+        font-weight: var(--fw-medium);
+        text-transform: capitalize;
+        color: var(--color-theme-white);
+        font-family: var(--font-title);
+        margin-bottom: 20px;
+
+        @media #{$lg,$md,$sm} {
+            font-size: 48px;
+        }
+
+        @media #{$xs} {
+            font-size: 42px;
+        }
+    }
+
+    .ap-banner-intro {
+        color: var(--color-theme-white);
+        width: 80%;
+        margin-bottom: 25px;
+    }
+
+    .ap-banner-list {
+        list-style-type: none;
+        margin-bottom: 36px;
+
+        li {
+            color: var(--color-theme-white);
+            position: relative;
+            padding-inline-start: 30px;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            &::before {
+                position: absolute;
+                content: "\e91d";
+                font-family: var(--font-icomoon);
+                inset-inline-start: 0;
+                top: 5px;
+                width: 20px;
+                min-width: 20px;
+                height: 20px;
+                border-radius: 100%;
+                background-color: #8FE337;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--color-bg-primary);
+                font-size: 18px;
+            }
+        }
+
+    }
+
+    .ap-banner-button {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 37px;
+
+        .ap-btn {
+            padding: 15px 30px 14px;
+        }
+
+        .ap-banner-link {
+            font-size: 18px;
+            font-weight: var(--fw-semibold);
+            color: var(--color-white);
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 2px;
+                width: 100%;
+                height: 1px;
+                background: currentColor;
+                transform-origin: left top;
+                transform: scale(1, 1);
+                transition: transform 0.4s cubic-bezier(0.74, 0.72, 0.27, 0.24);
+            }
+
+            &:hover::before {
+                -webkit-transform-origin: right top;
+                -ms-transform-origin: right top;
+                transform-origin: right top;
+                -webkit-transform: scale(0, 1);
+                -ms-transform: scale(0, 1);
+                transform: scale(0, 1);
+            }
+        }
+    }
+
+    .ap-banner-rating {
+        .title {
+            color: var(--color-white);
+            font-size: 18px;
+            font-weight: var(--fw-semibold);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .meta {
+            display: flex;
+            gap: 15px;
+            color: var(--color-white);
+
+            .icon {
+                color: var(--color-rating);
+            }
+
+            .review {
+                font-size: 16px;
+                font-weight: var(--fw-regular);
+                color: var(--color-white);
+            }
+        }
+    }
+
+    .ap-banner-thumb {
+        position: relative;
+        z-index: 9;
+        height: 770px;
+        margin-bottom: -185px;
+        margin-inline-end: -50px;
+
+        @media #{$xxl,$xl} {
+            margin-inline-end: 0px;
+        }
+
+        @media #{$lg} {
+            margin-bottom: -195px;
+            margin-inline-end: 0px;
+        }
+
+        @media #{$md,$sm,$xs} {
+            height: auto;
+            margin-bottom: 0;
+            margin-inline-end: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .ap-banner-shape {
+        .ap-banner-circle {
+            position: absolute;
+            width: 720px;
+            height: 720px;
+            border-radius: 100%;
+            inset-inline-end: 216px;
+            top: 150px;
+            background: linear-gradient(150.58deg, rgba(255, 255, 255, 0.07) 15.11%, rgba(255, 255, 255, 0) 74.68%);
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            z-index: -1;
+            animation: round-shape 8s linear infinite;
+
+            @media #{$x4l} {
+                inset-inline-end: 80px;
+            }
+
+            @media #{$xxl} {
+                inset-inline-end: 30px;
+                width: 600px;
+                height: 600px;
+            }
+
+            @media #{$xl,$lg} {
+                inset-inline-end: 15px;
+                width: 500px;
+                height: 500px;
+            }
+
+            @media #{$md} {
+                width: 600px;
+                height: 600px;
+                inset-inline-end: auto;
+                top: auto;
+                z-index: -1;
+                transform: translateX(-50%) matrix(-1, 0, 0, 1, 0, 0);
+                inset-inline-start: 50%;
+                bottom: 400px;
+            }
+
+            @media #{$sm} {
+                width: 500px;
+                height: 500px;
+                inset-inline-end: auto;
+                top: auto;
+                z-index: -1;
+                transform: translateX(-50%) matrix(-1, 0, 0, 1, 0, 0);
+                inset-inline-start: 50%;
+                bottom: 250px;
+                animation: none;
+            }
+
+            @media #{$xs} {
+                width: 400px;
+                height: 400px;
+                inset-inline-end: auto;
+                top: auto;
+                z-index: -1;
+                transform: translateX(-50%) matrix(-1, 0, 0, 1, 0, 0);
+                inset-inline-start: 50%;
+                bottom: 150px;
+                animation: none;
+            }
+        }
+
+        .ap-banner-circle-glow {
+            position: absolute;
+            width: 243px;
+            height: 243px;
+            inset-inline-start: 50%;
+            inset-block-start: 50%;
+            transform: translate(-50%, -50%);
+            background: #C370FF;
+            filter: blur(100px);
+
+            @media #{$xs} {
+                width: 180px;
+                height: 180px;
+            }
+
+            @include rtl {
+                inset-inline-start: auto;
+                inset-inline-end: 50%;
+            }
+        }
+
+        .ap-shape-one {
+            position: absolute;
+            bottom: 0;
+            inset-inline-start: 0;
+            z-index: -1;
+        }
+
+        .ap-shape-two {
+            position: absolute;
+            bottom: 183px;
+            inset-inline-start: 648px;
+            z-index: -1;
+
+            @media #{$xl} {
+                inset-inline-start: 450px;
+            }
+
+            @media #{$lg} {
+                inset-inline-start: 350px;
+            }
+        }
+
+        .ap-shape-three {
+            position: absolute;
+            top: 461px;
+            inset-inline-end: 776px;
+
+            @media #{$x4l,$x3l} {
+                top: 380px;
+                inset-inline-end: 620px;
+            }
+
+            @media #{$xxl} {
+                top: 400px;
+                inset-inline-end: 530px;
+            }
+
+            @media #{$xl,$lg,$md,$sm,$xs} {
+                display: none;
+            }
+        }
+
+        .ap-shape-four {
+            position: absolute;
+            top: 296px;
+            inset-inline-end: 119px;
+
+            @media #{$x4l} {
+                inset-inline-end: 30px;
+            }
+
+            @media #{$x3l} {
+                inset-inline-end: 15px;
+            }
+
+            @media #{$xxl,$xl,$lg,$md,$sm,$xs} {
+                display: none;
+            }
+        }
+    }
+
+    .ap-scroll-down {
+        position: absolute;
+        bottom: -1px;
+        inset-inline-start: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+
+        @include rtl {
+            inset-inline-start: auto;
+            inset-inline-end: 50%;
+        }
+
+        .box {
+            position: absolute;
+            bottom: 15px;
+            inset-inline-start: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 35px;
+            background: var(--color-white);
+            border: 2px solid var(--color-primary);
+            border-radius: 8px;
+
+            @include rtl {
+                inset-inline-start: auto;
+                inset-inline-end: 50%;
+            }
+
+            &::before {
+                position: absolute;
+                inset-inline-start: 4px;
+                top: 7px;
+                content: "";
+                width: 8px;
+                height: 8px;
+                border: 2px solid var(--color-primary);
+                border-radius: 100%;
+                -webkit-animation: arrowdown 1.5s infinite ease-in-out alternate;
+                animation: arrowdown 1.5s infinite ease-in-out alternate;
+            }
+        }
+    }
+}
+
+@-webkit-keyframes arrowdown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes round-shape {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/*----------------------------------------*/
+/*  3.1.1 Banner Style 1 CSS End
+/*----------------------------------------*/

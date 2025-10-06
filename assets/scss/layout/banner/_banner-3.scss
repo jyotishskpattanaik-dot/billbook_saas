@@ -1,0 +1,98 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.1.3 Banner Style 3 CSS Start
+/*----------------------------------------*/
+
+.ap-banner-three {
+    padding-top: 115px;
+    padding-bottom: 100px;
+    position: relative;
+
+    @media #{$md,$sm} {
+        padding-top: 100px;
+    }
+
+    @media #{$xs} {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    &-subtitle {
+        color: var(--color-primary);
+        position: relative;
+        padding-inline-start: 30px;
+        margin-bottom: 4px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            inset-inline-start: 0;
+            inset-block-start: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 1px;
+            background-color: var(--color-primary);
+        }
+    }
+
+    &-title {
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+
+    &-intro {
+        margin-bottom: 35px;
+    }
+
+    &-shape {
+        position: absolute;
+        inset-block-end: -45px;
+        inset-inline-end: 160px;
+    }
+
+    &-glow {
+        position: absolute;
+        width: 193px;
+        height: 153px;
+        background: rgba(175, 98, 231, 0.4);
+        filter: blur(100px);
+        inset-block-end: 0;
+        inset-inline-end: -50px;
+        z-index: -1;
+    }
+
+    &-circle-shape-1 {
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        border-radius: 100%;
+        background: rgba($color: $secondary, $alpha: 0.04);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.02);
+        inset-block-end: -350px;
+        inset-inline-start: -300px;
+        z-index: -1;
+
+        @media #{$xl,$lg} {
+            inset-inline-start: -50%;
+        }
+    }
+
+    &-circle-shape-2 {
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        border-radius: 100%;
+        background: rgba($color: $secondary, $alpha: 0.04);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.02);
+        inset-block-end: -700px;
+        inset-inline-end: -314px;
+        z-index: -1;
+
+        @media #{$xl,$lg} {
+            inset-inline-end: -50%;
+        }
+    }
+}
+/*----------------------------------------*/
+/*  3.1.3 Banner Style 3 CSS End
+/*----------------------------------------*/

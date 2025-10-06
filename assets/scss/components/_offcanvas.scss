@@ -1,0 +1,222 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.12 Offcanvas CSS Start
+/*----------------------------------------*/
+
+.ap-offcanvas {
+    &-area {
+        background: var(--color-bg-5) none repeat scroll 0 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 400px;
+        height: 100%;
+        transform: translateX(calc(100% + 80px));
+        transition: transform 0.45s ease-in-out, opacity 0.45s ease-in-out;
+        z-index: 999;
+        overflow-y: scroll;
+        overscroll-behavior-y: contain;
+        scrollbar-width: none;
+        border-inline-start: 1px solid var(--color-border-primary);
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media #{$xxs} {
+            width: 340px;
+        }
+
+        &.info-open {
+            opacity: 1;
+            @include transform(translateX(0));
+        }
+    }
+
+    &-logo {
+        a {
+            img {
+                width: 160px;
+
+                @media #{$xs} {
+                    width: 150px;
+                }
+
+                @media #{$xs} {
+                    width: 140px;
+                }
+            }
+        }
+    }
+
+    &-content {
+        padding-bottom: 45px;
+    }
+
+    &-wrapper {
+        position: relative;
+        height: 100%;
+        padding: 50px 40px;
+
+        @media #{$xs} {
+            padding: 30px 30px;
+        }
+    }
+
+    &-top {
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--color-border-primary);
+        ;
+    }
+
+    &-search {
+        position: relative;
+
+        button {
+            position: absolute;
+            top: 50%;
+            inset-inline-end: 0;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: var(--color-secondary);
+
+            &:hover {
+                color: var(--color-primary);
+            }
+        }
+
+        input {
+            width: 100%;
+            height: 40px;
+            padding: 0 30px 0 0;
+            background: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid var(--color-border-primary);
+            font-size: 16px;
+            color: var(--color-theme-black);
+            border-radius: 0;
+
+            &::placeholder {
+                color: var(--color-placeholder);
+            }
+
+            &:focus {
+                border-radius: 0;
+            }
+        }
+    }
+
+    &-title-meta {
+        color: var(--color-theme-black);
+        margin-bottom: 17px;
+    }
+
+    &-text {
+        & p {
+            margin-bottom: 25px;
+        }
+    }
+
+    &-overlay {
+        background-color: rgba(0, 0, 0, 0.6);
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 99;
+        inset-inline-start: 0;
+        opacity: 0;
+        visibility: hidden;
+        @extend %ap-transition-3;
+        backdrop-filter: blur(10px);
+
+        &:hover {
+            cursor: url(../images/shape/cross-out.webp), pointer;
+        }
+
+        &.overlay-open {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &-btn {
+        display: none;
+        align-items: center;
+        gap: 30px;
+        @media #{$xs,$sm} {
+            display: flex;
+        }
+    }
+    &-contact {
+        ul {
+            li {
+                &:hover {
+                    color: var(--color-primary);
+
+                    i {
+                        color: var(--color-primary);
+                        border-color: var(--color-primary);
+                    }
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        &-text {
+            a {
+                -webkit-transition: 0.3s ease-in-out;
+                -moz-transition: 0.3s ease-in-out;
+                -ms-transition: 0.3s ease-in-out;
+                -o-transition: 0.3s ease-in-out;
+                transition: 0.3s ease-in-out;
+            }
+        }
+
+        &-icon {
+            i {
+                display: inline-block;
+                width: 36px;
+                height: 36px;
+                font-size: 16px;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                border-radius: 50%;
+                background: var(--color-bg-5);
+                color: var(--color-theme-black);
+                border: 1px solid var(--color-border-primary);
+                -webkit-transition: 0.3s ease-in-out;
+                -moz-transition: 0.3s ease-in-out;
+                -ms-transition: 0.3s ease-in-out;
+                -o-transition: 0.3s ease-in-out;
+                transition: 0.3s ease-in-out;
+            }
+        }
+    }
+}
+
+.ap-sidebar-toggle-icon {
+    cursor: pointer;
+}
+
+/* Close icon  */
+.ap-offcanvas-close-icon {
+    line-height: 1;
+    color: var(--color-secondary);
+    cursor: pointer;
+    font-size: 26px;
+    transition: var(--transition);
+    &:hover {
+        color: var(--color-primary);
+    }
+}
+/*----------------------------------------*/
+/*  2.12 Offcanvas CSS End
+/*----------------------------------------*/

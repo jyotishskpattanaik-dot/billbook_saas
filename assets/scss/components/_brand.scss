@@ -1,0 +1,104 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.4 Brand CSS Start
+/*----------------------------------------*/
+
+.ap-brand {
+  &-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 135px;
+
+    @media #{$xl,$lg} {
+      gap: 50px;
+    }
+
+    @media #{$md} {
+      gap: 30px;
+    }
+
+    @media #{$sm,$xs} {
+      gap: 60px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &-item {
+    text-align: center;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset-block-start: 50%;
+      inset-inline-end: -67px;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 120px;
+      background-color: #D9D9D9;
+
+      @media #{$xl,$lg} {
+        inset-inline-end: -25px;
+      }
+
+      @media #{$md} {
+        inset-inline-end: -15px;
+      }
+
+      @media #{$sm,$xs} {
+        inset-block-start: auto;
+        inset-block-end: -30px;
+        inset-inline-end: auto;
+        inset-inline-start: 50%;
+        transform: translateX(-50%);
+        width: 300px;
+        height: 1px;
+
+        @include rtl {
+          inset-inline-end: 50%;
+          inset-inline-start: auto;
+        }
+      }
+    }
+
+    &:last-child {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: var(--color-rating);
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+
+  &-content {
+    color: var(--color-black-light);
+    margin-bottom: 20px;
+  }
+}
+
+.ap-brand-item-two {
+  &:hover {
+    img {
+      opacity: 1;
+    }
+  }
+
+  img {
+    opacity: .5;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+}
+
+/*----------------------------------------*/
+/*  2.4 Brand CSS End
+/*----------------------------------------*/

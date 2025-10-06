@@ -1,0 +1,51 @@
+#productDetails input.form-control {
+  font-size: 12px;
+  padding: 2px 4px;
+  height: auto;
+}
+#productDetails td {
+  vertical-align: middle;
+}
+
+.submenu {
+    display: none;
+    flex-direction: column;
+    padding-left: 15px;
+    background: #2c2c2c;
+}
+
+.submenu a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    display: block;
+    color: #ddd;
+}
+
+.submenu a:hover {
+    background: #444;
+    color: #fff;
+}
+
+.submenu-container .submenu-toggle {
+    display: block;
+    cursor: pointer;
+}
+/* Only product rows smaller, keep headers normal */
+.product-table tbody td {
+  font-size: 0.55rem;   /* shrink font for rows */
+  padding: 0.4rem;      /* reduce padding */
+}
+
+/* Make product table inputs compact */
+.product-table input {
+    font-size: 0.75rem;      /* smaller text */
+    padding: 2px 4px;        /* less padding */
+    height: 26px;            /* compact height */
+}
+
+/* Optional: align text in center */
+.product-table input[type="text"],
+.product-table input[type="date"],
+.product-table input[type="number"] {
+    text-align: center;
+}

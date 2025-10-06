@@ -1,0 +1,1308 @@
+
+2025-09-21 12:57:45 - === UPDATE PURCHASE START ===
+2025-09-21 12:57:45 - POST: Array
+(
+    [purchase_id] => PUR0003
+    [purchase_date] => 2025-09-21
+    [supplier_id] => 3
+    [supplier_name] => PATTANAIK ASSOCIATE
+    [invoice_number] => 0987
+    [payment_mode] => CASH
+    [search_product] => 
+    [product_id] => Array
+        (
+            [0] => 73
+        )
+
+    [product_name] => Array
+        (
+            [0] => KARVOL PLUS
+        )
+
+    [company] => Array
+        (
+            [0] => DR REDDY
+        )
+
+    [category] => Array
+        (
+            [0] => VAPOCAP
+        )
+
+    [pack] => Array
+        (
+            [0] => 15
+        )
+
+    [batch] => Array
+        (
+            [0] => 678
+        )
+
+    [hsn_code] => Array
+        (
+            [0] => 3004
+        )
+
+    [expiry_date] => Array
+        (
+            [0] => 2027-06-01
+        )
+
+    [mrp] => Array
+        (
+            [0] => 350.00
+        )
+
+    [rate] => Array
+        (
+            [0] => 250.00
+        )
+
+    [quantity] => Array
+        (
+            [0] => 1
+        )
+
+    [discount] => Array
+        (
+            [0] => 0.00
+        )
+
+    [free_quantity] => Array
+        (
+            [0] => 0
+        )
+
+    [composition] => Array
+        (
+            [0] => EUCALIPOTAS OIL
+        )
+
+    [igst] => Array
+        (
+            [0] => 0.00
+        )
+
+    [cgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [sgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [total] => Array
+        (
+            [0] => 280.00
+        )
+
+    [margin] => Array
+        (
+            [0] => 
+        )
+
+)
+
+2025-09-21 12:57:45 - [GET supplier_name] QUERY: SELECT supplier_name FROM supplier_details WHERE id = ? LIMIT 1 | PARAMS: [3]
+2025-09-21 12:57:45 - [UPDATE purchase_details] QUERY: 
+        UPDATE purchase_details
+           SET supplier_id = ?, 
+               supplier_name = ?, 
+               invoice_no = ?, 
+               purchase_date = ?, 
+               bill_type = ?
+         WHERE purchase_id = ? 
+           AND company_id = ? 
+           AND accounting_year_id = ?
+     | PARAMS: [3,"PATTANAIK ASSOCIATE","0987","2025-09-21","CASH","PUR0003",1,1]
+2025-09-21 12:57:45 - [DELETE stock_details] QUERY: DELETE FROM stock_details WHERE purchase_id = ? AND company_id = ? AND accounting_year_id = ? | PARAMS: ["PUR0003",1,1]
+2025-09-21 12:57:45 - [DELETE current_stock] QUERY: DELETE FROM current_stock WHERE purchase_id = ? AND company_id = ? AND accounting_year_id = ? | PARAMS: ["PUR0003",1,1]
+2025-09-21 12:57:45 - [INSERT stock_details] QUERY: 
+            INSERT INTO stock_details 
+            (product_id, supplier_id, supplier_name, invoice_no, product_name, company, composition, pack, quantity, mrp, expiry_date, batch, category, 
+             purchase_id, purchase_date, amount, created_by, free_quantity, rate, discount, 
+             total_discount, total_taxable_amount, total_payble_amount, gst_amount, igst, igst_amount, cgst, sgst, 
+             cgst_amount, sgst_amount, net_amount, hsn_code, total_quantity, bill_type, company_id, accounting_year_id, created_at) 
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,NOW())
+         | PARAMS: [73,3,"PATTANAIK ASSOCIATE","0987","KARVOL PLUS","DR REDDY","EUCALIPOTAS OIL","15",1,350,null,"678","VAPOCAP","PUR0003","2025-09-21",280,"Seetakanta Pattanaik",0,250,0,0,250,280,30,0,0,6,6,15,15,280,"3004",1,"CASH",1,1]
+2025-09-21 12:57:45 - !!! ROLLBACK due to error: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'expiry_date' cannot be null
+2025-09-21 13:00:33 - === UPDATE PURCHASE START ===
+2025-09-21 13:00:33 - POST: Array
+(
+    [purchase_id] => PUR0003
+    [purchase_date] => 2025-09-21
+    [supplier_id] => 3
+    [supplier_name] => PATTANAIK ASSOCIATE
+    [invoice_number] => 0987
+    [payment_mode] => CASH
+    [search_product] => 
+    [product_id] => Array
+        (
+            [0] => 73
+        )
+
+    [product_name] => Array
+        (
+            [0] => KARVOL PLUS
+        )
+
+    [company] => Array
+        (
+            [0] => DR REDDY
+        )
+
+    [category] => Array
+        (
+            [0] => VAPOCAP
+        )
+
+    [pack] => Array
+        (
+            [0] => 15
+        )
+
+    [batch] => Array
+        (
+            [0] => 678
+        )
+
+    [hsn_code] => Array
+        (
+            [0] => 3004
+        )
+
+    [expiry_date] => Array
+        (
+            [0] => 2027-06-01
+        )
+
+    [mrp] => Array
+        (
+            [0] => 350.00
+        )
+
+    [rate] => Array
+        (
+            [0] => 250.00
+        )
+
+    [quantity] => Array
+        (
+            [0] => 1
+        )
+
+    [discount] => Array
+        (
+            [0] => 0.00
+        )
+
+    [free_quantity] => Array
+        (
+            [0] => 0
+        )
+
+    [composition] => Array
+        (
+            [0] => EUCALIPOTAS OIL
+        )
+
+    [igst] => Array
+        (
+            [0] => 0.00
+        )
+
+    [cgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [sgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [total] => Array
+        (
+            [0] => 280.00
+        )
+
+    [margin] => Array
+        (
+            [0] => 
+        )
+
+)
+
+2025-09-21 13:00:33 - [GET supplier_name] QUERY: SELECT supplier_name FROM supplier_details WHERE id = ? LIMIT 1 | PARAMS: [3]
+2025-09-21 13:00:33 - [UPDATE purchase_details] QUERY: 
+        UPDATE purchase_details
+           SET supplier_id = ?, 
+               supplier_name = ?, 
+               invoice_no = ?, 
+               purchase_date = ?, 
+               bill_type = ?
+         WHERE purchase_id = ? 
+           AND company_id = ? 
+           AND accounting_year_id = ?
+     | PARAMS: [3,"PATTANAIK ASSOCIATE","0987","2025-09-21","CASH","PUR0003",1,1]
+2025-09-21 13:00:33 - [DELETE stock_details] QUERY: DELETE FROM stock_details WHERE purchase_id = ? AND company_id = ? AND accounting_year_id = ? | PARAMS: ["PUR0003",1,1]
+2025-09-21 13:00:33 - [DELETE current_stock] QUERY: DELETE FROM current_stock WHERE purchase_id = ? AND company_id = ? AND accounting_year_id = ? | PARAMS: ["PUR0003",1,1]
+2025-09-21 13:00:33 - [INSERT stock_details] QUERY: 
+            INSERT INTO stock_details 
+            (product_id, supplier_id, supplier_name, invoice_no, product_name, company, composition, pack, quantity, mrp, expiry_date, batch, category, 
+             purchase_id, purchase_date, amount, created_by, free_quantity, rate, discount, 
+             total_discount, total_taxable_amount, total_payble_amount, gst_amount, igst, igst_amount, cgst, sgst, 
+             cgst_amount, sgst_amount, net_amount, hsn_code, total_quantity, bill_type, company_id, accounting_year_id, created_at) 
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,NOW())
+         | PARAMS: [73,3,"PATTANAIK ASSOCIATE","0987","KARVOL PLUS","DR REDDY","EUCALIPOTAS OIL","15",1,350,"2027-06-01","678","VAPOCAP","PUR0003","2025-09-21",280,"Seetakanta Pattanaik",0,250,0,0,250,280,30,0,0,6,6,15,15,280,"3004",1,"CASH",1,1]
+2025-09-21 13:00:33 - [INSERT current_stock] QUERY: 
+            INSERT INTO current_stock 
+            (product_id, product_name, company, category, pack, batch_no, expiry_date, composition, hsn_code, 
+             quantity, free_quantity, total_quantity, rate, mrp, discount, total_discount, sgst, sgst_amount, cgst, cgst_amount, 
+             igst, igst_amount, taxable_amount, net_amount, purchase_id, invoice_no, purchase_date, supplier_id, supplier_name, 
+             created_at, created_by, company_id, accounting_year_id) 
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+         | PARAMS: [73,"KARVOL PLUS","DR REDDY","VAPOCAP","15","678","2027-06-01","EUCALIPOTAS OIL","3004",1,0,1,250,350,0,0,6,15,6,15,0,0,250,280,"PUR0003","0987","2025-09-21",3,"PATTANAIK ASSOCIATE","2025-09-21 13:00:33","Seetakanta Pattanaik",1,1]
+2025-09-21 13:00:33 - [UPDATE final amount] QUERY: UPDATE purchase_details SET amount=? WHERE purchase_id=? AND company_id=? AND accounting_year_id=? | PARAMS: [280,"PUR0003",1,1]
+2025-09-21 13:00:34 - === COMMIT SUCCESSFUL (purchase_id=PUR0003, total=280) ===
+2025-09-21 13:02:02 - === UPDATE PURCHASE START ===
+2025-09-21 13:02:02 - POST: Array
+(
+    [purchase_id] => PUR0002
+    [purchase_date] => 2025-09-21
+    [supplier_id] => 2
+    [supplier_name] => C D PHARMA
+    [invoice_number] => 678
+    [payment_mode] => CASH
+    [search_product] => 
+    [product_id] => Array
+        (
+            [0] => 72
+        )
+
+    [product_name] => Array
+        (
+            [0] => RABEKIND DSR
+        )
+
+    [company] => Array
+        (
+            [0] => MANKIND
+        )
+
+    [category] => Array
+        (
+            [0] => CAP
+        )
+
+    [pack] => Array
+        (
+            [0] => 10
+        )
+
+    [batch] => Array
+        (
+            [0] => 235
+        )
+
+    [hsn_code] => Array
+        (
+            [0] => 3004
+        )
+
+    [expiry_date] => Array
+        (
+            [0] => 2028-06-01
+        )
+
+    [mrp] => Array
+        (
+            [0] => 221.00
+        )
+
+    [rate] => Array
+        (
+            [0] => 160.00
+        )
+
+    [quantity] => Array
+        (
+            [0] => 10
+        )
+
+    [discount] => Array
+        (
+            [0] => 0.00
+        )
+
+    [free_quantity] => Array
+        (
+            [0] => 0
+        )
+
+    [composition] => Array
+        (
+            [0] => RABEPRAZOLE
+        )
+
+    [igst] => Array
+        (
+            [0] => 0.00
+        )
+
+    [cgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [sgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [total] => Array
+        (
+            [0] => 1792.00
+        )
+
+    [margin] => Array
+        (
+            [0] => 
+        )
+
+)
+
+2025-09-21 13:02:02 - [GET supplier_name] QUERY: SELECT supplier_name FROM supplier_details WHERE id = ? LIMIT 1 | PARAMS: [2]
+2025-09-21 13:02:02 - [UPDATE purchase_details] QUERY: 
+        UPDATE purchase_details
+           SET supplier_id = ?, 
+               supplier_name = ?, 
+               invoice_no = ?, 
+               purchase_date = ?, 
+               bill_type = ?
+         WHERE purchase_id = ? 
+           AND company_id = ? 
+           AND accounting_year_id = ?
+     | PARAMS: [2,"C D PHARMA","678","2025-09-21","CASH","PUR0002",1,1]
+2025-09-21 13:02:02 - [DELETE stock_details] QUERY: DELETE FROM stock_details WHERE purchase_id = ? AND company_id = ? AND accounting_year_id = ? | PARAMS: ["PUR0002",1,1]
+2025-09-21 13:02:02 - [DELETE current_stock] QUERY: DELETE FROM current_stock WHERE purchase_id = ? AND company_id = ? AND accounting_year_id = ? | PARAMS: ["PUR0002",1,1]
+2025-09-21 13:02:02 - [INSERT stock_details] QUERY: 
+            INSERT INTO stock_details 
+            (product_id, supplier_id, supplier_name, invoice_no, product_name, company, composition, pack, quantity, mrp, expiry_date, batch, category, 
+             purchase_id, purchase_date, amount, created_by, free_quantity, rate, discount, 
+             total_discount, total_taxable_amount, total_payble_amount, gst_amount, igst, igst_amount, cgst, sgst, 
+             cgst_amount, sgst_amount, net_amount, hsn_code, total_quantity, bill_type, company_id, accounting_year_id, created_at) 
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,NOW())
+         | PARAMS: [72,2,"C D PHARMA","678","RABEKIND DSR","MANKIND","RABEPRAZOLE","10",10,221,"2028-06-01","235","CAP","PUR0002","2025-09-21",1792,"Seetakanta Pattanaik",0,160,0,0,1600,1792,192,0,0,6,6,96,96,1792,"3004",10,"CASH",1,1]
+2025-09-21 13:02:02 - [INSERT current_stock] QUERY: 
+            INSERT INTO current_stock 
+            (product_id, product_name, company, category, pack, batch_no, expiry_date, composition, hsn_code, 
+             quantity, free_quantity, total_quantity, rate, mrp, discount, total_discount, sgst, sgst_amount, cgst, cgst_amount, 
+             igst, igst_amount, taxable_amount, net_amount, purchase_id, invoice_no, purchase_date, supplier_id, supplier_name, 
+             created_at, created_by, company_id, accounting_year_id) 
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+         | PARAMS: [72,"RABEKIND DSR","MANKIND","CAP","10","235","2028-06-01","RABEPRAZOLE","3004",10,0,10,160,221,0,0,6,96,6,96,0,0,1600,1792,"PUR0002","678","2025-09-21",2,"C D PHARMA","2025-09-21 13:02:02","Seetakanta Pattanaik",1,1]
+2025-09-21 13:02:02 - [UPDATE final amount] QUERY: UPDATE purchase_details SET amount=? WHERE purchase_id=? AND company_id=? AND accounting_year_id=? | PARAMS: [1792,"PUR0002",1,1]
+2025-09-21 13:02:02 - === COMMIT SUCCESSFUL (purchase_id=PUR0002, total=1792) ===
+2025-09-21 13:09:18 - === SAVE PURCHASE START ===
+2025-09-21 13:09:18 - POST: Array
+(
+    [purchase_id] => PUR0004
+    [purchase_date] => 2025-05-12
+    [supplier_id] => 1
+    [invoice_number] => e-563026
+    [payment_mode] => CASH
+    [search_product] => 
+    [id] => Array
+        (
+            [0] => 
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+        )
+
+    [product_name] => Array
+        (
+            [0] => TELMIKIND LN
+            [1] => MONTEK  LC TAB
+            [2] => LIPIROSE F10 TAB
+            [3] => NEXPRO IT CAP
+            [4] => BASAGLAR CARTIDGE
+            [5] => SITADAY DM FORTE
+            [6] => EFNOCAR 40 TAB
+            [7] => I DEW (DS) DROP
+        )
+
+    [company] => Array
+        (
+            [0] => MANKIND
+            [1] => SUN PHARMA
+            [2] => MANKIND
+            [3] => TORRENT
+            [4] => CIPLA
+            [5] => MANKIND
+            [6] => ZUVENTUS
+            [7] => ENTOD PHARMACEUTICALS
+        )
+
+    [category] => Array
+        (
+            [0] => 
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+        )
+
+    [pack] => Array
+        (
+            [0] => 10 S
+            [1] => 15 S
+            [2] => 10 S
+            [3] => 10S
+            [4] => 5*3ML
+            [5] => 15S
+            [6] => 10TAB
+            [7] => 10ML
+        )
+
+    [batch] => Array
+        (
+            [0] => V95Y001
+            [1] => GTF3453A
+            [2] => M8AFY001
+            [3] => A08932429
+            [4] => D769438A
+            [5] => A1OAX002
+            [6] => Z05CW24017
+            [7] => EDD408
+        )
+
+    [hsn_code] => Array
+        (
+            [0] => 30049079
+            [1] => 30049099
+            [2] => 30049099
+            [3] => 30049099
+            [4] => 30043110
+            [5] => 30049099
+            [6] => 30049099
+            [7] => 30049099
+        )
+
+    [expiry_date] => Array
+        (
+            [0] => 2025-09-21
+            [1] => 2025-09-21
+            [2] => 2025-09-21
+            [3] => 2025-09-21
+            [4] => 2025-09-21
+            [5] => 2025-09-21
+            [6] => 2025-09-21
+            [7] => 2025-09-21
+        )
+
+    [mrp] => Array
+        (
+            [0] => 129.63
+            [1] => 373
+            [2] => 241.87
+            [3] => 185.25
+            [4] => 3204
+            [5] => 358.5
+            [6] => 159.25
+            [7] => 185
+        )
+
+    [rate] => Array
+        (
+            [0] => 92.59
+            [1] => 266.43
+            [2] => 172.76
+            [3] => 132.32
+            [4] => 2563.2
+            [5] => 256.07
+            [6] => 113.75
+            [7] => 138.75
+        )
+
+    [quantity] => Array
+        (
+            [0] => 3
+            [1] => 5
+            [2] => 1
+            [3] => 1
+            [4] => 3
+            [5] => 1
+            [6] => 2
+            [7] => 1
+        )
+
+    [free_quantity] => Array
+        (
+            [0] => 0
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+            [5] => 0
+            [6] => 0
+            [7] => 0
+        )
+
+    [composition] => Array
+        (
+            [0] => 
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+        )
+
+    [discount] => Array
+        (
+            [0] => 4
+            [1] => 4
+            [2] => 4
+            [3] => 4
+            [4] => 2
+            [5] => 4
+            [6] => 4
+            [7] => 4
+        )
+
+    [igst] => Array
+        (
+            [0] => 0
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+            [5] => 0
+            [6] => 0
+            [7] => 0
+        )
+
+    [cgst] => Array
+        (
+            [0] => 6
+            [1] => 6
+            [2] => 6
+            [3] => 6
+            [4] => 2.5
+            [5] => 6
+            [6] => 6
+            [7] => 6
+        )
+
+    [sgst] => Array
+        (
+            [0] => 6
+            [1] => 6
+            [2] => 6
+            [3] => 6
+            [4] => 2.5
+            [5] => 6
+            [6] => 6
+            [7] => 6
+        )
+
+    [total] => Array
+        (
+            [0] => 298.66
+            [1] => 1432.33
+            [2] => 185.75
+            [3] => 142.27
+            [4] => 7912.60
+            [5] => 275.33
+            [6] => 244.61
+            [7] => 149.18
+        )
+
+    [margin] => Array
+        (
+            [0] => 28.57%
+            [1] => 28.57%
+            [2] => 28.57%
+            [3] => 28.57%
+            [4] => 20.00%
+            [5] => 28.57%
+            [6] => 28.57%
+            [7] => 25.00%
+        )
+
+)
+
+2025-09-21 13:09:18 - SELECT supplier_name for supplier_id=1
+2025-09-21 13:09:18 - INSERT purchase header
+2025-09-21 13:15:53 - === SAVE PURCHASE START ===
+2025-09-21 13:15:53 - POST: Array
+(
+    [purchase_id] => PUR0004
+    [purchase_date] => 0025-05-12
+    [supplier_id] => 1
+    [invoice_number] => e-563026
+    [payment_mode] => CASH
+    [search_product] => 
+    [id] => Array
+        (
+            [0] => 
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+        )
+
+    [product_name] => Array
+        (
+            [0] => TELMIKIND LN
+            [1] => MONTEK  LC TAB
+            [2] => LIPIROSE F10 TAB
+            [3] => NEXPRO IT CAP
+            [4] => BASAGLAR CARTIDGE
+            [5] => SITADAY DM FORTE
+            [6] => EFNOCAR 40 TAB
+            [7] => I DEW (DS) DROP
+        )
+
+    [company] => Array
+        (
+            [0] => MANKIND
+            [1] => SUN PHARMA
+            [2] => MANKIND
+            [3] => TORRENT
+            [4] => CIPLA
+            [5] => MANKIND
+            [6] => ZUVENTUS
+            [7] => ENTOD PHARMACEUTICALS
+        )
+
+    [category] => Array
+        (
+            [0] => 
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+        )
+
+    [pack] => Array
+        (
+            [0] => 10 S
+            [1] => 15 S
+            [2] => 10 S
+            [3] => 10S
+            [4] => 5*3ML
+            [5] => 15S
+            [6] => 10TAB
+            [7] => 10ML
+        )
+
+    [batch] => Array
+        (
+            [0] => V95Y001
+            [1] => GTF3453A
+            [2] => M8AFY001
+            [3] => A08932429
+            [4] => D769438A
+            [5] => A1OAX002
+            [6] => Z05CW24017
+            [7] => EDD408
+        )
+
+    [hsn_code] => Array
+        (
+            [0] => 30049079
+            [1] => 30049099
+            [2] => 30049099
+            [3] => 30049099
+            [4] => 30043110
+            [5] => 30049099
+            [6] => 30049099
+            [7] => 30049099
+        )
+
+    [expiry_date] => Array
+        (
+            [0] => 2027-01-01
+            [1] => 2027-04-01
+            [2] => 2026-12-01
+            [3] => 2026-11-01
+            [4] => 2026-04-01
+            [5] => 2026-09-01
+            [6] => 2026-06-01
+            [7] => 2026-11-01
+        )
+
+    [mrp] => Array
+        (
+            [0] => 129.63
+            [1] => 373
+            [2] => 241.87
+            [3] => 185.25
+            [4] => 3204
+            [5] => 358.5
+            [6] => 159.25
+            [7] => 185
+        )
+
+    [rate] => Array
+        (
+            [0] => 92.59
+            [1] => 266.43
+            [2] => 172.76
+            [3] => 132.32
+            [4] => 2563.2
+            [5] => 256.07
+            [6] => 113.75
+            [7] => 138.75
+        )
+
+    [quantity] => Array
+        (
+            [0] => 3
+            [1] => 5
+            [2] => 1
+            [3] => 1
+            [4] => 3
+            [5] => 1
+            [6] => 2
+            [7] => 1
+        )
+
+    [free_quantity] => Array
+        (
+            [0] => 0
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+            [5] => 0
+            [6] => 0
+            [7] => 0
+        )
+
+    [composition] => Array
+        (
+            [0] => 
+            [1] => 
+            [2] => 
+            [3] => 
+            [4] => 
+            [5] => 
+            [6] => 
+            [7] => 
+        )
+
+    [discount] => Array
+        (
+            [0] => 4
+            [1] => 4
+            [2] => 4
+            [3] => 4
+            [4] => 2
+            [5] => 4
+            [6] => 4
+            [7] => 4
+        )
+
+    [igst] => Array
+        (
+            [0] => 0
+            [1] => 0
+            [2] => 0
+            [3] => 0
+            [4] => 0
+            [5] => 0
+            [6] => 0
+            [7] => 0
+        )
+
+    [cgst] => Array
+        (
+            [0] => 6
+            [1] => 6
+            [2] => 6
+            [3] => 6
+            [4] => 2.5
+            [5] => 6
+            [6] => 6
+            [7] => 6
+        )
+
+    [sgst] => Array
+        (
+            [0] => 6
+            [1] => 6
+            [2] => 6
+            [3] => 6
+            [4] => 2.5
+            [5] => 6
+            [6] => 6
+            [7] => 6
+        )
+
+    [total] => Array
+        (
+            [0] => 298.66
+            [1] => 1432.33
+            [2] => 185.75
+            [3] => 142.27
+            [4] => 7912.60
+            [5] => 275.33
+            [6] => 244.61
+            [7] => 149.18
+        )
+
+    [margin] => Array
+        (
+            [0] => 28.57%
+            [1] => 28.57%
+            [2] => 28.57%
+            [3] => 28.57%
+            [4] => 20.00%
+            [5] => 28.57%
+            [6] => 28.57%
+            [7] => 25.00%
+        )
+
+)
+
+2025-09-21 13:15:53 - SELECT supplier_name for supplier_id=1
+2025-09-21 13:15:53 - INSERT purchase header
+2025-09-25 06:41:29 - === UPDATE PURCHASE START ===
+2025-09-25 06:41:29 - POST: Array
+(
+    [purchase_id] => PUR0001
+    [purchase_date] => 2025-09-25
+    [supplier_id] => 1
+    [supplier_name] => C D PHARMA
+    [invoice_number] => 786
+    [payment_mode] => CASH
+    [search_product] => 
+    [product_id] => Array
+        (
+            [0] => 1
+        )
+
+    [product_name] => Array
+        (
+            [0] => AMLOKIND 5
+        )
+
+    [company] => Array
+        (
+            [0] => MANKIND
+        )
+
+    [category] => Array
+        (
+            [0] => TAB
+        )
+
+    [pack] => Array
+        (
+            [0] => 15
+        )
+
+    [batch] => Array
+        (
+            [0] => 1234
+        )
+
+    [hsn_code] => Array
+        (
+            [0] => 3004
+        )
+
+    [expiry_date] => Array
+        (
+            [0] => 
+        )
+
+    [mrp] => Array
+        (
+            [0] => 200.00
+        )
+
+    [rate] => Array
+        (
+            [0] => 170.00
+        )
+
+    [quantity] => Array
+        (
+            [0] => 10
+        )
+
+    [discount] => Array
+        (
+            [0] => 0.00
+        )
+
+    [free_quantity] => Array
+        (
+            [0] => 0
+        )
+
+    [composition] => Array
+        (
+            [0] => AMLODIPINE
+        )
+
+    [igst] => Array
+        (
+            [0] => 0.00
+        )
+
+    [cgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [sgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [total] => Array
+        (
+            [0] => 190.40
+        )
+
+    [margin] => Array
+        (
+            [0] => 
+        )
+
+)
+
+2025-09-25 06:41:29 - [GET supplier_name] QUERY: SELECT supplier_name FROM supplier_details WHERE id = ? LIMIT 1 | PARAMS: [1]
+2025-09-25 06:41:29 - [UPDATE purchase_details] QUERY: 
+        UPDATE purchase_details
+           SET supplier_id = ?, 
+               supplier_name = ?, 
+               invoice_no = ?, 
+               purchase_date = ?, 
+               bill_type = ?
+         WHERE purchase_id = ? 
+           AND company_id = ? 
+           AND accounting_year_id = ?
+     | PARAMS: [1,"C D PHARMA","786","2025-09-25","CASH","PUR0001",1,1]
+2025-09-25 06:41:29 - [DELETE stock_details] QUERY: DELETE FROM stock_details WHERE purchase_id = ? AND company_id = ? AND accounting_year_id = ? | PARAMS: ["PUR0001",1,1]
+2025-09-25 06:41:29 - [DELETE current_stock] QUERY: DELETE FROM current_stock WHERE purchase_id = ? AND company_id = ? AND accounting_year_id = ? | PARAMS: ["PUR0001",1,1]
+2025-09-25 06:41:29 - [INSERT stock_details] QUERY: 
+            INSERT INTO stock_details 
+            (product_id, supplier_id, supplier_name, invoice_no, product_name, company, composition, pack, quantity, mrp, expiry_date, batch, category, 
+             purchase_id, purchase_date, amount, created_by, free_quantity, rate, discount, 
+             total_discount, total_taxable_amount, total_payble_amount, gst_amount, igst, igst_amount, cgst, sgst, 
+             cgst_amount, sgst_amount, net_amount, hsn_code, total_quantity, bill_type, company_id, accounting_year_id, created_at) 
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,NOW())
+         | PARAMS: [1,1,"C D PHARMA","786","AMLOKIND 5","MANKIND","AMLODIPINE","15",10,200,"","1234","TAB","PUR0001","2025-09-25",1904,"Seetakanta Pattanaik",0,170,0,0,1700,1904,204,0,0,6,6,102,102,1904,"3004",10,"CASH",1,1]
+2025-09-25 06:41:29 - [INSERT current_stock] QUERY: 
+            INSERT INTO current_stock 
+            (product_id, product_name, company, category, pack, batch_no, expiry_date, composition, hsn_code, 
+             quantity, free_quantity, total_quantity, rate, mrp, discount, total_discount, sgst, sgst_amount, cgst, cgst_amount, 
+             igst, igst_amount, taxable_amount, net_amount, purchase_id, invoice_no, purchase_date, supplier_id, supplier_name, 
+             created_at, created_by, company_id, accounting_year_id) 
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+         | PARAMS: [1,"AMLOKIND 5","MANKIND","TAB","15","1234","","AMLODIPINE","3004",10,0,10,170,200,0,0,6,102,6,102,0,0,1700,1904,"PUR0001","786","2025-09-25",1,"C D PHARMA","2025-09-25 06:41:29","Seetakanta Pattanaik",1,1]
+2025-09-25 06:41:29 - [UPDATE final amount] QUERY: UPDATE purchase_details SET amount=? WHERE purchase_id=? AND company_id=? AND accounting_year_id=? | PARAMS: [1904,"PUR0001",1,1]
+2025-09-25 06:41:29 - === COMMIT SUCCESSFUL (purchase_id=PUR0001, total=1904) ===
+2025-09-25 06:56:34 - === UPDATE PURCHASE START ===
+2025-09-25 06:56:34 - POST: Array
+(
+    [purchase_id] => PUR0001
+    [purchase_date] => 2025-09-25
+    [supplier_id] => 1
+    [supplier_name] => C D PHARMA
+    [invoice_number] => 786
+    [payment_mode] => CASH
+    [search_product] => 
+    [product_id] => Array
+        (
+            [0] => 1
+        )
+
+    [product_name] => Array
+        (
+            [0] => AMLOKIND 5
+        )
+
+    [company] => Array
+        (
+            [0] => MANKIND
+        )
+
+    [category] => Array
+        (
+            [0] => TAB
+        )
+
+    [pack] => Array
+        (
+            [0] => 15
+        )
+
+    [batch] => Array
+        (
+            [0] => 1234
+        )
+
+    [hsn_code] => Array
+        (
+            [0] => 3004
+        )
+
+    [expiry_date] => Array
+        (
+            [0] => 2027-06-01
+        )
+
+    [mrp] => Array
+        (
+            [0] => 200.00
+        )
+
+    [rate] => Array
+        (
+            [0] => 170.00
+        )
+
+    [quantity] => Array
+        (
+            [0] => 10
+        )
+
+    [discount] => Array
+        (
+            [0] => 0.00
+        )
+
+    [free_quantity] => Array
+        (
+            [0] => 0
+        )
+
+    [composition] => Array
+        (
+            [0] => AMLODIPINE
+        )
+
+    [igst] => Array
+        (
+            [0] => 0.00
+        )
+
+    [cgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [sgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [total] => Array
+        (
+            [0] => 1904.00
+        )
+
+    [margin] => Array
+        (
+            [0] => 
+        )
+
+)
+
+2025-09-25 06:56:34 - [GET supplier_name] QUERY: SELECT supplier_name FROM supplier_details WHERE id = ? LIMIT 1 | PARAMS: [1]
+2025-09-25 06:56:34 - [UPDATE purchase_details] QUERY: 
+        UPDATE purchase_details
+           SET supplier_id = ?, 
+               supplier_name = ?, 
+               invoice_no = ?, 
+               purchase_date = ?, 
+               bill_type = ?
+         WHERE purchase_id = ? 
+           AND company_id = ? 
+           AND accounting_year_id = ?
+     | PARAMS: [1,"C D PHARMA","786","2025-09-25","CASH","PUR0001",1,1]
+2025-09-25 06:56:34 - [DELETE stock_details] QUERY: DELETE FROM stock_details WHERE purchase_id = ? AND company_id = ? AND accounting_year_id = ? | PARAMS: ["PUR0001",1,1]
+2025-09-25 06:56:34 - [DELETE current_stock] QUERY: DELETE FROM current_stock WHERE purchase_id = ? AND company_id = ? AND accounting_year_id = ? | PARAMS: ["PUR0001",1,1]
+2025-09-25 06:56:35 - [INSERT stock_details] QUERY: 
+            INSERT INTO stock_details 
+            (product_id, supplier_id, supplier_name, invoice_no, product_name, company, composition, pack, quantity, mrp, expiry_date, batch, category, 
+             purchase_id, purchase_date, amount, created_by, free_quantity, rate, discount, 
+             total_discount, total_taxable_amount, total_payble_amount, gst_amount, igst, igst_amount, cgst, sgst, 
+             cgst_amount, sgst_amount, net_amount, hsn_code, total_quantity, bill_type, company_id, accounting_year_id, created_at) 
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,NOW())
+         | PARAMS: [1,1,"C D PHARMA","786","AMLOKIND 5","MANKIND","AMLODIPINE","15",10,200,"2027-06-01","1234","TAB","PUR0001","2025-09-25",1904,"Seetakanta Pattanaik",0,170,0,0,1700,1904,204,0,0,6,6,102,102,1904,"3004",10,"CASH",1,1]
+2025-09-25 06:56:35 - [INSERT current_stock] QUERY: 
+            INSERT INTO current_stock 
+            (product_id, product_name, company, category, pack, batch_no, expiry_date, composition, hsn_code, 
+             quantity, free_quantity, total_quantity, rate, mrp, discount, total_discount, sgst, sgst_amount, cgst, cgst_amount, 
+             igst, igst_amount, taxable_amount, net_amount, purchase_id, invoice_no, purchase_date, supplier_id, supplier_name, 
+             created_at, created_by, company_id, accounting_year_id) 
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+         | PARAMS: [1,"AMLOKIND 5","MANKIND","TAB","15","1234","2027-06-01","AMLODIPINE","3004",10,0,10,170,200,0,0,6,102,6,102,0,0,1700,1904,"PUR0001","786","2025-09-25",1,"C D PHARMA","2025-09-25 06:56:35","Seetakanta Pattanaik",1,1]
+2025-09-25 06:56:36 - [UPDATE final amount] QUERY: UPDATE purchase_details SET amount=? WHERE purchase_id=? AND company_id=? AND accounting_year_id=? | PARAMS: [1904,"PUR0001",1,1]
+2025-09-25 06:56:36 - === COMMIT SUCCESSFUL (purchase_id=PUR0001, total=1904) ===
+2025-09-25 06:56:41 - === UPDATE PURCHASE START ===
+2025-09-25 06:56:41 - POST: Array
+(
+    [purchase_id] => PUR0001
+    [purchase_date] => 2025-09-25
+    [supplier_id] => 1
+    [supplier_name] => C D PHARMA
+    [invoice_number] => 786
+    [payment_mode] => CASH
+    [search_product] => 
+    [product_id] => Array
+        (
+            [0] => 1
+        )
+
+    [product_name] => Array
+        (
+            [0] => AMLOKIND 5
+        )
+
+    [company] => Array
+        (
+            [0] => MANKIND
+        )
+
+    [category] => Array
+        (
+            [0] => TAB
+        )
+
+    [pack] => Array
+        (
+            [0] => 15
+        )
+
+    [batch] => Array
+        (
+            [0] => 1234
+        )
+
+    [hsn_code] => Array
+        (
+            [0] => 3004
+        )
+
+    [expiry_date] => Array
+        (
+            [0] => 2027-06-01
+        )
+
+    [mrp] => Array
+        (
+            [0] => 200.00
+        )
+
+    [rate] => Array
+        (
+            [0] => 170.00
+        )
+
+    [quantity] => Array
+        (
+            [0] => 10
+        )
+
+    [discount] => Array
+        (
+            [0] => 0.00
+        )
+
+    [free_quantity] => Array
+        (
+            [0] => 0
+        )
+
+    [composition] => Array
+        (
+            [0] => AMLODIPINE
+        )
+
+    [igst] => Array
+        (
+            [0] => 0.00
+        )
+
+    [cgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [sgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [total] => Array
+        (
+            [0] => 1904.00
+        )
+
+    [margin] => Array
+        (
+            [0] => 
+        )
+
+)
+
+2025-09-25 06:56:41 - [GET supplier_name] QUERY: SELECT supplier_name FROM supplier_details WHERE id = ? LIMIT 1 | PARAMS: [1]
+2025-09-25 06:56:41 - [UPDATE purchase_details] QUERY: 
+        UPDATE purchase_details
+           SET supplier_id = ?, 
+               supplier_name = ?, 
+               invoice_no = ?, 
+               purchase_date = ?, 
+               bill_type = ?
+         WHERE purchase_id = ? 
+           AND company_id = ? 
+           AND accounting_year_id = ?
+     | PARAMS: [1,"C D PHARMA","786","2025-09-25","CASH","PUR0001",1,1]
+2025-09-25 06:56:41 - [DELETE stock_details] QUERY: DELETE FROM stock_details WHERE purchase_id = ? AND company_id = ? AND accounting_year_id = ? | PARAMS: ["PUR0001",1,1]
+2025-09-25 06:56:41 - [DELETE current_stock] QUERY: DELETE FROM current_stock WHERE purchase_id = ? AND company_id = ? AND accounting_year_id = ? | PARAMS: ["PUR0001",1,1]
+2025-09-25 06:56:41 - [INSERT stock_details] QUERY: 
+            INSERT INTO stock_details 
+            (product_id, supplier_id, supplier_name, invoice_no, product_name, company, composition, pack, quantity, mrp, expiry_date, batch, category, 
+             purchase_id, purchase_date, amount, created_by, free_quantity, rate, discount, 
+             total_discount, total_taxable_amount, total_payble_amount, gst_amount, igst, igst_amount, cgst, sgst, 
+             cgst_amount, sgst_amount, net_amount, hsn_code, total_quantity, bill_type, company_id, accounting_year_id, created_at) 
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,NOW())
+         | PARAMS: [1,1,"C D PHARMA","786","AMLOKIND 5","MANKIND","AMLODIPINE","15",10,200,"2027-06-01","1234","TAB","PUR0001","2025-09-25",1904,"Seetakanta Pattanaik",0,170,0,0,1700,1904,204,0,0,6,6,102,102,1904,"3004",10,"CASH",1,1]
+2025-09-25 06:56:41 - [INSERT current_stock] QUERY: 
+            INSERT INTO current_stock 
+            (product_id, product_name, company, category, pack, batch_no, expiry_date, composition, hsn_code, 
+             quantity, free_quantity, total_quantity, rate, mrp, discount, total_discount, sgst, sgst_amount, cgst, cgst_amount, 
+             igst, igst_amount, taxable_amount, net_amount, purchase_id, invoice_no, purchase_date, supplier_id, supplier_name, 
+             created_at, created_by, company_id, accounting_year_id) 
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+         | PARAMS: [1,"AMLOKIND 5","MANKIND","TAB","15","1234","2027-06-01","AMLODIPINE","3004",10,0,10,170,200,0,0,6,102,6,102,0,0,1700,1904,"PUR0001","786","2025-09-25",1,"C D PHARMA","2025-09-25 06:56:41","Seetakanta Pattanaik",1,1]
+2025-09-25 06:56:41 - [UPDATE final amount] QUERY: UPDATE purchase_details SET amount=? WHERE purchase_id=? AND company_id=? AND accounting_year_id=? | PARAMS: [1904,"PUR0001",1,1]
+2025-09-25 06:56:41 - === COMMIT SUCCESSFUL (purchase_id=PUR0001, total=1904) ===

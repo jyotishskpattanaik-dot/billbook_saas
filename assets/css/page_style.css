@@ -1,0 +1,63 @@
+/* Page Wrapper Styles */
+.card {
+    border: 3px solid #343a40;   /* Dark border */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Header row */
+.card-header {
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 12px;
+}
+
+/* Footer row */
+.card-footer {
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 10px;
+}
+
+/* Form controls inside cards */
+.card-body .form-control {
+    border: 1px solid #555;
+    font-size: 0.9rem;
+}
+
+/* Table styling inside cards */
+.card-body table {
+    border: 2px solid #343a40;
+    margin-bottom: 0;
+}
+
+.card-body table th {
+    background-color: #f1f1f1;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.card-body table td {
+    font-size: 0.8rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Buttons */
+.card-body .btn {
+    font-size: 0.85rem;
+    padding: 5px 12px;
+}
+
+/* Success / error messages inside cards */
+.alert {
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+.container {
+    margin-top: 0 !important;
+}
+
+
