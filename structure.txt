@@ -1,0 +1,3550 @@
+Folder PATH listing
+Volume serial number is 2AE8-D3C3
+C:.
+³   billbook-dev-access.txt
+³   composer.json
+³   composer.lock
+³   debug_checkout.log
+³   footer.php
+³   header.php
+³   index.php
+³   mails.log
+³   structure.txt
+³   
+ÃÄÄÄadmin
+³       access_control.php
+³       add_user.php
+³       audit_logs.php
+³       company_profile.php
+³       control_panel.php
+³       edit_user.php
+³       manage_plan.php
+³       manage_users.php
+³       payments.php
+³       
+ÃÄÄÄapp
+³   ÃÄÄÄControllers
+³   ³       AuthController.php
+³   ³       
+³   ÃÄÄÄCore
+³   ³       Database.php
+³   ³       ModuleDatabase.php
+³   ³       session_check.php
+³   ³       
+³   ÀÄÄÄModels
+³           User.php
+³           
+ÃÄÄÄassets
+³   ÃÄÄÄbootstrap
+³   ³   ÃÄÄÄcss
+³   ³   ³       bootstrap.css
+³   ³   ³       bootstrap.min.css
+³   ³   ³       index.html
+³   ³   ³       sbi.css
+³   ³   ³       sbi.php
+³   ³   ³       
+³   ³   ÃÄÄÄfonts
+³   ³   ³       glyphicons-halflings-regular.eot
+³   ³   ³       glyphicons-halflings-regular.svg
+³   ³   ³       glyphicons-halflings-regular.ttf
+³   ³   ³       glyphicons-halflings-regular.woff
+³   ³   ³       
+³   ³   ÃÄÄÄimg
+³   ³   ³       glyphicons-halflings-white.png
+³   ³   ³       glyphicons-halflings.png
+³   ³   ³       
+³   ³   ÀÄÄÄjs
+³   ³           bootstrap.js
+³   ³           bootstrap.min.js
+³   ³           
+³   ÃÄÄÄcss
+³   ³   ³   animate.min.css
+³   ³   ³   animate.min1.css
+³   ³   ³   bill_mobile.css
+³   ³   ³   dashboard_mobile.css
+³   ³   ³   font-awesome.css
+³   ³   ³   font-awesome.min.css
+³   ³   ³   font-awesome.min1.css
+³   ³   ³   font-awesome1.css
+³   ³   ³   main.css
+³   ³   ³   page_style.css
+³   ³   ³   style.css
+³   ³   ³   style1.css
+³   ³   ³   table_header_fix.css
+³   ³   ³   
+³   ³   ÃÄÄÄplugins
+³   ³   ³       swiper.min.css
+³   ³   ³       
+³   ³   ÀÄÄÄvendor
+³   ³           animate.min.css
+³   ³           bootstrap.min.css
+³   ³           icomoon.css
+³   ³           magnific-popup.css
+³   ³           spacing.css
+³   ³           
+³   ÃÄÄÄfont-awesome
+³   ³   ³   fontawesome-webfont.eot
+³   ³   ³   fontawesome-webfont.svg
+³   ³   ³   fontawesome-webfont.ttf
+³   ³   ³   fontawesome-webfont.woff
+³   ³   ³   FontAwesome.otf
+³   ³   ³   
+³   ³   ÃÄÄÄcss
+³   ³   ³       font-awesome-ie7.css
+³   ³   ³       font-awesome-ie7.min.css
+³   ³   ³       font-awesome.css
+³   ³   ³       font-awesome.min.css
+³   ³   ³       
+³   ³   ÃÄÄÄfont-awesome
+³   ³   ³   ÃÄÄÄcss
+³   ³   ³   ³       font-awesome-ie7.css
+³   ³   ³   ³       font-awesome-ie7.min.css
+³   ³   ³   ³       font-awesome.css
+³   ³   ³   ³       font-awesome.min.css
+³   ³   ³   ³       
+³   ³   ³   ÃÄÄÄfont
+³   ³   ³   ³       fontawesome-webfont.eot
+³   ³   ³   ³       fontawesome-webfont.svg
+³   ³   ³   ³       fontawesome-webfont.ttf
+³   ³   ³   ³       fontawesome-webfont.woff
+³   ³   ³   ³       FontAwesome.otf
+³   ³   ³   ³       
+³   ³   ³   ÃÄÄÄless
+³   ³   ³   ³       bootstrap.less
+³   ³   ³   ³       core.less
+³   ³   ³   ³       extras.less
+³   ³   ³   ³       font-awesome-ie7.less
+³   ³   ³   ³       font-awesome.less
+³   ³   ³   ³       icons.less
+³   ³   ³   ³       mixins.less
+³   ³   ³   ³       path.less
+³   ³   ³   ³       variables.less
+³   ³   ³   ³       
+³   ³   ³   ÀÄÄÄscss
+³   ³   ³           font-awesome-ie7.scss
+³   ³   ³           font-awesome.scss
+³   ³   ³           _bootstrap.scss
+³   ³   ³           _core.scss
+³   ³   ³           _extras.scss
+³   ³   ³           _icons.scss
+³   ³   ³           _mixins.scss
+³   ³   ³           _path.scss
+³   ³   ³           _variables.scss
+³   ³   ³           
+³   ³   ÃÄÄÄless
+³   ³   ³       bootstrap.less
+³   ³   ³       core.less
+³   ³   ³       extras.less
+³   ³   ³       font-awesome-ie7.less
+³   ³   ³       font-awesome.less
+³   ³   ³       icons.less
+³   ³   ³       mixins.less
+³   ³   ³       path.less
+³   ³   ³       variables.less
+³   ³   ³       
+³   ³   ÀÄÄÄscss
+³   ³           font-awesome-ie7.scss
+³   ³           font-awesome.scss
+³   ³           _bootstrap.scss
+³   ³           _core.scss
+³   ³           _extras.scss
+³   ³           _icons.scss
+³   ³           _mixins.scss
+³   ³           _path.scss
+³   ³           _variables.scss
+³   ³           
+³   ÃÄÄÄfonts
+³   ³       festivo1.woff
+³   ³       fontawesome-webfont.eot
+³   ³       fontawesome-webfont.svg
+³   ³       fontawesome-webfont.ttf
+³   ³       fontawesome-webfont.woff
+³   ³       FontAwesome.otf
+³   ³       icomoon.eot
+³   ³       icomoon.svg
+³   ³       icomoon.ttf
+³   ³       icomoon.woff
+³   ³       
+³   ÃÄÄÄico
+³   ³       Android-icon.png
+³   ³       favicon.ico
+³   ³       iPhone-Icon.png
+³   ³       
+³   ÃÄÄÄimages
+³   ³   ÃÄÄÄabout
+³   ³   ³       about-3-shape-1.webp
+³   ³   ³       about-3-shape-2.webp
+³   ³   ³       about-3-thumb-1.webp
+³   ³   ³       about-3-thumb-2.webp
+³   ³   ³       about-3-tooltip.webp
+³   ³   ³       about-thumb-01.webp
+³   ³   ³       about-thumb-02-shape.webp
+³   ³   ³       about-thumb-02.webp
+³   ³   ³       about-thumb-03.webp
+³   ³   ³       about-thumb-04.webp
+³   ³   ³       about-thumb-shape.webp
+³   ³   ³       
+³   ³   ÃÄÄÄavatar
+³   ³   ³       avatar-1.webp
+³   ³   ³       avatar-2.webp
+³   ³   ³       avatar-3.webp
+³   ³   ³       avatar-4.webp
+³   ³   ³       testimonial-avatar-1.webp
+³   ³   ³       testimonial-avatar-2.webp
+³   ³   ³       
+³   ³   ÃÄÄÄbanner
+³   ³   ³   ÃÄÄÄbanner-1
+³   ³   ³   ³       banner-one-shape-1.webp
+³   ³   ³   ³       banner-one-shape-2.webp
+³   ³   ³   ³       banner-one-shape-3.webp
+³   ³   ³   ³       banner-one-shape-4.webp
+³   ³   ³   ³       banner-scroll-down.webp
+³   ³   ³   ³       banner-thumb-001.webp
+³   ³   ³   ³       
+³   ³   ³   ÃÄÄÄbanner-2
+³   ³   ³   ³       banner-2-avatar-1.webp
+³   ³   ³   ³       banner-2-avatar-2.webp
+³   ³   ³   ³       banner-2-bg.webp
+³   ³   ³   ³       banner-2-line.webp
+³   ³   ³   ³       banner-2-shape-1.webp
+³   ³   ³   ³       banner-2-shape-2.webp
+³   ³   ³   ³       banner-2-shape-3.webp
+³   ³   ³   ³       banner-2-shape-4.webp
+³   ³   ³   ³       banner-2-thumb-1.webp
+³   ³   ³   ³       banner-2-thumb-2.webp
+³   ³   ³   ³       
+³   ³   ³   ÀÄÄÄbanner-3
+³   ³   ³           banner-3-shape.webp
+³   ³   ³           banner-3-thumb.webp
+³   ³   ³           
+³   ³   ÃÄÄÄbg
+³   ³   ³       integration-thumb-1-shape.webp
+³   ³   ³       integration-thumb-1.webp
+³   ³   ³       process-thumb.webp
+³   ³   ³       projects-1.webp
+³   ³   ³       projects-2.webp
+³   ³   ³       section-bg.svg
+³   ³   ³       testimonial-thumb.webp
+³   ³   ³       tools-thumb-1.webp
+³   ³   ³       video-bg-main.webp
+³   ³   ³       video-bg.webp
+³   ³   ³       
+³   ³   ÃÄÄÄblog
+³   ³   ³       blog-author.webp
+³   ³   ³       blog-details-1.webp
+³   ³   ³       blog-details-2.webp
+³   ³   ³       blog-details-3.webp
+³   ³   ³       blog-thumb-1.webp
+³   ³   ³       blog-thumb-10.webp
+³   ³   ³       blog-thumb-11.webp
+³   ³   ³       blog-thumb-12.webp
+³   ³   ³       blog-thumb-13.webp
+³   ³   ³       blog-thumb-14.webp
+³   ³   ³       blog-thumb-15.webp
+³   ³   ³       blog-thumb-16.webp
+³   ³   ³       blog-thumb-17.webp
+³   ³   ³       blog-thumb-18.webp
+³   ³   ³       blog-thumb-19.webp
+³   ³   ³       blog-thumb-2.webp
+³   ³   ³       blog-thumb-20.webp
+³   ³   ³       blog-thumb-21.webp
+³   ³   ³       blog-thumb-22.webp
+³   ³   ³       blog-thumb-23.webp
+³   ³   ³       blog-thumb-24.webp
+³   ³   ³       blog-thumb-25.webp
+³   ³   ³       blog-thumb-27.webp
+³   ³   ³       blog-thumb-28.webp
+³   ³   ³       blog-thumb-29.webp
+³   ³   ³       blog-thumb-3.webp
+³   ³   ³       blog-thumb-30.webp
+³   ³   ³       blog-thumb-4.webp
+³   ³   ³       blog-thumb-5.webp
+³   ³   ³       blog-thumb-6.webp
+³   ³   ³       blog-thumb-7.webp
+³   ³   ³       blog-thumb-8.webp
+³   ³   ³       blog-thumb-9.webp
+³   ³   ³       
+³   ³   ÃÄÄÄbrand
+³   ³   ³       brand-1.webp
+³   ³   ³       brand-2-thumb-1.webp
+³   ³   ³       brand-2-thumb-2.webp
+³   ³   ³       brand-2-thumb-3.webp
+³   ³   ³       brand-2-thumb-4.webp
+³   ³   ³       brand-2-thumb-5.webp
+³   ³   ³       brand-2-thumb-6.webp
+³   ³   ³       brand-2.webp
+³   ³   ³       brand-3.webp
+³   ³   ³       testimonial-brand-1.webp
+³   ³   ³       testimonial-brand-2.webp
+³   ³   ³       testimonial-brand-3.webp
+³   ³   ³       testimonial-brand-4.webp
+³   ³   ³       testimonial-brand-5.webp
+³   ³   ³       testimonial-brand-6.webp
+³   ³   ³       
+³   ³   ÃÄÄÄcomponents
+³   ³   ³       components-1-thumb-1.webp
+³   ³   ³       components-1-thumb-shape-1.webp
+³   ³   ³       components-1-thumb-shape-2.webp
+³   ³   ³       components-2-thumb-1.webp
+³   ³   ³       components-2-thumb-shape-1.webp
+³   ³   ³       components-2-thumb-shape-2.webp
+³   ³   ³       components-2-thumb-shape-3.webp
+³   ³   ³       components-2-thumb-shape-4.webp
+³   ³   ³       components-3-thumb-shape.webp
+³   ³   ³       components-3-thumb.webp
+³   ³   ³       components-shape-1.webp
+³   ³   ³       components-shape-2.webp
+³   ³   ³       components-shape-3.webp
+³   ³   ³       components-shape-4.webp
+³   ³   ³       components-shape-line.webp
+³   ³   ³       
+³   ³   ÃÄÄÄcta
+³   ³   ³       cta-2-thumb-1.webp
+³   ³   ³       cta-2-thumb-2.webp
+³   ³   ³       cta-4-bg.webp
+³   ³   ³       cta-4-shape.webp
+³   ³   ³       cta-thumb-1.webp
+³   ³   ³       cta-thumb-2.webp
+³   ³   ³       cta-thumb-3.webp
+³   ³   ³       
+³   ³   ÃÄÄÄfeature
+³   ³   ³       feature-thumb-1.webp
+³   ³   ³       feature-thumb-2.webp
+³   ³   ³       feature-thumb-3.webp
+³   ³   ³       feature-thumb-4.webp
+³   ³   ³       
+³   ³   ÃÄÄÄicon
+³   ³   ³       apple-app-store.webp
+³   ³   ³       check.svg
+³   ³   ³       google-play.webp
+³   ³   ³       icon-1.svg
+³   ³   ³       icon-10.svg
+³   ³   ³       icon-11.svg
+³   ³   ³       icon-12.svg
+³   ³   ³       icon-13.svg
+³   ³   ³       icon-2.svg
+³   ³   ³       icon-3.svg
+³   ³   ³       icon-4.svg
+³   ³   ³       icon-5.svg
+³   ³   ³       icon-6.svg
+³   ³   ³       icon-7.svg
+³   ³   ³       icon-8.svg
+³   ³   ³       icon-9.svg
+³   ³   ³       iintegration-icon-1.svg
+³   ³   ³       iintegration-icon-2.svg
+³   ³   ³       iintegration-icon-3.svg
+³   ³   ³       iintegration-icon-4.svg
+³   ³   ³       iintegration-icon-5.svg
+³   ³   ³       iintegration-icon-6.svg
+³   ³   ³       integration-four-icon-1.webp
+³   ³   ³       integration-four-icon-2.webp
+³   ³   ³       integration-four-icon-3.webp
+³   ³   ³       integration-four-icon-4.webp
+³   ³   ³       integration-four-icon-5.webp
+³   ³   ³       integration-four-icon-6.webp
+³   ³   ³       payment.webp
+³   ³   ³       
+³   ³   ÃÄÄÄlogo
+³   ³   ³       favicon.svg
+³   ³   ³       favicon.webp
+³   ³   ³       logo-dark.svg
+³   ³   ³       logo-light.svg
+³   ³   ³       logo-white - Copy.webp
+³   ³   ³       logo-white.svg
+³   ³   ³       logo-white.webp
+³   ³   ³       preloader-icon.svg
+³   ³   ³       
+³   ³   ÃÄÄÄmenu
+³   ³   ³       menu-home-1.webp
+³   ³   ³       menu-home-2.webp
+³   ³   ³       menu-home-3.webp
+³   ³   ³       menu-home-4.webp
+³   ³   ³       
+³   ³   ÃÄÄÄproduct
+³   ³   ³       product-details-thumb-1.webp
+³   ³   ³       product-details-thumb-2.webp
+³   ³   ³       product-details-thumb-3.webp
+³   ³   ³       product-details-thumb-4.webp
+³   ³   ³       product-thumb-1.webp
+³   ³   ³       product-thumb-10.webp
+³   ³   ³       product-thumb-11.webp
+³   ³   ³       product-thumb-12.webp
+³   ³   ³       product-thumb-13.webp
+³   ³   ³       product-thumb-14.webp
+³   ³   ³       product-thumb-15.webp
+³   ³   ³       product-thumb-16.webp
+³   ³   ³       product-thumb-17.webp
+³   ³   ³       product-thumb-18.webp
+³   ³   ³       product-thumb-19.webp
+³   ³   ³       product-thumb-2.webp
+³   ³   ³       product-thumb-20.webp
+³   ³   ³       product-thumb-3.webp
+³   ³   ³       product-thumb-4.webp
+³   ³   ³       product-thumb-5.webp
+³   ³   ³       product-thumb-6.webp
+³   ³   ³       product-thumb-7.webp
+³   ³   ³       product-thumb-8.webp
+³   ³   ³       product-thumb-9.webp
+³   ³   ³       
+³   ³   ÃÄÄÄshape
+³   ³   ³       about-4-shape-1.webp
+³   ³   ³       about-4-shape-2.webp
+³   ³   ³       about-shape.webp
+³   ³   ³       banner-4-shape-1.webp
+³   ³   ³       banner-4-shape-2.webp
+³   ³   ³       blog-4-shape.webp
+³   ³   ³       cross-out.webp
+³   ³   ³       cta-arrow-shape.webp
+³   ³   ³       cta-shape-1.webp
+³   ³   ³       cta-shape-2.webp
+³   ³   ³       cta-shape-3.webp
+³   ³   ³       cta-shape-4.webp
+³   ³   ³       faq-shape-2.webp
+³   ³   ³       faq-shape.webp
+³   ³   ³       feature-bg.svg
+³   ³   ³       feature-bg.webp
+³   ³   ³       feature-shape.webp
+³   ³   ³       fun-fact-shape.webp
+³   ³   ³       integration-4-shape-1.webp
+³   ³   ³       integration-4-shape-2.webp
+³   ³   ³       integration-shape-1.webp
+³   ³   ³       integration-shape-2.webp
+³   ³   ³       pricing-plan-shape.webp
+³   ³   ³       pricing-shape-1.webp
+³   ³   ³       pricing-shape-2.webp
+³   ³   ³       process-shape.webp
+³   ³   ³       service-bg.svg
+³   ³   ³       service-bg.webp
+³   ³   ³       team-shape-1.webp
+³   ³   ³       team-shape-2.webp
+³   ³   ³       testimonial-logo-icon.webp
+³   ³   ³       testimonial-quote-icon.svg
+³   ³   ³       testimonial-shape.webp
+³   ³   ³       tools-bg.svg
+³   ³   ³       video-shape-2.webp
+³   ³   ³       video-shape.webp
+³   ³   ³       
+³   ³   ÀÄÄÄteam
+³   ³           team-mask-rtl.webp
+³   ³           team-mask.webp
+³   ³           team-member-1.webp
+³   ³           team-member-10.webp
+³   ³           team-member-11.webp
+³   ³           team-member-12.webp
+³   ³           team-member-13.webp
+³   ³           team-member-14.webp
+³   ³           team-member-15.webp
+³   ³           team-member-16.webp
+³   ³           team-member-2.webp
+³   ³           team-member-3.webp
+³   ³           team-member-4.webp
+³   ³           team-member-5.webp
+³   ³           team-member-6.webp
+³   ³           team-member-7.webp
+³   ³           team-member-8.webp
+³   ³           team-member-9.webp
+³   ³           team-section-bg.webp
+³   ³           
+³   ÃÄÄÄimg
+³   ³   ÃÄÄÄslider
+³   ³   ³       1.jpg
+³   ³   ³       accounting-firm-banner-1024x519.jpg
+³   ³   ³       banner-accounting-service.jpg
+³   ³   ³       banner-professional1.jpg
+³   ³   ³       barbecue.jpg
+³   ³   ³       Bicycle.jpg
+³   ³   ³       blog1.jpg
+³   ³   ³       blog2.jpg
+³   ³   ³       blog3.jpg
+³   ³   ³       blog3.png
+³   ³   ³       blog4.jpg
+³   ³   ³       Earth.jpg
+³   ³   ³       holidays.jpg
+³   ³   ³       img1.jpg
+³   ³   ³       img2.jpg
+³   ³   ³       img3.jpg
+³   ³   ³       info.jpg
+³   ³   ³       Info2.jpg
+³   ³   ³       info3.jpg
+³   ³   ³       info4.jpg
+³   ³   ³       Office.png
+³   ³   ³       pharma_retail.jpg
+³   ³   ³       Principiile-contabilitatii.jpg
+³   ³   ³       slide1.jpg
+³   ³   ³       slide10.jpg
+³   ³   ³       slide11.jpg
+³   ³   ³       slide15.jpg
+³   ³   ³       slide16.jpg
+³   ³   ³       slide18.jpg
+³   ³   ³       slide2.jpg
+³   ³   ³       slide20.jpg
+³   ³   ³       slide3.jpg
+³   ³   ³       slide4.jpg
+³   ³   ³       slide40.jpg
+³   ³   ³       slide50.jpg
+³   ³   ³       slide6.jpg
+³   ³   ³       slide7.jpg
+³   ³   ³       slide8.jpg
+³   ³   ³       slide9.jpg
+³   ³   ³       slide90.jpg
+³   ³   ³       tax-asset-management-banner.jpg
+³   ³   ³       Webheader.jpg
+³   ³   ³       
+³   ³   ÃÄÄÄsocial-icons
+³   ³   ³       btn_facebook.png
+³   ³   ³       btn_skype.png
+³   ³   ³       btn_twitter.png
+³   ³   ³       facebook.png
+³   ³   ³       googleplus.png
+³   ³   ³       pinterest.png
+³   ³   ³       twitter.png
+³   ³   ³       
+³   ³   ÃÄÄÄteam
+³   ³   ³       member1.png
+³   ³   ³       member2.png
+³   ³   ³       member3.png
+³   ³   ³       member4.png
+³   ³   ³       
+³   ³   ÀÄÄÄtestimonials
+³   ³           1.jpg
+³   ³           2.jpg
+³   ³           3.jpg
+³   ³           
+³   ÃÄÄÄjs
+³   ³   ³   main.js
+³   ³   ³   
+³   ³   ÃÄÄÄplugins
+³   ³   ³       easypie.js
+³   ³   ³       nice-select.min.js
+³   ³   ³       rangeslider.min.js
+³   ³   ³       swiper.min.js
+³   ³   ³       waypoints.min.js
+³   ³   ³       wow.js
+³   ³   ³       
+³   ³   ÀÄÄÄvendor
+³   ³           ajax-form.js
+³   ³           bootstrap.bundle.min.js
+³   ³           imagesloaded.pkgd.min.js
+³   ³           isotope.pkgd.min.js
+³   ³           jquery-3.7.1.min.js
+³   ³           magnific-popup.min.js
+³   ³           purecounter.js
+³   ³           
+³   ÃÄÄÄless
+³   ³       bordered-pulled.less
+³   ³       core.less
+³   ³       fixed-width.less
+³   ³       font-awesome.less
+³   ³       icons.less
+³   ³       larger.less
+³   ³       list.less
+³   ³       mixins.less
+³   ³       path.less
+³   ³       rotated-flipped.less
+³   ³       spinning.less
+³   ³       stacked.less
+³   ³       variables.less
+³   ³       
+³   ÀÄÄÄscss
+³       ³   font-awesome.scss
+³       ³   main.scss
+³       ³   sass-compile.txt
+³       ³   _bordered-pulled.scss
+³       ³   _core.scss
+³       ³   _fixed-width.scss
+³       ³   _icons.scss
+³       ³   _larger.scss
+³       ³   _list.scss
+³       ³   _mixins.scss
+³       ³   _path.scss
+³       ³   _rotated-flipped.scss
+³       ³   _spinning.scss
+³       ³   _stacked.scss
+³       ³   _variables.scss
+³       ³   
+³       ÃÄÄÄcomponents
+³       ³       index.scss
+³       ³       _animation.scss
+³       ³       _backtotop.scss
+³       ³       _badge.scss
+³       ³       _brand.scss
+³       ³       _breadcrumb.scss
+³       ³       _buttons.scss
+³       ³       _carousel.scss
+³       ³       _color.scss
+³       ³       _common.scss
+³       ³       _fun-fact.scss
+³       ³       _integration.scss
+³       ³       _offcanvas.scss
+³       ³       _pagination.scss
+³       ³       _preloader.scss
+³       ³       _section-title.scss
+³       ³       _shortcodes.scss
+³       ³       _social.scss
+³       ³       _video.scss
+³       ³       
+³       ÃÄÄÄlayout
+³       ³   ³   index.scss
+³       ³   ³   
+³       ³   ÃÄÄÄbanner
+³       ³   ³       index.scss
+³       ³   ³       _banner-1.scss
+³       ³   ³       _banner-2.scss
+³       ³   ³       _banner-3.scss
+³       ³   ³       _banner-4.scss
+³       ³   ³       
+³       ³   ÃÄÄÄblog
+³       ³   ³       index.scss
+³       ³   ³       _blog-tag.scss
+³       ³   ³       _blog.scss
+³       ³   ³       _postbox.scss
+³       ³   ³       _recent-post.scss
+³       ³   ³       _sidebar.scss
+³       ³   ³       
+³       ³   ÃÄÄÄecommerce
+³       ³   ³       index.scss
+³       ³   ³       _cart.scss
+³       ³   ³       _checkout.scss
+³       ³   ³       _order.scss
+³       ³   ³       _shop.scss
+³       ³   ³       
+³       ³   ÃÄÄÄfooter
+³       ³   ³       index.scss
+³       ³   ³       _copyright.scss
+³       ³   ³       _footer.scss
+³       ³   ³       
+³       ³   ÃÄÄÄheader
+³       ³   ³       index.scss
+³       ³   ³       _header-common.scss
+³       ³   ³       _header-dark.scss
+³       ³   ³       
+³       ³   ÃÄÄÄmenu
+³       ³   ³       index.scss
+³       ³   ³       _menu.scss
+³       ³   ³       _mobile-menu.scss
+³       ³   ³       
+³       ³   ÀÄÄÄpages
+³       ³           index.scss
+³       ³           _about.scss
+³       ³           _components.scss
+³       ³           _contact.scss
+³       ³           _cta.scss
+³       ³           _faq.scss
+³       ³           _features.scss
+³       ³           _pricing-plan.scss
+³       ³           _process.scss
+³       ³           _services.scss
+³       ³           _team.scss
+³       ³           _testimonial.scss
+³       ³           _tools.scss
+³       ³           
+³       ÃÄÄÄplugins
+³       ³       index.scss
+³       ³       _nice-selector.scss
+³       ³       _rangeSlider.scss
+³       ³       
+³       ÃÄÄÄtheme
+³       ³       index.scss
+³       ³       _spacing.scss
+³       ³       _theme.scss
+³       ³       _typography.scss
+³       ³       
+³       ÀÄÄÄutils
+³               index.scss
+³               _breakpoints.scss
+³               _extends.scss
+³               _mixins.scss
+³               _variables.scss
+³               
+ÃÄÄÄconfig
+³       payment_config.php
+³       
+ÃÄÄÄincludes
+³       audit.php
+³       export_report.php
+³       init.php
+³       init_main.php
+³       page_wrapper.php
+³       public_db_helper.php
+³       sanitize.php
+³       
+ÃÄÄÄinvoices
+ÃÄÄÄlogs
+ÃÄÄÄpharma_retail
+³   ³   dashboard.php
+³   ³   
+³   ÃÄÄÄadd
+³   ³       add_category.php
+³   ³       add_customer.php
+³   ³       add_supplier.php
+³   ³       
+³   ÃÄÄÄajax
+³   ³       add_product.php
+³   ³       ajax_add_supplier.php
+³   ³       check_category.php
+³   ³       check_customer.php
+³   ³       check_supplier.php
+³   ³       get_customer_details.php
+³   ³       get_next_bill_no.php
+³   ³       get_next_purchase_id.php
+³   ³       get_products.php
+³   ³       get_product_batches.php
+³   ³       get_suppliers.php
+³   ³       get_suppliers_table.php
+³   ³       search_product.php
+³   ³       search_sales_products.php
+³   ³       search_supplier.php
+³   ³       
+³   ÃÄÄÄcomponents
+³   ³       batch_table_modal.html
+³   ³       product_modal.html
+³   ³       product_picke.js
+³   ³       product_picker.css
+³   ³       product_picker.html
+³   ³       supplier_modal.html
+³   ³       supplier_picker.html
+³   ³       supplier_picker.js
+³   ³       supplier_picker.php
+³   ³       
+³   ÃÄÄÄcss
+³   ³       purchase.css
+³   ³       sales.css
+³   ³       
+³   ÃÄÄÄpurchasenstock
+³   ³   ³   add_new_purchase.php
+³   ³   ³   date_parser.php
+³   ³   ³   debug.log
+³   ³   ³   edit_purchase.php
+³   ³   ³   list_purchase.php
+³   ³   ³   preview_purchase.php
+³   ³   ³   save_upload_purchase.php
+³   ³   ³   update_purchase.php
+³   ³   ³   upload_purchase.php
+³   ³   ³   upload_purchase_form.php
+³   ³   ³   
+³   ³   ÃÄÄÄconfig
+³   ³   ³       field_aliases.php
+³   ³   ³       
+³   ³   ÀÄÄÄlib
+³   ³           parsers.php
+³   ³           
+³   ÃÄÄÄsalesnbilling
+³   ³       create_bill.php
+³   ³       debug.log
+³   ³       edit_bill.php
+³   ³       view_sale_bill.php
+³   ³       
+³   ÀÄÄÄsave
+³           debug.log
+³           save_bill.php
+³           save_category.php
+³           save_customer.php
+³           save_purchase.php
+³           save_supplier.php
+³           save_upload_purchase.php
+³           update_bill.php
+³           update_debug.log
+³           
+ÃÄÄÄprint
+³   ³   bill_print.php
+³   ³   generate_pdf.php
+³   ³   print_bill_template.php
+³   ³   renter_bill.php
+³   ³   
+³   ÃÄÄÄgenerated_bills
+³   ³       Bill_INV2025000001.pdf
+³   ³       
+³   ÀÄÄÄtemplates
+³           detailed_bill.php
+³           format4.php
+³           gst_invoice.php
+³           retail_bill.php
+³           
+ÃÄÄÄpublic
+³   ³   .htaccess
+³   ³   404.html
+³   ³   about.php
+³   ³   about_area.php
+³   ³   banner_area.php
+³   ³   blog-details.html
+³   ³   blog-grid.html
+³   ³   blog.php
+³   ³   blog_area.php
+³   ³   brand_area.php
+³   ³   cart.php
+³   ³   change_password_first_login.php
+³   ³   checkout.php
+³   ³   contact_us.php
+³   ³   cta_area.php
+³   ³   debug_checkout.log
+³   ³   faq.html
+³   ³   features.html
+³   ³   feature_area.php
+³   ³   footer.php
+³   ³   forgot_password.php
+³   ³   fun_fact_area.php
+³   ³   header.php
+³   ³   integrations.html
+³   ³   integration_area.php
+³   ³   login.php
+³   ³   login_process.php
+³   ³   logout.php
+³   ³   offcanvas_area.php
+³   ³   payment_callback.php
+³   ³   payment_failure.php
+³   ³   payment_gateway.php
+³   ³   phonepe_callback.php
+³   ³   phonepe_initiate.php
+³   ³   preload.php
+³   ³   pricing.php
+³   ³   pricing_module.php
+³   ³   privacy_policy.php
+³   ³   process_area.php
+³   ³   process_checkout.php
+³   ³   register.php
+³   ³   register_process.php
+³   ³   reset_password.php
+³   ³   service-details.html
+³   ³   services.html
+³   ³   service_area.php
+³   ³   shipping-policy.html
+³   ³   sign-up.html
+³   ³   success.php
+³   ³   team-details.html
+³   ³   team.html
+³   ³   team_area.php
+³   ³   terms-service.html
+³   ³   test.log
+³   ³   test.php
+³   ³   testimonial_area.php
+³   ³   test_db.php
+³   ³   thank_you.php
+³   ³   tools_area.php
+³   ³   verify_payment.php
+³   ³   
+³   ÀÄÄÄauth
+³           create_company.php
+³           create_year.php
+³           select_year.php
+³           
+ÃÄÄÄreports
+³   ÃÄÄÄbank
+³   ÃÄÄÄcustomer
+³   ÃÄÄÄexpiry
+³   ÃÄÄÄgst
+³   ÃÄÄÄpurchase
+³   ÃÄÄÄsales
+³   ³       list_sales.php
+³   ³       
+³   ÀÄÄÄsupplier
+ÃÄÄÄtemp
+³   ÀÄÄÄuploads
+ÃÄÄÄtools
+³       create_module.php
+³       
+ÀÄÄÄvendor
+    ³   autoload.php
+    ³   
+    ÃÄÄÄbin
+    ÃÄÄÄcomposer
+    ³       autoload_classmap.php
+    ³       autoload_files.php
+    ³       autoload_namespaces.php
+    ³       autoload_psr4.php
+    ³       autoload_real.php
+    ³       autoload_static.php
+    ³       ClassLoader.php
+    ³       installed.json
+    ³       installed.php
+    ³       InstalledVersions.php
+    ³       LICENSE
+    ³       platform_check.php
+    ³       
+    ÃÄÄÄdompdf
+    ³   ÃÄÄÄdompdf
+    ³   ³   ³   AUTHORS.md
+    ³   ³   ³   composer.json
+    ³   ³   ³   LICENSE.LGPL
+    ³   ³   ³   phpunit.xml
+    ³   ³   ³   README.md
+    ³   ³   ³   VERSION
+    ³   ³   ³   
+    ³   ³   ÃÄÄÄlib
+    ³   ³   ³   ³   Cpdf.php
+    ³   ³   ³   ³   
+    ³   ³   ³   ÃÄÄÄfonts
+    ³   ³   ³   ³       Courier-Bold.afm
+    ³   ³   ³   ³       Courier-BoldOblique.afm
+    ³   ³   ³   ³       Courier-Oblique.afm
+    ³   ³   ³   ³       Courier.afm
+    ³   ³   ³   ³       DejaVuSans-Bold.ttf
+    ³   ³   ³   ³       DejaVuSans-Bold.ufm
+    ³   ³   ³   ³       DejaVuSans-BoldOblique.ttf
+    ³   ³   ³   ³       DejaVuSans-BoldOblique.ufm
+    ³   ³   ³   ³       DejaVuSans-Oblique.ttf
+    ³   ³   ³   ³       DejaVuSans-Oblique.ufm
+    ³   ³   ³   ³       DejaVuSans.ttf
+    ³   ³   ³   ³       DejaVuSans.ufm
+    ³   ³   ³   ³       DejaVuSansMono-Bold.ttf
+    ³   ³   ³   ³       DejaVuSansMono-Bold.ufm
+    ³   ³   ³   ³       DejaVuSansMono-BoldOblique.ttf
+    ³   ³   ³   ³       DejaVuSansMono-BoldOblique.ufm
+    ³   ³   ³   ³       DejaVuSansMono-Oblique.ttf
+    ³   ³   ³   ³       DejaVuSansMono-Oblique.ufm
+    ³   ³   ³   ³       DejaVuSansMono.ttf
+    ³   ³   ³   ³       DejaVuSansMono.ufm
+    ³   ³   ³   ³       DejaVuSerif-Bold.ttf
+    ³   ³   ³   ³       DejaVuSerif-Bold.ufm
+    ³   ³   ³   ³       DejaVuSerif-BoldItalic.ttf
+    ³   ³   ³   ³       DejaVuSerif-BoldItalic.ufm
+    ³   ³   ³   ³       DejaVuSerif-Italic.ttf
+    ³   ³   ³   ³       DejaVuSerif-Italic.ufm
+    ³   ³   ³   ³       DejaVuSerif.ttf
+    ³   ³   ³   ³       DejaVuSerif.ufm
+    ³   ³   ³   ³       Helvetica-Bold.afm
+    ³   ³   ³   ³       Helvetica-Bold.afm.json
+    ³   ³   ³   ³       Helvetica-BoldOblique.afm
+    ³   ³   ³   ³       Helvetica-Oblique.afm
+    ³   ³   ³   ³       Helvetica.afm
+    ³   ³   ³   ³       Helvetica.afm.json
+    ³   ³   ³   ³       installed-fonts.dist.json
+    ³   ³   ³   ³       mustRead.html
+    ³   ³   ³   ³       Symbol.afm
+    ³   ³   ³   ³       Times-Bold.afm
+    ³   ³   ³   ³       Times-Bold.afm.json
+    ³   ³   ³   ³       Times-BoldItalic.afm
+    ³   ³   ³   ³       Times-Italic.afm
+    ³   ³   ³   ³       Times-Roman.afm
+    ³   ³   ³   ³       Times-Roman.afm.json
+    ³   ³   ³   ³       ZapfDingbats.afm
+    ³   ³   ³   ³       
+    ³   ³   ³   ÀÄÄÄres
+    ³   ³   ³           broken_image.png
+    ³   ³   ³           broken_image.svg
+    ³   ³   ³           html.css
+    ³   ³   ³           sRGB2014.icc
+    ³   ³   ³           sRGB2014.icc.LICENSE
+    ³   ³   ³           
+    ³   ³   ÀÄÄÄsrc
+    ³   ³       ³   Canvas.php
+    ³   ³       ³   CanvasFactory.php
+    ³   ³       ³   Cellmap.php
+    ³   ³       ³   Dompdf.php
+    ³   ³       ³   Exception.php
+    ³   ³       ³   FontMetrics.php
+    ³   ³       ³   Frame.php
+    ³   ³       ³   Helpers.php
+    ³   ³       ³   JavascriptEmbedder.php
+    ³   ³       ³   LineBox.php
+    ³   ³       ³   Options.php
+    ³   ³       ³   PhpEvaluator.php
+    ³   ³       ³   Renderer.php
+    ³   ³       ³   
+    ³   ³       ÃÄÄÄAdapter
+    ³   ³       ³       CPDF.php
+    ³   ³       ³       GD.php
+    ³   ³       ³       PDFLib.php
+    ³   ³       ³       
+    ³   ³       ÃÄÄÄCss
+    ³   ³       ³   ³   AttributeTranslator.php
+    ³   ³       ³   ³   Color.php
+    ³   ³       ³   ³   Style.php
+    ³   ³       ³   ³   Stylesheet.php
+    ³   ³       ³   ³   
+    ³   ³       ³   ÀÄÄÄContent
+    ³   ³       ³           Attr.php
+    ³   ³       ³           CloseQuote.php
+    ³   ³       ³           ContentPart.php
+    ³   ³       ³           Counter.php
+    ³   ³       ³           Counters.php
+    ³   ³       ³           NoCloseQuote.php
+    ³   ³       ³           NoOpenQuote.php
+    ³   ³       ³           OpenQuote.php
+    ³   ³       ³           StringPart.php
+    ³   ³       ³           Url.php
+    ³   ³       ³           
+    ³   ³       ÃÄÄÄException
+    ³   ³       ³       ImageException.php
+    ³   ³       ³       
+    ³   ³       ÃÄÄÄFrame
+    ³   ³       ³       Factory.php
+    ³   ³       ³       FrameListIterator.php
+    ³   ³       ³       FrameTree.php
+    ³   ³       ³       FrameTreeIterator.php
+    ³   ³       ³       
+    ³   ³       ÃÄÄÄFrameDecorator
+    ³   ³       ³       AbstractFrameDecorator.php
+    ³   ³       ³       Block.php
+    ³   ³       ³       Image.php
+    ³   ³       ³       Inline.php
+    ³   ³       ³       ListBullet.php
+    ³   ³       ³       ListBulletImage.php
+    ³   ³       ³       NullFrameDecorator.php
+    ³   ³       ³       Page.php
+    ³   ³       ³       Table.php
+    ³   ³       ³       TableCell.php
+    ³   ³       ³       TableRow.php
+    ³   ³       ³       TableRowGroup.php
+    ³   ³       ³       Text.php
+    ³   ³       ³       
+    ³   ³       ÃÄÄÄFrameReflower
+    ³   ³       ³       AbstractFrameReflower.php
+    ³   ³       ³       Block.php
+    ³   ³       ³       Image.php
+    ³   ³       ³       Inline.php
+    ³   ³       ³       ListBullet.php
+    ³   ³       ³       NullFrameReflower.php
+    ³   ³       ³       Page.php
+    ³   ³       ³       Table.php
+    ³   ³       ³       TableCell.php
+    ³   ³       ³       TableRow.php
+    ³   ³       ³       TableRowGroup.php
+    ³   ³       ³       Text.php
+    ³   ³       ³       
+    ³   ³       ÃÄÄÄImage
+    ³   ³       ³       Cache.php
+    ³   ³       ³       
+    ³   ³       ÃÄÄÄPositioner
+    ³   ³       ³       Absolute.php
+    ³   ³       ³       AbstractPositioner.php
+    ³   ³       ³       Block.php
+    ³   ³       ³       Fixed.php
+    ³   ³       ³       Inline.php
+    ³   ³       ³       ListBullet.php
+    ³   ³       ³       NullPositioner.php
+    ³   ³       ³       TableCell.php
+    ³   ³       ³       TableRow.php
+    ³   ³       ³       
+    ³   ³       ÀÄÄÄRenderer
+    ³   ³               AbstractRenderer.php
+    ³   ³               Block.php
+    ³   ³               Image.php
+    ³   ³               Inline.php
+    ³   ³               ListBullet.php
+    ³   ³               TableCell.php
+    ³   ³               TableRow.php
+    ³   ³               TableRowGroup.php
+    ³   ³               Text.php
+    ³   ³               
+    ³   ÃÄÄÄphp-font-lib
+    ³   ³   ³   AUTHORS.md
+    ³   ³   ³   composer.json
+    ³   ³   ³   LICENSE
+    ³   ³   ³   README.md
+    ³   ³   ³   
+    ³   ³   ÃÄÄÄmaps
+    ³   ³   ³       adobe-standard-encoding.map
+    ³   ³   ³       cp1250.map
+    ³   ³   ³       cp1251.map
+    ³   ³   ³       cp1252.map
+    ³   ³   ³       cp1253.map
+    ³   ³   ³       cp1254.map
+    ³   ³   ³       cp1255.map
+    ³   ³   ³       cp1257.map
+    ³   ³   ³       cp1258.map
+    ³   ³   ³       cp874.map
+    ³   ³   ³       iso-8859-1.map
+    ³   ³   ³       iso-8859-11.map
+    ³   ³   ³       iso-8859-15.map
+    ³   ³   ³       iso-8859-16.map
+    ³   ³   ³       iso-8859-2.map
+    ³   ³   ³       iso-8859-4.map
+    ³   ³   ³       iso-8859-5.map
+    ³   ³   ³       iso-8859-7.map
+    ³   ³   ³       iso-8859-9.map
+    ³   ³   ³       koi8-r.map
+    ³   ³   ³       koi8-u.map
+    ³   ³   ³       
+    ³   ³   ÀÄÄÄsrc
+    ³   ³       ÀÄÄÄFontLib
+    ³   ³           ³   AdobeFontMetrics.php
+    ³   ³           ³   BinaryStream.php
+    ³   ³           ³   EncodingMap.php
+    ³   ³           ³   Font.php
+    ³   ³           ³   Header.php
+    ³   ³           ³   
+    ³   ³           ÃÄÄÄEOT
+    ³   ³           ³       File.php
+    ³   ³           ³       Header.php
+    ³   ³           ³       
+    ³   ³           ÃÄÄÄException
+    ³   ³           ³       FontNotFoundException.php
+    ³   ³           ³       
+    ³   ³           ÃÄÄÄGlyph
+    ³   ³           ³       Outline.php
+    ³   ³           ³       OutlineComponent.php
+    ³   ³           ³       OutlineComposite.php
+    ³   ³           ³       OutlineSimple.php
+    ³   ³           ³       
+    ³   ³           ÃÄÄÄOpenType
+    ³   ³           ³       File.php
+    ³   ³           ³       TableDirectoryEntry.php
+    ³   ³           ³       
+    ³   ³           ÃÄÄÄTable
+    ³   ³           ³   ³   DirectoryEntry.php
+    ³   ³           ³   ³   Table.php
+    ³   ³           ³   ³   
+    ³   ³           ³   ÀÄÄÄType
+    ³   ³           ³           cmap.php
+    ³   ³           ³           cvt.php
+    ³   ³           ³           fpgm.php
+    ³   ³           ³           glyf.php
+    ³   ³           ³           head.php
+    ³   ³           ³           hhea.php
+    ³   ³           ³           hmtx.php
+    ³   ³           ³           kern.php
+    ³   ³           ³           loca.php
+    ³   ³           ³           maxp.php
+    ³   ³           ³           name.php
+    ³   ³           ³           nameRecord.php
+    ³   ³           ³           os2.php
+    ³   ³           ³           post.php
+    ³   ³           ³           prep.php
+    ³   ³           ³           
+    ³   ³           ÃÄÄÄTrueType
+    ³   ³           ³       Collection.php
+    ³   ³           ³       File.php
+    ³   ³           ³       Header.php
+    ³   ³           ³       TableDirectoryEntry.php
+    ³   ³           ³       
+    ³   ³           ÀÄÄÄWOFF
+    ³   ³                   File.php
+    ³   ³                   Header.php
+    ³   ³                   TableDirectoryEntry.php
+    ³   ³                   
+    ³   ÀÄÄÄphp-svg-lib
+    ³       ³   AUTHORS.md
+    ³       ³   composer.json
+    ³       ³   LICENSE
+    ³       ³   README.md
+    ³       ³   
+    ³       ÀÄÄÄsrc
+    ³           ÀÄÄÄSvg
+    ³               ³   CssLength.php
+    ³               ³   DefaultStyle.php
+    ³               ³   Document.php
+    ³               ³   Style.php
+    ³               ³   
+    ³               ÃÄÄÄGradient
+    ³               ³       Stop.php
+    ³               ³       
+    ³               ÃÄÄÄSurface
+    ³               ³       CPdf.php
+    ³               ³       SurfaceCpdf.php
+    ³               ³       SurfaceInterface.php
+    ³               ³       SurfacePDFLib.php
+    ³               ³       
+    ³               ÀÄÄÄTag
+    ³                       AbstractTag.php
+    ³                       Anchor.php
+    ³                       Circle.php
+    ³                       ClipPath.php
+    ³                       Ellipse.php
+    ³                       Group.php
+    ³                       Image.php
+    ³                       Line.php
+    ³                       LinearGradient.php
+    ³                       Path.php
+    ³                       Polygon.php
+    ³                       Polyline.php
+    ³                       RadialGradient.php
+    ³                       Rect.php
+    ³                       Shape.php
+    ³                       Stop.php
+    ³                       StyleTag.php
+    ³                       Symbol.php
+    ³                       Text.php
+    ³                       UseTag.php
+    ³                       
+    ÃÄÄÄezyang
+    ³   ÀÄÄÄhtmlpurifier
+    ³       ³   composer.json
+    ³       ³   CREDITS
+    ³       ³   LICENSE
+    ³       ³   README.md
+    ³       ³   VERSION
+    ³       ³   
+    ³       ÀÄÄÄlibrary
+    ³           ³   HTMLPurifier.auto.php
+    ³           ³   HTMLPurifier.autoload-legacy.php
+    ³           ³   HTMLPurifier.autoload.php
+    ³           ³   HTMLPurifier.composer.php
+    ³           ³   HTMLPurifier.func.php
+    ³           ³   HTMLPurifier.includes.php
+    ³           ³   HTMLPurifier.kses.php
+    ³           ³   HTMLPurifier.path.php
+    ³           ³   HTMLPurifier.php
+    ³           ³   HTMLPurifier.safe-includes.php
+    ³           ³   
+    ³           ÀÄÄÄHTMLPurifier
+    ³               ³   Arborize.php
+    ³               ³   AttrCollections.php
+    ³               ³   AttrDef.php
+    ³               ³   AttrTransform.php
+    ³               ³   AttrTypes.php
+    ³               ³   AttrValidator.php
+    ³               ³   Bootstrap.php
+    ³               ³   ChildDef.php
+    ³               ³   Config.php
+    ³               ³   ConfigSchema.php
+    ³               ³   ContentSets.php
+    ³               ³   Context.php
+    ³               ³   CSSDefinition.php
+    ³               ³   Definition.php
+    ³               ³   DefinitionCache.php
+    ³               ³   DefinitionCacheFactory.php
+    ³               ³   Doctype.php
+    ³               ³   DoctypeRegistry.php
+    ³               ³   ElementDef.php
+    ³               ³   Encoder.php
+    ³               ³   EntityLookup.php
+    ³               ³   EntityParser.php
+    ³               ³   ErrorCollector.php
+    ³               ³   ErrorStruct.php
+    ³               ³   Exception.php
+    ³               ³   Filter.php
+    ³               ³   Generator.php
+    ³               ³   HTMLDefinition.php
+    ³               ³   HTMLModule.php
+    ³               ³   HTMLModuleManager.php
+    ³               ³   IDAccumulator.php
+    ³               ³   Injector.php
+    ³               ³   Language.php
+    ³               ³   LanguageFactory.php
+    ³               ³   Length.php
+    ³               ³   Lexer.php
+    ³               ³   Node.php
+    ³               ³   PercentEncoder.php
+    ³               ³   Printer.php
+    ³               ³   PropertyList.php
+    ³               ³   PropertyListIterator.php
+    ³               ³   Queue.php
+    ³               ³   Strategy.php
+    ³               ³   StringHash.php
+    ³               ³   StringHashParser.php
+    ³               ³   TagTransform.php
+    ³               ³   Token.php
+    ³               ³   TokenFactory.php
+    ³               ³   UnitConverter.php
+    ³               ³   URI.php
+    ³               ³   URIDefinition.php
+    ³               ³   URIFilter.php
+    ³               ³   URIParser.php
+    ³               ³   URIScheme.php
+    ³               ³   URISchemeRegistry.php
+    ³               ³   VarParser.php
+    ³               ³   VarParserException.php
+    ³               ³   Zipper.php
+    ³               ³   
+    ³               ÃÄÄÄAttrDef
+    ³               ³   ³   Clone.php
+    ³               ³   ³   CSS.php
+    ³               ³   ³   Enum.php
+    ³               ³   ³   Integer.php
+    ³               ³   ³   Lang.php
+    ³               ³   ³   Switch.php
+    ³               ³   ³   Text.php
+    ³               ³   ³   URI.php
+    ³               ³   ³   
+    ³               ³   ÃÄÄÄCSS
+    ³               ³   ³       AlphaValue.php
+    ³               ³   ³       Background.php
+    ³               ³   ³       BackgroundPosition.php
+    ³               ³   ³       Border.php
+    ³               ³   ³       Color.php
+    ³               ³   ³       Composite.php
+    ³               ³   ³       DenyElementDecorator.php
+    ³               ³   ³       Filter.php
+    ³               ³   ³       Font.php
+    ³               ³   ³       FontFamily.php
+    ³               ³   ³       Ident.php
+    ³               ³   ³       ImportantDecorator.php
+    ³               ³   ³       Length.php
+    ³               ³   ³       ListStyle.php
+    ³               ³   ³       Multiple.php
+    ³               ³   ³       Number.php
+    ³               ³   ³       Percentage.php
+    ³               ³   ³       Ratio.php
+    ³               ³   ³       TextDecoration.php
+    ³               ³   ³       URI.php
+    ³               ³   ³       
+    ³               ³   ÃÄÄÄHTML
+    ³               ³   ³       Bool.php
+    ³               ³   ³       Class.php
+    ³               ³   ³       Color.php
+    ³               ³   ³       ContentEditable.php
+    ³               ³   ³       FrameTarget.php
+    ³               ³   ³       ID.php
+    ³               ³   ³       Length.php
+    ³               ³   ³       LinkTypes.php
+    ³               ³   ³       MultiLength.php
+    ³               ³   ³       Nmtokens.php
+    ³               ³   ³       Pixels.php
+    ³               ³   ³       
+    ³               ³   ÀÄÄÄURI
+    ³               ³       ³   Email.php
+    ³               ³       ³   Host.php
+    ³               ³       ³   IPv4.php
+    ³               ³       ³   IPv6.php
+    ³               ³       ³   
+    ³               ³       ÀÄÄÄEmail
+    ³               ³               SimpleCheck.php
+    ³               ³               
+    ³               ÃÄÄÄAttrTransform
+    ³               ³       Background.php
+    ³               ³       BdoDir.php
+    ³               ³       BgColor.php
+    ³               ³       BoolToCSS.php
+    ³               ³       Border.php
+    ³               ³       EnumToCSS.php
+    ³               ³       ImgRequired.php
+    ³               ³       ImgSpace.php
+    ³               ³       Input.php
+    ³               ³       Lang.php
+    ³               ³       Length.php
+    ³               ³       Name.php
+    ³               ³       NameSync.php
+    ³               ³       Nofollow.php
+    ³               ³       SafeEmbed.php
+    ³               ³       SafeObject.php
+    ³               ³       SafeParam.php
+    ³               ³       ScriptRequired.php
+    ³               ³       TargetBlank.php
+    ³               ³       TargetNoopener.php
+    ³               ³       TargetNoreferrer.php
+    ³               ³       Textarea.php
+    ³               ³       
+    ³               ÃÄÄÄChildDef
+    ³               ³       Chameleon.php
+    ³               ³       Custom.php
+    ³               ³       Empty.php
+    ³               ³       List.php
+    ³               ³       Optional.php
+    ³               ³       Required.php
+    ³               ³       StrictBlockquote.php
+    ³               ³       Table.php
+    ³               ³       
+    ³               ÃÄÄÄConfigSchema
+    ³               ³   ³   Exception.php
+    ³               ³   ³   Interchange.php
+    ³               ³   ³   InterchangeBuilder.php
+    ³               ³   ³   schema.ser
+    ³               ³   ³   Validator.php
+    ³               ³   ³   ValidatorAtom.php
+    ³               ³   ³   
+    ³               ³   ÃÄÄÄBuilder
+    ³               ³   ³       ConfigSchema.php
+    ³               ³   ³       Xml.php
+    ³               ³   ³       
+    ³               ³   ÃÄÄÄInterchange
+    ³               ³   ³       Directive.php
+    ³               ³   ³       Id.php
+    ³               ³   ³       
+    ³               ³   ÀÄÄÄschema
+    ³               ³           Attr.AllowedClasses.txt
+    ³               ³           Attr.AllowedFrameTargets.txt
+    ³               ³           Attr.AllowedRel.txt
+    ³               ³           Attr.AllowedRev.txt
+    ³               ³           Attr.ClassUseCDATA.txt
+    ³               ³           Attr.DefaultImageAlt.txt
+    ³               ³           Attr.DefaultInvalidImage.txt
+    ³               ³           Attr.DefaultInvalidImageAlt.txt
+    ³               ³           Attr.DefaultTextDir.txt
+    ³               ³           Attr.EnableID.txt
+    ³               ³           Attr.ForbiddenClasses.txt
+    ³               ³           Attr.ID.HTML5.txt
+    ³               ³           Attr.IDBlacklist.txt
+    ³               ³           Attr.IDBlacklistRegexp.txt
+    ³               ³           Attr.IDPrefix.txt
+    ³               ³           Attr.IDPrefixLocal.txt
+    ³               ³           AutoFormat.AutoParagraph.txt
+    ³               ³           AutoFormat.Custom.txt
+    ³               ³           AutoFormat.DisplayLinkURI.txt
+    ³               ³           AutoFormat.Linkify.txt
+    ³               ³           AutoFormat.PurifierLinkify.DocURL.txt
+    ³               ³           AutoFormat.PurifierLinkify.txt
+    ³               ³           AutoFormat.RemoveEmpty.Predicate.txt
+    ³               ³           AutoFormat.RemoveEmpty.RemoveNbsp.Exceptions.txt
+    ³               ³           AutoFormat.RemoveEmpty.RemoveNbsp.txt
+    ³               ³           AutoFormat.RemoveEmpty.txt
+    ³               ³           AutoFormat.RemoveSpansWithoutAttributes.txt
+    ³               ³           Cache.DefinitionImpl.txt
+    ³               ³           Cache.SerializerPath.txt
+    ³               ³           Cache.SerializerPermissions.txt
+    ³               ³           Core.AggressivelyFixLt.txt
+    ³               ³           Core.AggressivelyRemoveScript.txt
+    ³               ³           Core.AllowHostnameUnderscore.txt
+    ³               ³           Core.AllowParseManyTags.txt
+    ³               ³           Core.CollectErrors.txt
+    ³               ³           Core.ColorKeywords.txt
+    ³               ³           Core.ConvertDocumentToFragment.txt
+    ³               ³           Core.DirectLexLineNumberSyncInterval.txt
+    ³               ³           Core.DisableExcludes.txt
+    ³               ³           Core.EnableIDNA.txt
+    ³               ³           Core.Encoding.txt
+    ³               ³           Core.EscapeInvalidChildren.txt
+    ³               ³           Core.EscapeInvalidTags.txt
+    ³               ³           Core.EscapeNonASCIICharacters.txt
+    ³               ³           Core.HiddenElements.txt
+    ³               ³           Core.Language.txt
+    ³               ³           Core.LegacyEntityDecoder.txt
+    ³               ³           Core.LexerImpl.txt
+    ³               ³           Core.MaintainLineNumbers.txt
+    ³               ³           Core.NormalizeNewlines.txt
+    ³               ³           Core.RemoveBlanks.txt
+    ³               ³           Core.RemoveInvalidImg.txt
+    ³               ³           Core.RemoveProcessingInstructions.txt
+    ³               ³           Core.RemoveScriptContents.txt
+    ³               ³           CSS.AllowDuplicates.txt
+    ³               ³           CSS.AllowedFonts.txt
+    ³               ³           CSS.AllowedProperties.txt
+    ³               ³           CSS.AllowImportant.txt
+    ³               ³           CSS.AllowTricky.txt
+    ³               ³           CSS.DefinitionRev.txt
+    ³               ³           CSS.ForbiddenProperties.txt
+    ³               ³           CSS.MaxImgLength.txt
+    ³               ³           CSS.Proprietary.txt
+    ³               ³           CSS.Trusted.txt
+    ³               ³           Filter.Custom.txt
+    ³               ³           Filter.ExtractStyleBlocks.Escaping.txt
+    ³               ³           Filter.ExtractStyleBlocks.Scope.txt
+    ³               ³           Filter.ExtractStyleBlocks.TidyImpl.txt
+    ³               ³           Filter.ExtractStyleBlocks.txt
+    ³               ³           Filter.YouTube.txt
+    ³               ³           HTML.Allowed.txt
+    ³               ³           HTML.AllowedAttributes.txt
+    ³               ³           HTML.AllowedComments.txt
+    ³               ³           HTML.AllowedCommentsRegexp.txt
+    ³               ³           HTML.AllowedElements.txt
+    ³               ³           HTML.AllowedModules.txt
+    ³               ³           HTML.Attr.Name.UseCDATA.txt
+    ³               ³           HTML.BlockWrapper.txt
+    ³               ³           HTML.CoreModules.txt
+    ³               ³           HTML.CustomDoctype.txt
+    ³               ³           HTML.DefinitionID.txt
+    ³               ³           HTML.DefinitionRev.txt
+    ³               ³           HTML.Doctype.txt
+    ³               ³           HTML.FlashAllowFullScreen.txt
+    ³               ³           HTML.ForbiddenAttributes.txt
+    ³               ³           HTML.ForbiddenElements.txt
+    ³               ³           HTML.Forms.txt
+    ³               ³           HTML.MaxImgLength.txt
+    ³               ³           HTML.Nofollow.txt
+    ³               ³           HTML.Parent.txt
+    ³               ³           HTML.Proprietary.txt
+    ³               ³           HTML.SafeEmbed.txt
+    ³               ³           HTML.SafeIframe.txt
+    ³               ³           HTML.SafeObject.txt
+    ³               ³           HTML.SafeScripting.txt
+    ³               ³           HTML.Strict.txt
+    ³               ³           HTML.TargetBlank.txt
+    ³               ³           HTML.TargetNoopener.txt
+    ³               ³           HTML.TargetNoreferrer.txt
+    ³               ³           HTML.TidyAdd.txt
+    ³               ³           HTML.TidyLevel.txt
+    ³               ³           HTML.TidyRemove.txt
+    ³               ³           HTML.Trusted.txt
+    ³               ³           HTML.XHTML.txt
+    ³               ³           info.ini
+    ³               ³           Output.CommentScriptContents.txt
+    ³               ³           Output.FixInnerHTML.txt
+    ³               ³           Output.FlashCompat.txt
+    ³               ³           Output.Newline.txt
+    ³               ³           Output.SortAttr.txt
+    ³               ³           Output.TidyFormat.txt
+    ³               ³           Test.ForceNoIconv.txt
+    ³               ³           URI.AllowedSchemes.txt
+    ³               ³           URI.Base.txt
+    ³               ³           URI.DefaultScheme.txt
+    ³               ³           URI.DefinitionID.txt
+    ³               ³           URI.DefinitionRev.txt
+    ³               ³           URI.Disable.txt
+    ³               ³           URI.DisableExternal.txt
+    ³               ³           URI.DisableExternalResources.txt
+    ³               ³           URI.DisableResources.txt
+    ³               ³           URI.Host.txt
+    ³               ³           URI.HostBlacklist.txt
+    ³               ³           URI.MakeAbsolute.txt
+    ³               ³           URI.Munge.txt
+    ³               ³           URI.MungeResources.txt
+    ³               ³           URI.MungeSecretKey.txt
+    ³               ³           URI.OverrideAllowedSchemes.txt
+    ³               ³           URI.SafeIframeRegexp.txt
+    ³               ³           
+    ³               ÃÄÄÄDefinitionCache
+    ³               ³   ³   Decorator.php
+    ³               ³   ³   Null.php
+    ³               ³   ³   Serializer.php
+    ³               ³   ³   
+    ³               ³   ÃÄÄÄDecorator
+    ³               ³   ³       Cleanup.php
+    ³               ³   ³       Memory.php
+    ³               ³   ³       Template.php.in
+    ³               ³   ³       
+    ³               ³   ÀÄÄÄSerializer
+    ³               ³           README
+    ³               ³           
+    ³               ÃÄÄÄEntityLookup
+    ³               ³       entities.ser
+    ³               ³       
+    ³               ÃÄÄÄFilter
+    ³               ³       ExtractStyleBlocks.php
+    ³               ³       YouTube.php
+    ³               ³       
+    ³               ÃÄÄÄHTMLModule
+    ³               ³   ³   Bdo.php
+    ³               ³   ³   CommonAttributes.php
+    ³               ³   ³   Edit.php
+    ³               ³   ³   Forms.php
+    ³               ³   ³   Hypertext.php
+    ³               ³   ³   Iframe.php
+    ³               ³   ³   Image.php
+    ³               ³   ³   Legacy.php
+    ³               ³   ³   List.php
+    ³               ³   ³   Name.php
+    ³               ³   ³   Nofollow.php
+    ³               ³   ³   NonXMLCommonAttributes.php
+    ³               ³   ³   Object.php
+    ³               ³   ³   Presentation.php
+    ³               ³   ³   Proprietary.php
+    ³               ³   ³   Ruby.php
+    ³               ³   ³   SafeEmbed.php
+    ³               ³   ³   SafeObject.php
+    ³               ³   ³   SafeScripting.php
+    ³               ³   ³   Scripting.php
+    ³               ³   ³   StyleAttribute.php
+    ³               ³   ³   Tables.php
+    ³               ³   ³   Target.php
+    ³               ³   ³   TargetBlank.php
+    ³               ³   ³   TargetNoopener.php
+    ³               ³   ³   TargetNoreferrer.php
+    ³               ³   ³   Text.php
+    ³               ³   ³   Tidy.php
+    ³               ³   ³   XMLCommonAttributes.php
+    ³               ³   ³   
+    ³               ³   ÀÄÄÄTidy
+    ³               ³           Name.php
+    ³               ³           Proprietary.php
+    ³               ³           Strict.php
+    ³               ³           Transitional.php
+    ³               ³           XHTML.php
+    ³               ³           XHTMLAndHTML4.php
+    ³               ³           
+    ³               ÃÄÄÄInjector
+    ³               ³       AutoParagraph.php
+    ³               ³       DisplayLinkURI.php
+    ³               ³       Linkify.php
+    ³               ³       PurifierLinkify.php
+    ³               ³       RemoveEmpty.php
+    ³               ³       RemoveSpansWithoutAttributes.php
+    ³               ³       SafeObject.php
+    ³               ³       
+    ³               ÃÄÄÄLanguage
+    ³               ³   ÀÄÄÄmessages
+    ³               ³           en.php
+    ³               ³           
+    ³               ÃÄÄÄLexer
+    ³               ³       DirectLex.php
+    ³               ³       DOMLex.php
+    ³               ³       PH5P.php
+    ³               ³       
+    ³               ÃÄÄÄNode
+    ³               ³       Comment.php
+    ³               ³       Element.php
+    ³               ³       Text.php
+    ³               ³       
+    ³               ÃÄÄÄPrinter
+    ³               ³       ConfigForm.css
+    ³               ³       ConfigForm.js
+    ³               ³       ConfigForm.php
+    ³               ³       CSSDefinition.php
+    ³               ³       HTMLDefinition.php
+    ³               ³       
+    ³               ÃÄÄÄStrategy
+    ³               ³       Composite.php
+    ³               ³       Core.php
+    ³               ³       FixNesting.php
+    ³               ³       MakeWellFormed.php
+    ³               ³       RemoveForeignElements.php
+    ³               ³       ValidateAttributes.php
+    ³               ³       
+    ³               ÃÄÄÄTagTransform
+    ³               ³       Font.php
+    ³               ³       Simple.php
+    ³               ³       
+    ³               ÃÄÄÄToken
+    ³               ³       Comment.php
+    ³               ³       Empty.php
+    ³               ³       End.php
+    ³               ³       Start.php
+    ³               ³       Tag.php
+    ³               ³       Text.php
+    ³               ³       
+    ³               ÃÄÄÄURIFilter
+    ³               ³       DisableExternal.php
+    ³               ³       DisableExternalResources.php
+    ³               ³       DisableResources.php
+    ³               ³       HostBlacklist.php
+    ³               ³       MakeAbsolute.php
+    ³               ³       Munge.php
+    ³               ³       SafeIframe.php
+    ³               ³       
+    ³               ÃÄÄÄURIScheme
+    ³               ³       data.php
+    ³               ³       file.php
+    ³               ³       ftp.php
+    ³               ³       http.php
+    ³               ³       https.php
+    ³               ³       mailto.php
+    ³               ³       news.php
+    ³               ³       nntp.php
+    ³               ³       tel.php
+    ³               ³       
+    ³               ÀÄÄÄVarParser
+    ³                       Flexible.php
+    ³                       Native.php
+    ³                       
+    ÃÄÄÄmaennchen
+    ³   ÀÄÄÄzipstream-php
+    ³       ³   .editorconfig
+    ³       ³   .gitattributes
+    ³       ³   .gitignore
+    ³       ³   .php-cs-fixer.dist.php
+    ³       ³   .tool-versions
+    ³       ³   composer.json
+    ³       ³   LICENSE
+    ³       ³   phpdoc.dist.xml
+    ³       ³   phpunit.xml.dist
+    ³       ³   psalm.xml
+    ³       ³   README.md
+    ³       ³   
+    ³       ÃÄÄÄ.github
+    ³       ³   ³   CODE_OF_CONDUCT.md
+    ³       ³   ³   CONTRIBUTING.md
+    ³       ³   ³   dependabot.yml
+    ³       ³   ³   FUNDING.yml
+    ³       ³   ³   PULL_REQUEST_TEMPLATE.md
+    ³       ³   ³   scorecard.yml
+    ³       ³   ³   SECURITY.md
+    ³       ³   ³   
+    ³       ³   ÃÄÄÄISSUE_TEMPLATE
+    ³       ³   ³       BUG.yml
+    ³       ³   ³       FEATURE.yml
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄPULL_REQUEST_TEMPLATE
+    ³       ³   ³       FAILING_TEST.md
+    ³       ³   ³       FIX.md
+    ³       ³   ³       IMPROVEMENT.md
+    ³       ³   ³       NEW_FEATURE.md
+    ³       ³   ³       
+    ³       ³   ÀÄÄÄworkflows
+    ³       ³           branch_main.yml
+    ³       ³           part_dependabot.yml
+    ³       ³           part_docs.yml
+    ³       ³           part_release.yml
+    ³       ³           part_test.yml
+    ³       ³           pr.yml
+    ³       ³           scorecard.yml
+    ³       ³           tag-beta.yml
+    ³       ³           tag-stable.yml
+    ³       ³           
+    ³       ÃÄÄÄ.phive
+    ³       ³       phars.xml
+    ³       ³       
+    ³       ÃÄÄÄ.phpdoc
+    ³       ³   ÀÄÄÄtemplate
+    ³       ³           base.html.twig
+    ³       ³           
+    ³       ÃÄÄÄguides
+    ³       ³       ContentLength.rst
+    ³       ³       FlySystem.rst
+    ³       ³       index.rst
+    ³       ³       Nginx.rst
+    ³       ³       Options.rst
+    ³       ³       PSR7Streams.rst
+    ³       ³       StreamOutput.rst
+    ³       ³       Symfony.rst
+    ³       ³       Varnish.rst
+    ³       ³       
+    ³       ÃÄÄÄsrc
+    ³       ³   ³   CentralDirectoryFileHeader.php
+    ³       ³   ³   CompressionMethod.php
+    ³       ³   ³   DataDescriptor.php
+    ³       ³   ³   EndOfCentralDirectory.php
+    ³       ³   ³   Exception.php
+    ³       ³   ³   File.php
+    ³       ³   ³   GeneralPurposeBitFlag.php
+    ³       ³   ³   LocalFileHeader.php
+    ³       ³   ³   OperationMode.php
+    ³       ³   ³   PackField.php
+    ³       ³   ³   Time.php
+    ³       ³   ³   Version.php
+    ³       ³   ³   ZipStream.php
+    ³       ³   ³   
+    ³       ³   ÃÄÄÄException
+    ³       ³   ³       DosTimeOverflowException.php
+    ³       ³   ³       FileNotFoundException.php
+    ³       ³   ³       FileNotReadableException.php
+    ³       ³   ³       FileSizeIncorrectException.php
+    ³       ³   ³       OverflowException.php
+    ³       ³   ³       ResourceActionException.php
+    ³       ³   ³       SimulationFileUnknownException.php
+    ³       ³   ³       StreamNotReadableException.php
+    ³       ³   ³       StreamNotSeekableException.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄZip64
+    ³       ³   ³       DataDescriptor.php
+    ³       ³   ³       EndOfCentralDirectory.php
+    ³       ³   ³       EndOfCentralDirectoryLocator.php
+    ³       ³   ³       ExtendedInformationExtraField.php
+    ³       ³   ³       
+    ³       ³   ÀÄÄÄZs
+    ³       ³           ExtendedInformationExtraField.php
+    ³       ³           
+    ³       ÀÄÄÄtest
+    ³           ³   Assertions.php
+    ³           ³   bootstrap.php
+    ³           ³   CentralDirectoryFileHeaderTest.php
+    ³           ³   DataDescriptorTest.php
+    ³           ³   EndlessCycleStream.php
+    ³           ³   EndOfCentralDirectoryTest.php
+    ³           ³   FaultInjectionResource.php
+    ³           ³   LocalFileHeaderTest.php
+    ³           ³   PackFieldTest.php
+    ³           ³   ResourceStream.php
+    ³           ³   Tempfile.php
+    ³           ³   TimeTest.php
+    ³           ³   Util.php
+    ³           ³   ZipStreamTest.php
+    ³           ³   
+    ³           ÃÄÄÄZip64
+    ³           ³       DataDescriptorTest.php
+    ³           ³       EndOfCentralDirectoryLocatorTest.php
+    ³           ³       EndOfCentralDirectoryTest.php
+    ³           ³       ExtendedInformationExtraFieldTest.php
+    ³           ³       
+    ³           ÀÄÄÄZs
+    ³                   ExtendedInformationExtraFieldTest.php
+    ³                   
+    ÃÄÄÄmarkbaker
+    ³   ÃÄÄÄcomplex
+    ³   ³   ³   composer.json
+    ³   ³   ³   license.md
+    ³   ³   ³   README.md
+    ³   ³   ³   
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³           main.yml
+    ³   ³   ³           
+    ³   ³   ÃÄÄÄclasses
+    ³   ³   ³   ÀÄÄÄsrc
+    ³   ³   ³           Complex.php
+    ³   ³   ³           Exception.php
+    ³   ³   ³           Functions.php
+    ³   ³   ³           Operations.php
+    ³   ³   ³           
+    ³   ³   ÀÄÄÄexamples
+    ³   ³           complexTest.php
+    ³   ³           testFunctions.php
+    ³   ³           testOperations.php
+    ³   ³           
+    ³   ÀÄÄÄmatrix
+    ³       ³   buildPhar.php
+    ³       ³   composer.json
+    ³       ³   infection.json.dist
+    ³       ³   license.md
+    ³       ³   phpstan.neon
+    ³       ³   README.md
+    ³       ³   
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ³           main.yaml
+    ³       ³           
+    ³       ÃÄÄÄclasses
+    ³       ³   ÀÄÄÄsrc
+    ³       ³       ³   Builder.php
+    ³       ³       ³   Div0Exception.php
+    ³       ³       ³   Exception.php
+    ³       ³       ³   Functions.php
+    ³       ³       ³   Matrix.php
+    ³       ³       ³   Operations.php
+    ³       ³       ³   
+    ³       ³       ÃÄÄÄDecomposition
+    ³       ³       ³       Decomposition.php
+    ³       ³       ³       LU.php
+    ³       ³       ³       QR.php
+    ³       ³       ³       
+    ³       ³       ÀÄÄÄOperators
+    ³       ³               Addition.php
+    ³       ³               DirectSum.php
+    ³       ³               Division.php
+    ³       ³               Multiplication.php
+    ³       ³               Operator.php
+    ³       ³               Subtraction.php
+    ³       ³               
+    ³       ÀÄÄÄexamples
+    ³               test.php
+    ³               
+    ÃÄÄÄmasterminds
+    ³   ÀÄÄÄhtml5
+    ³       ³   composer.json
+    ³       ³   CREDITS
+    ³       ³   LICENSE.txt
+    ³       ³   README.md
+    ³       ³   RELEASE.md
+    ³       ³   UPGRADING.md
+    ³       ³   
+    ³       ÃÄÄÄbin
+    ³       ³       entities.php
+    ³       ³       
+    ³       ÀÄÄÄsrc
+    ³           ³   HTML5.php
+    ³           ³   
+    ³           ÀÄÄÄHTML5
+    ³               ³   Elements.php
+    ³               ³   Entities.php
+    ³               ³   Exception.php
+    ³               ³   InstructionProcessor.php
+    ³               ³   
+    ³               ÃÄÄÄParser
+    ³               ³       CharacterReference.php
+    ³               ³       DOMTreeBuilder.php
+    ³               ³       EventHandler.php
+    ³               ³       FileInputStream.php
+    ³               ³       InputStream.php
+    ³               ³       ParseError.php
+    ³               ³       README.md
+    ³               ³       Scanner.php
+    ³               ³       StringInputStream.php
+    ³               ³       Tokenizer.php
+    ³               ³       TreeBuildingRules.php
+    ³               ³       UTF8Utils.php
+    ³               ³       
+    ³               ÀÄÄÄSerializer
+    ³                       HTML5Entities.php
+    ³                       OutputRules.php
+    ³                       README.md
+    ³                       RulesInterface.php
+    ³                       Traverser.php
+    ³                       
+    ÃÄÄÄphpmailer
+    ³   ÀÄÄÄphpmailer
+    ³       ³   COMMITMENT
+    ³       ³   composer.json
+    ³       ³   get_oauth_token.php
+    ³       ³   LICENSE
+    ³       ³   README.md
+    ³       ³   SECURITY.md
+    ³       ³   SMTPUTF8.md
+    ³       ³   VERSION
+    ³       ³   
+    ³       ÃÄÄÄlanguage
+    ³       ³       phpmailer.lang-af.php
+    ³       ³       phpmailer.lang-ar.php
+    ³       ³       phpmailer.lang-as.php
+    ³       ³       phpmailer.lang-az.php
+    ³       ³       phpmailer.lang-ba.php
+    ³       ³       phpmailer.lang-be.php
+    ³       ³       phpmailer.lang-bg.php
+    ³       ³       phpmailer.lang-bn.php
+    ³       ³       phpmailer.lang-ca.php
+    ³       ³       phpmailer.lang-cs.php
+    ³       ³       phpmailer.lang-da.php
+    ³       ³       phpmailer.lang-de.php
+    ³       ³       phpmailer.lang-el.php
+    ³       ³       phpmailer.lang-eo.php
+    ³       ³       phpmailer.lang-es.php
+    ³       ³       phpmailer.lang-et.php
+    ³       ³       phpmailer.lang-fa.php
+    ³       ³       phpmailer.lang-fi.php
+    ³       ³       phpmailer.lang-fo.php
+    ³       ³       phpmailer.lang-fr.php
+    ³       ³       phpmailer.lang-gl.php
+    ³       ³       phpmailer.lang-he.php
+    ³       ³       phpmailer.lang-hi.php
+    ³       ³       phpmailer.lang-hr.php
+    ³       ³       phpmailer.lang-hu.php
+    ³       ³       phpmailer.lang-hy.php
+    ³       ³       phpmailer.lang-id.php
+    ³       ³       phpmailer.lang-it.php
+    ³       ³       phpmailer.lang-ja.php
+    ³       ³       phpmailer.lang-ka.php
+    ³       ³       phpmailer.lang-ko.php
+    ³       ³       phpmailer.lang-ku.php
+    ³       ³       phpmailer.lang-lt.php
+    ³       ³       phpmailer.lang-lv.php
+    ³       ³       phpmailer.lang-mg.php
+    ³       ³       phpmailer.lang-mn.php
+    ³       ³       phpmailer.lang-ms.php
+    ³       ³       phpmailer.lang-nb.php
+    ³       ³       phpmailer.lang-nl.php
+    ³       ³       phpmailer.lang-pl.php
+    ³       ³       phpmailer.lang-pt.php
+    ³       ³       phpmailer.lang-pt_br.php
+    ³       ³       phpmailer.lang-ro.php
+    ³       ³       phpmailer.lang-ru.php
+    ³       ³       phpmailer.lang-si.php
+    ³       ³       phpmailer.lang-sk.php
+    ³       ³       phpmailer.lang-sl.php
+    ³       ³       phpmailer.lang-sr.php
+    ³       ³       phpmailer.lang-sr_latn.php
+    ³       ³       phpmailer.lang-sv.php
+    ³       ³       phpmailer.lang-tl.php
+    ³       ³       phpmailer.lang-tr.php
+    ³       ³       phpmailer.lang-uk.php
+    ³       ³       phpmailer.lang-ur.php
+    ³       ³       phpmailer.lang-vi.php
+    ³       ³       phpmailer.lang-zh.php
+    ³       ³       phpmailer.lang-zh_cn.php
+    ³       ³       
+    ³       ÀÄÄÄsrc
+    ³               DSNConfigurator.php
+    ³               Exception.php
+    ³               OAuth.php
+    ³               OAuthTokenProvider.php
+    ³               PHPMailer.php
+    ³               POP3.php
+    ³               SMTP.php
+    ³               
+    ÃÄÄÄphpoffice
+    ³   ÃÄÄÄmath
+    ³   ³   ³   .gitignore
+    ³   ³   ³   .php-cs-fixer.dist.php
+    ³   ³   ³   composer.json
+    ³   ³   ³   LICENSE
+    ³   ³   ³   mkdocs.yml
+    ³   ³   ³   phpstan.neon.dist
+    ³   ³   ³   phpunit.xml.dist
+    ³   ³   ³   README.md
+    ³   ³   ³   roave-bc-check.yaml
+    ³   ³   ³   
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ³   dependabot.yml
+    ³   ³   ³   ³   
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³           deploy.yml
+    ³   ³   ³           php.yml
+    ³   ³   ³           
+    ³   ³   ÃÄÄÄdocs
+    ³   ³   ³   ³   credits.md
+    ³   ³   ³   ³   index.md
+    ³   ³   ³   ³   install.md
+    ³   ³   ³   ³   
+    ³   ³   ³   ÃÄÄÄassets
+    ³   ³   ³   ³       mathjax.js
+    ³   ³   ³   ³       
+    ³   ³   ³   ÃÄÄÄchanges
+    ³   ³   ³   ³       0.1.0.md
+    ³   ³   ³   ³       0.2.0.md
+    ³   ³   ³   ³       0.3.0.md
+    ³   ³   ³   ³       
+    ³   ³   ³   ÀÄÄÄusage
+    ³   ³   ³       ³   readers.md
+    ³   ³   ³       ³   writers.md
+    ³   ³   ³       ³   
+    ³   ³   ³       ÀÄÄÄelements
+    ³   ³   ³               fraction.md
+    ³   ³   ³               identifier.md
+    ³   ³   ³               numeric.md
+    ³   ³   ³               operator.md
+    ³   ³   ³               row.md
+    ³   ³   ³               semantics.md
+    ³   ³   ³               superscript.md
+    ³   ³   ³               
+    ³   ³   ÃÄÄÄsrc
+    ³   ³   ³   ÀÄÄÄMath
+    ³   ³   ³       ³   Math.php
+    ³   ³   ³       ³   
+    ³   ³   ³       ÃÄÄÄElement
+    ³   ³   ³       ³       AbstractElement.php
+    ³   ³   ³       ³       AbstractGroupElement.php
+    ³   ³   ³       ³       Fraction.php
+    ³   ³   ³       ³       Identifier.php
+    ³   ³   ³       ³       Numeric.php
+    ³   ³   ³       ³       Operator.php
+    ³   ³   ³       ³       Row.php
+    ³   ³   ³       ³       Semantics.php
+    ³   ³   ³       ³       Superscript.php
+    ³   ³   ³       ³       
+    ³   ³   ³       ÃÄÄÄException
+    ³   ³   ³       ³       InvalidInputException.php
+    ³   ³   ³       ³       MathException.php
+    ³   ³   ³       ³       NotImplementedException.php
+    ³   ³   ³       ³       SecurityException.php
+    ³   ³   ³       ³       
+    ³   ³   ³       ÃÄÄÄReader
+    ³   ³   ³       ³   ³   MathML.php
+    ³   ³   ³       ³   ³   OfficeMathML.php
+    ³   ³   ³       ³   ³   ReaderInterface.php
+    ³   ³   ³       ³   ³   
+    ³   ³   ³       ³   ÀÄÄÄSecurity
+    ³   ³   ³       ³           XmlScanner.php
+    ³   ³   ³       ³           
+    ³   ³   ³       ÀÄÄÄWriter
+    ³   ³   ³               MathML.php
+    ³   ³   ³               OfficeMathML.php
+    ³   ³   ³               WriterInterface.php
+    ³   ³   ³               
+    ³   ³   ÀÄÄÄtests
+    ³   ³       ÃÄÄÄMath
+    ³   ³       ³   ÃÄÄÄElement
+    ³   ³       ³   ³       AbstractGroupElementTest.php
+    ³   ³       ³   ³       FractionTest.php
+    ³   ³       ³   ³       IdentifierTest.php
+    ³   ³       ³   ³       NumericTest.php
+    ³   ³       ³   ³       OperatorTest.php
+    ³   ³       ³   ³       SemanticsTest.php
+    ³   ³       ³   ³       SuperscriptTest.php
+    ³   ³       ³   ³       
+    ³   ³       ³   ÃÄÄÄReader
+    ³   ³       ³   ³       MathMLTest.php
+    ³   ³       ³   ³       OfficeMathMLTest.php
+    ³   ³       ³   ³       
+    ³   ³       ³   ÀÄÄÄWriter
+    ³   ³       ³           MathMLTest.php
+    ³   ³       ³           OfficeMathMLTest.php
+    ³   ³       ³           WriterTestCase.php
+    ³   ³       ³           
+    ³   ³       ÀÄÄÄresources
+    ³   ³           ÀÄÄÄschema
+    ³   ³               ÀÄÄÄmathml3
+    ³   ³                       mathml3-common.xsd
+    ³   ³                       mathml3-content.xsd
+    ³   ³                       mathml3-presentation.xsd
+    ³   ³                       mathml3-strict-content.xsd
+    ³   ³                       mathml3.xsd
+    ³   ³                       
+    ³   ÃÄÄÄphpspreadsheet
+    ³   ³   ³   .php-cs-fixer.dist.php
+    ³   ³   ³   .phpcs.xml.dist
+    ³   ³   ³   CHANGELOG.md
+    ³   ³   ³   composer.json
+    ³   ³   ³   CONTRIBUTING.md
+    ³   ³   ³   LICENSE
+    ³   ³   ³   phpstan-baseline.neon
+    ³   ³   ³   phpstan-conditional.php
+    ³   ³   ³   phpstan.neon.dist
+    ³   ³   ³   phpunit10.xml.dist
+    ³   ³   ³   README.md
+    ³   ³   ³   
+    ³   ³   ÀÄÄÄsrc
+    ³   ³       ÀÄÄÄPhpSpreadsheet
+    ³   ³           ³   CellReferenceHelper.php
+    ³   ³           ³   Comment.php
+    ³   ³           ³   DefinedName.php
+    ³   ³           ³   Exception.php
+    ³   ³           ³   HashTable.php
+    ³   ³           ³   IComparable.php
+    ³   ³           ³   IOFactory.php
+    ³   ³           ³   NamedFormula.php
+    ³   ³           ³   NamedRange.php
+    ³   ³           ³   ReferenceHelper.php
+    ³   ³           ³   Settings.php
+    ³   ³           ³   Spreadsheet.php
+    ³   ³           ³   Theme.php
+    ³   ³           ³   
+    ³   ³           ÃÄÄÄCalculation
+    ³   ³           ³   ³   ArrayEnabled.php
+    ³   ³           ³   ³   BinaryComparison.php
+    ³   ³           ³   ³   Calculation.php
+    ³   ³           ³   ³   Category.php
+    ³   ³           ³   ³   Database.php
+    ³   ³           ³   ³   DateTime.php
+    ³   ³           ³   ³   Engineering.php
+    ³   ³           ³   ³   Exception.php
+    ³   ³           ³   ³   ExceptionHandler.php
+    ³   ³           ³   ³   Financial.php
+    ³   ³           ³   ³   FormulaParser.php
+    ³   ³           ³   ³   FormulaToken.php
+    ³   ³           ³   ³   Functions.php
+    ³   ³           ³   ³   Logical.php
+    ³   ³           ³   ³   LookupRef.php
+    ³   ³           ³   ³   MathTrig.php
+    ³   ³           ³   ³   Statistical.php
+    ³   ³           ³   ³   TextData.php
+    ³   ³           ³   ³   Web.php
+    ³   ³           ³   ³   
+    ³   ³           ³   ÃÄÄÄDatabase
+    ³   ³           ³   ³       DatabaseAbstract.php
+    ³   ³           ³   ³       DAverage.php
+    ³   ³           ³   ³       DCount.php
+    ³   ³           ³   ³       DCountA.php
+    ³   ³           ³   ³       DGet.php
+    ³   ³           ³   ³       DMax.php
+    ³   ³           ³   ³       DMin.php
+    ³   ³           ³   ³       DProduct.php
+    ³   ³           ³   ³       DStDev.php
+    ³   ³           ³   ³       DStDevP.php
+    ³   ³           ³   ³       DSum.php
+    ³   ³           ³   ³       DVar.php
+    ³   ³           ³   ³       DVarP.php
+    ³   ³           ³   ³       
+    ³   ³           ³   ÃÄÄÄDateTimeExcel
+    ³   ³           ³   ³       Constants.php
+    ³   ³           ³   ³       Current.php
+    ³   ³           ³   ³       Date.php
+    ³   ³           ³   ³       DateParts.php
+    ³   ³           ³   ³       DateValue.php
+    ³   ³           ³   ³       Days.php
+    ³   ³           ³   ³       Days360.php
+    ³   ³           ³   ³       Difference.php
+    ³   ³           ³   ³       Helpers.php
+    ³   ³           ³   ³       Month.php
+    ³   ³           ³   ³       NetworkDays.php
+    ³   ³           ³   ³       Time.php
+    ³   ³           ³   ³       TimeParts.php
+    ³   ³           ³   ³       TimeValue.php
+    ³   ³           ³   ³       Week.php
+    ³   ³           ³   ³       WorkDay.php
+    ³   ³           ³   ³       YearFrac.php
+    ³   ³           ³   ³       
+    ³   ³           ³   ÃÄÄÄEngine
+    ³   ³           ³   ³   ³   ArrayArgumentHelper.php
+    ³   ³           ³   ³   ³   ArrayArgumentProcessor.php
+    ³   ³           ³   ³   ³   BranchPruner.php
+    ³   ³           ³   ³   ³   CyclicReferenceStack.php
+    ³   ³           ³   ³   ³   FormattedNumber.php
+    ³   ³           ³   ³   ³   Logger.php
+    ³   ³           ³   ³   ³   
+    ³   ³           ³   ³   ÀÄÄÄOperands
+    ³   ³           ³   ³           Operand.php
+    ³   ³           ³   ³           StructuredReference.php
+    ³   ³           ³   ³           
+    ³   ³           ³   ÃÄÄÄEngineering
+    ³   ³           ³   ³       BesselI.php
+    ³   ³           ³   ³       BesselJ.php
+    ³   ³           ³   ³       BesselK.php
+    ³   ³           ³   ³       BesselY.php
+    ³   ³           ³   ³       BitWise.php
+    ³   ³           ³   ³       Compare.php
+    ³   ³           ³   ³       Complex.php
+    ³   ³           ³   ³       ComplexFunctions.php
+    ³   ³           ³   ³       ComplexOperations.php
+    ³   ³           ³   ³       Constants.php
+    ³   ³           ³   ³       ConvertBase.php
+    ³   ³           ³   ³       ConvertBinary.php
+    ³   ³           ³   ³       ConvertDecimal.php
+    ³   ³           ³   ³       ConvertHex.php
+    ³   ³           ³   ³       ConvertOctal.php
+    ³   ³           ³   ³       ConvertUOM.php
+    ³   ³           ³   ³       EngineeringValidations.php
+    ³   ³           ³   ³       Erf.php
+    ³   ³           ³   ³       ErfC.php
+    ³   ³           ³   ³       
+    ³   ³           ³   ÃÄÄÄFinancial
+    ³   ³           ³   ³   ³   Amortization.php
+    ³   ³           ³   ³   ³   Constants.php
+    ³   ³           ³   ³   ³   Coupons.php
+    ³   ³           ³   ³   ³   Depreciation.php
+    ³   ³           ³   ³   ³   Dollar.php
+    ³   ³           ³   ³   ³   FinancialValidations.php
+    ³   ³           ³   ³   ³   Helpers.php
+    ³   ³           ³   ³   ³   InterestRate.php
+    ³   ³           ³   ³   ³   TreasuryBill.php
+    ³   ³           ³   ³   ³   
+    ³   ³           ³   ³   ÃÄÄÄCashFlow
+    ³   ³           ³   ³   ³   ³   CashFlowValidations.php
+    ³   ³           ³   ³   ³   ³   Single.php
+    ³   ³           ³   ³   ³   ³   
+    ³   ³           ³   ³   ³   ÃÄÄÄConstant
+    ³   ³           ³   ³   ³   ³   ³   Periodic.php
+    ³   ³           ³   ³   ³   ³   ³   
+    ³   ³           ³   ³   ³   ³   ÀÄÄÄPeriodic
+    ³   ³           ³   ³   ³   ³           Cumulative.php
+    ³   ³           ³   ³   ³   ³           Interest.php
+    ³   ³           ³   ³   ³   ³           InterestAndPrincipal.php
+    ³   ³           ³   ³   ³   ³           Payments.php
+    ³   ³           ³   ³   ³   ³           
+    ³   ³           ³   ³   ³   ÀÄÄÄVariable
+    ³   ³           ³   ³   ³           NonPeriodic.php
+    ³   ³           ³   ³   ³           Periodic.php
+    ³   ³           ³   ³   ³           
+    ³   ³           ³   ³   ÀÄÄÄSecurities
+    ³   ³           ³   ³           AccruedInterest.php
+    ³   ³           ³   ³           Price.php
+    ³   ³           ³   ³           Rates.php
+    ³   ³           ³   ³           SecurityValidations.php
+    ³   ³           ³   ³           Yields.php
+    ³   ³           ³   ³           
+    ³   ³           ³   ÃÄÄÄInformation
+    ³   ³           ³   ³       ErrorValue.php
+    ³   ³           ³   ³       ExcelError.php
+    ³   ³           ³   ³       Value.php
+    ³   ³           ³   ³       
+    ³   ³           ³   ÃÄÄÄInternal
+    ³   ³           ³   ³       MakeMatrix.php
+    ³   ³           ³   ³       WildcardMatch.php
+    ³   ³           ³   ³       
+    ³   ³           ³   ÃÄÄÄlocale
+    ³   ³           ³   ³   ³   Translations.xlsx
+    ³   ³           ³   ³   ³   
+    ³   ³           ³   ³   ÃÄÄÄbg
+    ³   ³           ³   ³   ³       config
+    ³   ³           ³   ³   ³       functions
+    ³   ³           ³   ³   ³       
+    ³   ³           ³   ³   ÃÄÄÄcs
+    ³   ³           ³   ³   ³       config
+    ³   ³           ³   ³   ³       functions
+    ³   ³           ³   ³   ³       
+    ³   ³           ³   ³   ÃÄÄÄda
+    ³   ³           ³   ³   ³       config
+    ³   ³           ³   ³   ³       functions
+    ³   ³           ³   ³   ³       
+    ³   ³           ³   ³   ÃÄÄÄde
+    ³   ³           ³   ³   ³       config
+    ³   ³           ³   ³   ³       functions
+    ³   ³           ³   ³   ³       
+    ³   ³           ³   ³   ÃÄÄÄen
+    ³   ³           ³   ³   ³   ÀÄÄÄuk
+    ³   ³           ³   ³   ³           config
+    ³   ³           ³   ³   ³           
+    ³   ³           ³   ³   ÃÄÄÄes
+    ³   ³           ³   ³   ³       config
+    ³   ³           ³   ³   ³       functions
+    ³   ³           ³   ³   ³       
+    ³   ³           ³   ³   ÃÄÄÄfi
+    ³   ³           ³   ³   ³       config
+    ³   ³           ³   ³   ³       functions
+    ³   ³           ³   ³   ³       
+    ³   ³           ³   ³   ÃÄÄÄfr
+    ³   ³           ³   ³   ³       config
+    ³   ³           ³   ³   ³       functions
+    ³   ³           ³   ³   ³       
+    ³   ³           ³   ³   ÃÄÄÄhu
+    ³   ³           ³   ³   ³       config
+    ³   ³           ³   ³   ³       functions
+    ³   ³           ³   ³   ³       
+    ³   ³           ³   ³   ÃÄÄÄit
+    ³   ³           ³   ³   ³       config
+    ³   ³           ³   ³   ³       functions
+    ³   ³           ³   ³   ³       
+    ³   ³           ³   ³   ÃÄÄÄnb
+    ³   ³           ³   ³   ³       config
+    ³   ³           ³   ³   ³       functions
+    ³   ³           ³   ³   ³       
+    ³   ³           ³   ³   ÃÄÄÄnl
+    ³   ³           ³   ³   ³       config
+    ³   ³           ³   ³   ³       functions
+    ³   ³           ³   ³   ³       
+    ³   ³           ³   ³   ÃÄÄÄpl
+    ³   ³           ³   ³   ³       config
+    ³   ³           ³   ³   ³       functions
+    ³   ³           ³   ³   ³       
+    ³   ³           ³   ³   ÃÄÄÄpt
+    ³   ³           ³   ³   ³   ³   config
+    ³   ³           ³   ³   ³   ³   functions
+    ³   ³           ³   ³   ³   ³   
+    ³   ³           ³   ³   ³   ÀÄÄÄbr
+    ³   ³           ³   ³   ³           config
+    ³   ³           ³   ³   ³           functions
+    ³   ³           ³   ³   ³           
+    ³   ³           ³   ³   ÃÄÄÄru
+    ³   ³           ³   ³   ³       config
+    ³   ³           ³   ³   ³       functions
+    ³   ³           ³   ³   ³       
+    ³   ³           ³   ³   ÃÄÄÄsv
+    ³   ³           ³   ³   ³       config
+    ³   ³           ³   ³   ³       functions
+    ³   ³           ³   ³   ³       
+    ³   ³           ³   ³   ÀÄÄÄtr
+    ³   ³           ³   ³           config
+    ³   ³           ³   ³           functions
+    ³   ³           ³   ³           
+    ³   ³           ³   ÃÄÄÄLogical
+    ³   ³           ³   ³       Boolean.php
+    ³   ³           ³   ³       Conditional.php
+    ³   ³           ³   ³       Operations.php
+    ³   ³           ³   ³       
+    ³   ³           ³   ÃÄÄÄLookupRef
+    ³   ³           ³   ³       Address.php
+    ³   ³           ³   ³       ExcelMatch.php
+    ³   ³           ³   ³       Filter.php
+    ³   ³           ³   ³       Formula.php
+    ³   ³           ³   ³       Helpers.php
+    ³   ³           ³   ³       HLookup.php
+    ³   ³           ³   ³       Hyperlink.php
+    ³   ³           ³   ³       Indirect.php
+    ³   ³           ³   ³       Lookup.php
+    ³   ³           ³   ³       LookupBase.php
+    ³   ³           ³   ³       LookupRefValidations.php
+    ³   ³           ³   ³       Matrix.php
+    ³   ³           ³   ³       Offset.php
+    ³   ³           ³   ³       RowColumnInformation.php
+    ³   ³           ³   ³       Selection.php
+    ³   ³           ³   ³       Sort.php
+    ³   ³           ³   ³       Unique.php
+    ³   ³           ³   ³       VLookup.php
+    ³   ³           ³   ³       
+    ³   ³           ³   ÃÄÄÄMathTrig
+    ³   ³           ³   ³   ³   Absolute.php
+    ³   ³           ³   ³   ³   Angle.php
+    ³   ³           ³   ³   ³   Arabic.php
+    ³   ³           ³   ³   ³   Base.php
+    ³   ³           ³   ³   ³   Ceiling.php
+    ³   ³           ³   ³   ³   Combinations.php
+    ³   ³           ³   ³   ³   Exp.php
+    ³   ³           ³   ³   ³   Factorial.php
+    ³   ³           ³   ³   ³   Floor.php
+    ³   ³           ³   ³   ³   Gcd.php
+    ³   ³           ³   ³   ³   Helpers.php
+    ³   ³           ³   ³   ³   IntClass.php
+    ³   ³           ³   ³   ³   Lcm.php
+    ³   ³           ³   ³   ³   Logarithms.php
+    ³   ³           ³   ³   ³   MatrixFunctions.php
+    ³   ³           ³   ³   ³   Operations.php
+    ³   ³           ³   ³   ³   Random.php
+    ³   ³           ³   ³   ³   Roman.php
+    ³   ³           ³   ³   ³   Round.php
+    ³   ³           ³   ³   ³   SeriesSum.php
+    ³   ³           ³   ³   ³   Sign.php
+    ³   ³           ³   ³   ³   Sqrt.php
+    ³   ³           ³   ³   ³   Subtotal.php
+    ³   ³           ³   ³   ³   Sum.php
+    ³   ³           ³   ³   ³   SumSquares.php
+    ³   ³           ³   ³   ³   Trunc.php
+    ³   ³           ³   ³   ³   
+    ³   ³           ³   ³   ÀÄÄÄTrig
+    ³   ³           ³   ³           Cosecant.php
+    ³   ³           ³   ³           Cosine.php
+    ³   ³           ³   ³           Cotangent.php
+    ³   ³           ³   ³           Secant.php
+    ³   ³           ³   ³           Sine.php
+    ³   ³           ³   ³           Tangent.php
+    ³   ³           ³   ³           
+    ³   ³           ³   ÃÄÄÄStatistical
+    ³   ³           ³   ³   ³   AggregateBase.php
+    ³   ³           ³   ³   ³   Averages.php
+    ³   ³           ³   ³   ³   Conditional.php
+    ³   ³           ³   ³   ³   Confidence.php
+    ³   ³           ³   ³   ³   Counts.php
+    ³   ³           ³   ³   ³   Deviations.php
+    ³   ³           ³   ³   ³   Maximum.php
+    ³   ³           ³   ³   ³   MaxMinBase.php
+    ³   ³           ³   ³   ³   Minimum.php
+    ³   ³           ³   ³   ³   Percentiles.php
+    ³   ³           ³   ³   ³   Permutations.php
+    ³   ³           ³   ³   ³   Size.php
+    ³   ³           ³   ³   ³   StandardDeviations.php
+    ³   ³           ³   ³   ³   Standardize.php
+    ³   ³           ³   ³   ³   StatisticalValidations.php
+    ³   ³           ³   ³   ³   Trends.php
+    ³   ³           ³   ³   ³   VarianceBase.php
+    ³   ³           ³   ³   ³   Variances.php
+    ³   ³           ³   ³   ³   
+    ³   ³           ³   ³   ÃÄÄÄAverages
+    ³   ³           ³   ³   ³       Mean.php
+    ³   ³           ³   ³   ³       
+    ³   ³           ³   ³   ÀÄÄÄDistributions
+    ³   ³           ³   ³           Beta.php
+    ³   ³           ³   ³           Binomial.php
+    ³   ³           ³   ³           ChiSquared.php
+    ³   ³           ³   ³           DistributionValidations.php
+    ³   ³           ³   ³           Exponential.php
+    ³   ³           ³   ³           F.php
+    ³   ³           ³   ³           Fisher.php
+    ³   ³           ³   ³           Gamma.php
+    ³   ³           ³   ³           GammaBase.php
+    ³   ³           ³   ³           HyperGeometric.php
+    ³   ³           ³   ³           LogNormal.php
+    ³   ³           ³   ³           NewtonRaphson.php
+    ³   ³           ³   ³           Normal.php
+    ³   ³           ³   ³           Poisson.php
+    ³   ³           ³   ³           StandardNormal.php
+    ³   ³           ³   ³           StudentT.php
+    ³   ³           ³   ³           Weibull.php
+    ³   ³           ³   ³           
+    ³   ³           ³   ÃÄÄÄTextData
+    ³   ³           ³   ³       CaseConvert.php
+    ³   ³           ³   ³       CharacterConvert.php
+    ³   ³           ³   ³       Concatenate.php
+    ³   ³           ³   ³       Extract.php
+    ³   ³           ³   ³       Format.php
+    ³   ³           ³   ³       Helpers.php
+    ³   ³           ³   ³       Replace.php
+    ³   ³           ³   ³       Search.php
+    ³   ³           ³   ³       Text.php
+    ³   ³           ³   ³       Trim.php
+    ³   ³           ³   ³       
+    ³   ³           ³   ÃÄÄÄToken
+    ³   ³           ³   ³       Stack.php
+    ³   ³           ³   ³       
+    ³   ³           ³   ÀÄÄÄWeb
+    ³   ³           ³           Service.php
+    ³   ³           ³           
+    ³   ³           ÃÄÄÄCell
+    ³   ³           ³       AddressHelper.php
+    ³   ³           ³       AddressRange.php
+    ³   ³           ³       AdvancedValueBinder.php
+    ³   ³           ³       Cell.php
+    ³   ³           ³       CellAddress.php
+    ³   ³           ³       CellRange.php
+    ³   ³           ³       ColumnRange.php
+    ³   ³           ³       Coordinate.php
+    ³   ³           ³       DataType.php
+    ³   ³           ³       DataValidation.php
+    ³   ³           ³       DataValidator.php
+    ³   ³           ³       DefaultValueBinder.php
+    ³   ³           ³       Hyperlink.php
+    ³   ³           ³       IgnoredErrors.php
+    ³   ³           ³       IValueBinder.php
+    ³   ³           ³       RowRange.php
+    ³   ³           ³       StringValueBinder.php
+    ³   ³           ³       
+    ³   ³           ÃÄÄÄChart
+    ³   ³           ³   ³   Axis.php
+    ³   ³           ³   ³   AxisText.php
+    ³   ³           ³   ³   Chart.php
+    ³   ³           ³   ³   ChartColor.php
+    ³   ³           ³   ³   DataSeries.php
+    ³   ³           ³   ³   DataSeriesValues.php
+    ³   ³           ³   ³   Exception.php
+    ³   ³           ³   ³   GridLines.php
+    ³   ³           ³   ³   Layout.php
+    ³   ³           ³   ³   Legend.php
+    ³   ³           ³   ³   PlotArea.php
+    ³   ³           ³   ³   Properties.php
+    ³   ³           ³   ³   Title.php
+    ³   ³           ³   ³   TrendLine.php
+    ³   ³           ³   ³   
+    ³   ³           ³   ÀÄÄÄRenderer
+    ³   ³           ³           IRenderer.php
+    ³   ³           ³           JpGraph.php
+    ³   ³           ³           JpGraphRendererBase.php
+    ³   ³           ³           MtJpGraphRenderer.php
+    ³   ³           ³           PHP Charting Libraries.txt
+    ³   ³           ³           
+    ³   ³           ÃÄÄÄCollection
+    ³   ³           ³   ³   Cells.php
+    ³   ³           ³   ³   CellsFactory.php
+    ³   ³           ³   ³   
+    ³   ³           ³   ÀÄÄÄMemory
+    ³   ³           ³           SimpleCache1.php
+    ³   ³           ³           SimpleCache3.php
+    ³   ³           ³           
+    ³   ³           ÃÄÄÄDocument
+    ³   ³           ³       Properties.php
+    ³   ³           ³       Security.php
+    ³   ³           ³       
+    ³   ³           ÃÄÄÄHelper
+    ³   ³           ³       Dimension.php
+    ³   ³           ³       Downloader.php
+    ³   ³           ³       Handler.php
+    ³   ³           ³       Html.php
+    ³   ³           ³       Sample.php
+    ³   ³           ³       Size.php
+    ³   ³           ³       TextGrid.php
+    ³   ³           ³       
+    ³   ³           ÃÄÄÄReader
+    ³   ³           ³   ³   BaseReader.php
+    ³   ³           ³   ³   Csv.php
+    ³   ³           ³   ³   DefaultReadFilter.php
+    ³   ³           ³   ³   Exception.php
+    ³   ³           ³   ³   Gnumeric.php
+    ³   ³           ³   ³   Html.php
+    ³   ³           ³   ³   IReader.php
+    ³   ³           ³   ³   IReadFilter.php
+    ³   ³           ³   ³   Ods.php
+    ³   ³           ³   ³   Slk.php
+    ³   ³           ³   ³   Xls.php
+    ³   ³           ³   ³   Xlsx.php
+    ³   ³           ³   ³   Xml.php
+    ³   ³           ³   ³   
+    ³   ³           ³   ÃÄÄÄCsv
+    ³   ³           ³   ³       Delimiter.php
+    ³   ³           ³   ³       
+    ³   ³           ³   ÃÄÄÄGnumeric
+    ³   ³           ³   ³       PageSetup.php
+    ³   ³           ³   ³       Properties.php
+    ³   ³           ³   ³       Styles.php
+    ³   ³           ³   ³       
+    ³   ³           ³   ÃÄÄÄOds
+    ³   ³           ³   ³       AutoFilter.php
+    ³   ³           ³   ³       BaseLoader.php
+    ³   ³           ³   ³       DefinedNames.php
+    ³   ³           ³   ³       FormulaTranslator.php
+    ³   ³           ³   ³       PageSettings.php
+    ³   ³           ³   ³       Properties.php
+    ³   ³           ³   ³       
+    ³   ³           ³   ÃÄÄÄSecurity
+    ³   ³           ³   ³       XmlScanner.php
+    ³   ³           ³   ³       
+    ³   ³           ³   ÃÄÄÄXls
+    ³   ³           ³   ³   ³   Color.php
+    ³   ³           ³   ³   ³   ConditionalFormatting.php
+    ³   ³           ³   ³   ³   DataValidationHelper.php
+    ³   ³           ³   ³   ³   ErrorCode.php
+    ³   ³           ³   ³   ³   Escher.php
+    ³   ³           ³   ³   ³   MD5.php
+    ³   ³           ³   ³   ³   RC4.php
+    ³   ³           ³   ³   ³   
+    ³   ³           ³   ³   ÃÄÄÄColor
+    ³   ³           ³   ³   ³       BIFF5.php
+    ³   ³           ³   ³   ³       BIFF8.php
+    ³   ³           ³   ³   ³       BuiltIn.php
+    ³   ³           ³   ³   ³       
+    ³   ³           ³   ³   ÀÄÄÄStyle
+    ³   ³           ³   ³           Border.php
+    ³   ³           ³   ³           CellAlignment.php
+    ³   ³           ³   ³           CellFont.php
+    ³   ³           ³   ³           FillPattern.php
+    ³   ³           ³   ³           
+    ³   ³           ³   ÃÄÄÄXlsx
+    ³   ³           ³   ³       AutoFilter.php
+    ³   ³           ³   ³       BaseParserClass.php
+    ³   ³           ³   ³       Chart.php
+    ³   ³           ³   ³       ColumnAndRowAttributes.php
+    ³   ³           ³   ³       ConditionalStyles.php
+    ³   ³           ³   ³       DataValidations.php
+    ³   ³           ³   ³       Hyperlinks.php
+    ³   ³           ³   ³       Namespaces.php
+    ³   ³           ³   ³       PageSetup.php
+    ³   ³           ³   ³       Properties.php
+    ³   ³           ³   ³       SharedFormula.php
+    ³   ³           ³   ³       SheetViewOptions.php
+    ³   ³           ³   ³       SheetViews.php
+    ³   ³           ³   ³       Styles.php
+    ³   ³           ³   ³       TableReader.php
+    ³   ³           ³   ³       Theme.php
+    ³   ³           ³   ³       WorkbookView.php
+    ³   ³           ³   ³       
+    ³   ³           ³   ÀÄÄÄXml
+    ³   ³           ³       ³   DataValidations.php
+    ³   ³           ³       ³   PageSettings.php
+    ³   ³           ³       ³   Properties.php
+    ³   ³           ³       ³   Style.php
+    ³   ³           ³       ³   
+    ³   ³           ³       ÀÄÄÄStyle
+    ³   ³           ³               Alignment.php
+    ³   ³           ³               Border.php
+    ³   ³           ³               Fill.php
+    ³   ³           ³               Font.php
+    ³   ³           ³               NumberFormat.php
+    ³   ³           ³               StyleBase.php
+    ³   ³           ³               
+    ³   ³           ÃÄÄÄRichText
+    ³   ³           ³       ITextElement.php
+    ³   ³           ³       RichText.php
+    ³   ³           ³       Run.php
+    ³   ³           ³       TextElement.php
+    ³   ³           ³       
+    ³   ³           ÃÄÄÄShared
+    ³   ³           ³   ³   CodePage.php
+    ³   ³           ³   ³   Date.php
+    ³   ³           ³   ³   Drawing.php
+    ³   ³           ³   ³   Escher.php
+    ³   ³           ³   ³   File.php
+    ³   ³           ³   ³   Font.php
+    ³   ³           ³   ³   IntOrFloat.php
+    ³   ³           ³   ³   OLE.php
+    ³   ³           ³   ³   OLERead.php
+    ³   ³           ³   ³   PasswordHasher.php
+    ³   ³           ³   ³   StringHelper.php
+    ³   ³           ³   ³   TimeZone.php
+    ³   ³           ³   ³   Xls.php
+    ³   ³           ³   ³   XMLWriter.php
+    ³   ³           ³   ³   
+    ³   ³           ³   ÃÄÄÄEscher
+    ³   ³           ³   ³   ³   DgContainer.php
+    ³   ³           ³   ³   ³   DggContainer.php
+    ³   ³           ³   ³   ³   
+    ³   ³           ³   ³   ÃÄÄÄDgContainer
+    ³   ³           ³   ³   ³   ³   SpgrContainer.php
+    ³   ³           ³   ³   ³   ³   
+    ³   ³           ³   ³   ³   ÀÄÄÄSpgrContainer
+    ³   ³           ³   ³   ³           SpContainer.php
+    ³   ³           ³   ³   ³           
+    ³   ³           ³   ³   ÀÄÄÄDggContainer
+    ³   ³           ³   ³       ³   BstoreContainer.php
+    ³   ³           ³   ³       ³   
+    ³   ³           ³   ³       ÀÄÄÄBstoreContainer
+    ³   ³           ³   ³           ³   BSE.php
+    ³   ³           ³   ³           ³   
+    ³   ³           ³   ³           ÀÄÄÄBSE
+    ³   ³           ³   ³                   Blip.php
+    ³   ³           ³   ³                   
+    ³   ³           ³   ÃÄÄÄOLE
+    ³   ³           ³   ³   ³   ChainedBlockStream.php
+    ³   ³           ³   ³   ³   PPS.php
+    ³   ³           ³   ³   ³   
+    ³   ³           ³   ³   ÀÄÄÄPPS
+    ³   ³           ³   ³           File.php
+    ³   ³           ³   ³           Root.php
+    ³   ³           ³   ³           
+    ³   ³           ³   ÀÄÄÄTrend
+    ³   ³           ³           BestFit.php
+    ³   ³           ³           ExponentialBestFit.php
+    ³   ³           ³           LinearBestFit.php
+    ³   ³           ³           LogarithmicBestFit.php
+    ³   ³           ³           PolynomialBestFit.php
+    ³   ³           ³           PowerBestFit.php
+    ³   ³           ³           Trend.php
+    ³   ³           ³           
+    ³   ³           ÃÄÄÄStyle
+    ³   ³           ³   ³   Alignment.php
+    ³   ³           ³   ³   Border.php
+    ³   ³           ³   ³   Borders.php
+    ³   ³           ³   ³   Color.php
+    ³   ³           ³   ³   Conditional.php
+    ³   ³           ³   ³   Fill.php
+    ³   ³           ³   ³   Font.php
+    ³   ³           ³   ³   NumberFormat.php
+    ³   ³           ³   ³   Protection.php
+    ³   ³           ³   ³   RgbTint.php
+    ³   ³           ³   ³   Style.php
+    ³   ³           ³   ³   Supervisor.php
+    ³   ³           ³   ³   
+    ³   ³           ³   ÃÄÄÄConditionalFormatting
+    ³   ³           ³   ³   ³   CellMatcher.php
+    ³   ³           ³   ³   ³   CellStyleAssessor.php
+    ³   ³           ³   ³   ³   ConditionalDataBar.php
+    ³   ³           ³   ³   ³   ConditionalDataBarExtension.php
+    ³   ³           ³   ³   ³   ConditionalFormattingRuleExtension.php
+    ³   ³           ³   ³   ³   ConditionalFormatValueObject.php
+    ³   ³           ³   ³   ³   StyleMerger.php
+    ³   ³           ³   ³   ³   Wizard.php
+    ³   ³           ³   ³   ³   
+    ³   ³           ³   ³   ÀÄÄÄWizard
+    ³   ³           ³   ³           Blanks.php
+    ³   ³           ³   ³           CellValue.php
+    ³   ³           ³   ³           DateValue.php
+    ³   ³           ³   ³           Duplicates.php
+    ³   ³           ³   ³           Errors.php
+    ³   ³           ³   ³           Expression.php
+    ³   ³           ³   ³           TextValue.php
+    ³   ³           ³   ³           WizardAbstract.php
+    ³   ³           ³   ³           WizardInterface.php
+    ³   ³           ³   ³           
+    ³   ³           ³   ÀÄÄÄNumberFormat
+    ³   ³           ³       ³   BaseFormatter.php
+    ³   ³           ³       ³   DateFormatter.php
+    ³   ³           ³       ³   Formatter.php
+    ³   ³           ³       ³   FractionFormatter.php
+    ³   ³           ³       ³   NumberFormatter.php
+    ³   ³           ³       ³   PercentageFormatter.php
+    ³   ³           ³       ³   
+    ³   ³           ³       ÀÄÄÄWizard
+    ³   ³           ³               Accounting.php
+    ³   ³           ³               Currency.php
+    ³   ³           ³               Date.php
+    ³   ³           ³               DateTime.php
+    ³   ³           ³               DateTimeWizard.php
+    ³   ³           ³               Duration.php
+    ³   ³           ³               Locale.php
+    ³   ³           ³               Number.php
+    ³   ³           ³               NumberBase.php
+    ³   ³           ³               Percentage.php
+    ³   ³           ³               Scientific.php
+    ³   ³           ³               Time.php
+    ³   ³           ³               Wizard.php
+    ³   ³           ³               
+    ³   ³           ÃÄÄÄWorksheet
+    ³   ³           ³   ³   AutoFilter.php
+    ³   ³           ³   ³   AutoFit.php
+    ³   ³           ³   ³   BaseDrawing.php
+    ³   ³           ³   ³   CellIterator.php
+    ³   ³           ³   ³   Column.php
+    ³   ³           ³   ³   ColumnCellIterator.php
+    ³   ³           ³   ³   ColumnDimension.php
+    ³   ³           ³   ³   ColumnIterator.php
+    ³   ³           ³   ³   Dimension.php
+    ³   ³           ³   ³   Drawing.php
+    ³   ³           ³   ³   HeaderFooter.php
+    ³   ³           ³   ³   HeaderFooterDrawing.php
+    ³   ³           ³   ³   Iterator.php
+    ³   ³           ³   ³   MemoryDrawing.php
+    ³   ³           ³   ³   PageBreak.php
+    ³   ³           ³   ³   PageMargins.php
+    ³   ³           ³   ³   PageSetup.php
+    ³   ³           ³   ³   Protection.php
+    ³   ³           ³   ³   Row.php
+    ³   ³           ³   ³   RowCellIterator.php
+    ³   ³           ³   ³   RowDimension.php
+    ³   ³           ³   ³   RowIterator.php
+    ³   ³           ³   ³   SheetView.php
+    ³   ³           ³   ³   Table.php
+    ³   ³           ³   ³   Validations.php
+    ³   ³           ³   ³   Worksheet.php
+    ³   ³           ³   ³   
+    ³   ³           ³   ÃÄÄÄAutoFilter
+    ³   ³           ³   ³   ³   Column.php
+    ³   ³           ³   ³   ³   
+    ³   ³           ³   ³   ÀÄÄÄColumn
+    ³   ³           ³   ³           Rule.php
+    ³   ³           ³   ³           
+    ³   ³           ³   ÃÄÄÄDrawing
+    ³   ³           ³   ³       Shadow.php
+    ³   ³           ³   ³       
+    ³   ³           ³   ÀÄÄÄTable
+    ³   ³           ³           Column.php
+    ³   ³           ³           TableStyle.php
+    ³   ³           ³           
+    ³   ³           ÀÄÄÄWriter
+    ³   ³               ³   BaseWriter.php
+    ³   ³               ³   Csv.php
+    ³   ³               ³   Exception.php
+    ³   ³               ³   Html.php
+    ³   ³               ³   IWriter.php
+    ³   ³               ³   Ods.php
+    ³   ³               ³   Pdf.php
+    ³   ³               ³   Xls.php
+    ³   ³               ³   Xlsx.php
+    ³   ³               ³   ZipStream0.php
+    ³   ³               ³   ZipStream2.php
+    ³   ³               ³   ZipStream3.php
+    ³   ³               ³   
+    ³   ³               ÃÄÄÄOds
+    ³   ³               ³   ³   AutoFilters.php
+    ³   ³               ³   ³   Content.php
+    ³   ³               ³   ³   Formula.php
+    ³   ³               ³   ³   Meta.php
+    ³   ³               ³   ³   MetaInf.php
+    ³   ³               ³   ³   Mimetype.php
+    ³   ³               ³   ³   NamedExpressions.php
+    ³   ³               ³   ³   Settings.php
+    ³   ³               ³   ³   Styles.php
+    ³   ³               ³   ³   Thumbnails.php
+    ³   ³               ³   ³   WriterPart.php
+    ³   ³               ³   ³   
+    ³   ³               ³   ÀÄÄÄCell
+    ³   ³               ³           Comment.php
+    ³   ³               ³           Style.php
+    ³   ³               ³           
+    ³   ³               ÃÄÄÄPdf
+    ³   ³               ³       Dompdf.php
+    ³   ³               ³       Mpdf.php
+    ³   ³               ³       Tcpdf.php
+    ³   ³               ³       
+    ³   ³               ÃÄÄÄXls
+    ³   ³               ³   ³   BIFFwriter.php
+    ³   ³               ³   ³   CellDataValidation.php
+    ³   ³               ³   ³   ConditionalHelper.php
+    ³   ³               ³   ³   ErrorCode.php
+    ³   ³               ³   ³   Escher.php
+    ³   ³               ³   ³   Font.php
+    ³   ³               ³   ³   Parser.php
+    ³   ³               ³   ³   Workbook.php
+    ³   ³               ³   ³   Worksheet.php
+    ³   ³               ³   ³   Xf.php
+    ³   ³               ³   ³   
+    ³   ³               ³   ÀÄÄÄStyle
+    ³   ³               ³           CellAlignment.php
+    ³   ³               ³           CellBorder.php
+    ³   ³               ³           CellFill.php
+    ³   ³               ³           ColorMap.php
+    ³   ³               ³           
+    ³   ³               ÀÄÄÄXlsx
+    ³   ³                       AutoFilter.php
+    ³   ³                       Chart.php
+    ³   ³                       Comments.php
+    ³   ³                       ContentTypes.php
+    ³   ³                       DefinedNames.php
+    ³   ³                       DocProps.php
+    ³   ³                       Drawing.php
+    ³   ³                       FunctionPrefix.php
+    ³   ³                       Rels.php
+    ³   ³                       RelsRibbon.php
+    ³   ³                       RelsVBA.php
+    ³   ³                       StringTable.php
+    ³   ³                       Style.php
+    ³   ³                       Table.php
+    ³   ³                       Theme.php
+    ³   ³                       Workbook.php
+    ³   ³                       Worksheet.php
+    ³   ³                       WriterPart.php
+    ³   ³                       
+    ³   ÀÄÄÄphpword
+    ³       ³   .github_changelog_generator
+    ³       ³   .php-cs-fixer.dist.php
+    ³       ³   composer.json
+    ³       ³   CONTRIBUTING.md
+    ³       ³   COPYING
+    ³       ³   COPYING.LESSER
+    ³       ³   LICENSE
+    ³       ³   mkdocs.yml
+    ³       ³   phpstan-baseline.neon
+    ³       ³   phpstan.neon.dist
+    ³       ³   phpword.ini.dist
+    ³       ³   README.md
+    ³       ³   
+    ³       ÀÄÄÄsrc
+    ³           ÀÄÄÄPhpWord
+    ³               ³   Autoloader.php
+    ³               ³   IOFactory.php
+    ³               ³   Media.php
+    ³               ³   PhpWord.php
+    ³               ³   Settings.php
+    ³               ³   Style.php
+    ³               ³   TemplateProcessor.php
+    ³               ³   
+    ³               ÃÄÄÄCollection
+    ³               ³       AbstractCollection.php
+    ³               ³       Bookmarks.php
+    ³               ³       Charts.php
+    ³               ³       Comments.php
+    ³               ³       Endnotes.php
+    ³               ³       Footnotes.php
+    ³               ³       Titles.php
+    ³               ³       
+    ³               ÃÄÄÄComplexType
+    ³               ³       FootnoteProperties.php
+    ³               ³       ProofState.php
+    ³               ³       RubyProperties.php
+    ³               ³       TblWidth.php
+    ³               ³       TrackChangesView.php
+    ³               ³       
+    ³               ÃÄÄÄElement
+    ³               ³       AbstractContainer.php
+    ³               ³       AbstractElement.php
+    ³               ³       Bookmark.php
+    ³               ³       Cell.php
+    ³               ³       Chart.php
+    ³               ³       CheckBox.php
+    ³               ³       Comment.php
+    ³               ³       Endnote.php
+    ³               ³       Field.php
+    ³               ³       Footer.php
+    ³               ³       Footnote.php
+    ³               ³       FormField.php
+    ³               ³       Formula.php
+    ³               ³       Header.php
+    ³               ³       Image.php
+    ³               ³       Line.php
+    ³               ³       Link.php
+    ³               ³       ListItem.php
+    ³               ³       ListItemRun.php
+    ³               ³       OLEObject.php
+    ³               ³       PageBreak.php
+    ³               ³       PreserveText.php
+    ³               ³       Row.php
+    ³               ³       Ruby.php
+    ³               ³       SDT.php
+    ³               ³       Section.php
+    ³               ³       Shape.php
+    ³               ³       Table.php
+    ³               ³       Text.php
+    ³               ³       TextBox.php
+    ³               ³       TextBreak.php
+    ³               ³       TextRun.php
+    ³               ³       Title.php
+    ³               ³       TOC.php
+    ³               ³       TrackChange.php
+    ³               ³       
+    ³               ÃÄÄÄEscaper
+    ³               ³       AbstractEscaper.php
+    ³               ³       EscaperInterface.php
+    ³               ³       RegExp.php
+    ³               ³       Rtf.php
+    ³               ³       Xml.php
+    ³               ³       
+    ³               ÃÄÄÄException
+    ³               ³       CopyFileException.php
+    ³               ³       CreateTemporaryFileException.php
+    ³               ³       Exception.php
+    ³               ³       InvalidImageException.php
+    ³               ³       InvalidObjectException.php
+    ³               ³       InvalidStyleException.php
+    ³               ³       UnsupportedImageTypeException.php
+    ³               ³       
+    ³               ÃÄÄÄMetadata
+    ³               ³       Compatibility.php
+    ³               ³       DocInfo.php
+    ³               ³       Protection.php
+    ³               ³       Settings.php
+    ³               ³       
+    ³               ÃÄÄÄReader
+    ³               ³   ³   AbstractReader.php
+    ³               ³   ³   HTML.php
+    ³               ³   ³   MsDoc.php
+    ³               ³   ³   ODText.php
+    ³               ³   ³   ReaderInterface.php
+    ³               ³   ³   RTF.php
+    ³               ³   ³   Word2007.php
+    ³               ³   ³   
+    ³               ³   ÃÄÄÄODText
+    ³               ³   ³       AbstractPart.php
+    ³               ³   ³       Content.php
+    ³               ³   ³       Meta.php
+    ³               ³   ³       
+    ³               ³   ÃÄÄÄRTF
+    ³               ³   ³       Document.php
+    ³               ³   ³       
+    ³               ³   ÀÄÄÄWord2007
+    ³               ³           AbstractPart.php
+    ³               ³           Comments.php
+    ³               ³           DocPropsApp.php
+    ³               ³           DocPropsCore.php
+    ³               ³           DocPropsCustom.php
+    ³               ³           Document.php
+    ³               ³           Endnotes.php
+    ³               ³           Footnotes.php
+    ³               ³           Numbering.php
+    ³               ³           Settings.php
+    ³               ³           Styles.php
+    ³               ³           
+    ³               ÃÄÄÄresources
+    ³               ³       doc.png
+    ³               ³       ppt.png
+    ³               ³       xls.png
+    ³               ³       
+    ³               ÃÄÄÄShared
+    ³               ³   ³   AbstractEnum.php
+    ³               ³   ³   Converter.php
+    ³               ³   ³   Css.php
+    ³               ³   ³   Drawing.php
+    ³               ³   ³   Html.php
+    ³               ³   ³   OLERead.php
+    ³               ³   ³   Text.php
+    ³               ³   ³   Validate.php
+    ³               ³   ³   XMLReader.php
+    ³               ³   ³   XMLWriter.php
+    ³               ³   ³   ZipArchive.php
+    ³               ³   ³   
+    ³               ³   ÃÄÄÄMicrosoft
+    ³               ³   ³       PasswordEncoder.php
+    ³               ³   ³       
+    ³               ³   ÀÄÄÄPCLZip
+    ³               ³           pclzip.lib.php
+    ³               ³           
+    ³               ÃÄÄÄSimpleType
+    ³               ³       Border.php
+    ³               ³       DocProtect.php
+    ³               ³       Jc.php
+    ³               ³       JcTable.php
+    ³               ³       LineSpacingRule.php
+    ³               ³       NumberFormat.php
+    ³               ³       TblWidth.php
+    ³               ³       TextAlignment.php
+    ³               ³       VerticalJc.php
+    ³               ³       Zoom.php
+    ³               ³       
+    ³               ÃÄÄÄStyle
+    ³               ³       AbstractStyle.php
+    ³               ³       Border.php
+    ³               ³       Cell.php
+    ³               ³       Chart.php
+    ³               ³       Extrusion.php
+    ³               ³       Fill.php
+    ³               ³       Font.php
+    ³               ³       Frame.php
+    ³               ³       Image.php
+    ³               ³       Indentation.php
+    ³               ³       Language.php
+    ³               ³       Line.php
+    ³               ³       LineNumbering.php
+    ³               ³       ListItem.php
+    ³               ³       Numbering.php
+    ³               ³       NumberingLevel.php
+    ³               ³       Outline.php
+    ³               ³       Paper.php
+    ³               ³       Paragraph.php
+    ³               ³       Row.php
+    ³               ³       Section.php
+    ³               ³       Shading.php
+    ³               ³       Shadow.php
+    ³               ³       Shape.php
+    ³               ³       Spacing.php
+    ³               ³       Tab.php
+    ³               ³       Table.php
+    ³               ³       TablePosition.php
+    ³               ³       TextBox.php
+    ³               ³       TOC.php
+    ³               ³       
+    ³               ÀÄÄÄWriter
+    ³                   ³   AbstractWriter.php
+    ³                   ³   EPub3.php
+    ³                   ³   HTML.php
+    ³                   ³   ODText.php
+    ³                   ³   PDF.php
+    ³                   ³   RTF.php
+    ³                   ³   Word2007.php
+    ³                   ³   WriterInterface.php
+    ³                   ³   WriterPartInterface.php
+    ³                   ³   
+    ³                   ÃÄÄÄEPub3
+    ³                   ³   ³   Part.php
+    ³                   ³   ³   
+    ³                   ³   ÃÄÄÄElement
+    ³                   ³   ³       AbstractElement.php
+    ³                   ³   ³       Image.php
+    ³                   ³   ³       Text.php
+    ³                   ³   ³       
+    ³                   ³   ÃÄÄÄPart
+    ³                   ³   ³       AbstractPart.php
+    ³                   ³   ³       Content.php
+    ³                   ³   ³       ContentXhtml.php
+    ³                   ³   ³       Manifest.php
+    ³                   ³   ³       Meta.php
+    ³                   ³   ³       Mimetype.php
+    ³                   ³   ³       Nav.php
+    ³                   ³   ³       
+    ³                   ³   ÀÄÄÄStyle
+    ³                   ³           AbstractStyle.php
+    ³                   ³           Font.php
+    ³                   ³           Paragraph.php
+    ³                   ³           Table.php
+    ³                   ³           
+    ³                   ÃÄÄÄHTML
+    ³                   ³   ÃÄÄÄElement
+    ³                   ³   ³       AbstractElement.php
+    ³                   ³   ³       Bookmark.php
+    ³                   ³   ³       Container.php
+    ³                   ³   ³       Endnote.php
+    ³                   ³   ³       Footnote.php
+    ³                   ³   ³       Image.php
+    ³                   ³   ³       Link.php
+    ³                   ³   ³       ListItem.php
+    ³                   ³   ³       ListItemRun.php
+    ³                   ³   ³       PageBreak.php
+    ³                   ³   ³       Ruby.php
+    ³                   ³   ³       Table.php
+    ³                   ³   ³       Text.php
+    ³                   ³   ³       TextBreak.php
+    ³                   ³   ³       TextRun.php
+    ³                   ³   ³       Title.php
+    ³                   ³   ³       
+    ³                   ³   ÃÄÄÄPart
+    ³                   ³   ³       AbstractPart.php
+    ³                   ³   ³       Body.php
+    ³                   ³   ³       Head.php
+    ³                   ³   ³       
+    ³                   ³   ÀÄÄÄStyle
+    ³                   ³           AbstractStyle.php
+    ³                   ³           Font.php
+    ³                   ³           Generic.php
+    ³                   ³           Image.php
+    ³                   ³           Paragraph.php
+    ³                   ³           Table.php
+    ³                   ³           
+    ³                   ÃÄÄÄODText
+    ³                   ³   ÃÄÄÄElement
+    ³                   ³   ³       AbstractElement.php
+    ³                   ³   ³       Container.php
+    ³                   ³   ³       Field.php
+    ³                   ³   ³       Formula.php
+    ³                   ³   ³       Image.php
+    ³                   ³   ³       Link.php
+    ³                   ³   ³       ListItemRun.php
+    ³                   ³   ³       PageBreak.php
+    ³                   ³   ³       Ruby.php
+    ³                   ³   ³       Table.php
+    ³                   ³   ³       Text.php
+    ³                   ³   ³       TextBreak.php
+    ³                   ³   ³       TextRun.php
+    ³                   ³   ³       Title.php
+    ³                   ³   ³       
+    ³                   ³   ÃÄÄÄPart
+    ³                   ³   ³       AbstractPart.php
+    ³                   ³   ³       Content.php
+    ³                   ³   ³       Manifest.php
+    ³                   ³   ³       Meta.php
+    ³                   ³   ³       Mimetype.php
+    ³                   ³   ³       Styles.php
+    ³                   ³   ³       
+    ³                   ³   ÀÄÄÄStyle
+    ³                   ³           AbstractStyle.php
+    ³                   ³           Font.php
+    ³                   ³           Image.php
+    ³                   ³           Numbering.php
+    ³                   ³           Paragraph.php
+    ³                   ³           Section.php
+    ³                   ³           Table.php
+    ³                   ³           
+    ³                   ÃÄÄÄPDF
+    ³                   ³       AbstractRenderer.php
+    ³                   ³       DomPDF.php
+    ³                   ³       MPDF.php
+    ³                   ³       TCPDF.php
+    ³                   ³       
+    ³                   ÃÄÄÄRTF
+    ³                   ³   ÃÄÄÄElement
+    ³                   ³   ³       AbstractElement.php
+    ³                   ³   ³       Container.php
+    ³                   ³   ³       Field.php
+    ³                   ³   ³       Image.php
+    ³                   ³   ³       Link.php
+    ³                   ³   ³       ListItem.php
+    ³                   ³   ³       PageBreak.php
+    ³                   ³   ³       Ruby.php
+    ³                   ³   ³       Table.php
+    ³                   ³   ³       Text.php
+    ³                   ³   ³       TextBreak.php
+    ³                   ³   ³       TextRun.php
+    ³                   ³   ³       Title.php
+    ³                   ³   ³       
+    ³                   ³   ÃÄÄÄPart
+    ³                   ³   ³       AbstractPart.php
+    ³                   ³   ³       Document.php
+    ³                   ³   ³       Header.php
+    ³                   ³   ³       
+    ³                   ³   ÀÄÄÄStyle
+    ³                   ³           AbstractStyle.php
+    ³                   ³           Border.php
+    ³                   ³           Font.php
+    ³                   ³           Indentation.php
+    ³                   ³           Paragraph.php
+    ³                   ³           Section.php
+    ³                   ³           Tab.php
+    ³                   ³           
+    ³                   ÀÄÄÄWord2007
+    ³                       ÃÄÄÄElement
+    ³                       ³       AbstractElement.php
+    ³                       ³       Bookmark.php
+    ³                       ³       Chart.php
+    ³                       ³       CheckBox.php
+    ³                       ³       Container.php
+    ³                       ³       Endnote.php
+    ³                       ³       Field.php
+    ³                       ³       Footnote.php
+    ³                       ³       FormField.php
+    ³                       ³       Formula.php
+    ³                       ³       Image.php
+    ³                       ³       Line.php
+    ³                       ³       Link.php
+    ³                       ³       ListItem.php
+    ³                       ³       ListItemRun.php
+    ³                       ³       OLEObject.php
+    ³                       ³       PageBreak.php
+    ³                       ³       ParagraphAlignment.php
+    ³                       ³       PreserveText.php
+    ³                       ³       Ruby.php
+    ³                       ³       SDT.php
+    ³                       ³       Shape.php
+    ³                       ³       Table.php
+    ³                       ³       TableAlignment.php
+    ³                       ³       Text.php
+    ³                       ³       TextBox.php
+    ³                       ³       TextBreak.php
+    ³                       ³       TextRun.php
+    ³                       ³       Title.php
+    ³                       ³       TOC.php
+    ³                       ³       
+    ³                       ÃÄÄÄPart
+    ³                       ³       AbstractPart.php
+    ³                       ³       Chart.php
+    ³                       ³       Comments.php
+    ³                       ³       ContentTypes.php
+    ³                       ³       DocPropsApp.php
+    ³                       ³       DocPropsCore.php
+    ³                       ³       DocPropsCustom.php
+    ³                       ³       Document.php
+    ³                       ³       Endnotes.php
+    ³                       ³       FontTable.php
+    ³                       ³       Footer.php
+    ³                       ³       Footnotes.php
+    ³                       ³       Header.php
+    ³                       ³       Numbering.php
+    ³                       ³       Rels.php
+    ³                       ³       RelsDocument.php
+    ³                       ³       RelsPart.php
+    ³                       ³       Settings.php
+    ³                       ³       Styles.php
+    ³                       ³       Theme.php
+    ³                       ³       WebSettings.php
+    ³                       ³       
+    ³                       ÀÄÄÄStyle
+    ³                               AbstractStyle.php
+    ³                               Cell.php
+    ³                               Extrusion.php
+    ³                               Fill.php
+    ³                               Font.php
+    ³                               Frame.php
+    ³                               Image.php
+    ³                               Indentation.php
+    ³                               Line.php
+    ³                               LineNumbering.php
+    ³                               MarginBorder.php
+    ³                               Outline.php
+    ³                               Paragraph.php
+    ³                               Row.php
+    ³                               Section.php
+    ³                               Shading.php
+    ³                               Shadow.php
+    ³                               Shape.php
+    ³                               Spacing.php
+    ³                               Tab.php
+    ³                               Table.php
+    ³                               TablePosition.php
+    ³                               TextBox.php
+    ³                               
+    ÃÄÄÄpsr
+    ³   ÃÄÄÄhttp-client
+    ³   ³   ³   CHANGELOG.md
+    ³   ³   ³   composer.json
+    ³   ³   ³   LICENSE
+    ³   ³   ³   README.md
+    ³   ³   ³   
+    ³   ³   ÀÄÄÄsrc
+    ³   ³           ClientExceptionInterface.php
+    ³   ³           ClientInterface.php
+    ³   ³           NetworkExceptionInterface.php
+    ³   ³           RequestExceptionInterface.php
+    ³   ³           
+    ³   ÃÄÄÄhttp-factory
+    ³   ³   ³   composer.json
+    ³   ³   ³   LICENSE
+    ³   ³   ³   README.md
+    ³   ³   ³   
+    ³   ³   ÀÄÄÄsrc
+    ³   ³           RequestFactoryInterface.php
+    ³   ³           ResponseFactoryInterface.php
+    ³   ³           ServerRequestFactoryInterface.php
+    ³   ³           StreamFactoryInterface.php
+    ³   ³           UploadedFileFactoryInterface.php
+    ³   ³           UriFactoryInterface.php
+    ³   ³           
+    ³   ÃÄÄÄhttp-message
+    ³   ³   ³   CHANGELOG.md
+    ³   ³   ³   composer.json
+    ³   ³   ³   LICENSE
+    ³   ³   ³   README.md
+    ³   ³   ³   
+    ³   ³   ÃÄÄÄdocs
+    ³   ³   ³       PSR7-Interfaces.md
+    ³   ³   ³       PSR7-Usage.md
+    ³   ³   ³       
+    ³   ³   ÀÄÄÄsrc
+    ³   ³           MessageInterface.php
+    ³   ³           RequestInterface.php
+    ³   ³           ResponseInterface.php
+    ³   ³           ServerRequestInterface.php
+    ³   ³           StreamInterface.php
+    ³   ³           UploadedFileInterface.php
+    ³   ³           UriInterface.php
+    ³   ³           
+    ³   ÀÄÄÄsimple-cache
+    ³       ³   .editorconfig
+    ³       ³   composer.json
+    ³       ³   LICENSE.md
+    ³       ³   README.md
+    ³       ³   
+    ³       ÀÄÄÄsrc
+    ³               CacheException.php
+    ³               CacheInterface.php
+    ³               InvalidArgumentException.php
+    ³               
+    ÃÄÄÄsabberworm
+    ³   ÀÄÄÄphp-css-parser
+    ³       ³   CHANGELOG.md
+    ³       ³   composer.json
+    ³       ³   LICENSE
+    ³       ³   README.md
+    ³       ³   
+    ³       ÀÄÄÄsrc
+    ³           ³   CSSElement.php
+    ³           ³   OutputFormat.php
+    ³           ³   OutputFormatter.php
+    ³           ³   Parser.php
+    ³           ³   Renderable.php
+    ³           ³   Settings.php
+    ³           ³   
+    ³           ÃÄÄÄComment
+    ³           ³       Comment.php
+    ³           ³       Commentable.php
+    ³           ³       
+    ³           ÃÄÄÄCSSList
+    ³           ³       AtRuleBlockList.php
+    ³           ³       CSSBlockList.php
+    ³           ³       CSSList.php
+    ³           ³       Document.php
+    ³           ³       KeyFrame.php
+    ³           ³       
+    ³           ÃÄÄÄParsing
+    ³           ³       Anchor.php
+    ³           ³       OutputException.php
+    ³           ³       ParserState.php
+    ³           ³       SourceException.php
+    ³           ³       UnexpectedEOFException.php
+    ³           ³       UnexpectedTokenException.php
+    ³           ³       
+    ³           ÃÄÄÄPosition
+    ³           ³       Position.php
+    ³           ³       Positionable.php
+    ³           ³       
+    ³           ÃÄÄÄProperty
+    ³           ³       AtRule.php
+    ³           ³       Charset.php
+    ³           ³       CSSNamespace.php
+    ³           ³       Import.php
+    ³           ³       KeyframeSelector.php
+    ³           ³       Selector.php
+    ³           ³       
+    ³           ÃÄÄÄRule
+    ³           ³       Rule.php
+    ³           ³       
+    ³           ÃÄÄÄRuleSet
+    ³           ³       AtRuleSet.php
+    ³           ³       DeclarationBlock.php
+    ³           ³       RuleSet.php
+    ³           ³       
+    ³           ÀÄÄÄValue
+    ³                   CalcFunction.php
+    ³                   CalcRuleValueList.php
+    ³                   Color.php
+    ³                   CSSFunction.php
+    ³                   CSSString.php
+    ³                   LineName.php
+    ³                   PrimitiveValue.php
+    ³                   RuleValueList.php
+    ³                   Size.php
+    ³                   URL.php
+    ³                   Value.php
+    ³                   ValueList.php
+    ³                   
+    ÃÄÄÄsendgrid
+    ³   ÃÄÄÄphp-http-client
+    ³   ³   ³   .gitignore
+    ³   ³   ³   .php_cs.dist
+    ³   ³   ³   CHANGELOG.md
+    ³   ³   ³   CODE_OF_CONDUCT.md
+    ³   ³   ³   composer.json
+    ³   ³   ³   CONTRIBUTING.md
+    ³   ³   ³   Dockerfile
+    ³   ³   ³   FIRST_TIMERS.md
+    ³   ³   ³   LICENSE
+    ³   ³   ³   Makefile
+    ³   ³   ³   PULL_REQUEST_TEMPLATE.md
+    ³   ³   ³   README.md
+    ³   ³   ³   TROUBLESHOOTING.md
+    ³   ³   ³   twilio_sendgrid_logo.png
+    ³   ³   ³   UPGRADE.md
+    ³   ³   ³   USAGE.md
+    ³   ³   ³   
+    ³   ³   ÃÄÄÄ.github
+    ³   ³   ³   ÀÄÄÄworkflows
+    ³   ³   ³           pr-lint.yml
+    ³   ³   ³           test-and-deploy.yml
+    ³   ³   ³           
+    ³   ³   ÃÄÄÄexamples
+    ³   ³   ³       .env_sample
+    ³   ³   ³       example.php
+    ³   ³   ³       
+    ³   ³   ÃÄÄÄlib
+    ³   ³   ³   ³   Client.php
+    ³   ³   ³   ³   Response.php
+    ³   ³   ³   ³   
+    ³   ³   ³   ÀÄÄÄException
+    ³   ³   ³           InvalidRequest.php
+    ³   ³   ³           
+    ³   ³   ÃÄÄÄstatic
+    ³   ³   ³   ÀÄÄÄimg
+    ³   ³   ³           github-fork.png
+    ³   ³   ³           github-sign-up.png
+    ³   ³   ³           
+    ³   ³   ÃÄÄÄtest
+    ³   ³   ³   ³   phpunit.xml.dist
+    ³   ³   ³   ³   
+    ³   ³   ³   ÀÄÄÄunit
+    ³   ³   ³           ClientTest.php
+    ³   ³   ³           FilesExistTest.php
+    ³   ³   ³           LicenceYearTest.php
+    ³   ³   ³           MockClient.php
+    ³   ³   ³           ResponseTest.php
+    ³   ³   ³           
+    ³   ³   ÀÄÄÄuse_cases
+    ³   ³           docker.md
+    ³   ³           README.md
+    ³   ³           
+    ³   ÀÄÄÄsendgrid
+    ³       ³   .editorconfig
+    ³       ³   .env.sample
+    ³       ³   composer.json
+    ³       ³   Dockerfile
+    ³       ³   FIRST_TIMERS.md
+    ³       ³   ISSUE_TEMPLATE.md
+    ³       ³   LICENSE
+    ³       ³   phpcs.xml
+    ³       ³   sendgrid-php.php
+    ³       ³   twilio_sendgrid_logo.png
+    ³       ³   UPGRADE.md
+    ³       ³   
+    ³       ÃÄÄÄ.github
+    ³       ³   ÀÄÄÄworkflows
+    ³       ³           pr-lint.yml
+    ³       ³           test-and-deploy.yml
+    ³       ³           
+    ³       ÃÄÄÄexamples
+    ³       ³   ÃÄÄÄaccesssettings
+    ³       ³   ³       accesssettings.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄalerts
+    ³       ³   ³       alerts.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄapikeys
+    ³       ³   ³       apikeys.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄasm
+    ³       ³   ³       asm.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄbrowsers
+    ³       ³   ³       browsers.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄcampaigns
+    ³       ³   ³       campaigns.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄcategories
+    ³       ³   ³       categories.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄclients
+    ³       ³   ³       clients.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄcontactdb
+    ³       ³   ³       contactdb.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄdataresidency
+    ³       ³   ³       setregion.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄdevices
+    ³       ³   ³       devices.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄgeo
+    ³       ³   ³       geo.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄhelpers
+    ³       ³   ³   ÃÄÄÄcontacts
+    ³       ³   ³   ³       recipients.php
+    ³       ³   ³   ³       
+    ³       ³   ³   ÃÄÄÄeventwebhook
+    ³       ³   ³   ³       example.php
+    ³       ³   ³   ³       
+    ³       ³   ³   ÃÄÄÄmail
+    ³       ³   ³   ³       example.php
+    ³       ³   ³   ³       
+    ³       ³   ³   ÀÄÄÄstats
+    ³       ³   ³           example.php
+    ³       ³   ³           
+    ³       ³   ÃÄÄÄips
+    ³       ³   ³       ips.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄmail
+    ³       ³   ³       mail.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄmailboxproviders
+    ³       ³   ³       mailboxproviders.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄmailsettings
+    ³       ³   ³       mailsettings.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄpartnersettings
+    ³       ³   ³       partnersettings.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄscopes
+    ³       ³   ³       scopes.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄsenderauthentication
+    ³       ³   ³       senderauthentication.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄsenders
+    ³       ³   ³       senders.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄstats
+    ³       ³   ³       stats.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄsubusers
+    ³       ³   ³       subusers.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄsuppression
+    ³       ³   ³       suppression.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄtemplates
+    ³       ³   ³       templates.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄtrackingsettings
+    ³       ³   ³       trackingsettings.php
+    ³       ³   ³       
+    ³       ³   ÀÄÄÄuser
+    ³       ³           user.php
+    ³       ³           
+    ³       ÃÄÄÄlib
+    ³       ³   ³   BaseSendGridClientInterface.php
+    ³       ³   ³   SendGrid.php
+    ³       ³   ³   TwilioEmail.php
+    ³       ³   ³   
+    ³       ³   ÃÄÄÄcontacts
+    ³       ³   ³       Recipient.php
+    ³       ³   ³       RecipientForm.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄeventwebhook
+    ³       ³   ³       EventWebhook.php
+    ³       ³   ³       EventWebhookHeader.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄhelper
+    ³       ³   ³       Assert.php
+    ³       ³   ³       
+    ³       ³   ÃÄÄÄmail
+    ³       ³   ³       Asm.php
+    ³       ³   ³       Attachment.php
+    ³       ³   ³       BatchId.php
+    ³       ³   ³       Bcc.php
+    ³       ³   ³       BccSettings.php
+    ³       ³   ³       BypassBounceManagement.php
+    ³       ³   ³       BypassListManagement.php
+    ³       ³   ³       BypassSpamManagement.php
+    ³       ³   ³       BypassUnsubscribeManagement.php
+    ³       ³   ³       Category.php
+    ³       ³   ³       Cc.php
+    ³       ³   ³       ClickTracking.php
+    ³       ³   ³       Content.php
+    ³       ³   ³       CustomArg.php
+    ³       ³   ³       EmailAddress.php
+    ³       ³   ³       Footer.php
+    ³       ³   ³       From.php
+    ³       ³   ³       Ganalytics.php
+    ³       ³   ³       GroupId.php
+    ³       ³   ³       GroupsToDisplay.php
+    ³       ³   ³       Header.php
+    ³       ³   ³       HtmlContent.php
+    ³       ³   ³       IpPoolName.php
+    ³       ³   ³       Mail.php
+    ³       ³   ³       MailSettings.php
+    ³       ³   ³       MimeType.php
+    ³       ³   ³       OpenTracking.php
+    ³       ³   ³       Personalization.php
+    ³       ³   ³       PlainTextContent.php
+    ³       ³   ³       ReplyTo.php
+    ³       ³   ³       SandBoxMode.php
+    ³       ³   ³       Section.php
+    ³       ³   ³       SendAt.php
+    ³       ³   ³       SpamCheck.php
+    ³       ³   ³       Subject.php
+    ³       ³   ³       SubscriptionTracking.php
+    ³       ³   ³       Substitution.php
+    ³       ³   ³       TemplateId.php
+    ³       ³   ³       To.php
+    ³       ³   ³       TrackingSettings.php
+    ³       ³   ³       TypeException.php
+    ³       ³   ³       
+    ³       ³   ÀÄÄÄstats
+    ³       ³           Stats.php
+    ³       ³           
+    ³       ÃÄÄÄscripts
+    ³       ³       package.sh
+    ³       ³       
+    ³       ÀÄÄÄstatic
+    ³           ÀÄÄÄimg
+    ³                   github-fork.png
+    ³                   github-sign-up.png
+    ³                   
+    ÀÄÄÄstarkbank
+        ÀÄÄÄecdsa
+            ³   .travis.yml
+            ³   composer.json
+            ³   LICENSE
+            ³   README.md
+            ³   
+            ÃÄÄÄsrc
+            ³   ³   ecdsa.php
+            ³   ³   ellipticcurve.php
+            ³   ³   privatekey.php
+            ³   ³   publickey.php
+            ³   ³   signature.php
+            ³   ³   
+            ³   ÀÄÄÄutils
+            ³           file.php
+            ³           
+            ÀÄÄÄtests
+                    message.txt
+                    privateKey.pem
+                    publicKey.pem
+                    signatureDer.txt
+                    test.php
+                    

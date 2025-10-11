@@ -212,7 +212,7 @@ textarea { resize: none; height: 20px; }
 
 <div class="d-flex justify-content-between mt-3">
   <div>
-    <a href="list_sales.php" class="btn btn-outline-secondary mr-2">⬅ Back to List</a>
+    <a href="../../reports/sales/list_sales.php" class="btn btn-outline-secondary mr-2">⬅ Back to List</a>
     <a href="create_bill.php" class="btn btn-outline-primary">🆕 Create New Bill</a>
   </div>
   <button type="submit" class="btn btn-warning">💾 Update Bill</button>

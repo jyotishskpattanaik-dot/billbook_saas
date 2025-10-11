@@ -29,7 +29,7 @@ if ($dateTo)    { $where[] = "a.created_at <= ?"; $params[] = $dateTo . " 23:59:
 $whereSQL = $where ? "WHERE " . implode(" AND ", $where) : "";
 
 $sql = "
-    SELECT a.*, u.name AS user_name, c.company_name
+    SELECT a.*, u.username AS user_name, c.company_name
     FROM audit_logs a
     LEFT JOIN users u ON a.user_id = u.id
     LEFT JOIN companies c ON a.company_id = c.id

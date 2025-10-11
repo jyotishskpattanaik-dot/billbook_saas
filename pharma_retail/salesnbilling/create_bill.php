@@ -200,7 +200,7 @@ textarea { resize: none; height: 20px; }
 <!-- Action Buttons -->
 <div class="btn-group-mobile">
   <div class="btn-group-left">
-    <a href="list_sales.php" class="btn btn-outline-secondary">📋 Sales List</a>
+    <a href="../../reports/sales/list_sales.php" class="btn btn-outline-secondary">📋 Sales Register</a>
     <a href="../dashboard.php" class="btn btn-outline-info">🏠 Dashboard</a>
   </div>
   <button type="submit" class="btn btn-primary btn-lg">💾 Save Bill</button>
@@ -676,7 +676,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let billNo = "<?= $_SESSION['bill_created']; ?>";
     <?php unset($_SESSION['bill_created']); ?>
     if (confirm("✅ Bill " + billNo + " created successfully!\nDo you want to print it?")) {
-      window.location.href = "../print/bill_print.php?bill_no=" + encodeURIComponent(billNo);
+      window.location.href = "../../print/bill_print.php?bill_no=" + encodeURIComponent(billNo);
     }
 });
 </script>

@@ -74,3 +74,19 @@
 2025-09-22 10:43:39 - Final totals calculated
 2025-09-22 10:43:39 - === BILL UPDATED SUCCESSFULLY ===
 2025-09-22 10:43:39 - Bill No: INV2025000003, Sale ID: 4, Grand Total: 392
+2025-10-08 17:39:21 - === UPDATE BILL PROCESS STARTED ===
+2025-10-08 17:39:21 - Updating bill: INV2025000001
+2025-10-08 17:39:21 - Processing 2 products
+2025-10-08 17:39:21 - Product AMLOKIND 5: Input '1' parsed to 1
+2025-10-08 17:39:21 - Product AMLOKIND 5: Input '1' parsed to 1
+2025-10-08 17:39:21 - All products validated. Starting database transaction...
+2025-10-08 17:39:21 - Restoring stock for original products...
+2025-10-08 17:39:21 - Restored 1.000 units for product 1, batch 1234
+2025-10-08 17:39:21 - Deleted old bill products
+2025-10-08 17:39:21 - Processing new products...
+2025-10-08 17:39:21 - Processing: AMLOKIND 5, Qty: 1, MRP: 200
+2025-10-08 17:39:21 - Calculations - Net: 224, GST: 24
+2025-10-08 17:39:21 - Stock updated - New total: 0
+2025-10-08 17:39:21 - Processing: AMLOKIND 5, Qty: 1, MRP: 200
+2025-10-08 17:39:21 - ❌ Error: Insufficient stock for AMLOKIND 5 (available: 0.000, requested: 1)
+2025-10-08 17:39:21 - ❌ Error trace: #0 {main}

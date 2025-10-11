@@ -161,7 +161,7 @@ $isFreeTrialPlan = ($plan === 'free_trial' || $price === 0);
                                                     <small class="text-muted">Enter 10-digit mobile number</small>
                                                 </div>
                                             </div>
-                                            <div class="col-md-12">
+                                            <!-- <div class="col-md-12">
                                                 <div class="ap-checkout-input">
                                                     <label>Company Name (Optional)</label>
                                                     <input type="text" name="company" class="form-control">
@@ -173,7 +173,7 @@ $isFreeTrialPlan = ($plan === 'free_trial' || $price === 0);
                                                     <input type="text" name="gstin" class="form-control" placeholder="For tax invoice" pattern="[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}">
                                                     <small class="text-muted">Format: 22AAAAA0000A1Z5</small>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             
                                             <?php if (!$isFreeTrialPlan): ?>
                                             <div class="col-md-12">

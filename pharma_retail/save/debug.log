@@ -1,0 +1,697 @@
+
+2025-10-07 13:14:24 - === SAVE PURCHASE START ===
+2025-10-07 13:14:24 - POST: Array
+(
+    [purchase_id] => PUR0001
+    [purchase_date] => 2025-10-07
+    [supplier_id] => 3
+    [invoice_number] => 890
+    [payment_mode] => CASH
+    [search_product] => AMLOKIND 5
+    [product_id] => Array
+        (
+            [0] => 1
+        )
+
+    [product_name] => Array
+        (
+            [0] => AMLOKIND 5
+        )
+
+    [company] => Array
+        (
+            [0] => MANKIND
+        )
+
+    [category] => Array
+        (
+            [0] => TAB
+        )
+
+    [pack] => Array
+        (
+            [0] => 15
+        )
+
+    [batch] => Array
+        (
+            [0] => 1234
+        )
+
+    [hsn_code] => Array
+        (
+            [0] => 3004
+        )
+
+    [expiry_date] => Array
+        (
+            [0] => 2027-06-01
+        )
+
+    [mrp] => Array
+        (
+            [0] => 200.00
+        )
+
+    [rate] => Array
+        (
+            [0] => 170.00
+        )
+
+    [quantity] => Array
+        (
+            [0] => 1
+        )
+
+    [discount] => Array
+        (
+            [0] => 0
+        )
+
+    [free_quantity] => Array
+        (
+            [0] => 0
+        )
+
+    [composition] => Array
+        (
+            [0] => AMLODIPINE
+        )
+
+    [igst] => Array
+        (
+            [0] => 0.00
+        )
+
+    [cgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [sgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [total] => Array
+        (
+            [0] => 190.40
+        )
+
+    [margin] => Array
+        (
+            [0] => 4.80
+        )
+
+)
+
+2025-10-07 13:14:24 - SELECT supplier_name for supplier_id=3
+2025-10-07 13:14:24 - INSERT purchase header
+2025-10-07 13:14:24 - ERROR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'PUR0001' for key 'purchaseid'
+2025-10-07 13:15:39 - === SAVE PURCHASE START ===
+2025-10-07 13:15:39 - POST: Array
+(
+    [purchase_id] => PUR0001
+    [purchase_date] => 2025-10-07
+    [supplier_id] => 3
+    [invoice_number] => 890
+    [payment_mode] => CASH
+    [search_product] => AMLOKIND 5
+    [product_id] => Array
+        (
+            [0] => 1
+        )
+
+    [product_name] => Array
+        (
+            [0] => AMLOKIND 5
+        )
+
+    [company] => Array
+        (
+            [0] => MANKIND
+        )
+
+    [category] => Array
+        (
+            [0] => TAB
+        )
+
+    [pack] => Array
+        (
+            [0] => 15
+        )
+
+    [batch] => Array
+        (
+            [0] => 1234
+        )
+
+    [hsn_code] => Array
+        (
+            [0] => 3004
+        )
+
+    [expiry_date] => Array
+        (
+            [0] => 2027-06-01
+        )
+
+    [mrp] => Array
+        (
+            [0] => 200.00
+        )
+
+    [rate] => Array
+        (
+            [0] => 170.00
+        )
+
+    [quantity] => Array
+        (
+            [0] => 1
+        )
+
+    [discount] => Array
+        (
+            [0] => 0
+        )
+
+    [free_quantity] => Array
+        (
+            [0] => 0
+        )
+
+    [composition] => Array
+        (
+            [0] => AMLODIPINE
+        )
+
+    [igst] => Array
+        (
+            [0] => 0.00
+        )
+
+    [cgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [sgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [total] => Array
+        (
+            [0] => 190.40
+        )
+
+    [margin] => Array
+        (
+            [0] => 4.80
+        )
+
+)
+
+2025-10-07 13:15:39 - SELECT supplier_name for supplier_id=3
+2025-10-07 13:15:39 - INSERT purchase header
+2025-10-07 13:15:39 - ERROR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'PUR0001' for key 'purchaseid'
+2025-10-07 13:18:06 - === SAVE PURCHASE START ===
+2025-10-07 13:18:06 - POST: Array
+(
+    [purchase_id] => PUR0001
+    [purchase_date] => 2025-10-07
+    [supplier_id] => 3
+    [invoice_number] => 890
+    [payment_mode] => CASH
+    [search_product] => AMLOKIND 5
+    [product_id] => Array
+        (
+            [0] => 1
+        )
+
+    [product_name] => Array
+        (
+            [0] => AMLOKIND 5
+        )
+
+    [company] => Array
+        (
+            [0] => MANKIND
+        )
+
+    [category] => Array
+        (
+            [0] => TAB
+        )
+
+    [pack] => Array
+        (
+            [0] => 15
+        )
+
+    [batch] => Array
+        (
+            [0] => 1234
+        )
+
+    [hsn_code] => Array
+        (
+            [0] => 3004
+        )
+
+    [expiry_date] => Array
+        (
+            [0] => 2027-06-01
+        )
+
+    [mrp] => Array
+        (
+            [0] => 200.00
+        )
+
+    [rate] => Array
+        (
+            [0] => 170.00
+        )
+
+    [quantity] => Array
+        (
+            [0] => 1
+        )
+
+    [discount] => Array
+        (
+            [0] => 0
+        )
+
+    [free_quantity] => Array
+        (
+            [0] => 0
+        )
+
+    [composition] => Array
+        (
+            [0] => AMLODIPINE
+        )
+
+    [igst] => Array
+        (
+            [0] => 0.00
+        )
+
+    [cgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [sgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [total] => Array
+        (
+            [0] => 190.40
+        )
+
+    [margin] => Array
+        (
+            [0] => 4.80
+        )
+
+)
+
+2025-10-07 13:18:06 - SELECT supplier_name for supplier_id=3
+2025-10-07 13:18:06 - INSERT purchase header
+2025-10-07 13:18:06 - ERROR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'PUR0001' for key 'purchaseid'
+2025-10-07 13:19:21 - === SAVE PURCHASE START ===
+2025-10-07 13:19:21 - POST: Array
+(
+    [purchase_id] => PUR0001
+    [purchase_date] => 2025-10-07
+    [supplier_id] => 3
+    [invoice_number] => 890
+    [payment_mode] => CASH
+    [search_product] => AMLOKIND 5
+    [product_id] => Array
+        (
+            [0] => 1
+        )
+
+    [product_name] => Array
+        (
+            [0] => AMLOKIND 5
+        )
+
+    [company] => Array
+        (
+            [0] => MANKIND
+        )
+
+    [category] => Array
+        (
+            [0] => TAB
+        )
+
+    [pack] => Array
+        (
+            [0] => 15
+        )
+
+    [batch] => Array
+        (
+            [0] => 1234
+        )
+
+    [hsn_code] => Array
+        (
+            [0] => 3004
+        )
+
+    [expiry_date] => Array
+        (
+            [0] => 2027-06-01
+        )
+
+    [mrp] => Array
+        (
+            [0] => 200.00
+        )
+
+    [rate] => Array
+        (
+            [0] => 170.00
+        )
+
+    [quantity] => Array
+        (
+            [0] => 1
+        )
+
+    [discount] => Array
+        (
+            [0] => 0
+        )
+
+    [free_quantity] => Array
+        (
+            [0] => 0
+        )
+
+    [composition] => Array
+        (
+            [0] => AMLODIPINE
+        )
+
+    [igst] => Array
+        (
+            [0] => 0.00
+        )
+
+    [cgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [sgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [total] => Array
+        (
+            [0] => 190.40
+        )
+
+    [margin] => Array
+        (
+            [0] => 4.80
+        )
+
+)
+
+2025-10-07 13:19:21 - SELECT supplier_name for supplier_id=3
+2025-10-07 13:19:21 - INSERT purchase header
+2025-10-07 14:17:07 - === NEW SALE SAVE START ===
+2025-10-07 14:17:07 - POST DATA: Array
+(
+    [bill_no] => AUTO
+    [bill_date] => 2025-10-07
+    [customer_name] => 4
+    [mobile_number] => 7735364889
+    [doctor] => m/o
+    [payment_mode] => CASH
+    [search_product] => 
+    [product_id] => Array
+        (
+            [0] => 1
+        )
+
+    [product_name] => Array
+        (
+            [0] => AMLOKIND 5
+        )
+
+    [pack] => Array
+        (
+            [0] => 15
+        )
+
+    [batch] => Array
+        (
+            [0] => 1234
+        )
+
+    [hsn_code] => Array
+        (
+            [0] => 3004
+        )
+
+    [expiry_date] => Array
+        (
+            [0] => 2027-06-01
+        )
+
+    [mrp] => Array
+        (
+            [0] => 200.00
+        )
+
+    [quantity] => Array
+        (
+            [0] => 1
+        )
+
+    [discount] => Array
+        (
+            [0] => 0
+        )
+
+    [igst] => Array
+        (
+            [0] => 0.00
+        )
+
+    [cgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [sgst] => Array
+        (
+            [0] => 6.00
+        )
+
+    [total] => Array
+        (
+            [0] => 200.00
+        )
+
+)
+
+2025-10-07 14:17:07 - Auto-generated bill number: INV2025000001 (sequence: 1)
+2025-10-07 14:17:07 - === VALIDATING QUANTITIES ===
+2025-10-07 14:17:07 - Product AMLOKIND 5: Input '1' parsed to 1
+2025-10-07 14:17:07 - === PROCESSING VALIDATED PRODUCTS ===
+2025-10-07 14:17:07 - Processing: AMLOKIND 5, Qty: 1, MRP: 200, Discount: 0%
+2025-10-07 14:17:07 - Calculations - Base: 200, Discount: 0, Taxable: 200, GST: 24, Net: 224
+2025-10-07 14:17:07 - Stock updated - Product: AMLOKIND 5, Batch: 1234, Deducted: 1, New Stock: 0
+2025-10-07 14:17:07 - Final Totals - Taxable: 200, GST: 24, Discount: 0, Grand: 224
+2025-10-07 14:17:07 - === SALE SAVED SUCCESSFULLY ===
+2025-10-07 14:17:07 - Bill No: INV2025000001, Sale ID: 2, Grand Total: 224
+2025-10-09 07:58:51 - === NEW SALE SAVE START ===
+2025-10-09 07:58:51 - POST DATA: Array
+(
+    [bill_no] => AUTO
+    [bill_date] => 2025-10-09
+    [customer_name] => 4
+    [mobile_number] => 7735364889
+    [doctor] => m/o
+    [payment_mode] => CASH
+    [search_product] => 
+    [product_id] => Array
+        (
+            [0] => 17
+        )
+
+    [product_name] => Array
+        (
+            [0] => ELECTRAL POWDER
+        )
+
+    [pack] => Array
+        (
+            [0] => 22
+        )
+
+    [batch] => Array
+        (
+            [0] => 084D098
+        )
+
+    [hsn_code] => Array
+        (
+            [0] => 30049086
+        )
+
+    [expiry_date] => Array
+        (
+            [0] => 2026-03-01
+        )
+
+    [mrp] => Array
+        (
+            [0] => 24.35
+        )
+
+    [quantity] => Array
+        (
+            [0] => 1
+        )
+
+    [discount] => Array
+        (
+            [0] => 0
+        )
+
+    [igst] => Array
+        (
+            [0] => 0.00
+        )
+
+    [cgst] => Array
+        (
+            [0] => 0.00
+        )
+
+    [sgst] => Array
+        (
+            [0] => 5.00
+        )
+
+    [total] => Array
+        (
+            [0] => 24.35
+        )
+
+)
+
+2025-10-09 07:58:51 - Auto-generated bill number: INV2025000002 (sequence: 2)
+2025-10-09 07:58:51 - === VALIDATING QUANTITIES ===
+2025-10-09 07:58:51 - Product ELECTRAL POWDER: Input '1' parsed to 1
+2025-10-09 07:58:51 - === PROCESSING VALIDATED PRODUCTS ===
+2025-10-09 07:58:51 - Processing: ELECTRAL POWDER, Qty: 1, MRP: 24.35, Discount: 0%
+2025-10-09 07:58:51 - Calculations - Base: 24.35, Discount: 0, Taxable: 24.35, GST: 1.22, Net: 25.57
+2025-10-09 07:58:51 - Stock updated - Product: ELECTRAL POWDER, Batch: 084D098, Deducted: 1, New Stock: 59
+2025-10-09 07:58:51 - Final Totals - Taxable: 24.35, GST: 1.22, Discount: 0, Grand: 25.57
+2025-10-09 07:58:51 - === SALE SAVED SUCCESSFULLY ===
+2025-10-09 07:58:51 - Bill No: INV2025000002, Sale ID: 3, Grand Total: 25.57
+2025-10-09 08:02:58 - === NEW SALE SAVE START ===
+2025-10-09 08:02:58 - POST DATA: Array
+(
+    [bill_no] => AUTO
+    [bill_date] => 2025-10-09
+    [customer_name] => 4
+    [mobile_number] => 7735364889
+    [doctor] => m/o
+    [payment_mode] => CASH
+    [search_product] => 
+    [product_id] => Array
+        (
+            [0] => 26
+        )
+
+    [product_name] => Array
+        (
+            [0] => SIMROSE  500
+        )
+
+    [pack] => Array
+        (
+            [0] => 15
+        )
+
+    [batch] => Array
+        (
+            [0] => SM1042GJ
+        )
+
+    [hsn_code] => Array
+        (
+            [0] => 30049039
+        )
+
+    [expiry_date] => Array
+        (
+            [0] => 2026-01-01
+        )
+
+    [mrp] => Array
+        (
+            [0] => 217.00
+        )
+
+    [quantity] => Array
+        (
+            [0] => 1
+        )
+
+    [discount] => Array
+        (
+            [0] => 0
+        )
+
+    [igst] => Array
+        (
+            [0] => 0.00
+        )
+
+    [cgst] => Array
+        (
+            [0] => 0.00
+        )
+
+    [sgst] => Array
+        (
+            [0] => 5.00
+        )
+
+    [total] => Array
+        (
+            [0] => 217.00
+        )
+
+)
+
+2025-10-09 08:02:58 - Auto-generated bill number: INV2025000003 (sequence: 3)
+2025-10-09 08:02:58 - === VALIDATING QUANTITIES ===
+2025-10-09 08:02:58 - Product SIMROSE  500: Input '1' parsed to 1
+2025-10-09 08:02:58 - === PROCESSING VALIDATED PRODUCTS ===
+2025-10-09 08:02:58 - Processing: SIMROSE  500, Qty: 1, MRP: 217, Discount: 0%
+2025-10-09 08:02:58 - Calculations - Base: 217, Discount: 0, Taxable: 217, GST: 10.85, Net: 227.85
+2025-10-09 08:02:59 - Stock updated - Product: SIMROSE  500, Batch: SM1042GJ, Deducted: 1, New Stock: 3
+2025-10-09 08:02:59 - Final Totals - Taxable: 217, GST: 10.85, Discount: 0, Grand: 227.85
+2025-10-09 08:02:59 - === SALE SAVED SUCCESSFULLY ===
+2025-10-09 08:02:59 - Bill No: INV2025000003, Sale ID: 4, Grand Total: 227.85

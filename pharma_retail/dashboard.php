@@ -128,6 +128,27 @@ function formatCurrency($amount) {
     <!-- External CSS -->
     <link rel="stylesheet" href="../assets/css/dashboard_mobile.css">
     <link rel="stylesheet" href="../assets/css/master_style.css">
+    <style>
+        .submenu {
+    display: none;
+    padding-left: 15px;
+}
+
+.submenu.show {
+    display: block;
+}
+
+.submenu a.active {
+    font-weight: 600;
+    color: #0d6efd;
+}
+
+.submenu-toggle.expanded {
+    font-weight: 600;
+    color: #0d6efd;
+}
+
+    </style>
 </head>
 <body>
 
@@ -195,6 +216,7 @@ function formatCurrency($amount) {
                     </a>
                 </div>
             </div>
+            
 
             <div class="nav-section">
                 <div class="nav-section-title">Management</div>
@@ -212,25 +234,78 @@ function formatCurrency($amount) {
                 </div>
             </div>
 
-            <div class="nav-section">
-                <div class="nav-section-title">Reports</div>
-                <div class="nav-item">
-                    <a href="#" class="nav-link submenu-toggle" data-target="reports-submenu">
-                        <i class="fas fa-chart-bar"></i>
-                        Reports
-                    </a>
-                    <div class="submenu" id="reports-submenu">
-                        <a href="salesnbilling/list_sales.php" class="nav-link">
-                            <i class="fas fa-receipt"></i>
-                            Sales Reports
-                        </a>
-                        <a href="purchasenstock/list_purchase.php" class="nav-link">
-                            <i class="fas fa-file-invoice"></i>
-                            Purchase Reports
-                        </a>
-                    </div>
-                </div>
-            </div>
+           <div class="nav-section">
+    <div class="nav-section-title">Reports</div>
+
+    <!-- Purchase Reports -->
+    <div class="nav-item">
+        <a href="#" class="nav-link submenu-toggle" data-target="purchase-reports-submenu">
+            <i class="fas fa-file-invoice"></i> Purchase Reports
+        </a>
+        <div class="submenu" id="purchase-reports-submenu">
+            <a href="../reports/purchase/list_purchase.php" class="nav-link">Purchase Rigister</a>
+            <a href="../reports/purchase/monthly_purchase_report.php" class="nav-link">Monthly Purchase Report</a>
+        </div>
+    </div>
+
+    <!-- Sales Reports -->
+    <div class="nav-item">
+        <a href="#" class="nav-link submenu-toggle" data-target="sales-reports-submenu">
+            <i class="fas fa-receipt"></i> Sales Reports
+        </a>
+        <div class="submenu" id="sales-reports-submenu">
+           <!-- <a href="../reports/sales/list_sales.php" class="nav-link">Sales Register</a> -->
+         <a href="../reports/sales/list_sales.php" class="nav-link">Sales Register</a>
+         <a href="../reports/misc/mis.php" class="nav-link"></a>
+            <a href="salesnbilling/monthly_sales_report.php" class="nav-link">Monthly Sales Report</a>
+        </div>
+    </div>
+
+    <!-- GST Reports -->
+    <div class="nav-item">
+        <a href="#" class="nav-link submenu-toggle" data-target="gst-reports-submenu">
+            <i class="fas fa-calculator"></i> GST Reports
+        </a>
+        <div class="submenu" id="gst-reports-submenu">
+            <a href="../reports/gst_reports/gst_summary.php" class="nav-link">GST Summary</a>
+        </div>
+    </div>
+
+    <!-- Expiry Reports -->
+    <div class="nav-item">
+        <a href="#" class="nav-link submenu-toggle" data-target="expiry-reports-submenu">
+            <i class="fas fa-calendar-times"></i> Expiry Reports
+        </a>
+        <div class="submenu" id="expiry-reports-submenu">
+            <a href="../reports/expiry_reports/expiring_soon.php" class="nav-link">Expiring Soon</a>
+        </div>
+    </div>
+     <!-- Accounts Reports -->
+    <div class="nav-item">
+        <a href="#" class="nav-link submenu-toggle" data-target="accounts-submenu">
+            <i class="fas fa-calendar-times"></i> Accounts Reports
+        </a>
+        <div class="submenu" id="accounts-submenu">
+            <a href="../accounts/ledger_summary.php" class="nav-link">Ledger Summary</a>
+            <a href="../accounts/voucher_list.php" class="nav-link">Voucher Register</a>
+             <a href="../accounts/create_voucher.php" class="nav-link">Create Voucher</a>
+             <a href="../accounts/voucher_view.php" class="nav-link">Voucher</a>
+             <a href="../accounts/voucher_edit.php" class="nav-link">Edit Voucher</a>
+             <!-- <a href="../accounts/expense_heads.php" class="nav-link">Expense Catagories</a> -->
+            <a href="../accounts/ledger_entries_list.php" class="nav-link">Ledger Entries</a>
+        </div>
+    </div>
+
+    <!-- Misc Reports -->
+    <div class="nav-item">
+        <a href="#" class="nav-link submenu-toggle" data-target="misc-reports-submenu">
+            <i class="fas fa-ellipsis-h"></i> Misc Reports
+        </a>
+        <div class="submenu" id="misc-reports-submenu">
+            <a href="../reports/misc_reports/stock_summary.php" class="nav-link">Stock Summary</a>
+        </div>
+    </div>
+</div>
 
             <div class="nav-section">
                 <div class="nav-section-title">System</div>
@@ -424,134 +499,98 @@ function formatCurrency($amount) {
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu elements
-            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-            const sidebar = document.getElementById('sidebar');
-            const sidebarOverlay = document.getElementById('sidebarOverlay');
-            const sidebarClose = document.getElementById('sidebarClose');
+       document.addEventListener('DOMContentLoaded', function() {
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const sidebarClose = document.getElementById('sidebarClose');
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 
-            // Mobile menu toggle functionality
-            function toggleSidebar() {
-                sidebar.classList.toggle('show');
-                sidebarOverlay.classList.toggle('show');
-                document.body.style.overflow = sidebar.classList.contains('show') ? 'hidden' : '';
-            }
+    // ---------- Mobile sidebar toggle ----------
+    function toggleSidebar() {
+        sidebar.classList.toggle('show');
+        sidebarOverlay.classList.toggle('show');
+        document.body.style.overflow = sidebar.classList.contains('show') ? 'hidden' : '';
+    }
+    function closeSidebar() {
+        sidebar.classList.remove('show');
+        sidebarOverlay.classList.remove('show');
+        document.body.style.overflow = '';
+    }
 
-            function closeSidebar() {
-                sidebar.classList.remove('show');
-                sidebarOverlay.classList.remove('show');
-                document.body.style.overflow = '';
-            }
+    mobileMenuToggle?.addEventListener('click', toggleSidebar);
+    sidebarClose?.addEventListener('click', closeSidebar);
+    sidebarOverlay?.addEventListener('click', closeSidebar);
 
-            // Event listeners for mobile menu
-            if (mobileMenuToggle) {
-                mobileMenuToggle.addEventListener('click', toggleSidebar);
-            }
+    // Close sidebar when clicking nav links (except submenu toggles) on mobile
+    document.querySelectorAll('.nav-link').forEach(link => {
+        if (!link.classList.contains('submenu-toggle')) {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) closeSidebar();
+            });
+        }
+    });
 
-            if (sidebarClose) {
-                sidebarClose.addEventListener('click', closeSidebar);
-            }
+    // ---------- Submenu toggle (accordion behavior) ----------
+    const toggles = document.querySelectorAll('.submenu-toggle');
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('data-target');
+            const submenu = document.getElementById(targetId);
 
-            if (sidebarOverlay) {
-                sidebarOverlay.addEventListener('click', closeSidebar);
-            }
-
-            // Close sidebar when clicking on nav links in mobile
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                if (!link.classList.contains('submenu-toggle')) {
-                    link.addEventListener('click', function() {
-                        if (window.innerWidth <= 768) {
-                            closeSidebar();
-                        }
-                    });
-                }
+            // Close all other submenus
+            document.querySelectorAll('.submenu').forEach(menu => {
+                if (menu !== submenu) menu.classList.remove('show');
             });
 
-            // Submenu toggle functionality
-            document.querySelectorAll('.submenu-toggle').forEach(toggle => {
-                toggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('data-target');
-                    const submenu = document.getElementById(targetId);
-                    
-                    // Toggle submenu
-                    submenu.classList.toggle('show');
-                    this.classList.toggle('expanded');
-                    
-                    // Close other submenus
-                    document.querySelectorAll('.submenu').forEach(menu => {
-                        if (menu !== submenu) {
-                            menu.classList.remove('show');
-                        }
-                    });
-                    
-                    document.querySelectorAll('.submenu-toggle').forEach(otherToggle => {
-                        if (otherToggle !== this) {
-                            otherToggle.classList.remove('expanded');
-                        }
-                    });
-                });
+            document.querySelectorAll('.submenu-toggle').forEach(other => {
+                if (other !== this) other.classList.remove('expanded');
             });
 
-            // Handle window resize
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
-                    closeSidebar();
-                }
-            });
-
-            // Handle escape key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && sidebar.classList.contains('show')) {
-                    closeSidebar();
-                }
-            });
-
-            // Auto-refresh stats every 5 minutes
-            setTimeout(() => {
-                location.reload();
-            }, 300000);
-
-            // Notification badge click handler
-            const notificationBadge = document.querySelector('.notification-badge');
-            if (notificationBadge) {
-                notificationBadge.addEventListener('click', function() {
-                    // Add notification handling logic here
-                    console.log('Notifications clicked');
-                });
-            }
-
-            // Add touch support for better mobile experience
-            let touchStartX = 0;
-            let touchEndX = 0;
-
-            document.addEventListener('touchstart', e => {
-                touchStartX = e.changedTouches[0].screenX;
-            });
-
-            document.addEventListener('touchend', e => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-            });
-
-            function handleSwipe() {
-                const swipeThreshold = 100;
-                const swipeDistance = touchEndX - touchStartX;
-
-                if (window.innerWidth <= 768) {
-                    // Swipe right to open sidebar
-                    if (swipeDistance > swipeThreshold && touchStartX < 50 && !sidebar.classList.contains('show')) {
-                        toggleSidebar();
-                    }
-                    // Swipe left to close sidebar
-                    else if (swipeDistance < -swipeThreshold && sidebar.classList.contains('show')) {
-                        closeSidebar();
-                    }
-                }
-            }
+            // Toggle clicked submenu
+            submenu.classList.toggle('show');
+            this.classList.toggle('expanded');
         });
-    </script>
+    });
+
+    // ---------- Highlight active link based on URL ----------
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll('.submenu a').forEach(link => {
+        if (link.getAttribute('href').split("/").pop() === currentPage) {
+            link.classList.add('active');
+            link.closest('.submenu').classList.add('show');
+            link.closest('.submenu').previousElementSibling.classList.add('expanded');
+        }
+    });
+
+    // ---------- Window resize handling ----------
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) closeSidebar();
+    });
+
+    // ---------- Escape key closes sidebar ----------
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && sidebar.classList.contains('show')) {
+            closeSidebar();
+        }
+    });
+
+    // ---------- Swipe support for mobile ----------
+    let touchStartX = 0, touchEndX = 0;
+    document.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX);
+    document.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        const swipeDistance = touchEndX - touchStartX;
+        if (window.innerWidth <= 768) {
+            if (swipeDistance > 100 && touchStartX < 50 && !sidebar.classList.contains('show')) toggleSidebar();
+            else if (swipeDistance < -100 && sidebar.classList.contains('show')) closeSidebar();
+        }
+    });
+
+    // ---------- Auto-refresh dashboard stats ----------
+    setTimeout(() => location.reload(), 300000); // 5 min
+});
+
+</script>
 </body>
 </html>

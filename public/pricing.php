@@ -181,44 +181,49 @@ try {
     <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Handle Free Trial with module
-    const freeTrialBtn = document.querySelector('a[href^="checkout.php?plan=free_trial"]');
-    const freeTrialModule = freeTrialBtn.closest('.ap-pricing-plan-card').querySelector('.module-select');
-    
+    const freeTrialBtn = document.querySelector('.start-trial-btn');
+
+if (freeTrialBtn) {
     freeTrialBtn.addEventListener('click', function(e) {
-        const selectedModule = freeTrialModule.value;
+        e.preventDefault();
+        const card = freeTrialBtn.closest('.ap-pricing-plan-card');
+        const moduleSelect = card.querySelector('.module-select');
+        const selectedModule = moduleSelect.value;
+
         if (!selectedModule) {
-            e.preventDefault();
-            alert('Please select a module first');
-            return false;
+            alert('Please select a module first.');
+            return;
         }
-        // Add module to URL
-        this.href = 'cart.php?plan=free_trial&price=0&module=' + encodeURIComponent(selectedModule);
+
+        window.location.href = 'checkout.php?plan=free_trial&price=0&module=' + encodeURIComponent(selectedModule);
     });
+}
+
     
     // Handle paid plans with module
-    document.querySelectorAll('.ap-pricing-plan-card').forEach(card => {
-        const moduleSelect = card.querySelector('.module-select');
-        const planSelect = card.querySelector('select[onchange]');
-        
-        if (planSelect && moduleSelect) {
-            planSelect.addEventListener('change', function(e) {
-                const selectedModule = moduleSelect.value;
-                if (!selectedModule) {
-                    e.preventDefault();
-                    this.value = '';
-                    alert('Please select a module first');
-                    return false;
-                }
-                
-                // Add module parameter to URL
-                if (this.value) {
-                    const url = new URL(this.value, window.location.origin);
-                    url.searchParams.set('module', selectedModule);
-                    window.location.href = url.toString();
-                }
-            });
-        }
-    });
+   document.querySelectorAll('.ap-pricing-plan-card').forEach(card => {
+    const moduleSelect = card.querySelector('.module-select');
+    const planSelect = card.querySelector('.plan-select');
+
+    if (planSelect && moduleSelect) {
+        planSelect.addEventListener('change', function() {
+            const selectedModule = moduleSelect.value;
+
+            if (!selectedModule) {
+                alert('Please select a module first.');
+                this.value = '';
+                return;
+            }
+
+            if (this.value) {
+                const url = new URL(this.value, window.location.origin);
+                url.searchParams.set('module', selectedModule);
+                window.location.href = url.toString();
+            }
+        });
+    }
+});
+
 });
 </script>
 </body>

@@ -271,7 +271,7 @@ try {
     debugLog("=== COMMIT SUCCESSFUL (purchase_id=$purchase_id, total=$grand_total) ===");
 
     $_SESSION['success'] = "Purchase updated successfully! Total amount: " . number_format($grand_total, 2);
-    header("Location: ../purchasenstock/list_purchase.php?success=1");
+    header("Location: ../../reports/purchase/list_purchase.php?success=1");
     exit;
 
 } catch (Exception $e) {

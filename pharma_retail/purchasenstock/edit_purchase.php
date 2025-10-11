@@ -243,7 +243,7 @@ $parties = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </div>
 
 <div class="d-flex justify-content-between mt-3">
-  <a href="list_purchase.php" class="btn btn-outline-secondary">⬅️ Back</a>
+  <a href="../../reports/purchase/list_purchase.php" class="btn btn-outline-secondary">⬅️ Back</a>
   <button type="submit" class="btn btn-primary">💾 Update Bill</button>
 </div>
 
