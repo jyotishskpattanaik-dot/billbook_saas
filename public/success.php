@@ -246,7 +246,7 @@ file_put_contents(
                         </div>
 
                         <div class="text-center mt-5">
-                            <a href="/pharma_retail/dashboard.php" class="ap-btn btn-primary me-3 mb-3">Go to Dashboard</a>
+                            <a href="../public/login.php" class="ap-btn btn-primary me-3 mb-3">Go to Login</a>
                             <a href="../index.php" class="ap-btn btn-secondary mb-3">Back to Home</a>
                         </div>
 

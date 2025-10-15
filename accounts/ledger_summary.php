@@ -1,15 +1,13 @@
 <?php
 require __DIR__ . '/../includes/init.php';
 require __DIR__ . '/../includes/navigation_helper.php';
-// ✅ Start session only if not already active
+
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// ✅ Get PDO Connection
-$pdo = getModulePDO(); // Connect to module DB
+$pdo = getModulePDO();
 
-// ✅ Basic session checks
 if (!isset($_SESSION['company_id'], $_SESSION['financial_year_id'])) {
     header("Location: ../public/login.php");
     exit;
@@ -19,28 +17,30 @@ $companyId = $_SESSION['company_id'];
 $yearId    = $_SESSION['financial_year_id'];
 $userId    = $_SESSION['user_id'];
 
-// ✅ Handle date filters
 $startDate = $_GET['start_date'] ?? date('Y-m-01');
 $endDate   = $_GET['end_date'] ?? date('Y-m-t');
 
-// ✅ Fetch ledger summary
-$stmt = $pdo->prepare("
+// ✅ Fetch ledger summary from ledger_entries
+$query = "
     SELECT 
+        am.id AS account_id,
         am.account_name,
         am.account_group,
-        SUM(CASE WHEN le.debit_account_id = am.id THEN le.amount ELSE 0 END) AS total_debit,
-        SUM(CASE WHEN le.credit_account_id = am.id THEN le.amount ELSE 0 END) AS total_credit
+        SUM(CASE WHEN le.dr_cr = 'Dr' THEN le.amount ELSE 0 END) AS total_debit,
+        SUM(CASE WHEN le.dr_cr = 'Cr' THEN le.amount ELSE 0 END) AS total_credit
     FROM ledger_accounts_master am
     LEFT JOIN ledger_entries le 
-      ON le.company_id = am.company_id 
-      AND le.accounting_year_id = am.accounting_year_id 
-      AND le.entry_date BETWEEN :start_date AND :end_date
-      AND (le.debit_account_id = am.id OR le.credit_account_id = am.id)
-    WHERE am.company_id = :company_id 
+        ON le.account_id = am.id
+        AND le.company_id = am.company_id
+        AND le.accounting_year_id = am.accounting_year_id
+        AND le.entry_date BETWEEN :start_date AND :end_date
+    WHERE am.company_id = :company_id
       AND am.accounting_year_id = :year_id
-    GROUP BY am.id
+    GROUP BY am.id, am.account_name, am.account_group
     ORDER BY am.account_group, am.account_name
-");
+";
+
+$stmt = $pdo->prepare($query);
 $stmt->execute([
     ':company_id' => $companyId,
     ':year_id'    => $yearId,
@@ -48,24 +48,6 @@ $stmt->execute([
     ':end_date'   => $endDate
 ]);
 $ledgers = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-/**
- * ✅ Dynamic module-aware dashboard redirect
- * This assumes you already defined `getModuleDashboardUrl()` in includes/init.php
- */
-// if (!function_exists('getModuleDashboardUrl')) {
-//     function getModuleDashboardUrl(): string {
-//         $module = $_SESSION['user_module'] ?? 'main';
-//         $base = "/billbook.in";
-//         switch ($module) {
-//             case 'pharma_retail': return "$base/pharma_retail/dashboard.php";
-//             case 'pharma_wholesale': return "$base/pharma_wholesale/dashboard.php";
-//             case 'retail_other': return "$base/retail_other/dashboard.php";
-//             case 'wholesale_others': return "$base/wholesale_others/dashboard.php";
-//             default: return "$base/public/login.php";
-//         }
-//     }
-// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -90,7 +72,6 @@ $ledgers = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </a>
     </div>
 
-    <!-- Filter -->
     <form method="get" class="row g-2 my-3">
         <div class="col-auto">
             <label class="form-label">From:</label>
@@ -105,7 +86,6 @@ $ledgers = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </form>
 
-    <!-- Ledger Table -->
     <table class="table table-bordered table-striped">
         <thead class="table-dark">
             <tr>
@@ -128,7 +108,7 @@ $ledgers = $stmt->fetchAll(PDO::FETCH_ASSOC);
             ?>
             <tr>
                 <td>
-                    <a href="ledger_detail.php?account=<?= urlencode($l['account_name']) ?>&start_date=<?= $startDate ?>&end_date=<?= $endDate ?>" 
+                    <a href="ledger_detail.php?account_id=<?= $l['account_id'] ?>&start_date=<?= $startDate ?>&end_date=<?= $endDate ?>" 
                        class="account-link">
                        <?= htmlspecialchars($l['account_name']) ?>
                     </a>

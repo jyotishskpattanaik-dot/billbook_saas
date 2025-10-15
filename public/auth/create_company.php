@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (!$user) {
                 throw new Exception("User not found with provided email & phone!");
             }
-            $user_id = $user['user_id'];
+            $user_id = $user['user_id'];        
             debugLog("Found user_id: $user_id");
 
             // 2️⃣ Fetch the last order for this user

@@ -8,7 +8,6 @@ if (!isset($_SESSION['user_id'])) {
 require __DIR__ . '/../vendor/autoload.php';
 $userRole = $_SESSION['user_role'] ?? 'user';
 
-
 use App\Core\ModuleDatabase;
 
 // ✅ Redirect to login if session expired
@@ -23,7 +22,8 @@ $companyId = $_SESSION['company_id'];
 $yearId    = $_SESSION['financial_year_id'];
 $username  = htmlspecialchars($_SESSION["user_name"]);
 $module    = $_SESSION['user_module'];
-$userRole  = $_SESSION['user_role'] ?? 'user'; // ✅ Default to user if not set
+$userRole  = $_SESSION['user_role'] ?? 'user';
+
 try {
     $pdo = ModuleDatabase::getConnection();
 
@@ -108,7 +108,6 @@ try {
     error_log("Dashboard Error: " . $e->getMessage());
 }
 
-// Helper function for formatting currency
 function formatCurrency($amount) {
     return "₹" . number_format($amount, 2);
 }
@@ -120,81 +119,656 @@ function formatCurrency($amount) {
     <title>Pharma Retail Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     
-    <!-- Bootstrap 5 + Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- External CSS -->
     <link rel="stylesheet" href="../assets/css/dashboard_mobile.css">
     <link rel="stylesheet" href="../assets/css/master_style.css">
+    
     <style>
-        .submenu {
-    display: none;
-    padding-left: 15px;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.submenu.show {
-    display: block;
-}
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8f9fa;
+        }
 
-.submenu a.active {
-    font-weight: 600;
-    color: #0d6efd;
-}
+        /* Top Navigation Bar */
+        .top-navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: 60px;
+        }
 
-.submenu-toggle.expanded {
-    font-weight: 600;
-    color: #0d6efd;
-}
+        .top-navbar-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            padding: 0 20px;
+            max-width: 100%;
+        }
 
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white !important;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .navbar-menu {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-menu > li {
+            position: relative;
+        }
+
+        .nav-link-top {
+            color: white;
+            text-decoration: none;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        .nav-link-top:hover {
+            background: rgba(255,255,255,0.15);
+        }
+
+        /* Mega Dropdown for Reports */
+        .reports-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 800px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            padding: 30px;
+            display: none;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            margin-top: 0;
+        }
+
+        .navbar-menu > li:hover .reports-dropdown {
+            display: grid;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reports-dropdown {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .report-category {
+            position: relative;
+        }
+
+        .report-category-title {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #667eea;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .report-category-title i {
+            font-size: 1.1rem;
+        }
+
+        .report-links {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .report-link {
+            color: #495057;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .report-link:hover {
+            background: #f8f9fa;
+            color: #667eea;
+            transform: translateX(5px);
+        }
+
+        .report-link i {
+            font-size: 0.85rem;
+            opacity: 0.6;
+        }
+
+        /* User Actions */
+        .navbar-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .notification-icon {
+            position: relative;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .notification-badge {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            background: #ff4757;
+            color: white;
+            border-radius: 10px;
+            padding: 2px 6px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            cursor: pointer;
+            padding: 6px 12px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .user-profile:hover {
+            background: rgba(255,255,255,0.15);
+        }
+
+        .user-avatar {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Sidebar - Simplified */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 60px;
+            bottom: 0;
+            width: 260px;
+            background: white;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+            overflow-y: auto;
+            transition: all 0.3s ease;
+            z-index: 900;
+        }
+
+        .sidebar-user {
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .sidebar-user .user-info h6 {
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .sidebar-user .user-info small {
+            opacity: 0.9;
+        }
+
+        .sidebar-nav {
+            padding: 20px 0;
+        }
+
+        .nav-section {
+            margin-bottom: 25px;
+        }
+
+        .nav-section-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #6c757d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0 20px;
+            margin-bottom: 10px;
+        }
+
+        .nav-item {
+            margin: 2px 10px;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 15px;
+            color: #495057;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover {
+            background: #f8f9fa;
+            color: #667eea;
+        }
+
+        .nav-link.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .nav-link i {
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 260px;
+            margin-top: 60px;
+            padding: 30px;
+            min-height: calc(100vh - 60px);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .stat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .stat-content h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 0 5px 0;
+            color: #2d3436;
+        }
+
+        .stat-content p {
+            color: #636e72;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .stat-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .stat-icon.sales { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .stat-icon.purchase { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; }
+        .stat-icon.warning { background: linear-gradient(135deg, #ffa751 0%, #ffe259 100%); color: white; }
+        .stat-icon.danger { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; }
+
+        .stat-trend {
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .trend-up { color: #00b894; }
+        .trend-down { color: #d63031; }
+
+        /* Actions Grid */
+        .actions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .action-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .action-card h5 {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2d3436;
+        }
+
+        .action-card p {
+            color: #636e72;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .btn-success { background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%); color: white; }
+        .btn-warning { background: linear-gradient(135deg, #f2994a 0%, #f2c94c 100%); color: white; }
+
+        .btn-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+
+            .sidebar.show {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .navbar-menu {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+                background: none;
+                border: none;
+                color: white;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+
+            .reports-dropdown {
+                min-width: 100vw;
+                grid-template-columns: 1fr;
+                left: -20px;
+            }
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+        }
+
+        @media (min-width: 769px) {
+            .sidebar-close {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Sidebar Overlay for Mobile -->
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <!-- Top Navigation Bar -->
+    <nav class="top-navbar">
+        <div class="top-navbar-content">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="dashboard.php" class="navbar-brand">
+                    <i class="fas fa-pills"></i>
+                    PHARMA RETAIL
+                </a>
+            </div>
+
+            <ul class="navbar-menu">
+                <li>
+                    <a href="dashboard.php" class="nav-link-top">
+                        <i class="fas fa-home"></i>
+                        Dashboard
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#" class="nav-link-top">
+                        <i class="fas fa-chart-bar"></i>
+                        Reports
+                        <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i>
+                    </a>
+                    
+                    <!-- Mega Dropdown -->
+                    <div class="reports-dropdown">
+                        <!-- Purchase Reports -->
+                        <div class="report-category">
+                            <div class="report-category-title">
+                                <i class="fas fa-shopping-cart"></i>
+                                Purchase Reports
+                            </div>
+                            <div class="report-links">
+                                <a href="../reports/purchase/list_purchase.php" class="report-link">
+                                    <i class="fas fa-angle-right"></i>
+                                    Purchase Register
+                                </a>
+                                <a href="../reports/purchase/view_order_suggestions.php" class="report-link">
+                                    <i class="fas fa-angle-right"></i>
+                                    Purchase Order
+                                </a>
+                                <a href="../reports/purchase/monthly_purchase_report.php" class="report-link">
+                                    <i class="fas fa-angle-right"></i>
+                                    Monthly Purchase Report
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Sales Reports -->
+                        <div class="report-category">
+                            <div class="report-category-title">
+                                <i class="fas fa-cash-register"></i>
+                                Sales Reports
+                            </div>
+                            <div class="report-links">
+                                <a href="../reports/sales/list_sales.php" class="report-link">
+                                    <i class="fas fa-angle-right"></i>
+                                    Sales Register
+                                </a>
+                                <a href="../reports/misc/mis.php" class="report-link">
+                                    <i class="fas fa-angle-right"></i>
+                                    MIS Report
+                                </a>
+                                <a href="salesnbilling/monthly_sales_report.php" class="report-link">
+                                    <i class="fas fa-angle-right"></i>
+                                    Monthly Sales Report
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- GST Reports -->
+                        <div class="report-category">
+                            <div class="report-category-title">
+                                <i class="fas fa-calculator"></i>
+                                GST Reports
+                            </div>
+                            <div class="report-links">
+                                <a href="../reports/gst_reports/gst_summary.php" class="report-link">
+                                    <i class="fas fa-angle-right"></i>
+                                    GST Summary
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Expiry Reports -->
+                        <div class="report-category">
+                            <div class="report-category-title">
+                                <i class="fas fa-calendar-times"></i>
+                                Expiry Reports
+                            </div>
+                            <div class="report-links">
+                                <a href="../reports/expiry_reports/expiring_soon.php" class="report-link">
+                                    <i class="fas fa-angle-right"></i>
+                                    Expiring Soon
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Accounts Reports -->
+                        <div class="report-category">
+                            <div class="report-category-title">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                                Accounts Reports
+                            </div>
+                            <div class="report-links">
+                                <a href="../accounts/ledger_summary.php" class="report-link">
+                                    <i class="fas fa-angle-right"></i>
+                                    Ledger Summary
+                                </a>
+-                                <a href="../accounts/customer_ledger.php" class="report-link">
+                                    <i class="fas fa-angle-right"></i>
+                                    Customer Ledger
+                                </a>
+                                <a href="../accounts/create_voucher.php" class="report-link">
+                                    <i class="fas fa-angle-right"></i>
+                                    Create Voucher
+                                </a>
+                                <a href="../accounts/voucher_edit.php" class="report-link">
+                                    <i class="fas fa-angle-right"></i>
+                                    Edit Voucher
+                                </a>
+                                <a href="../accounts/receive_payment.php" class="report-link">
+                                    <i class="fas fa-angle-right"></i>
+                                    Customer Payment
+                                </a>
+                                <a href="../accounts/cash_book_list.php" class="report-link">
+                                    <i class="fas fa-angle-right"></i>
+                                    Cash Book
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Misc Reports -->
+                        <div class="report-category">
+                            <div class="report-category-title">
+                                <i class="fas fa-ellipsis-h"></i>
+                                Misc Reports
+                            </div>
+                            <div class="report-links">
+                                <a href="../reports/misc_reports/stock_summary.php" class="report-link">
+                                    <i class="fas fa-angle-right"></i>
+                                    Stock Summary
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <?php if ($userRole === 'admin'): ?>
+                <li>
+                    <a href="../admin/control_panel.php" class="nav-link-top">
+                        <i class="fas fa-shield-alt"></i>
+                        Control Panel
+                    </a>
+                </li>
+                <?php endif; ?>
+            </ul>
+
+            <div class="navbar-actions">
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                    <?php if ($lowStockCount + $expiringSoonCount > 0): ?>
+                        <span class="notification-badge"><?= $lowStockCount + $expiringSoonCount ?></span>
+                    <?php endif; ?>
+                </div>
+                
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <?= strtoupper(substr($username, 0, 2)) ?>
+                    </div>
+                    <span><?= $username ?></span>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <h2>PHARMA RETAIL</h2>
-            <button class="sidebar-close" id="sidebarClose">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-
+        <button class="sidebar-close" id="sidebarClose" style="position: absolute; right: 10px; top: 10px; background: none; border: none; font-size: 1.5rem; color: white; cursor: pointer;">
+            <i class="fas fa-times"></i>
+        </button>
+        
         <div class="sidebar-user">
-            <div class="user-avatar">
-                <?= strtoupper(substr($username, 0, 2)) ?>
-            </div>
             <div class="user-info">
                 <h6><?= $username ?></h6>
                 <small>FY: <?= $yearLabel ?></small>
             </div>
         </div>
 
-        
-        <!-- <nav class="sidebar-nav">
-            <div class="nav-section">
-                <div class="nav-section-title">Main</div>
-                <div class="nav-item">
-                    <a href="dashboard.php" class="nav-link active">
-                        <i class="fas fa-home"></i>
-                        Dashboard
-                    </a>
-                </div>
-            </div> -->
-              <!-- ✅ Admin-only Control Panel (fixed path) -->
-            <!-- <?php if ($userRole === 'admin'): ?>
-            <div class="nav-item">
-                <a href="../../admin/control_panel.php" class="nav-link">
-                    <i class="fas fa-shield-alt"></i>
-                    Control Panel
-                </a>
-            </div>
-            <?php endif; ?> -->
-
+        <nav class="sidebar-nav">
             <div class="nav-section">
                 <div class="nav-section-title">Operations</div>
                 <div class="nav-item">
@@ -210,13 +784,18 @@ function formatCurrency($amount) {
                     </a>
                 </div>
                 <div class="nav-item">
+                    <a href="purchasenstock/upload_purchase.php" class="nav-link">
+                        <i class="fas fa-upload"></i>
+                        Purchase Upload
+                    </a>
+                </div>
+                <div class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="fas fa-clock"></i>
                         Expiry Management
                     </a>
                 </div>
             </div>
-            
 
             <div class="nav-section">
                 <div class="nav-section-title">Management</div>
@@ -234,363 +813,208 @@ function formatCurrency($amount) {
                 </div>
             </div>
 
-           <div class="nav-section">
-    <div class="nav-section-title">Reports</div>
-
-    <!-- Purchase Reports -->
-    <div class="nav-item">
-        <a href="#" class="nav-link submenu-toggle" data-target="purchase-reports-submenu">
-            <i class="fas fa-file-invoice"></i> Purchase Reports
-        </a>
-        <div class="submenu" id="purchase-reports-submenu">
-            <a href="../reports/purchase/list_purchase.php" class="nav-link">Purchase Rigister</a>
-            <a href="../reports/purchase/monthly_purchase_report.php" class="nav-link">Monthly Purchase Report</a>
-        </div>
-    </div>
-
-    <!-- Sales Reports -->
-    <div class="nav-item">
-        <a href="#" class="nav-link submenu-toggle" data-target="sales-reports-submenu">
-            <i class="fas fa-receipt"></i> Sales Reports
-        </a>
-        <div class="submenu" id="sales-reports-submenu">
-           <!-- <a href="../reports/sales/list_sales.php" class="nav-link">Sales Register</a> -->
-         <a href="../reports/sales/list_sales.php" class="nav-link">Sales Register</a>
-         <a href="../reports/misc/mis.php" class="nav-link"></a>
-            <a href="salesnbilling/monthly_sales_report.php" class="nav-link">Monthly Sales Report</a>
-        </div>
-    </div>
-
-    <!-- GST Reports -->
-    <div class="nav-item">
-        <a href="#" class="nav-link submenu-toggle" data-target="gst-reports-submenu">
-            <i class="fas fa-calculator"></i> GST Reports
-        </a>
-        <div class="submenu" id="gst-reports-submenu">
-            <a href="../reports/gst_reports/gst_summary.php" class="nav-link">GST Summary</a>
-        </div>
-    </div>
-
-    <!-- Expiry Reports -->
-    <div class="nav-item">
-        <a href="#" class="nav-link submenu-toggle" data-target="expiry-reports-submenu">
-            <i class="fas fa-calendar-times"></i> Expiry Reports
-        </a>
-        <div class="submenu" id="expiry-reports-submenu">
-            <a href="../reports/expiry_reports/expiring_soon.php" class="nav-link">Expiring Soon</a>
-        </div>
-    </div>
-     <!-- Accounts Reports -->
-    <div class="nav-item">
-        <a href="#" class="nav-link submenu-toggle" data-target="accounts-submenu">
-            <i class="fas fa-calendar-times"></i> Accounts Reports
-        </a>
-        <div class="submenu" id="accounts-submenu">
-            <a href="../accounts/ledger_summary.php" class="nav-link">Ledger Summary</a>
-            <a href="../accounts/voucher_list.php" class="nav-link">Voucher Register</a>
-             <a href="../accounts/create_voucher.php" class="nav-link">Create Voucher</a>
-             <a href="../accounts/voucher_view.php" class="nav-link">Voucher</a>
-             <a href="../accounts/voucher_edit.php" class="nav-link">Edit Voucher</a>
-             <!-- <a href="../accounts/expense_heads.php" class="nav-link">Expense Catagories</a> -->
-            <a href="../accounts/ledger_entries_list.php" class="nav-link">Ledger Entries</a>
-        </div>
-    </div>
-
-    <!-- Misc Reports -->
-    <div class="nav-item">
-        <a href="#" class="nav-link submenu-toggle" data-target="misc-reports-submenu">
-            <i class="fas fa-ellipsis-h"></i> Misc Reports
-        </a>
-        <div class="submenu" id="misc-reports-submenu">
-            <a href="../reports/misc_reports/stock_summary.php" class="nav-link">Stock Summary</a>
-        </div>
-    </div>
-</div>
-
             <div class="nav-section">
                 <div class="nav-section-title">System</div>
+                <div class="nav-item">
+                    <a href="profile.php" class="nav-link">
+                        <i class="fas fa-user"></i>
+                        Profile
+                    </a>
+                </div>
                 <div class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="fas fa-cog"></i>
                         Settings
                     </a>
                 </div>
-                <div class="d-flex align-items-center">
-    <!-- Profile -->
-    <a href="profile.php" class="btn btn-sm btn-outline-primary me-3">
-        <i class="fas fa-user"></i> Profile
-    </a>
-
-    <!-- Control Panel (only for admin) -->
-    <?php if ($userRole === 'admin'): ?>
-        <a href="../admin/control_panel.php" class="btn btn-sm btn-outline-primary me-3">
-            <i class="fas fa-shield-alt"></i> Control Panel
-        </a>
-    <?php endif; ?>
-
-    <!-- Logout -->
-    <a href="../public/logout.php" class="btn btn-sm btn-outline-danger">
-        <i class="fas fa-sign-out-alt"></i> Logout
-    </a>
-</div>           
+                <div class="nav-item">
+                    <a href="../public/logout.php" class="nav-link">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Logout
+                    </a>
+                </div>
             </div>
         </nav>
     </div>
 
     <!-- Main Content -->
     <div class="main-content">
-        <!-- Topbar -->
-<div class="topbar">
-    <div class="topbar-left">
-        <button class="mobile-menu-toggle" id="mobileMenuToggle">
-            <i class="fas fa-bars"></i>
-        </button>
-        <h4>Dashboard Overview</h4>
-    </div>
-    <div class="topbar-actions">
-        <!-- ✅ Control Panel shortcut (admin only) -->
-        <?php if ($userRole === 'admin'): ?>
-            <a href="../admin/control_panel.php" class="btn btn-sm btn-outline-primary me-3">
-                <i class="fas fa-shield-alt"></i> Control Panel
-            </a>
-        <?php endif; ?>
-
-        <div class="notification-badge">
-            <i class="fas fa-bell"></i>
-            <?php if ($lowStockCount + $expiringSoonCount > 0): ?>
-                <span class="badge"><?= $lowStockCount + $expiringSoonCount ?></span>
-            <?php endif; ?>
-        </div>
-        <div class="user-info">
-            <i class="fas fa-user-circle"></i>
-            <span><?= $username ?></span>
-        </div>
-    </div>
-</div>
-
-        <!-- Content Area -->
-        <div class="content-area">
-            <!-- Statistics Grid -->
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-header">
-                        <div class="stat-content">
-                            <h3><?= formatCurrency($dailySales) ?></h3>
-                            <p>Today's Sales</p>
-                        </div>
-                        <div class="stat-icon sales">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
+        <!-- Statistics Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div class="stat-content">
+                        <h3><?= formatCurrency($dailySales) ?></h3>
+                        <p>Today's Sales</p>
                     </div>
-                    <div class="stat-trend trend-up">+12% from yesterday</div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-header">
-                        <div class="stat-content">
-                            <h3><?= formatCurrency($monthlySales) ?></h3>
-                            <p>Monthly Sales</p>
-                        </div>
-                        <div class="stat-icon sales">
-                            <i class="fas fa-calendar-alt"></i>
-                        </div>
+                    <div class="stat-icon sales">
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <div class="stat-trend trend-up">+8% from last month</div>
                 </div>
-
-                <div class="stat-card">
-                    <div class="stat-header">
-                        <div class="stat-content">
-                            <h3><?= formatCurrency($dailyPurchase) ?></h3>
-                            <p>Today's Purchases</p>
-                        </div>
-                        <div class="stat-icon purchase">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                    </div>
-                    <div class="stat-trend trend-down">-5% from yesterday</div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-header">
-                        <div class="stat-content">
-                            <h3><?= formatCurrency($monthlyPurchase) ?></h3>
-                            <p>Monthly Purchases</p>
-                        </div>
-                        <div class="stat-icon purchase">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                    </div>
-                    <div class="stat-trend trend-up">+15% from last month</div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-header">
-                        <div class="stat-content">
-                            <h3><?= $lowStockCount ?></h3>
-                            <p>Low Stock Items</p>
-                        </div>
-                        <div class="stat-icon warning">
-                            <i class="fas fa-exclamation-triangle"></i>
-                        </div>
-                    </div>
-                    <div class="stat-trend trend-down">Requires attention</div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-header">
-                        <div class="stat-content">
-                            <h3><?= $expiringSoonCount ?></h3>
-                            <p>Expiring Soon</p>
-                        </div>
-                        <div class="stat-icon danger">
-                            <i class="fas fa-calendar-times"></i>
-                        </div>
-                    </div>
-                    <div class="stat-trend trend-down">Next 30 days</div>
-                </div>
+                <div class="stat-trend trend-up">+12% from yesterday</div>
             </div>
 
-            <!-- Quick Actions Grid -->
-            <div class="actions-grid">
-                <div class="action-card">
-                    <h5>Create New Sale</h5>
-                    <p>Process customer transactions, manage inventory, and generate sales receipts with support for fractional quantities.</p>
-                    <a href="salesnbilling/create_bill.php" class="btn-action btn-primary">
-                        <i class="fas fa-plus-circle"></i>New Sale
-                    </a>
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div class="stat-content">
+                        <h3><?= formatCurrency($monthlySales) ?></h3>
+                        <p>Monthly Sales</p>
+                    </div>
+                    <div class="stat-icon sales">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
                 </div>
+                <div class="stat-trend trend-up">+8% from last month</div>
+            </div>
 
-                <div class="action-card">
-                    <h5>Record Purchase</h5>
-                    <p>Add new inventory, update stock levels, and manage supplier transactions efficiently.</p>
-                    <a href="purchasenstock/add_new_purchase.php" class="btn-action btn-success">
-                        <i class="fas fa-truck"></i>New Purchase
-                    </a>
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div class="stat-content">
+                        <h3><?= formatCurrency($dailyPurchase) ?></h3>
+                        <p>Today's Purchases</p>
+                    </div>
+                    <div class="stat-icon purchase">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
                 </div>
+                <div class="stat-trend trend-down">-5% from yesterday</div>
+            </div>
 
-                <div class="action-card">
-                    <h5>Purchase Upload</h5>
-                    <p>Add new inventory, update stock levels, and manage supplier transactions efficiently.</p>
-                    <a href="purchasenstock/upload_purchase.php" class="btn-action btn-success">
-                        <i class="fas fa-upload"></i>Purchase Upload
-                    </a>
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div class="stat-content">
+                        <h3><?= formatCurrency($monthlyPurchase) ?></h3>
+                        <p>Monthly Purchases</p>
+                    </div>
+                    <div class="stat-icon purchase">
+                        <i class="fas fa-truck"></i>
+                    </div>
                 </div>
+                <div class="stat-trend trend-up">+15% from last month</div>
+            </div>
 
-                <div class="action-card">
-                    <h5>Manage Customers</h5>
-                    <p>Add new customers, update contact information, and maintain customer database.</p>
-                    <a href="add/add_customer.php" class="btn-action btn-warning">
-                        <i class="fas fa-user-plus"></i>Add Customer
-                    </a>
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div class="stat-content">
+                        <h3><?= $lowStockCount ?></h3>
+                        <p>Low Stock Items</p>
+                    </div>
+                    <div class="stat-icon warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
                 </div>
+                <div class="stat-trend trend-down">Requires attention</div>
+            </div>
 
-                <div class="action-card">
-                    <h5>Supplier Management</h5>
-                    <p>Register new suppliers, manage vendor relationships, and track supplier performance.</p>
-                    <a href="add/add_supplier.php" class="btn-action btn-warning">
-                        <i class="fas fa-handshake"></i>Add Supplier
-                    </a>
+            <div class="stat-card">
+                <div class="stat-header">
+                    <div class="stat-content">
+                        <h3><?= $expiringSoonCount ?></h3>
+                        <p>Expiring Soon</p>
+                    </div>
+                    <div class="stat-icon danger">
+                        <i class="fas fa-calendar-times"></i>
+                    </div>
                 </div>
+                <div class="stat-trend trend-down">Next 30 days</div>
+            </div>
+        </div>
+
+        <!-- Quick Actions Grid -->
+        <div class="actions-grid">
+            <div class="action-card">
+                <h5>Create New Sale</h5>
+                <p>Process customer transactions, manage inventory, and generate sales receipts with support for fractional quantities.</p>
+                <a href="salesnbilling/create_bill.php" class="btn-action btn-primary">
+                    <i class="fas fa-plus-circle"></i>New Sale
+                </a>
+            </div>
+
+            <div class="action-card">
+                <h5>Record Purchase</h5>
+                <p>Add new inventory, update stock levels, and manage supplier transactions efficiently.</p>
+                <a href="purchasenstock/add_new_purchase.php" class="btn-action btn-success">
+                    <i class="fas fa-truck"></i>New Purchase
+                </a>
+            </div>
+
+            <div class="action-card">
+                <h5>Purchase Upload</h5>
+                <p>Bulk upload purchase data, streamline inventory updates with CSV imports.</p>
+                <a href="purchasenstock/upload_purchase.php" class="btn-action btn-success">
+                    <i class="fas fa-upload"></i>Purchase Upload
+                </a>
+            </div>
+
+            <div class="action-card">
+                <h5>Manage Customers</h5>
+                <p>Add new customers, update contact information, and maintain customer database.</p>
+                <a href="add/add_customer.php" class="btn-action btn-warning">
+                    <i class="fas fa-user-plus"></i>Add Customer
+                </a>
+            </div>
+
+            <div class="action-card">
+                <h5>Supplier Management</h5>
+                <p>Register new suppliers, manage vendor relationships, and track supplier performance.</p>
+                <a href="add/add_supplier.php" class="btn-action btn-warning">
+                    <i class="fas fa-handshake"></i>Add Supplier
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-       document.addEventListener('DOMContentLoaded', function() {
-    const sidebar = document.getElementById('sidebar');
-    const sidebarOverlay = document.getElementById('sidebarOverlay');
-    const sidebarClose = document.getElementById('sidebarClose');
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.getElementById('sidebar');
+            const sidebarClose = document.getElementById('sidebarClose');
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 
-    // ---------- Mobile sidebar toggle ----------
-    function toggleSidebar() {
-        sidebar.classList.toggle('show');
-        sidebarOverlay.classList.toggle('show');
-        document.body.style.overflow = sidebar.classList.contains('show') ? 'hidden' : '';
-    }
-    function closeSidebar() {
-        sidebar.classList.remove('show');
-        sidebarOverlay.classList.remove('show');
-        document.body.style.overflow = '';
-    }
+            // Mobile sidebar toggle
+            function toggleSidebar() {
+                sidebar.classList.toggle('show');
+                document.body.style.overflow = sidebar.classList.contains('show') ? 'hidden' : '';
+            }
 
-    mobileMenuToggle?.addEventListener('click', toggleSidebar);
-    sidebarClose?.addEventListener('click', closeSidebar);
-    sidebarOverlay?.addEventListener('click', closeSidebar);
+            function closeSidebar() {
+                sidebar.classList.remove('show');
+                document.body.style.overflow = '';
+            }
 
-    // Close sidebar when clicking nav links (except submenu toggles) on mobile
-    document.querySelectorAll('.nav-link').forEach(link => {
-        if (!link.classList.contains('submenu-toggle')) {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) closeSidebar();
-            });
-        }
-    });
+            mobileMenuToggle?.addEventListener('click', toggleSidebar);
+            sidebarClose?.addEventListener('click', closeSidebar);
 
-    // ---------- Submenu toggle (accordion behavior) ----------
-    const toggles = document.querySelectorAll('.submenu-toggle');
-    toggles.forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('data-target');
-            const submenu = document.getElementById(targetId);
-
-            // Close all other submenus
-            document.querySelectorAll('.submenu').forEach(menu => {
-                if (menu !== submenu) menu.classList.remove('show');
+            // Close sidebar when clicking nav links on mobile
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) closeSidebar();
+                });
             });
 
-            document.querySelectorAll('.submenu-toggle').forEach(other => {
-                if (other !== this) other.classList.remove('expanded');
+            // Highlight active link based on URL
+            const currentPage = window.location.pathname.split("/").pop();
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') && link.getAttribute('href').split("/").pop() === currentPage) {
+                    link.classList.add('active');
+                }
             });
 
-            // Toggle clicked submenu
-            submenu.classList.toggle('show');
-            this.classList.toggle('expanded');
+            // Window resize handling
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) closeSidebar();
+            });
+
+            // Escape key closes sidebar
+            document.addEventListener('keydown', e => {
+                if (e.key === 'Escape' && sidebar.classList.contains('show')) {
+                    closeSidebar();
+                }
+            });
+
+            // Auto-refresh dashboard stats (5 minutes)
+            setTimeout(() => location.reload(), 300000);
         });
-    });
-
-    // ---------- Highlight active link based on URL ----------
-    const currentPage = window.location.pathname.split("/").pop();
-    document.querySelectorAll('.submenu a').forEach(link => {
-        if (link.getAttribute('href').split("/").pop() === currentPage) {
-            link.classList.add('active');
-            link.closest('.submenu').classList.add('show');
-            link.closest('.submenu').previousElementSibling.classList.add('expanded');
-        }
-    });
-
-    // ---------- Window resize handling ----------
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) closeSidebar();
-    });
-
-    // ---------- Escape key closes sidebar ----------
-    document.addEventListener('keydown', e => {
-        if (e.key === 'Escape' && sidebar.classList.contains('show')) {
-            closeSidebar();
-        }
-    });
-
-    // ---------- Swipe support for mobile ----------
-    let touchStartX = 0, touchEndX = 0;
-    document.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX);
-    document.addEventListener('touchend', e => {
-        touchEndX = e.changedTouches[0].screenX;
-        const swipeDistance = touchEndX - touchStartX;
-        if (window.innerWidth <= 768) {
-            if (swipeDistance > 100 && touchStartX < 50 && !sidebar.classList.contains('show')) toggleSidebar();
-            else if (swipeDistance < -100 && sidebar.classList.contains('show')) closeSidebar();
-        }
-    });
-
-    // ---------- Auto-refresh dashboard stats ----------
-    setTimeout(() => location.reload(), 300000); // 5 min
-});
-
-</script>
+    </script>
 </body>
 </html>

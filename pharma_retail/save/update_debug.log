@@ -1,92 +1,22 @@
 
-2025-09-18 12:06:50 - === UPDATE BILL PROCESS STARTED ===
-2025-09-18 12:06:50 - Updating bill: INV2025000002
-2025-09-18 12:06:50 - Processing 1 products
-2025-09-18 12:06:50 - Product KARVOL PLUS: Input '1' parsed to 1
-2025-09-18 12:06:50 - All products validated. Starting database transaction...
-2025-09-18 12:06:50 - Restoring stock for original products...
-2025-09-18 12:06:50 - Restored 1.000 units for product 5, batch 678
-2025-09-18 12:06:50 - Deleted old bill products
-2025-09-18 12:06:50 - Processing new products...
-2025-09-18 12:06:50 - Processing: KARVOL PLUS, Qty: 1, MRP: 250
-2025-09-18 12:06:50 - Calculations - Net: 266, GST: 28.5
-2025-09-18 12:06:51 - Stock updated - New total: 9
-2025-09-18 12:06:51 - Final totals calculated
-2025-09-18 12:06:51 - === BILL UPDATED SUCCESSFULLY ===
-2025-09-18 12:06:51 - Bill No: INV2025000002, Sale ID: 37, Grand Total: 266
-2025-09-18 12:14:15 - === UPDATE BILL PROCESS STARTED ===
-2025-09-18 12:14:15 - Updating bill: INV2025000002
-2025-09-18 12:14:15 - Processing 1 products
-2025-09-18 12:14:15 - Product KARVOL PLUS: Input '1' parsed to 1
-2025-09-18 12:14:15 - All products validated. Starting database transaction...
-2025-09-18 12:14:15 - Restoring stock for original products...
-2025-09-18 12:14:15 - Restored 1.000 units for product 5, batch 678
-2025-09-18 12:14:15 - Deleted old bill products
-2025-09-18 12:14:15 - Processing new products...
-2025-09-18 12:14:15 - Processing: KARVOL PLUS, Qty: 1, MRP: 250
-2025-09-18 12:14:15 - Calculations - Net: 266, GST: 28.5
-2025-09-18 12:14:16 - Stock updated - New total: 9
-2025-09-18 12:14:16 - Final totals calculated
-2025-09-18 12:14:16 - === BILL UPDATED SUCCESSFULLY ===
-2025-09-18 12:14:16 - Bill No: INV2025000002, Sale ID: 37, Grand Total: 266
-2025-09-18 12:15:15 - === UPDATE BILL PROCESS STARTED ===
-2025-09-18 12:15:15 - Updating bill: INV2025000002
-2025-09-18 12:15:15 - Processing 1 products
-2025-09-18 12:15:15 - Product KARVOL PLUS: Input '1' parsed to 1
-2025-09-18 12:15:15 - All products validated. Starting database transaction...
-2025-09-18 12:15:15 - Restoring stock for original products...
-2025-09-18 12:15:15 - Restored 1.000 units for product 5, batch 678
-2025-09-18 12:15:16 - Deleted old bill products
-2025-09-18 12:15:16 - Processing new products...
-2025-09-18 12:15:16 - Processing: KARVOL PLUS, Qty: 1, MRP: 250
-2025-09-18 12:15:16 - Calculations - Net: 266, GST: 28.5
-2025-09-18 12:15:16 - Stock updated - New total: 9
-2025-09-18 12:15:16 - Final totals calculated
-2025-09-18 12:15:17 - === BILL UPDATED SUCCESSFULLY ===
-2025-09-18 12:15:17 - Bill No: INV2025000002, Sale ID: 37, Grand Total: 266
-2025-09-18 12:18:17 - === UPDATE BILL PROCESS STARTED ===
-2025-09-18 12:18:17 - Updating bill: INV2025000002
-2025-09-18 12:18:18 - Processing 1 products
-2025-09-18 12:18:18 - Product KARVOL PLUS: Input '1' parsed to 1
-2025-09-18 12:18:18 - All products validated. Starting database transaction...
-2025-09-18 12:18:18 - Restoring stock for original products...
-2025-09-18 12:18:19 - Restored 1.000 units for product 5, batch 678
-2025-09-18 12:18:19 - Deleted old bill products
-2025-09-18 12:18:19 - Processing new products...
-2025-09-18 12:18:19 - Processing: KARVOL PLUS, Qty: 1, MRP: 250
-2025-09-18 12:18:19 - Calculations - Net: 266, GST: 28.5
-2025-09-18 12:18:20 - Stock updated - New total: 9
-2025-09-18 12:18:20 - Final totals calculated
-2025-09-18 12:18:20 - === BILL UPDATED SUCCESSFULLY ===
-2025-09-18 12:18:20 - Bill No: INV2025000002, Sale ID: 37, Grand Total: 266
-2025-09-22 10:43:37 - === UPDATE BILL PROCESS STARTED ===
-2025-09-22 10:43:38 - Updating bill: INV2025000003
-2025-09-22 10:43:38 - Processing 1 products
-2025-09-22 10:43:38 - Product KARVOL PLUS: Input '1' parsed to 1
-2025-09-22 10:43:38 - All products validated. Starting database transaction...
-2025-09-22 10:43:38 - Restoring stock for original products...
-2025-09-22 10:43:38 - Restored 1.000 units for product 73, batch 678
-2025-09-22 10:43:38 - Deleted old bill products
-2025-09-22 10:43:38 - Processing new products...
-2025-09-22 10:43:38 - Processing: KARVOL PLUS, Qty: 1, MRP: 350
-2025-09-22 10:43:38 - Calculations - Net: 392, GST: 42
-2025-09-22 10:43:39 - Stock updated - New total: 0
-2025-09-22 10:43:39 - Final totals calculated
-2025-09-22 10:43:39 - === BILL UPDATED SUCCESSFULLY ===
-2025-09-22 10:43:39 - Bill No: INV2025000003, Sale ID: 4, Grand Total: 392
-2025-10-08 17:39:21 - === UPDATE BILL PROCESS STARTED ===
-2025-10-08 17:39:21 - Updating bill: INV2025000001
-2025-10-08 17:39:21 - Processing 2 products
-2025-10-08 17:39:21 - Product AMLOKIND 5: Input '1' parsed to 1
-2025-10-08 17:39:21 - Product AMLOKIND 5: Input '1' parsed to 1
-2025-10-08 17:39:21 - All products validated. Starting database transaction...
-2025-10-08 17:39:21 - Restoring stock for original products...
-2025-10-08 17:39:21 - Restored 1.000 units for product 1, batch 1234
-2025-10-08 17:39:21 - Deleted old bill products
-2025-10-08 17:39:21 - Processing new products...
-2025-10-08 17:39:21 - Processing: AMLOKIND 5, Qty: 1, MRP: 200
-2025-10-08 17:39:21 - Calculations - Net: 224, GST: 24
-2025-10-08 17:39:21 - Stock updated - New total: 0
-2025-10-08 17:39:21 - Processing: AMLOKIND 5, Qty: 1, MRP: 200
-2025-10-08 17:39:21 - ❌ Error: Insufficient stock for AMLOKIND 5 (available: 0.000, requested: 1)
-2025-10-08 17:39:21 - ❌ Error trace: #0 {main}
+2025-10-14 13:48:42 - === UPDATE BILL PROCESS STARTED ===
+2025-10-14 13:48:42 - Updating bill: OM-25-000001
+2025-10-14 13:48:42 - Processing 1 products
+2025-10-14 13:48:42 - Product TELMIKIND LN: Input '2' parsed to 2
+2025-10-14 13:48:42 - All products validated. Starting database transaction...
+2025-10-14 13:48:42 - Restoring stock for original products...
+2025-10-14 13:48:42 - Restored 1.000 units for product 53, batch V95Y001
+2025-10-14 13:48:42 - Deleted old bill products
+2025-10-14 13:48:42 - Processing new products...
+2025-10-14 13:48:42 - Processing: TELMIKIND LN, Qty: 2, MRP: 129.63
+2025-10-14 13:48:42 - Calculations - Net: 290.38, GST: 31.12
+2025-10-14 13:48:43 - Stock updated - New total: 1
+2025-10-14 13:48:43 - Final totals calculated
+2025-10-14 13:48:43 - === BILL UPDATED SUCCESSFULLY ===
+2025-10-14 13:48:43 - Bill No: OM-25-000001, Sale ID: 18, Grand Total: 290.38
+2025-10-14 13:48:43 - 🧾 Starting accounting update for Sale ID: 18
+2025-10-14 13:48:43 - Old accounting records deleted for Sale ID: 18
+2025-10-14 13:48:43 - Sales summary recreated: ID 10
+2025-10-14 13:48:43 - Customer receipt created: ID 3
+2025-10-14 13:48:43 - Ledger entries added for Sale ID: 18
+2025-10-14 13:48:44 - Ledger flag updated in bill_summary for Sale ID: 18

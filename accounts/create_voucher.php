@@ -27,53 +27,40 @@ $paymentModes = $pdo->query("SELECT method_name FROM payment_methods ORDER BY me
 $message = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $type = $_POST['voucher_type'];
-    $category = $_POST['category'];
-    $amount = (float) $_POST['amount'];
-    $paymentMode = $_POST['payment_mode'];
-    $paidTo = $_POST['paid_to'];
-    $narration = $_POST['narration'];
+    // Read POST values with safe defaults
+    $type = isset($_POST['voucher_type']) ? trim($_POST['voucher_type']) : '';
+    $category = isset($_POST['category']) ? trim($_POST['category']) : '';
+    $amount = isset($_POST['amount']) ? (float) $_POST['amount'] : 0.0;
+    $paymentMode = isset($_POST['payment_mode']) ? trim($_POST['payment_mode']) : '';
+    $counterparty = isset($_POST['counterparty']) ? trim($_POST['counterparty']) : '';
+    $narration = isset($_POST['narration']) ? trim($_POST['narration']) : '';
 
     if ($amount <= 0) {
         $message = "<div class='alert alert-danger'>Amount must be greater than 0.</div>";
     } else {
-        $success = addVoucher(
+        // Call addVoucher with correct arg order
+        $voucherId = addVoucher(
             $pdo,
             $companyId,
             $yearId,
-            $type,
-            $category,
-            $amount,
-            $paymentMode,
-            $paidTo,
-            $narration,
-            $userId
+            $type,         // voucher type
+            $category,     // category/head
+            $amount,       // amount
+            $paymentMode,  // payment mode
+            $counterparty,       // paid_to / counterparty
+            $narration,    // narration
+            $userId        // created_by
+            // note: addVoucher's entry_date is optional
         );
 
-        if ($success) {
-            $message = "<div class='alert alert-success'>Voucher created successfully and ledger updated!</div>";
+        if ($voucherId !== false) {
+            $message = "<div class='alert alert-success'>Voucher created successfully (ID: " . htmlspecialchars($voucherId) . ") and ledger updated!</div>";
         } else {
             $message = "<div class='alert alert-danger'>Error creating voucher. Please check logs.</div>";
         }
     }
 }
-/**
- * ✅ Dynamic module-aware dashboard redirect
- * This assumes you already defined `getModuleDashboardUrl()` in includes/init.php
- */
-// if (!function_exists('getModuleDashboardUrl')) {
-//     function getModuleDashboardUrl(): string {
-//         $module = $_SESSION['user_module'] ?? 'main';
-//         $base = "/billbook.in";
-//         switch ($module) {
-//             case 'pharma_retail': return "$base/pharma_retail/dashboard.php";
-//             case 'pharma_wholesale': return "$base/pharma_wholesale/dashboard.php";
-//             case 'retail_other': return "$base/retail_other/dashboard.php";
-//             case 'wholesale_others': return "$base/wholesale_others/dashboard.php";
-//             default: return "$base/public/login.php";
-//         }
-//     }
-// }
+
 
 ?>
 <!DOCTYPE html>

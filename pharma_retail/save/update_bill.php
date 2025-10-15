@@ -1,6 +1,8 @@
 <?php
 require __DIR__ . '/../../vendor/autoload.php';
 require __DIR__ . '/../../includes/init.php';
+require __DIR__ . '/../../accounts/helpers/accounts_functions.php';
+
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
@@ -342,6 +344,75 @@ try {
 
     debugLog("=== BILL UPDATED SUCCESSFULLY ===");
     debugLog("Bill No: $bill_no, Sale ID: $sale_id, Grand Total: $grand_total");
+
+    // --- STEP 6: Update Accounting and Ledger ---
+try {
+    debugLog("🧾 Starting accounting update for Sale ID: $sale_id");
+
+    // 1️⃣ Delete old accounting records
+    deleteAllSalesAccounting($pdo, $sale_id);
+    debugLog("Old accounting records deleted for Sale ID: $sale_id");
+
+    // 2️⃣ Recreate sales summary
+    $summary_id = createSalesSummary(
+        $pdo,
+        $company_id,
+        $year_id,
+        $sale_id,
+        $customer_name,
+        $bill_no,
+        $bill_date,
+        (float)$grand_total,
+        strtolower($payment_mode),
+        'Updated bill via edit',
+        $created_by
+    );
+    debugLog("Sales summary recreated: ID $summary_id");
+
+    // 3️⃣ Create customer receipt (only if paid)
+    if (strtolower($payment_mode) !== 'credit' && (float)$grand_total > 0) {
+        $receipt_id = createCustomerReceipt(
+            $pdo,
+            $sale_id,
+            $company_id,
+            $year_id,
+            $customer_name,
+            $bill_no,
+            $bill_date,
+            strtolower($payment_mode),
+            (float)$grand_total,
+            $created_by
+        );
+        debugLog("Customer receipt created: ID $receipt_id");
+    } else {
+        debugLog("Skipped receipt creation (Credit bill)");
+    }
+
+    // 4️⃣ Ledger entries (Double-entry)
+    addLedgerEntry(
+        $pdo,
+        $company_id,
+        $year_id,
+        (strtolower($payment_mode) === 'credit') ? $customer_name : ucfirst(strtolower($payment_mode)),
+        'Sales',
+        (float)$grand_total,
+        "Updated Sale #$bill_no",
+        'sales_summary',
+        $sale_id,
+        $created_by
+    );
+    debugLog("Ledger entries added for Sale ID: $sale_id");
+
+    // 5️⃣ Update bill_summary ledger flag
+    $stmt_flag = $pdo->prepare("UPDATE bill_summary SET ledger_posted = 1 WHERE id = ?");
+    $stmt_flag->execute([$sale_id]);
+    debugLog("Ledger flag updated in bill_summary for Sale ID: $sale_id");
+
+} catch (Exception $ex) {
+    debugLog("⚠️ Accounting Update Error: " . $ex->getMessage());
+}
+
+
 
     $_SESSION['success'] = "Bill $bill_no updated successfully!";
     header("Location: ../salesnbilling/create_bill.php?bill_no=" . urlencode($bill_no) . "&success=1");

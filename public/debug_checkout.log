@@ -1,2 +1,16 @@
 2025-10-07 12:52:15 - Linking company to user_id: USR-0001
 2025-10-07 12:52:15 - Company created and linked: OM GANESH PHARMA - USR-0001
+2025-10-12 16:42:32 - Found user_id: USR-0001
+2025-10-12 16:42:32 - ❌ Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'module' in 'field list'
+2025-10-12 20:11:37 - Found user_id: USR-0001
+2025-10-12 20:11:37 - ❌ Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'module' in 'field list'
+2025-10-12 20:28:17 - Found user_id: USR-0001
+2025-10-12 20:28:17 - ❌ Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'module' in 'field list'
+2025-10-12 20:28:22 - Found user_id: USR-0001
+2025-10-12 20:28:22 - ❌ Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'module' in 'field list'
+2025-10-13 11:34:51 - Found user_id: USR-0001
+2025-10-13 11:34:51 - Company created with ID: 1 | Plan: free_trial | Module: pharma_retail
+2025-10-13 11:34:52 - Subscriptions updated with company_id: 1
+2025-10-14 16:43:39 - Found user_id: USR-0001
+2025-10-14 16:43:40 - Company created with ID: 1 | Plan: free_trial | Module: pharma_retail
+2025-10-14 16:43:40 - Subscriptions updated with company_id: 1

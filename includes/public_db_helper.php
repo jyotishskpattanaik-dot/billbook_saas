@@ -94,6 +94,10 @@ function sendEmail($to, $subject, $message, $from = 'litu1pattanaik@gmail.com') 
 
         // Local fallback (no SendGrid / localhost)
         $logFile = __DIR__ . '/../mails.log';
+        // ensure directory writable
+        if (!is_writable(dirname($logFile))) {
+            error_log("mails.log directory not writable: " . dirname($logFile));
+        }
         $logEntry = "=== MAIL " . date('Y-m-d H:i:s') . " ===\nTo: $to\nSubject: $subject\n\n$message\n\n";
         file_put_contents($logFile, $logEntry, FILE_APPEND);
         return true;
@@ -110,25 +114,26 @@ function sendEmail($to, $subject, $message, $from = 'litu1pattanaik@gmail.com') 
 }
 
 /**
- * Log public activity (safe for checkout & user actions)
+ * Log public activity (matches your existing activity_logs table)
  */
-function logPublicActivity($action, $description, $user_id = null, $order_id = null) {
+function logPublicActivity($activityType, $activityDetails, $user_id = null) {
     try {
         $pdo = getPublicPDO();
+
         $stmt = $pdo->prepare("
-            INSERT INTO activity_logs (user_id, order_id, action, description, ip_address, user_agent, created_at)
-            VALUES (:user_id, :order_id, :action, :description, :ip, :user_agent, NOW())
+            INSERT INTO activity_logs (user_id, activity_type, activity_details, ip_address, user_agent, created_at)
+            VALUES (:user_id, :type, :details, :ip, :agent, NOW())
         ");
         $stmt->execute([
             ':user_id' => $user_id,
-            ':order_id' => $order_id,
-            ':action' => $action,
-            ':description' => $description,
+            ':type' => $activityType,
+            ':details' => $activityDetails,
             ':ip' => $_SERVER['REMOTE_ADDR'] ?? 'unknown',
-            ':user_agent' => $_SERVER['HTTP_USER_AGENT'] ?? 'unknown'
+            ':agent' => $_SERVER['HTTP_USER_AGENT'] ?? 'unknown'
         ]);
+
     } catch (Exception $e) {
-        error_log("Failed to log public activity: " . $e->getMessage());
+        error_log('Failed to log activity: ' . $e->getMessage());
     }
 }
 
@@ -201,8 +206,10 @@ function formatCurrency($amount, $symbol = '₹') {
     return $symbol . number_format($amount, 2);
 }
 
-function generateOrderNumber() {
-    return 'ORD-' . strtoupper(uniqid());
+if (!function_exists('generateOrderNumber')) {
+    function generateOrderNumber() {
+        return 'ORD-' . strtoupper(uniqid());
+    }
 }
 
 function calculateExpiryDate($period, $duration) {
@@ -213,3 +220,4 @@ function calculateExpiryDate($period, $duration) {
     }
     return null;
 }
+

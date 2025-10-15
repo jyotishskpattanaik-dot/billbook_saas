@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../../includes/init.php';
+require_once __DIR__ . '/../../accounts/helpers/accounts_functions.php';
 
 if (session_status() === PHP_SESSION_NONE) session_start();
 
@@ -49,7 +50,7 @@ try {
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     if (!$row) {
         $_SESSION['error'] = "Invalid supplier selected.";
-        header("Location: ../purchasenstock/add_new_purchase.php");
+        header("Location: ../purchasenstock/upload_purchase.php");
         exit;
     }
     $supplier_name = clean($row['supplier_name']);
@@ -57,12 +58,12 @@ try {
     // basic validation
     if ($purchase_id === '' || $purchase_date === '' || $supplier_name === '') {
         $_SESSION['error'] = "Purchase ID, Date and Supplier are required.";
-        header("Location: ../purchasenstock/add_new_purchase.php");
+        header("Location: ../purchasenstock/upload_purchase.php");
         exit;
     }
     if (!DateTime::createFromFormat('Y-m-d', $purchase_date)) {
         $_SESSION['error'] = "Invalid date format. Use YYYY-MM-DD.";
-        header("Location: ../purchasenstock/add_new_purchase.php");
+        header("Location: ../purchasenstock/upload_purchase.php");
         exit;
     }
 
@@ -70,7 +71,7 @@ try {
     $product_names = $_POST['product_name'] ?? [];
     if (!is_array($product_names) || count($product_names) === 0) {
         $_SESSION['error'] = "No products added to this purchase.";
-        header("Location: ../purchasenstock/add_new_purchase.php");
+        header("Location: ../purchasenstock/upload_purchase.php");
         exit;
     }
 
@@ -151,17 +152,12 @@ try {
 
         $mrp         = floatval($_POST['mrp'][$i] ?? 0);
         $rate        = floatval($_POST['rate'][$i] ?? 0);
-        // <-- fractional quantities allowed
         $qty         = floatval($_POST['quantity'][$i] ?? 0.0);
         $discount    = floatval($_POST['discount'][$i] ?? 0.0);
         $free_qty    = floatval($_POST['free_quantity'][$i] ?? 0.0);
 
-        if ($p_name === '' || $qty <= 0 || $rate <= 0) {
-            // skip invalid row
-            continue;
-        }
+        if ($p_name === '' || $qty <= 0 || $rate <= 0) continue;
 
-        // ensure product_master exists
         $selProduct->execute([':product_name' => $p_name, ':batch_no' => $batch]);
         $prodRow = $selProduct->fetch(PDO::FETCH_ASSOC);
         if (!$prodRow) {
@@ -185,7 +181,6 @@ try {
             $product_id = $prodRow['id'];
         }
 
-        // calculations
         $baseAmount = $rate * $qty;
         $discountAmount = ($discount / 100.0) * $baseAmount;
         $taxableAmount = $baseAmount - $discountAmount;
@@ -194,7 +189,6 @@ try {
         $cgst = floatval($_POST['cgst'][$i] ?? 0);
         $igst = floatval($_POST['igst'][$i] ?? 0);
 
-        $gstPercent = $sgst + $cgst + $igst;
         $sgstAmount = $taxableAmount * ($sgst / 100.0);
         $cgstAmount = $taxableAmount * ($cgst / 100.0);
         $igstAmount = $taxableAmount * ($igst / 100.0);
@@ -280,11 +274,86 @@ try {
             ':company_id' => $company_id,
             ':year_id' => $year_id
         ]);
-    } // end products loop
+    }
 
-    // update purchase header totals
+    // --- Update purchase_details total ---
     $stmtUp = $pdo->prepare("UPDATE purchase_details SET amount = :amount WHERE id = :id");
     $stmtUp->execute([':amount' => $grand_total, ':id' => $purchase_db_id]);
+
+    // --- ACCOUNTING MODULE INTEGRATION START ---
+// require_once __DIR__ . '/../../accounts/helpers/account_functions.php';
+
+// Step 1️⃣ - Create Purchase Summary FIRST
+$purchase_summary_id = createPurchaseSummary(
+    $pdo,
+    $company_id,
+    $year_id,
+    $purchase_id,
+    $supplier_name,
+    $invoice_number,
+    $purchase_date,
+    $grand_total,
+    $bill_type,
+    $remarks,
+    $created_by,
+);
+
+// Step 2️⃣ - Determine Debit/Credit accounts
+if (strtolower($bill_type) === 'cash') {
+    $debitAccount  = 'Purchase';
+    $creditAccount = 'Cash';
+} else {
+    $debitAccount  = 'Purchase';
+    $creditAccount = $supplier_name; // Credit supplier
+}
+
+// Step 3️⃣ - Create Ledger Entries
+addLedgerEntry(
+    $pdo,
+    $company_id,
+    $year_id,
+    $debitAccount,
+    $creditAccount,
+    $grand_total,
+    "Purchase Invoice #$invoice_number",
+    'purchase_summary',
+    $purchase_summary_id,
+    $created_by,
+    $purchase_date
+);
+
+// Step 4️⃣ - If Cash Purchase → record Cash Book + Supplier Payment
+if (strtolower($bill_type) === 'cash') {
+    // Cash Book entry
+    addCashBookEntry(
+        $pdo,
+        $company_id,
+        $year_id,
+        "Payment for Purchase Invoice #$invoice_number",
+        $grand_total,
+        0,
+        'Cash',
+        'supplier_payments',
+        $purchase_summary_id,
+        $purchase_date
+    );
+
+    // Supplier Payment entry
+    createSupplierPayment(
+        $pdo,
+        $purchase_id,
+        $company_id,
+        $year_id,
+        $supplier_name,
+        $invoice_number,
+        $bill_type,
+        $grand_total,
+        $created_by
+    );
+}
+
+// --- ACCOUNTING MODULE INTEGRATION END ---
+
 
     $pdo->commit();
 

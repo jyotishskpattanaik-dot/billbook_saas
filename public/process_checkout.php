@@ -1,35 +1,44 @@
 <?php
 session_start();
-require __DIR__ . '/../includes/public_db_helper.php';
-require __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../includes/public_db_helper.php';
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+if (!function_exists('logPublicActivity')) {
+    die('logPublicActivity not loaded!');
+} else {
+    debugLog('✅ logPublicActivity loaded successfully');
+}
+
+
 
 // Centralized debug log
-$debugFile = __DIR__ . '/../debug_checkout.log';
 function debugLog($msg) {
-    global $debugFile;
+    $debugFile = __DIR__ . '/../debug_checkout.log';
     file_put_contents($debugFile, date('Y-m-d H:i:s') . " - $msg\n", FILE_APPEND);
 }
 
 // Generate a unique user_id like USR-0001
 function generateUserId($pdo) {
-    $stmt = $pdo->query("SELECT user_id FROM users ORDER BY id DESC LIMIT 1");
-    $last = $stmt->fetchColumn();
-    if ($last) {
-        $num = intval(str_replace('USR-', '', $last)) + 1;
-    } else {
-        $num = 1;
+    try {
+        $stmt = $pdo->query("SELECT user_id FROM users ORDER BY id DESC LIMIT 1");
+        $last = $stmt->fetchColumn();
+        if ($last) {
+            $num = intval(str_replace('USR-', '', $last)) + 1;
+        } else {
+            $num = 1;
+        }
+        return 'USR-' . str_pad($num, 4, '0', STR_PAD_LEFT);
+    } catch (Exception $e) {
+        debugLog("generateUserId error: " . $e->getMessage());
+        // fallback
+        return 'USR-' . str_pad(rand(1,9999), 4, '0', STR_PAD_LEFT);
     }
-    return 'USR-' . str_pad($num, 4, '0', STR_PAD_LEFT);
-}
-
-// Generate order number (you may already have this function)
-function generateOrderNumber() {
-    return 'ORD-' . date('YmdHis') . rand(100, 999);
 }
 
 // Sanitize helper
 function sanitize($str) {
-    return htmlspecialchars(trim($str));
+    return htmlspecialchars(trim((string)$str));
 }
 
 try {
@@ -46,8 +55,6 @@ try {
     $last_name  = sanitize($_POST['last_name'] ?? '');
     $email      = sanitize($_POST['email'] ?? '');
     $phone      = sanitize($_POST['phone'] ?? '');
-    // $company    = sanitize($_POST['company'] ?? '');
-    // $gstin      = sanitize($_POST['gstin'] ?? '');
     $module     = $_POST['module'] ?? 'pharma_retail';
     $plan       = $_POST['plan'] ?? 'silver';
     $period     = $_POST['period'] ?? 'yearly';
@@ -84,10 +91,10 @@ try {
 
         // Insert into users
         $stmt = $pdo->prepare("
-            INSERT INTO users (user_id, username, first_name, last_name, email, phone, password_hash, status, created_at)
-            VALUES (?, ?, ?, ?, ?, ?, ?, 'active', NOW())
+            INSERT INTO users (user_id, username,module, first_name, last_name, email, phone, password_hash, status, created_at)
+            VALUES (?, ?, ?, ?, ?, ?,?, ?, 'active', NOW())
         ");
-        $stmt->execute([$user_id, $first_name, $first_name, $last_name, $email, $phone, $hashed_password]);
+        $stmt->execute([$user_id, $first_name,$module, $first_name, $last_name, $email, $phone, $hashed_password]);
 
         // Insert into login_users
         $stmt = $pdo->prepare("
@@ -97,12 +104,13 @@ try {
         $stmt->execute([$user_id, $first_name, $email, $module, $hashed_password, $first_name, $last_name, $phone]);
 
         $user_db_id = $pdo->lastInsertId();
-        debugLog("New user created: $user_id");
+        debugLog("New user created: $user_id (db id $user_db_id)");
     } else {
         // Existing user
         $user_id = $user['user_id'];
         $user_db_id = $user['id'];
-        debugLog("Existing user: $user_id");
+        debugLog("Existing user: $user_id (db id $user_db_id)");
+        // TODO: optionally update phone/first_name if changed
     }
 
     // Calculate expiry
@@ -124,6 +132,7 @@ try {
     ]);
     $order_id = $pdo->lastInsertId();
     $_SESSION['order_id'] = $order_id;
+    debugLog("Order created: $order_number (id $order_id)");
 
     // Assign module
     $stmt = $pdo->prepare("SELECT id FROM modules WHERE module_name = ?");
@@ -143,11 +152,25 @@ try {
     // Subscription
     $status = $is_free_trial ? 'active' : 'pending';
     $stmt = $pdo->prepare("
-        INSERT INTO subscriptions (module_id,user_id, order_number, plan_name, status, start_date, expiry_date, created_at)
-        VALUES (?,?, ?, ?, ?, NOW(), ?, NOW())
+        INSERT INTO subscriptions (module_id, user_id, order_id, plan_name, status, start_date, expiry_date, created_at)
+        VALUES (?, ?, ?, ?, ?, NOW(), ?, NOW())
     ");
-    $stmt->execute([$moduleId,$user_id, $order_number, $plan, $status, $expiry_date]);
-    debugLog("Subscription inserted for $user_id");
+    $stmt->execute([$moduleId, $user_id, $order_id, $plan, $status, $expiry_date]);
+    $subscription_id = $pdo->lastInsertId();
+    debugLog("Subscription inserted id: $subscription_id for user $user_id");
+
+    // Log activity (safe; non-blocking)
+    $logged = logPublicActivity('signup', "User signed up: $user_id, Order: $order_number, Plan: $plan", $user_db_id, $order_id);
+    debugLog("Activity log saved: " . ($logged ? 'yes' : 'no'));
+
+    // Send welcome email (non-blocking; fallback logs to mails.log)
+    // We store plain password only to email it once — careful in production.
+    if (!empty($password)) {
+        $mailOk = sendWelcomeEmail($email, $first_name, $password, $order_number, $plan);
+        debugLog("Welcome email queued/logged: " . ($mailOk ? 'yes' : 'no'));
+    } else {
+        debugLog("No password (existing user) — welcome email skipped.");
+    }
 
     // Redirect
     if ($is_free_trial) {
@@ -158,7 +181,8 @@ try {
     exit;
 
 } catch (Exception $e) {
-    if ($pdo && $pdo->inTransaction()) $pdo->rollBack();
+    if (isset($pdo) && $pdo && $pdo->inTransaction()) $pdo->rollBack();
+    debugLog("PROCESS CHECKOUT ERROR: " . $e->getMessage() . "\nTrace: " . $e->getTraceAsString());
     $_SESSION['checkout_errors'] = [$e->getMessage()];
     header("Location: checkout.php");
     exit;

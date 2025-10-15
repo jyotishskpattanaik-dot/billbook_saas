@@ -49,24 +49,7 @@
           </div>
         </div>
 
-        <!-- Free Trial -->
-        <!-- <div class="ap-pricing-plan-card">
-          <h4 class="ap-pricing-plan-title">Free Trial</h4>
-          <p class="ap-pricing-plan-desc">Try all features free for 14 days. No card required.</p>
-          <h3 class="ap-pricing-plan-price">₹0<span>/14 days</span></h3>
-          <div class="ap-pricing-plan-list">
-            <ul>
-              <li class="available"><i class="icon-circle-check"></i> Full access for 14 days</li>
-              <li class="available"><i class="icon-circle-check"></i> No payment required</li>
-              <li class="available"><i class="icon-circle-check"></i> Upgrade anytime</li>
-            </ul>
-          </div>
-          <div class="ap-pricing-plan-btn">
-            <a href="checkout.php?plan=free_trial&price=0" class="ap-btn btn-outline-primary w-100">Start Free Trial</a>
-          </div>
-        </div> -->
-
-        <!-- Bronze Plan -->
+          <!-- Bronze Plan -->
         <div class="ap-pricing-plan-card">
           <h4 class="ap-pricing-plan-title">Bronze</h4>
           <p class="ap-pricing-plan-desc">Single user access with limited features.</p>

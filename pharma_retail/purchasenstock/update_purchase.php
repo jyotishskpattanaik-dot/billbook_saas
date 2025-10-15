@@ -1,5 +1,10 @@
 <?php
-require __DIR__ . '/../../includes/init.php';
+require_once __DIR__ . '/../../includes/init.php';
+require_once __DIR__ . '/../../accounts/helpers/accounts_functions.php';
+
+if (session_status() === PHP_SESSION_NONE) session_start();
+
+$pdo = getModulePDO();
 
 function debugLog($message) {
     $logFile = __DIR__ . "/debug.log";
@@ -89,6 +94,52 @@ try {
     $stmt = $pdo->prepare("DELETE FROM current_stock WHERE purchase_id = ? AND company_id = ? AND accounting_year_id = ?");
     debugExecute($stmt, [$purchase_id, $company_id, $year_id], "DELETE current_stock");
 
+  // --- Clean up old linked entries before recreating them ---
+try {
+    // 🔍 Find existing purchase_summary_id first
+    $stmt = $pdo->prepare("
+        SELECT id FROM purchase_summary 
+        WHERE purchase_id = ? AND company_id = ? AND accounting_year_id = ? LIMIT 1
+    ");
+    $stmt->execute([$purchase_id, $company_id, $year_id]);
+    $old_summary = $stmt->fetch(PDO::FETCH_ASSOC);
+    $old_summary_id = $old_summary['id'] ?? null;
+
+    // 1️⃣ Delete supplier payments
+    $stmt = $pdo->prepare("
+        DELETE FROM supplier_payments 
+        WHERE purchase_id = ? AND company_id = ? AND accounting_year_id = ?
+    ");
+    $stmt->execute([$purchase_id, $company_id, $year_id]);
+
+    // 2️⃣ Delete ledger entries and cash book using OLD reference_id
+    if ($old_summary_id) {
+        $stmt = $pdo->prepare("
+            DELETE FROM ledger_entries 
+            WHERE reference_id = ? AND company_id = ? AND accounting_year_id = ?
+        ");
+        $stmt->execute([$old_summary_id, $company_id, $year_id]);
+
+        $stmt = $pdo->prepare("
+            DELETE FROM cash_book 
+            WHERE reference_id = ? AND company_id = ? AND accounting_year_id = ?
+        ");
+        $stmt->execute([$old_summary_id, $company_id, $year_id]);
+    }
+
+    // 3️⃣ Finally delete old purchase summary
+    $stmt = $pdo->prepare("
+        DELETE FROM purchase_summary 
+        WHERE purchase_id = ? AND company_id = ? AND accounting_year_id = ?
+    ");
+    $stmt->execute([$purchase_id, $company_id, $year_id]);
+
+} catch (PDOException $e) {
+    throw new Exception("Error cleaning old purchase entries: " . $e->getMessage());
+}
+
+
+
     $grand_total = 0.0;
 
     // --- Product arrays ---
@@ -114,9 +165,9 @@ try {
         $expiry_date = trim($_POST['expiry_date'][$i] ?? null);
         $mrp        = floatval($_POST['mrp'][$i] ?? 0);
         $rate       = floatval($_POST['rate'][$i] ?? 0);
-        $qty        = intval($_POST['quantity'][$i] ?? 0);
+        $qty        = floatval($_POST['quantity'][$i] ?? 0);
         $discount   = floatval($_POST['discount'][$i] ?? 0);
-        $free_qty   = intval($_POST['free_quantity'][$i] ?? 0);
+        $free_qty   = floatval($_POST['free_quantity'][$i] ?? 0);
         $composition= trim($_POST['composition'][$i] ?? '');
         $igst       = floatval($_POST['igst'][$i] ?? 0);
         $cgst       = floatval($_POST['cgst'][$i] ?? 0);
@@ -147,7 +198,7 @@ try {
                     (product_name, company, category, composition, batch_no, hsn_code, pack, mrp, rate, expiry_date, sgst, cgst, igst, created_at) 
                     VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,NOW())
                 ");
-                debugExecute($stmt, [$p_name, $company, $category, $composition, $batch, $hsn, $pack, $mrp, $rate, $exp_date, $sgst, $cgst, $igst], "INSERT product_master");
+                debugExecute($stmt, [$p_name, $company, $category, $composition, $batch, $hsn, $pack, $mrp, $rate, $expiry_date, $sgst, $cgst, $igst], "INSERT product_master");
                 $p_id = $pdo->lastInsertId();
             } else {
                 $p_id = $existing['id'];
@@ -266,6 +317,80 @@ try {
     // --- Update final amount ---
     $stmt = $pdo->prepare("UPDATE purchase_details SET amount=? WHERE purchase_id=? AND company_id=? AND accounting_year_id=?");
     debugExecute($stmt, [$grand_total, $purchase_id, $company_id, $year_id], "UPDATE final amount");
+    
+     // --- ACCOUNTING MODULE INTEGRATION START ---
+// require_once __DIR__ . '/../../accounts/helpers/account_functions.php';
+
+// Step 1️⃣ - Create Purchase Summary FIRST
+$purchase_summary_id = createPurchaseSummary(
+    $pdo,
+    $company_id,
+    $year_id,
+    $purchase_id,
+    $supplier_name,
+    $invoice_number,
+    $purchase_date,
+    $grand_total,
+    $bill_type,
+    $remarks,
+    $created_by
+);
+
+// Step 2️⃣ - Determine Debit/Credit accounts
+if (strtolower($bill_type) === 'cash') {
+    $debitAccount  = 'Purchase';
+    $creditAccount = 'Cash';
+} else {
+    $debitAccount  = 'Purchase';
+    $creditAccount = $supplier_name; // Credit supplier
+}
+
+// Step 3️⃣ - Create Ledger Entries
+addLedgerEntry(
+    $pdo,
+    $company_id,
+    $year_id,
+    $debitAccount,
+    $creditAccount,
+    $grand_total,
+    "Purchase Invoice #$invoice_number",
+    'purchase_summary',
+    $purchase_summary_id,
+    $created_by,
+    $purchase_date
+);
+
+// Step 4️⃣ - If Cash Purchase → record Cash Book + Supplier Payment
+if (strtolower($bill_type) === 'cash') {
+    // Cash Book entry
+    addCashBookEntry(
+        $pdo,
+        $company_id,
+        $year_id,
+        "Payment for Purchase Invoice #$invoice_number",
+        $grand_total,
+        0,
+        'Cash',
+        'supplier_payments',
+        $purchase_summary_id,
+        $purchase_date
+    );
+
+    // Supplier Payment entry
+    createSupplierPayment(
+        $pdo,
+        $purchase_id,
+        $company_id,
+        $year_id,
+        $supplier_name,
+        $invoice_number,
+        $bill_type,
+        $grand_total,
+        $created_by
+    );
+}
+
+// --- ACCOUNTING MODULE INTEGRATION END ---
 
     $pdo->commit();
     debugLog("=== COMMIT SUCCESSFUL (purchase_id=$purchase_id, total=$grand_total) ===");

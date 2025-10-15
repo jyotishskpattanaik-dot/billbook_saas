@@ -54,6 +54,7 @@ $preview = [
   'invoice_number' => safe_trim($_POST['invoice_number'] ?? $mappedRows[0]['invoice_number'] ?? ''),
   'purchase_date' => safe_trim($_POST['purchase_date'] ?? $mappedRows[0]['purchase_date'] ?? date('Y-m-d')),
   'bill_type' => safe_trim($_POST['bill_type'] ?? $mappedRows[0]['bill_type'] ?? ''),
+//   'remarks'    => safe_trim($_POST['remarks'] ?? $mappedRows[0]['remark']?? ''),
   'products' => $products
 ];
 
